@@ -9,22 +9,22 @@
                     <nav class="container-fluid all-size navbar-style pt-3">
                         <ul [ngClass]="classMenu" (click)="hideMenu()" (mouseenter)="showMenu()">
                             <li>
-                                <a class="title-menu">Perfilador</a>
+                                <a class="title-menu" [routerLink]="['perfilador/index']" routerLinkActive="true">Perfilador</a>
                             </li>
                             <li>
-                                <a class="title-menu">Tip's Aclaraciones</a>
+                                <a class="title-menu" [routerLink]="['tipsaclaraciones/index']" routerLinkActive="true">Tip's Aclaraciones</a>
                             </li>
                             <li>
-                                <a class="title-menu">Citibanamex vs Otros</a>
+                                <a class="title-menu" [routerLink]="['citivsotros/index']" routerLinkActive="true">Citibanamex vs Otros</a>
                             </li>
                             <li>
-                                <a class="title-menu">Campañas Pagaré</a>
+                                <a class="title-menu" [routerLink]="['campaniaspagare/index']" routerLinkActive="true">Campañas Pagaré</a>
                             </li>
                             <li>
-                                <a class="title-menu">Uso Herramienta</a>
+                                <a class="title-menu" [routerLink]="['usoherramienta/index']" routerLinkActive="true">Uso Herramienta</a>
                             </li>
                             <li>
-                                <a class="title-menu">Formulario Edición</a>
+                                <a class="title-menu" [routerLink]="['formularioedicion/index']" routerLinkActive="true">Formulario Edición</a>
                             </li>
                             <li>
                                 <a class="title-menu">Funciones de configuración</a>
