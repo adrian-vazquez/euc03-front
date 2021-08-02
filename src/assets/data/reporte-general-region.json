@@ -1,0 +1,211 @@
+[
+    {
+      "division": "PACIFICO",
+      "region": "DIR. REG. BAJA CALIFORNIA",
+      "vencimientos": "1256",
+      "monto_vencido": "$369,260,448.68",
+      "monto_por_vencer": "$367,849,624.26",
+      "por_vencer": "1206"
+    },
+    {
+      "division": "SURESTE",
+      "region": "DIR. REG. CHIAPAS",
+      "vencimientos": "834",
+      "monto_vencido": "$219,831,946.24",
+      "monto_por_vencer": "$241,135,351.35",
+      "por_vencer": "966"
+    },
+    {
+      "division": "NORTE",
+      "region": "DIR. REG. CHIHUAHUA",
+      "vencimientos": "1058",
+      "monto_vencido": "$316,014,771.21",
+      "monto_por_vencer": "$383,210,079.13",
+      "por_vencer": "1200"
+    },
+    {
+      "division": "NORTE",
+      "region": "DIR. REG. COAHUILA/DURANGO",
+      "vencimientos": "929",
+      "monto_vencido": "$230,659,077.50",
+      "monto_por_vencer": "$283,128,213.96",
+      "por_vencer": "1010"
+    },
+    {
+      "division": "PACIFICO",
+      "region": "DIR. REG. GUADALAJARA",
+      "vencimientos": "2342",
+      "monto_vencido": "$625,775,337.39",
+      "monto_por_vencer": "$727,762,031.77",
+      "por_vencer": "2486"
+    },
+    {
+      "division": "CENTRO",
+      "region": "DIR. REG. GUANAJUATO",
+      "vencimientos": "762",
+      "monto_vencido": "$176,785,656.52",
+      "monto_por_vencer": "$213,385,512.99",
+      "por_vencer": "760"
+    },
+    {
+      "division": "METROPOLITANA",
+      "region": "DIR. REG. METRO CENTRO",
+      "vencimientos": "3879",
+      "monto_vencido": "$807,911,438.99",
+      "monto_por_vencer": "$967,489,266.85",
+      "por_vencer": "4014"
+    },
+    {
+      "division": "METROPOLITANA",
+      "region": "DIR. REG. METRO NORTE",
+      "vencimientos": "5244",
+      "monto_vencido": "$1,200,072,664.50",
+      "monto_por_vencer": "$1,403,565,566.99",
+      "por_vencer": "5557"
+    },
+    {
+      "division": "METROPOLITANA",
+      "region": "DIR. REG. METRO PONIENTE",
+      "vencimientos": "2876",
+      "monto_vencido": "$725,969,891.26",
+      "monto_por_vencer": "$820,191,039.17",
+      "por_vencer": "2985"
+    },
+    {
+      "division": "METROPOLITANA",
+      "region": "DIR. REG. METRO SUR ORIENTE",
+      "vencimientos": "4247",
+      "monto_vencido": "$905,228,225.18",
+      "monto_por_vencer": "$1,043,157,446.76",
+      "por_vencer": "4411"
+    },
+    {
+      "division": "CENTRO",
+      "region": "DIR. REG. MEXICO HIDALGO",
+      "vencimientos": "4408",
+      "monto_vencido": "$1,023,029,382.30",
+      "monto_por_vencer": "$1,226,789,023.87",
+      "por_vencer": "4842"
+    },
+    {
+      "division": "CENTRO",
+      "region": "DIR. REG. MICHOACAN",
+      "vencimientos": "2971",
+      "monto_vencido": "$914,248,837.85",
+      "monto_por_vencer": "$1,042,451,943.33",
+      "por_vencer": "3347"
+    },
+    {
+      "division": "NORTE",
+      "region": "DIR. REG. MONTERREY",
+      "vencimientos": "1811",
+      "monto_vencido": "$443,842,240.43",
+      "monto_por_vencer": "$501,301,343.76",
+      "por_vencer": "1949"
+    },
+    {
+      "division": "SURESTE",
+      "region": "DIR. REG. MORELOS GUERRERO",
+      "vencimientos": "2916",
+      "monto_vencido": "$737,743,666.80",
+      "monto_por_vencer": "$930,207,981.54",
+      "por_vencer": "3291"
+    },
+    {
+      "division": "SURESTE",
+      "region": "DIR. REG. OAXACA",
+      "vencimientos": "1970",
+      "monto_vencido": "$459,898,873.40",
+      "monto_por_vencer": "$493,166,775.19",
+      "por_vencer": "2160"
+    },
+    {
+      "division": "PACIFICO",
+      "region": "DIR. REG. OCCIDENTE",
+      "vencimientos": "2360",
+      "monto_vencido": "$759,441,780.86",
+      "monto_por_vencer": "$985,659,508.25",
+      "por_vencer": "2756"
+    },
+    {
+      "division": "SURESTE",
+      "region": "DIR. REG. PENINSULAR",
+      "vencimientos": "1523",
+      "monto_vencido": "$347,391,678.52",
+      "monto_por_vencer": "$427,365,620.37",
+      "por_vencer": "1799"
+    },
+    {
+      "division": "SURESTE",
+      "region": "DIR. REG. PUEBLA TLAXCALA",
+      "vencimientos": "2020",
+      "monto_vencido": "$445,768,151.47",
+      "monto_por_vencer": "$508,952,054.13",
+      "por_vencer": "2268"
+    },
+    {
+      "division": "CENTRO",
+      "region": "DIR. REG. QUERETARO/BAJIO",
+      "vencimientos": "3099",
+      "monto_vencido": "$801,524,856.66",
+      "monto_por_vencer": "$876,937,307.38",
+      "por_vencer": "3450"
+    },
+    {
+      "division": "PACIFICO",
+      "region": "DIR. REG. SINALOA",
+      "vencimientos": "1524",
+      "monto_vencido": "$486,946,471.44",
+      "monto_por_vencer": "$522,172,773.00",
+      "por_vencer": "1652"
+    },
+    {
+      "division": "CENTRO",
+      "region": "DIR. REG. SLP/ZAC",
+      "vencimientos": "1450",
+      "monto_vencido": "$351,160,946.00",
+      "monto_por_vencer": "$366,275,824.91",
+      "por_vencer": "1506"
+    },
+    {
+      "division": "PACIFICO",
+      "region": "DIR. REG. SONORA",
+      "vencimientos": "1011",
+      "monto_vencido": "$272,343,934.42",
+      "monto_por_vencer": "$337,167,374.84",
+      "por_vencer": "1145"
+    },
+    {
+      "division": "SURESTE",
+      "region": "DIR. REG. TABASCO",
+      "vencimientos": "1536",
+      "monto_vencido": "$388,951,268.61",
+      "monto_por_vencer": "$482,685,009.39",
+      "por_vencer": "1852"
+    },
+    {
+      "division": "NORTE",
+      "region": "DIR. REG. TAMAULIPAS",
+      "vencimientos": "1570",
+      "monto_vencido": "$398,119,619.58",
+      "monto_por_vencer": "$456,506,633.61",
+      "por_vencer": "1675"
+    },
+    {
+      "division": "SURESTE",
+      "region": "DIR. REG. VERACRUZ",
+      "vencimientos": "2690",
+      "monto_vencido": "$662,890,725.99",
+      "monto_por_vencer": "$666,792,141.85",
+      "por_vencer": "2810"
+    },
+    {
+      "division": "TOTAL",
+      "region": "",
+      "vencimientos": "56286",
+      "monto_vencido": "$14,070,811,891.80",
+      "monto_por_vencer": "$16,275,305,448.65",
+      "por_vencer": "61097"
+    }
+  
+  ]

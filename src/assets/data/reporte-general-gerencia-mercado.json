@@ -1,0 +1,938 @@
+[
+  {
+    "division": "PACIFICO",
+    "region": "DIR. REG. SONORA",
+    "gerencia": "GCIA MERCADO CD.OBREGON",
+    "vencimientos": "396",
+    "monto_vencido": "$119,359,626.33",
+    "monto_por_vencer": "$337,167,374.84",
+    "por_vencer": "1145"
+  },
+  {
+    "division": "CENTRO",
+    "region": "DIR. REG. MEXICO HIDALGO",
+    "gerencia": "GCIA. MERCADO  PACHUCA",
+    "vencimientos": "993",
+    "monto_vencido": "$232,806,645.95",
+    "monto_por_vencer": "$1,226,789,023.87",
+    "por_vencer": "4842"
+  },
+  {
+    "division": "SURESTE",
+    "region": "DIR. REG. MORELOS GUERRERO",
+    "gerencia": "GCIA. MERCADO ACAPULCO",
+    "vencimientos": "404",
+    "monto_vencido": "$106,244,179.39",
+    "monto_por_vencer": "$930,207,981.54",
+    "por_vencer": "3291"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO CENTRO",
+    "gerencia": "GCIA. MERCADO AEROPUERTO",
+    "vencimientos": "665",
+    "monto_vencido": "$141,498,091.58",
+    "monto_por_vencer": "$967,489,266.85",
+    "por_vencer": "4014"
+  },
+  {
+    "division": "CENTRO",
+    "region": "DIR. REG. SLP/ZAC",
+    "gerencia": "GCIA. MERCADO AGUASCALIENTES",
+    "vencimientos": "488",
+    "monto_vencido": "$130,687,185.67",
+    "monto_por_vencer": "$366,275,824.91",
+    "por_vencer": "1506"
+  },
+  {
+    "division": "NORTE",
+    "region": "DIR. REG. MONTERREY",
+    "gerencia": "GCIA. MERCADO APODACA",
+    "vencimientos": "497",
+    "monto_vencido": "$109,673,238.88",
+    "monto_por_vencer": "$501,301,343.76",
+    "por_vencer": "1949"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO NORTE",
+    "gerencia": "GCIA. MERCADO ARAGON",
+    "vencimientos": "1028",
+    "monto_vencido": "$213,172,938.88",
+    "monto_por_vencer": "$1,403,565,566.99",
+    "por_vencer": "5557"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO CENTRO",
+    "gerencia": "GCIA. MERCADO BENITO JUAREZ",
+    "vencimientos": "430",
+    "monto_vencido": "$100,404,417.91",
+    "monto_por_vencer": "$967,489,266.85",
+    "por_vencer": "4014"
+  },
+  {
+    "division": "SURESTE",
+    "region": "DIR. REG. PENINSULAR",
+    "gerencia": "GCIA. MERCADO CANCUN 1",
+    "vencimientos": "147",
+    "monto_vencido": "$23,418,674.66",
+    "monto_por_vencer": "$427,365,620.37",
+    "por_vencer": "1799"
+  },
+  {
+    "division": "NORTE",
+    "region": "DIR. REG. CHIHUAHUA",
+    "gerencia": "GCIA. MERCADO CD. JUAREZ",
+    "vencimientos": "353",
+    "monto_vencido": "$73,422,427.73",
+    "monto_por_vencer": "$383,210,079.13",
+    "por_vencer": "1200"
+  },
+  {
+    "division": "CENTRO",
+    "region": "DIR. REG. QUERETARO/BAJIO",
+    "gerencia": "GCIA. MERCADO CELAYA",
+    "vencimientos": "860",
+    "monto_vencido": "$212,587,055.87",
+    "monto_por_vencer": "$876,937,307.38",
+    "por_vencer": "3450"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO CENTRO",
+    "gerencia": "GCIA. MERCADO CENTRO HISTORICO",
+    "vencimientos": "638",
+    "monto_vencido": "$142,433,990.03",
+    "monto_por_vencer": "$967,489,266.85",
+    "por_vencer": "4014"
+  },
+  {
+    "division": "NORTE",
+    "region": "DIR. REG. CHIHUAHUA",
+    "gerencia": "GCIA. MERCADO CHIHUAHUA",
+    "vencimientos": "403",
+    "monto_vencido": "$139,231,507.27",
+    "monto_por_vencer": "$383,210,079.13",
+    "por_vencer": "1200"
+  },
+  {
+    "division": "SURESTE",
+    "region": "DIR. REG. TABASCO",
+    "gerencia": "GCIA. MERCADO COATZACOALCOS",
+    "vencimientos": "633",
+    "monto_vencido": "$168,573,646.27",
+    "monto_por_vencer": "$482,685,009.39",
+    "por_vencer": "1852"
+  },
+  {
+    "division": "NORTE",
+    "region": "DIR. REG. MONTERREY",
+    "gerencia": "GCIA. MERCADO CONTRY",
+    "vencimientos": "416",
+    "monto_vencido": "$103,355,946.01",
+    "monto_por_vencer": "$501,301,343.76",
+    "por_vencer": "1949"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO SUR ORIENTE",
+    "gerencia": "GCIA. MERCADO COYOACAN",
+    "vencimientos": "631",
+    "monto_vencido": "$133,395,393.58",
+    "monto_por_vencer": "$1,043,157,446.76",
+    "por_vencer": "4411"
+  },
+  {
+    "division": "SURESTE",
+    "region": "DIR. REG. MORELOS GUERRERO",
+    "gerencia": "GCIA. MERCADO CUERNAVACA",
+    "vencimientos": "582",
+    "monto_vencido": "$158,960,958.93",
+    "monto_por_vencer": "$930,207,981.54",
+    "por_vencer": "3291"
+  },
+  {
+    "division": "PACIFICO",
+    "region": "DIR. REG. SINALOA",
+    "gerencia": "GCIA. MERCADO CULIACAN",
+    "vencimientos": "524",
+    "monto_vencido": "$143,927,473.47",
+    "monto_por_vencer": "$522,172,773.00",
+    "por_vencer": "1652"
+  },
+  {
+    "division": "NORTE",
+    "region": "DIR. REG. MONTERREY",
+    "gerencia": "GCIA. MERCADO CUMBRES",
+    "vencimientos": "206",
+    "monto_vencido": "$58,190,170.94",
+    "monto_por_vencer": "$501,301,343.76",
+    "por_vencer": "1949"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO NORTE",
+    "gerencia": "GCIA. MERCADO ECATEPEC",
+    "vencimientos": "983",
+    "monto_vencido": "$231,363,448.52",
+    "monto_por_vencer": "$1,403,565,566.99",
+    "por_vencer": "5557"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO PONIENTE",
+    "gerencia": "GCIA. MERCADO EMPRESAS CORP.",
+    "vencimientos": "37",
+    "monto_vencido": "$18,222,167.61",
+    "monto_por_vencer": "$820,191,039.17",
+    "por_vencer": "2985"
+  },
+  {
+    "division": "PACIFICO",
+    "region": "DIR. REG. BAJA CALIFORNIA",
+    "gerencia": "GCIA. MERCADO ENSENADA",
+    "vencimientos": "277",
+    "monto_vencido": "$82,164,315.43",
+    "monto_por_vencer": "$367,849,624.26",
+    "por_vencer": "1206"
+  },
+  {
+    "division": "PACIFICO",
+    "region": "DIR. REG. GUADALAJARA",
+    "gerencia": "GCIA. MERCADO GDL CENTRO",
+    "vencimientos": "409",
+    "monto_vencido": "$107,687,514.95",
+    "monto_por_vencer": "$727,762,031.77",
+    "por_vencer": "2486"
+  },
+  {
+    "division": "PACIFICO",
+   "region": "DIR. REG. GUADALAJARA",
+    "gerencia": "GCIA. MERCADO GDL INDUSTRIAL",
+    "vencimientos": "366",
+    "monto_vencido": "$98,006,867.37",
+    "monto_por_vencer": "$727,762,031.77",
+    "por_vencer": "2486"
+  },
+  {
+    "division": "PACIFICO",
+    "region": "DIR. REG. GUADALAJARA",
+    "gerencia": "GCIA. MERCADO GDL NORTE",
+    "vencimientos": "399",
+    "monto_vencido": "$100,489,043.44",
+    "monto_por_vencer": "$727,762,031.77",
+    "por_vencer": "2486"
+  },
+  {
+    "division": "PACIFICO",
+   "region": "DIR. REG. GUADALAJARA",
+    "gerencia": "GCIA. MERCADO GDL PONIENTE",
+    "vencimientos": "246",
+    "monto_vencido": "$80,713,736.71",
+    "monto_por_vencer": "$727,762,031.77",
+    "por_vencer": "2486"
+  },
+  {
+    "division": "PACIFICO",
+    "region": "DIR. REG. GUADALAJARA",
+    "gerencia": "GCIA. MERCADO GDL SUR",
+    "vencimientos": "362",
+    "monto_vencido": "$102,690,180.57",
+    "monto_por_vencer": "$727,762,031.77",
+    "por_vencer": "2486"
+  },
+  {
+    "division": "PACIFICO",
+    "region": "DIR. REG. GUADALAJARA",
+    "gerencia": "GCIA. MERCADO GDL TLAQUEPAQUE",
+    "vencimientos": "560",
+    "monto_vencido": "$136,187,994.35",
+    "monto_por_vencer": "$727,762,031.77",
+    "por_vencer": "2486"
+  },
+  {
+    "division": "CENTRO",
+    "region": "DIR. REG. GUANAJUATO",
+    "gerencia": "GCIA. MERCADO GUANAJUATO",
+    "vencimientos": "353",
+    "monto_vencido": "$85,893,148.89",
+    "monto_por_vencer": "$213,385,512.99",
+    "por_vencer": "760"
+  },
+  {
+    "division": "PACIFICO",
+    "region": "DIR. REG. SONORA",
+    "gerencia": "GCIA. MERCADO HERMOSILLO",
+    "vencimientos": "378",
+    "monto_vencido": "$84,120,189.64",
+    "monto_por_vencer": "$337,167,374.84",
+    "por_vencer": "1145"
+  },
+  {
+    "division": "CENTRO",
+    "region": "DIR. REG. QUERETARO/BAJIO",
+    "gerencia": "GCIA. MERCADO IRAPUATO",
+    "vencimientos": "907",
+    "monto_vencido": "$221,712,514.28",
+    "monto_por_vencer": "$876,937,307.38",
+    "por_vencer": "3450"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO NORTE",
+    "gerencia": "GCIA. MERCADO IZCALLI",
+    "vencimientos": "1002",
+    "monto_vencido": "$257,206,167.99",
+    "monto_por_vencer": "$1,403,565,566.99",
+    "por_vencer": "5557"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO SUR ORIENTE",
+    "gerencia": "GCIA. MERCADO IZTAPALAPA",
+    "vencimientos": "1092",
+    "monto_vencido": "$239,515,996.08",
+    "monto_por_vencer": "$1,043,157,446.76",
+    "por_vencer": "4411"
+  },
+  {
+    "division": "NORTE",
+    "region": "DIR. REG. COAHUILA/DURANGO",
+    "gerencia": "GCIA. MERCADO LA LAGUNA",
+    "vencimientos": "369",
+    "monto_vencido": "$95,387,192.31",
+    "monto_por_vencer": "$283,128,213.96",
+    "por_vencer": "1010"
+  },
+  {
+    "division": "CENTRO",
+    "region": "DIR. REG. GUANAJUATO",
+    "gerencia": "GCIA. MERCADO LEON",
+    "vencimientos": "409",
+    "monto_vencido": "$90,892,507.63",
+    "monto_por_vencer": "$213,385,512.99",
+    "por_vencer": "760"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO NORTE",
+    "gerencia": "GCIA. MERCADO LINDAVISTA",
+    "vencimientos": "964",
+    "monto_vencido": "$216,103,459.46",
+    "monto_por_vencer": "$1,403,565,566.99",
+    "por_vencer": "5557"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO PONIENTE",
+    "gerencia": "GCIA. MERCADO LOMAS",
+    "vencimientos": "405",
+    "monto_vencido": "$81,196,059.52",
+    "monto_por_vencer": "$820,191,039.17",
+    "por_vencer": "2985"
+  },
+  {
+    "division": "PACIFICO",
+    "region": "DIR. REG. SINALOA",
+    "gerencia": "GCIA. MERCADO LOS MOCHIS",
+    "vencimientos": "375",
+    "monto_vencido": "$167,346,440.13",
+    "monto_por_vencer": "$522,172,773.00",
+    "por_vencer": "1652"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO CENTRO",
+    "gerencia": "GCIA. MERCADO LOS REYES NEZA",
+    "vencimientos": "1095",
+    "monto_vencido": "$205,579,966.18",
+    "monto_por_vencer": "$967,489,266.85",
+    "por_vencer": "4014"
+  },
+  {
+    "division": "PACIFICO",
+    "region": "DIR. REG. SINALOA",
+    "gerencia": "GCIA. MERCADO MAZATLAN",
+    "vencimientos": "390",
+    "monto_vencido": "$87,242,239.99",
+    "monto_por_vencer": "$522,172,773.00",
+    "por_vencer": "1652"
+  },
+  {
+    "division": "PACIFICO",
+    "region": "DIR. REG. BAJA CALIFORNIA",
+    "gerencia": "GCIA. MERCADO MEXICALI",
+    "vencimientos": "334",
+    "monto_vencido": "$103,472,264.83",
+    "monto_por_vencer": "$367,849,624.26",
+    "por_vencer": "1206"
+  },
+  {
+    "division": "NORTE",
+    "region": "DIR. REG. MONTERREY",
+    "gerencia": "GCIA. MERCADO MONTERREY",
+    "vencimientos": "244",
+    "monto_vencido": "$46,169,495.79",
+    "monto_por_vencer": "$501,301,343.76",
+    "por_vencer": "1949"
+  },
+  {
+    "division": "CENTRO",
+    "region": "DIR. REG. MICHOACAN",
+    "gerencia": "GCIA. MERCADO MORELIA",
+    "vencimientos": "889",
+    "monto_vencido": "$253,862,191.54",
+    "monto_por_vencer": "$1,042,451,943.33",
+    "por_vencer": "3347"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO PONIENTE",
+    "gerencia": "GCIA. MERCADO NAUCALPAN",
+    "vencimientos": "768",
+    "monto_vencido": "$262,685,283.51",
+    "monto_por_vencer": "$820,191,039.17",
+    "por_vencer": "2985"
+  },
+  {
+    "division": "PACIFICO",
+    "region": "DIR. REG. SONORA",
+    "gerencia": "GCIA. MERCADO NOGALES-NTE SON",
+    "vencimientos": "237",
+    "monto_vencido": "$68,864,118.45",
+    "monto_por_vencer": "$337,167,374.84",
+    "por_vencer": "1145"
+  },
+  {
+    "division": "SURESTE",
+    "region": "DIR. REG. OAXACA",
+    "gerencia": "GCIA. MERCADO OAXACA",
+    "vencimientos": "1229",
+    "monto_vencido": "$262,272,257.97",
+    "monto_por_vencer": "$493,166,775.19",
+    "por_vencer": "2160"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO SUR ORIENTE",
+    "gerencia": "GCIA. MERCADO ORIENTE",
+    "vencimientos": "817",
+    "monto_vencido": "$170,128,612.23",
+    "monto_por_vencer": "$1,043,157,446.76",
+   "por_vencer": "4411"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO SUR ORIENTE",
+    "gerencia": "GCIA. MERCADO PEDREGAL",
+    "vencimientos": "509",
+    "monto_vencido": "$129,222,377.32",
+    "monto_por_vencer": "$1,043,157,446.76",
+    "por_vencer": "4411"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO PONIENTE",
+    "gerencia": "GCIA. MERCADO POLANCO",
+    "vencimientos": "481",
+    "monto_vencido": "$92,790,751.53",
+    "monto_por_vencer": "$820,191,039.17",
+    "por_vencer": "2985"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO CENTRO",
+    "gerencia": "GCIA. MERCADO PORTALES",
+    "vencimientos": "651",
+    "monto_vencido": "$137,596,845.94",
+    "monto_por_vencer": "$967,489,266.85",
+    "por_vencer": "4014"
+  },
+  {
+    "division": "SURESTE",
+    "region": "DIR. REG. PUEBLA TLAXCALA",
+    "gerencia": "GCIA. MERCADO PUEBLA 1",
+    "vencimientos": "531",
+    "monto_vencido": "$113,371,231.01",
+    "monto_por_vencer": "$508,952,054.13",
+    "por_vencer": "2268"
+  },
+  {
+    "division": "SURESTE",
+    "region": "DIR. REG. PUEBLA TLAXCALA",
+    "gerencia": "GCIA. MERCADO PUEBLA 2",
+    "vencimientos": "487",
+    "monto_vencido": "$110,528,546.43",
+    "monto_por_vencer": "$508,952,054.13",
+    "por_vencer": "2268"
+  },
+  {
+    "division": "CENTRO",
+    "region": "DIR. REG. QUERETARO/BAJIO",
+    "gerencia": "GCIA. MERCADO QUERETARO 1",
+    "vencimientos": "530",
+    "monto_vencido": "$120,243,628.03",
+    "monto_por_vencer": "$876,937,307.38",
+    "por_vencer": "3450"
+  },
+  {
+    "division": "CENTRO",
+    "region": "DIR. REG. QUERETARO/BAJIO",
+    "gerencia": "GCIA. MERCADO QUERETARO 2",
+    "vencimientos": "802",
+    "monto_vencido": "$246,981,658.48",
+    "monto_por_vencer": "$876,937,307.38",
+    "por_vencer": "3450"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO CENTRO",
+    "gerencia": "GCIA. MERCADO ROMA CONDESA",
+    "vencimientos": "400",
+    "monto_vencido": "$80,398,127.35",
+    "monto_por_vencer": "$967,489,266.85",
+    "por_vencer": "4014"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO SUR ORIENTE",
+    "gerencia": "GCIA. MERCADO SAN ANGEL",
+    "vencimientos": "425",
+    "monto_vencido": "$81,191,113.09",
+    "monto_por_vencer": "$1,043,157,446.76",
+    "por_vencer": "4411"
+  },
+  {
+    "division": "CENTRO",
+    "region": "DIR. REG. SLP/ZAC",
+    "gerencia": "GCIA. MERCADO SAN LUIS POTOSI",
+    "vencimientos": "730",
+    "monto_vencido": "$159,350,644.24",
+    "monto_por_vencer": "$366,275,824.91",
+    "por_vencer": "1506"
+  },
+  {
+    "division": "NORTE",
+    "region": "DIR. REG. MONTERREY",
+    "gerencia": "GCIA. MERCADO SAN NICOLAS",
+    "vencimientos": "348",
+    "monto_vencido": "$88,068,834.16",
+    "monto_por_vencer": "$501,301,343.76",
+    "por_vencer": "1949"
+  },
+  {
+    "division": "NORTE",
+    "region": "DIR. REG. MONTERREY",
+    "gerencia": "GCIA. MERCADO SAN PEDRO",
+    "vencimientos": "100",
+    "monto_vencido": "$38,384,554.65",
+    "monto_por_vencer": "$501,301,343.76",
+    "por_vencer": "1949"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO PONIENTE",
+    "gerencia": "GCIA. MERCADO SANTA FE",
+    "vencimientos": "518",
+    "monto_vencido": "$102,524,893.46",
+    "monto_por_vencer": "$820,191,039.17",
+    "por_vencer": "2985"
+  },
+  {
+    "division": "NORTE",
+    "region": "DIR. REG. TAMAULIPAS",
+    "gerencia": "GCIA. MERCADO TAMPICO",
+    "vencimientos": "518",
+    "monto_vencido": "$135,306,626.68",
+    "monto_por_vencer": "$456,506,633.61",
+    "por_vencer": "1675"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO NORTE",
+    "gerencia": "GCIA. MERCADO TEXCOCO",
+    "vencimientos": "562",
+    "monto_vencido": "$136,085,099.07",
+    "monto_por_vencer": "$1,403,565,566.99",
+    "por_vencer": "5557"
+  },
+  {
+    "division": "PACIFICO",
+    "region": "DIR. REG. BAJA CALIFORNIA",
+    "gerencia": "GCIA. MERCADO TIJUANA 1",
+    "vencimientos": "253",
+    "monto_vencido": "$76,201,102.63",
+    "monto_por_vencer": "$367,849,624.26",
+    "por_vencer": "1206"
+  },
+  {
+    "division": "PACIFICO",
+    "region": "DIR. REG. BAJA CALIFORNIA",
+    "gerencia": "GCIA. MERCADO TIJUANA 2",
+    "vencimientos": "392",
+    "monto_vencido": "$107,422,765.79",
+    "monto_por_vencer": "$367,849,624.26",
+    "por_vencer": "1206"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO PONIENTE",
+    "gerencia": "GCIA. MERCADO TLALNEPANTLA",
+    "vencimientos": "667",
+    "monto_vencido": "$168,550,735.63",
+    "monto_por_vencer": "$820,191,039.17",
+    "por_vencer": "2985"
+  },
+  {
+    "division": "CENTRO",
+    "region": "DIR. REG. MEXICO HIDALGO",
+    "gerencia": "GCIA. MERCADO TOLUCA 1",
+    "vencimientos": "558",
+    "monto_vencido": "$135,479,782.02",
+    "monto_por_vencer": "$1,226,789,023.87",
+    "por_vencer": "4842"
+  },
+  {
+    "division": "CENTRO",
+    "region": "DIR. REG. MEXICO HIDALGO",
+    "gerencia": "GCIA. MERCADO TOLUCA 2",
+    "vencimientos": "607",
+    "monto_vencido": "$138,477,528.47",
+    "monto_por_vencer": "$1,226,789,023.87",
+    "por_vencer": "4842"
+  },
+  {
+    "division": "SURESTE",
+    "region": "DIR. REG. CHIAPAS",
+    "gerencia": "GCIA. MERCADO TUXTLA GTZ",
+    "vencimientos": "495",
+    "monto_vencido": "$127,510,775.07",
+    "monto_por_vencer": "$241,135,351.35",
+    "por_vencer": "966"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO NORTE",
+    "gerencia": "GCIA. MERCADO VALLEJO",
+    "vencimientos": "705",
+    "monto_vencido": "$146,141,550.58",
+    "monto_por_vencer": "$1,403,565,566.99",
+    "por_vencer": "5557"
+  },
+  {
+    "division": "SURESTE",
+    "region": "DIR. REG. VERACRUZ",
+    "gerencia": "GCIA. MERCADO VERACRUZ",
+    "vencimientos": "482",
+    "monto_vencido": "$145,328,612.19",
+    "monto_por_vencer": "$666,792,141.85",
+    "por_vencer": "2810"
+  },
+  {
+    "division": "METROPOLITANA",
+    "region": "DIR. REG. METRO SUR ORIENTE",
+    "gerencia": "GCIA. MERCADO VILLACOAPA",
+    "vencimientos": "773",
+    "monto_vencido": "$151,774,732.88",
+    "monto_por_vencer": "$1,043,157,446.76",
+    "por_vencer": "4411"
+  },
+  {
+    "division": "SURESTE",
+    "region": "DIR. REG. VERACRUZ",
+    "gerencia": "GCIA. MERCADO XALAPA",
+    "vencimientos": "736",
+    "monto_vencido": "$173,588,711.37",
+    "monto_por_vencer": "$666,792,141.85",
+    "por_vencer": "2810"
+  },
+  {
+    "division": "SURESTE",
+    "region": "DIR. REG. PENINSULAR",
+    "gerencia": "GCIA. MERCADO YUCATAN",
+    "vencimientos": "536",
+    "monto_vencido": "$137,281,951.65",
+    "monto_por_vencer": "$427,365,620.37",
+    "por_vencer": "1799"
+  },
+  {
+    "division": "CENTRO",
+    "region": "DIR. REG. SLP/ZAC",
+    "gerencia": "GCIA. MERCADO ZACATECAS",
+    "vencimientos": "232",
+    "monto_vencido": "$61,123,116.09",
+    "monto_por_vencer": "$366,275,824.91",
+    "por_vencer": "1506"
+  },
+  {
+    "division": "PACIFICO",
+    "region": "DIR. REG. SINALOA",
+    "gerencia": "GCIA. REG. BAJA CALIFORNIA SUR",
+    "vencimientos": "235",
+    "monto_vencido": "$88,430,317.85",
+    "monto_por_vencer": "$522,172,773.00",
+    "por_vencer": "1652"
+  },
+  {
+    "division": "SURESTE",
+   "region": "DIR. REG. PUEBLA TLAXCALA",
+    "gerencia": "GCIA. REG. PUEBLA SUR",
+    "vencimientos": "462",
+    "monto_vencido": "$92,270,118.26",
+    "monto_por_vencer": "$508,952,054.13",
+    "por_vencer": "2268"
+  },
+  {
+    "division": "SURESTE",
+    "region": "DIR. REG. TABASCO",
+    "gerencia": "GCIA. REG. TABASCO",
+    "vencimientos": "458",
+    "monto_vencido": "$114,366,356.92",
+    "monto_por_vencer": "$482,685,009.39",
+    "por_vencer": "1852"
+  },
+  {
+    "division": "SURESTE",
+    "region": "DIR. REG. PUEBLA TLAXCALA",
+    "gerencia": "GCIA. REG. TLAXCALA - PUEBLA",
+    "vencimientos": "540",
+    "monto_vencido": "$129,598,255.77",
+    "monto_por_vencer": "$508,952,054.13",
+    "por_vencer": "2268"
+  },
+  {
+    "division": "SURESTE",
+    "region": "DIR. REG. PENINSULAR",
+    "gerencia": "GCIA. REGIONAL CAMPECHE",
+    "vencimientos": "612",
+    "monto_vencido": "$130,456,140.16",
+    "monto_por_vencer": "$427,365,620.37",
+    "por_vencer": "1799"
+  },
+  {
+    "division": "SURESTE",
+    "region": "DIR. REG. PENINSULAR",
+    "gerencia": "GCIA. REGIONAL CANCUN 2",
+    "vencimientos": "228",
+    "monto_vencido": "$56,234,912.05",
+    "monto_por_vencer": "$427,365,620.37",
+    "por_vencer": "1799"
+  },
+  {
+    "division": "NORTE",
+    "region": "DIR. REG. TAMAULIPAS",
+    "gerencia": "GCIA. REGIONAL CD. VICTORIA",
+    "vencimientos": "390",
+    "monto_vencido": "$103,947,931.29",
+    "monto_por_vencer": "$456,506,633.61",
+    "por_vencer": "1675"
+  },
+  {
+    "division": "SURESTE",
+    "region": "DIR. REG. CHIAPAS",
+    "gerencia": "GCIA. REGIONAL CHIAPAS",
+    "vencimientos": "339",
+    "monto_vencido": "$92,321,171.17",
+    "monto_por_vencer": "$241,135,351.35",
+    "por_vencer": "966"
+  },
+  {
+    "division": "NORTE",
+    "region": "DIR. REG. CHIHUAHUA",
+    "gerencia": "GCIA. REGIONAL CHIHUAHUA",
+    "vencimientos": "302",
+    "monto_vencido": "$103,360,836.21",
+    "monto_por_vencer": "$383,210,079.13",
+    "por_vencer": "1200"
+  },
+  {
+    "division": "PACIFICO",
+    "region": "DIR. REG. OCCIDENTE",
+    "gerencia": "GCIA. REGIONAL COLIMA",
+    "vencimientos": "541",
+    "monto_vencido": "$181,342,525.33",
+    "monto_por_vencer": "$985,659,508.25",
+    "por_vencer": "2756"
+  },
+  {
+    "division": "SURESTE",
+    "region": "DIR. REG. VERACRUZ",
+    "gerencia": "GCIA. REGIONAL CORDOBA",
+    "vencimientos": "839",
+    "monto_vencido": "$177,737,506.24",
+    "monto_por_vencer": "$666,792,141.85",
+    "por_vencer": "2810"
+  },
+  {
+    "division": "CENTRO",
+    "region": "DIR. REG. MICHOACAN",
+    "gerencia": "GCIA. REGIONAL CTO - ORIENTE",
+    "vencimientos": "891",
+    "monto_vencido": "$255,611,402.48",
+    "monto_por_vencer": "$1,042,451,943.33",
+    "por_vencer": "3347"
+  },
+  {
+    "division": "NORTE",
+    "region": "DIR. REG. COAHUILA/DURANGO",
+    "gerencia": "GCIA. REGIONAL DURANGO",
+    "vencimientos": "186",
+    "monto_vencido": "$36,332,897.80",
+    "monto_por_vencer": "$283,128,213.96",
+    "por_vencer": "1010"
+  },
+  {
+    "division": "SURESTE",
+    "region": "DIR. REG. MORELOS GUERRERO",
+    "gerencia": "GCIA. REGIONAL GUERRERO I",
+    "vencimientos": "716",
+    "monto_vencido": "$179,577,028.62",
+    "monto_por_vencer": "$930,207,981.54",
+    "por_vencer": "3291"
+  },
+  {
+    "division": "SURESTE",
+    "region": "DIR. REG. MORELOS GUERRERO",
+    "gerencia": "GCIA. REGIONAL GUERRERO II",
+    "vencimientos": "587",
+    "monto_vencido": "$137,326,384.72",
+    "monto_por_vencer": "$930,207,981.54",
+    "por_vencer": "3291"
+  },
+  {
+    "division": "CENTRO",
+    "region": "DIR. REG. MEXICO HIDALGO",
+    "gerencia": "GCIA. REGIONAL HIDALGO 1",
+    "vencimientos": "1170",
+    "monto_vencido": "$272,358,972.88",
+    "monto_por_vencer": "$1,226,789,023.87",
+    "por_vencer": "4842"
+  },
+  {
+    "division": "SURESTE",
+    "region": "DIR. REG. OAXACA",
+    "gerencia": "GCIA. REGIONAL ISTMO",
+    "vencimientos": "741",
+    "monto_vencido": "$197,626,615.43",
+    "monto_por_vencer": "$493,166,775.19",
+    "por_vencer": "2160"
+  },
+  {
+    "division": "SURESTE",
+    "region": "DIR. REG. MORELOS GUERRERO",
+    "gerencia": "GCIA. REGIONAL MORELOS",
+    "vencimientos": "627",
+    "monto_vencido": "$155,635,115.14",
+    "monto_por_vencer": "$930,207,981.54",
+    "por_vencer": "3291"
+  },
+  {
+    "division": "PACIFICO",
+    "region": "DIR. REG. OCCIDENTE",
+    "gerencia": "GCIA. REGIONAL NAYARIT",
+    "vencimientos": "614",
+    "monto_vencido": "$179,088,634.38",
+    "monto_por_vencer": "$985,659,508.25",
+    "por_vencer": "2756"
+  },
+  {
+    "division": "NORTE",
+    "region": "DIR. REG. TAMAULIPAS",
+    "gerencia": "GCIA. REGIONAL NUEVO LAREDO",
+    "vencimientos": "176",
+    "monto_vencido": "$43,362,079.38",
+    "monto_por_vencer": "$456,506,633.61",
+    "por_vencer": "1675"
+  },
+  {
+    "division": "PACIFICO",
+    "region": "DIR. REG. OCCIDENTE",
+    "gerencia": "GCIA. REGIONAL OCCIDENTE 1",
+    "vencimientos": "518",
+    "monto_vencido": "$172,726,857.07",
+    "monto_por_vencer": "$985,659,508.25",
+    "por_vencer": "2756"
+  },
+  {
+    "division": "PACIFICO",
+    "region": "DIR. REG. OCCIDENTE",
+    "gerencia": "GCIA. REGIONAL OCCIDENTE 2",
+    "vencimientos": "687",
+    "monto_vencido": "$226,283,764.08",
+    "monto_por_vencer": "$985,659,508.25",
+    "por_vencer": "2756"
+  },
+  {
+    "division": "NORTE",
+    "region": "DIR. REG. TAMAULIPAS",
+    "gerencia": "GCIA. REGIONAL REYNOSA",
+    "vencimientos": "486",
+    "monto_vencido": "$115,502,982.23",
+    "monto_por_vencer": "$456,506,633.61",
+    "por_vencer": "1675"
+  },
+  {
+    "division": "NORTE",
+    "region": "DIR. REG. COAHUILA/DURANGO",
+    "gerencia": "GCIA. REGIONAL SALTILLO",
+    "vencimientos": "374",
+    "monto_vencido": "$98,938,987.39",
+    "monto_por_vencer": "$283,128,213.96",
+    "por_vencer": "1010"
+  },
+  {
+   "division": "CENTRO",
+    "region": "DIR. REG. MICHOACAN",
+    "gerencia": "GCIA. REGIONAL URUAPAN",
+    "vencimientos": "427",
+    "monto_vencido": "$144,987,563.87",
+    "monto_por_vencer": "$1,042,451,943.33",
+    "por_vencer": "3347"
+  },
+  {
+    "division": "SURESTE",
+    "region": "DIR. REG. VERACRUZ",
+    "gerencia": "GCIA. REGIONAL VERACRUZ NTE. 1",
+    "vencimientos": "633",
+    "monto_vencido": "$166,235,896.19",
+    "monto_por_vencer": "$666,792,141.85",
+    "por_vencer": "2810"
+  },
+  {
+    "division": "SURESTE",
+    "region": "DIR. REG. TABASCO",
+    "gerencia": "GCIA. REGIONAL VILLAHERMOSA",
+    "vencimientos": "445",
+    "monto_vencido": "$106,011,265.42",
+    "monto_por_vencer": "$482,685,009.39",
+    "por_vencer": "1852"
+  },
+  {
+    "division": "CENTRO",
+    "region": "DIR. REG. MICHOACAN",
+    "gerencia": "GCIA. REGIONAL ZAMORA",
+    "vencimientos": "764",
+    "monto_vencido": "$259,787,679.96",
+    "monto_por_vencer": "$1,042,451,943.33",
+    "por_vencer": "3347"
+  },
+  {
+    "division": "CENTRO",
+    "region": "DIR. REG. MEXICO HIDALGO",
+    "gerencia": "GERENCIA REGIONAL ESTADO DE MEXICO",
+    "vencimientos": "1080",
+    "monto_vencido": "$243,906,452.98",
+    "monto_por_vencer": "$1,226,789,023.87",
+    "por_vencer": "4842"
+  },
+  {
+    "division": "TOTAL",
+    "region": "",
+    "gerencia": "",
+    "vencimientos": "56286",
+    "monto_vencido": "$14,070,811,891.80",
+    "monto_por_vencer": "$74,437,310,409.32",
+    "por_vencer": "280840"
+  }
+]

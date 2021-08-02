@@ -1,0 +1,126 @@
+
+[
+  {
+  "id":1,
+  "fechaAlta": "02-02-2020",
+  "campana":"Aqui tu dinero gana 2020",
+  "nombreMovile": "Tarjeta azul 2x1 Buen Fin",
+  "tipo": "1 Vía",
+  "usuario" : "Josue Vargas",
+  "keyword": "",
+  "conceptoBoletin": "CAPTACION-INVERSIONES",
+  "gerencia": "3323-CAPTACION",
+  "vigencia": "Temporal",
+  "fechaVigencia":  "2021-02-02"
+  },
+
+  {
+    "id":2,
+    "fechaAlta": "10-10-2020",
+    "campana":"Aqui tu dinero gana 2020",
+    "nombreMovile": "Tarjeta azul 2x1 Buen Fin",
+    "tipo": "1 Vía",
+    "usuario" : "Alejandra Romero",
+    "keyword": "",
+    "conceptoBoletin": "CAPTACION-INVERSIONES",
+    "gerencia": "3323-CAPTACION",
+    "vigencia": "Temporal",
+    "fechaVigencia":  "2021-01-01"
+    },
+    {
+      "id":3,
+      "fechaAlta": "10-10-2020",
+      "campana":"Aqui tu dinero gana 2020",
+      "nombreMovile": "Tarjeta azul 2x1 Buen Fin",
+      "tipo": "1 Vía",
+      "usuario" : "Alejandra Romero",
+      "keyword": "",
+      "conceptoBoletin": "CAPTACION-INVERSIONES",
+      "gerencia": "3323-CAPTACION",
+      "vigencia": "Temporal",
+      "fechaVigencia":  "2021-01-01"
+      },
+      {
+        "id":4,
+        "fechaAlta": "10-10-2020",
+        "campana":"Aqui tu dinero gana 2020",
+        "nombreMovile": "Tarjeta azul 2x1 Buen Fin",
+        "tipo": "1 Vía",
+        "usuario" : "Alejandra Romero",
+        "keyword": "",
+        "conceptoBoletin": "CAPTACION-INVERSIONES",
+        "gerencia": "3323-CAPTACION",
+        "vigencia": "Temporal",
+        "fechaVigencia":  "2021-01-01"
+        },
+        {
+          "id":7,
+          "fechaAlta": "10-10-2020",
+          "campana":"Aqui tu dinero gana 2020",
+          "nombreMovile": "Tarjeta azul 2x1 Buen Fin",
+          "tipo": "1 Vía",
+          "usuario" : "Alejandra Romero",
+          "keyword": "",
+          "conceptoBoletin": "CAPTACION-INVERSIONES",
+          "gerencia": "3323-CAPTACION",
+          "vigencia": "Temporal",
+          "fechaVigencia":  "2021-01-01"
+          },
+          {
+            "id":9,
+            "fechaAlta": "10-10-2020",
+            "campana":"Aqui tu dinero gana 2020",
+            "nombreMovile": "Tarjeta azul 2x1 Buen Fin",
+            "tipo": "1 Vía",
+            "usuario" : "Alejandra Romero",
+            "keyword": "",
+            "conceptoBoletin": "CAPTACION-INVERSIONES",
+            "gerencia": "3323-CAPTACION",
+            "vigencia": "Temporal",
+            "fechaVigencia":  "2021-01-01"
+            },
+            {
+              "id":10,
+              "fechaAlta": "10-10-2020",
+              "campana":"Aqui tu dinero gana 2020",
+              "nombreMovile": "Tarjeta azul 2x1 Buen Fin",
+              "tipo": "1 Vía",
+              "usuario" : "Alejandra Romero",
+              "keyword": "",
+              "conceptoBoletin": "CAPTACION-INVERSIONES",
+              "gerencia": "3323-CAPTACION",
+              "vigencia": "Temporal",
+              "fechaVigencia":  "2021-01-01"
+              },
+              {
+                "id":17,
+                "fechaAlta": "10-10-2020",
+                "campana":"Aqui tu dinero gana 2020",
+                "nombreMovile": "Tarjeta azul 2x1 Buen Fin",
+                "tipo": "1 Vía",
+                "usuario" : "Alejandra Romero",
+                "keyword": "",
+                "conceptoBoletin": "CAPTACION-INVERSIONES",
+                "gerencia": "3323-CAPTACION",
+                "vigencia": "Temporal",
+                "fechaVigencia":  "2021-01-01"
+                },
+                {
+                  "id":99,
+                  "fechaAlta": "10-10-2020",
+                  "campana":"Aqui tu dinero gana 2020",
+                  "nombreMovile": "Tarjeta azul 2x1 Buen Fin",
+                  "tipo": "1 Vía",
+                  "usuario" : "Alejandra Romero",
+                  "keyword": "",
+                  "conceptoBoletin": "CAPTACION-INVERSIONES",
+                  "gerencia": "3323-CAPTACION",
+                  "vigencia": "Temporal",
+                  "fechaVigencia":  "2021-01-01"
+                  }
+
+
+
+
+  ]
+

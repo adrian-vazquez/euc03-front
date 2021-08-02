@@ -1,0 +1,60 @@
+<div class="topbar">
+    <nav class="navbar  top-navbar navbar-expand-mb navbar-light section">
+        <div class="container-fluid all-size">
+            <div class="row w-100 p-0 m-0">
+                <div class="col-2" style="float: left;">
+                    <img class="img-position pt-4" style="max-width: 80%;" alt="Citi Banamex" [src]="iconBanco">
+                </div>
+                <div class="col">
+                    <nav class="container-fluid all-size navbar-style pt-3">
+                        <ul [ngClass]="classMenu" (click)="hideMenu()" (mouseenter)="showMenu()">
+                            <li>
+                                <a class="title-menu">Perfilador</a>
+                            </li>
+                            <li>
+                                <a class="title-menu">Tip's Aclaraciones</a>
+                            </li>
+                            <li>
+                                <a class="title-menu">Citibanamex vs Otros</a>
+                            </li>
+                            <li>
+                                <a class="title-menu">Campañas Pagaré</a>
+                            </li>
+                            <li>
+                                <a class="title-menu">Uso Herramienta</a>
+                            </li>
+                            <li>
+                                <a class="title-menu">Formulario Edición</a>
+                            </li>
+                            <li>
+                                <a class="title-menu">Funciones de configuración</a>
+                                <div class="submenu-right" style="position: absolute;">
+                                    <ul>
+                                        <li>
+                                            <a class="title-menu">Menú de Administración</a>
+                                        </li>
+                                        <li>
+                                            <a class="title-menu">Salir</a>
+                                        </li>
+                                        <li>
+                                            <a class="title-menu">PDF para el sistema</a>
+                                        </li>
+                                        <li>
+                                            <a class="title-menu">Comparativo</a>
+                                        </li>
+                                        <li>
+                                            <a class="title-menu">Imagen Principal</a>
+                                        </li>
+                                        <li>
+                                            <a class="title-menu">Catálogos</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
