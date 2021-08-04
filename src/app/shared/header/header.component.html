@@ -9,47 +9,46 @@
                     <nav class="container-fluid all-size navbar-style pt-3">
                         <ul [ngClass]="classMenu" (click)="hideMenu()" (mouseenter)="showMenu()">
                             <li>
-                                <a class="title-menu" [routerLink]="['perfilador/index']" routerLinkActive="true">Perfilador</a>
-                            </li>
-                            <li>
-                                <a class="title-menu" [routerLink]="['tipsaclaraciones/index']" routerLinkActive="true">Tip's Aclaraciones</a>
-                            </li>
-                            <li>
-                                <a class="title-menu" [routerLink]="['citivsotros/index']" routerLinkActive="true">Citibanamex vs Otros</a>
-                            </li>
-                            <li>
-                                <a class="title-menu" [routerLink]="['campaniaspagare/index']" routerLinkActive="true">Campañas Pagaré</a>
-                            </li>
-                            <li>
-                                <a class="title-menu" [routerLink]="['usoherramienta/index']" routerLinkActive="true">Uso Herramienta</a>
-                            </li>
-                            <li>
-                                <a class="title-menu" [routerLink]="['formularioedicion/index']" routerLinkActive="true">Formulario Edición</a>
-                            </li>
-                            <li>
-                                <a class="title-menu">Funciones de configuración</a>
-                                <div class="submenu-right" style="position: absolute;">
+                                <a class="title-menu">Perfilador</a>
+                                <div class="submenu-right">
                                     <ul>
                                         <li>
-                                            <a class="title-menu">Menú de Administración</a>
+                                            <a class="title-menu" [routerLink]="['perfilador']" routerLinkActive="true">Perfilador</a>
                                         </li>
                                         <li>
-                                            <a class="title-menu">Salir</a>
-                                        </li>
-                                        <li>
-                                            <a class="title-menu">PDF para el sistema</a>
-                                        </li>
-                                        <li>
-                                            <a class="title-menu">Comparativo</a>
-                                        </li>
-                                        <li>
-                                            <a class="title-menu">Imagen Principal</a>
-                                        </li>
-                                        <li>
-                                            <a class="title-menu">Catálogos</a>
+                                            <a class="title-menu" [routerLink]="['aclaraciones']" routerLinkActive="true">Aclaraciones</a>
                                         </li>
                                     </ul>
                                 </div>
+                            </li>
+                            <li>
+                                <a class="title-menu">Solicitud de inversiones</a>
+                                <div class="submenu-right">
+                                    <ul>
+                                        <li>
+                                            <a class="title-menu" [routerLink]="['vista-ejecutivo']" routerLinkActive="true">Vista Ejecutivo</a>
+                                        </li>
+                                        <li>
+                                            <a class="title-menu" [routerLink]="['solicitudes-especiales']" routerLinkActive="true">Solicitudes especiales</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="title-menu">Sitio EUC</a>
+                                <div class="submenu-right">
+                                    <ul>
+                                        <li>
+                                            <a class="title-menu" [routerLink]="['control-tasas']" routerLinkActive="true">Control de tasas</a>
+                                        </li>
+                                        <li>
+                                            <a class="title-menu" [routerLink]="['reportes-EUC']" routerLinkActive="true">reportes EUC</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="title-menu" [routerLink]="['formularioedicion/index']" routerLinkActive="true">Formulario Edición</a>
                             </li>
                         </ul>
                     </nav>

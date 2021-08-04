@@ -2,8 +2,9 @@ import { Component, OnInit } from "@angular/core";
 
 @Component({
     selector: 'app-views',
-    templateUrl: './views.component.html',
-    styleUrls: ['./views.component.scss']
+    template:`  
+                <router-outlet></router-outlet>
+            `
 })
 
 export class ViewsComponent implements OnInit {

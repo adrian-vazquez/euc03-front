@@ -20,6 +20,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { AddHeaderInterceptor } from './app.http.request.interceptor';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
+import { ViewsModule } from './views/views.module';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -44,7 +45,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     ReactiveFormsModule,
     FormsModule,
     FontAwesomeModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ViewsModule
   ],
   providers: [
     {

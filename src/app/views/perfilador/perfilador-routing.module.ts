@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { IndexComponent } from './index/index.component';
+import { PerfiladorComponent } from './perfilador/perfilador.component';
+import { AclaracionesComponent } from './aclaraciones/aclaraciones.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'perfilador', pathMatch: 'full' },
-  { path: 'index', component: IndexComponent }
+    { path: 'perfilador', component: PerfiladorComponent },
+    { path: 'aclaraciones', component: AclaracionesComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
 })
-export class PerfiladorRoutingModule { }
+export class PerfiladorRoutingModule {}
