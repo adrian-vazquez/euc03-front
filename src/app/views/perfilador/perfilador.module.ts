@@ -6,6 +6,7 @@ import { PerfiladorComponent } from './perfilador/perfilador.component';
 import { PerfiladorRoutingModule } from './perfilador-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 const COMPONENTS = [
   AclaracionesComponent,
@@ -18,7 +19,8 @@ const COMPONENTS = [
     CommonModule,
     PerfiladorRoutingModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    PdfViewerModule
   ],
   exports:[
   ]
