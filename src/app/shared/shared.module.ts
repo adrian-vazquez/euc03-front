@@ -7,10 +7,14 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 //directives
 import { OnlyNumber } from './directives/only-number.directive';
+import { ModalComponent } from './components/modal/modal.component';
+import { SliderComponent } from './components/slider/slider.component';
 
 const COMPONENTS = [
   HeaderComponent,
-  FooterComponent
+  FooterComponent,
+  ModalComponent, 
+  SliderComponent
 ]
 
 const DIRECTIVES = [
