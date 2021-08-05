@@ -1,0 +1,9 @@
+<!-- <div [ngClass]="[active ? 'abrir' : 'cerrar']"> -->
+<div [ngStyle]="{'display': (active) ? 'block' : 'none'}">
+    <div class="simplemodal-overlay"></div>
+    <div class="modal" style="z-index: 1;">
+        <div [ngClass]="[size === 'g' ? 'cuadro cuadroG' : (size === 'xg' ? 'cuadro cuadroXG': 'cuadro cuadroM')]" cdkGrag>
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

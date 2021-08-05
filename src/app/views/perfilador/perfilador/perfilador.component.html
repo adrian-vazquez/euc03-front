@@ -1,1 +1,186 @@
-<p>perfilador works!</p>
+<div class="container-header">
+    <div class="row pt-2">
+        <div class="col-3">
+        </div>
+        <div class="col container justify-content-center banner" [ngStyle]="{'display': (showBanner) ? 'block' : 'none'}">
+            <label class="bienvenido pt-2 pr-2" style="text-align: left;">¡Atención sucursales!</label><label class="txt-user pt-2 pr-2">Ofrece a tus clientes las ofertas de retención Digital</label>
+            <button type="button" class="close" aria-label="Close" (click)="closeBanner()" style="text-align: left;">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="col-3">
+        </div>
+    </div>
+    <div class="row pt-3">
+        <div class="col-8">
+            <h4>{{titulo}}</h4>
+        </div>
+        <div class="col">
+            <div class="row">
+                <label class="bienvenido pt-2 pr-2" style="text-align: left;">BIENVENIDO</label><label class="txt-user pt-2 pr-2">{{user}}</label>
+                <button type="button" class="btn btn-danger btn-sm btn-border mb-4" style="text-align: right;">Cerrar Sesión</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid pt-1">
+    <!-- Slider Header -->
+    <app-slider></app-slider>
+    <!-- End Slider -->
+    <div class="container justify-content-center mt-2">
+        <form [formGroup]="form">
+            <div class="row">
+                <div class="col">
+                    <label class="bienvenido pt-2 pr-2" style="text-align: left;">APERTURA DE CUENTA INVERSIÓN</label>
+                    <div class="separador" style="width: 85%;"></div>
+                    <div class="row">
+                        <div class="col">
+                            <label class="texto-general"><b>¿Eres cliente Citibanamex?</b></label>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-outline-info btn-border btn-sm ml-2" (click)="valFormYes()">Sí</button>
+                            <button class="btn btn-outline-info btn-border btn-sm ml-2" (click)="valFormNo()">No</button>
+                        </div>
+                    </div>
+                    <div class="form-group row pt-4">
+                        <div class="col-3">
+                            <div class="form-group">
+                                <div *ngIf="showCliente==0">
+                                    <label class="texto-general"><b>No. de Cliente: </b></label><br>
+                                    <label class="texto-general pt-4"><b>Monto a Invertir: </b></label>
+                                </div>
+                                <div *ngIf="showCliente==1">
+                                    <label class="texto-general pt-4"><b>Monto a Invertir: </b></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group">
+                                <div *ngIf="showCliente==0">
+                                    <input type="text" class="form-control form-control-sm redondear" (blur)="getCliente($event)"
+                                        formControlName="cliente" pattern="^[0-9]" PatternOnlyDirective maxlength="6">
+                                    <input type="text" class="form-control form-control-sm mt-2 redondear" 
+                                    formControlName="monto" pattern="^[0-9]" [(ngModel)]="monto" PatternOnlyDirective maxlength="6">
+                                </div>
+                                <div *ngIf="showCliente==1">
+                                    <input type="text" class="form-control form-control-sm mt-2 redondear" 
+                                    formControlName="monto" pattern="^[0-9]" [(ngModel)]="monto" PatternOnlyDirective maxlength="6">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="showCliente!=-1">
+                        <div class="row pt-2">
+                            <div class="col-3">
+                            </div>
+                            <div class="col-6">
+                                <button type="button" class="btn btn-warning btn-sm m-1 btn-border" (click)="abrirmodal()">Calcular</button>
+                                <button type="button" class="btn btn-success btn-sm m-1 btn-border">Imprimir Selección</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div *ngIf="showImaCliente!=-1">
+                        <div *ngIf="showCliente!=-1">
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="etiqueta-dato">
+                                        <label class="texto-general"><b>Saldo 1</b></label>
+                                        <div class="separador" style="width: 100%;"></div>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <div class="etiqueta-dato">
+                                        <label class="texto-general"><b>Tipo de Persona</b></label>
+                                        <div class="separador" style="width: 100%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-5" style="text-align: center;">
+                                    <!-- <input type="text" class="form-control form-control-sm input-dato"> -->
+                                    <button class="btn btn-outline-info ml-2" (click)="setSaldo()">{{valSaldo}}</button>
+                                </div>
+                                <div class="col-5" style="text-align: center;">
+                                    <!-- <input type="text" class="form-control form-control-sm input-dato"> -->
+                                    <button class="btn btn-outline-info ml-2">{{valTipoPersona}}</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="showImaCliente==-1">
+                        <div class="row">
+                            <div class="col-4" style="float: left;">
+                                <img class="img-position pt-4" style="max-width: 95%;" alt="Citi Info" [src]="iconH">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <app-modal [active]="active" (envio)="cerrarPopup()" [size]="'g'">
+            <div class="modal-header">
+                <h3 class="modal-title" style="margin: 0;">
+                    <b>Información adicional</b>
+                </h3>
+                <button type="button" class="close" data-dismiss="modal" arial-label="Cerrar" (click)="cerrarPopup()">
+                    <span class="m-1" aria-hidden="true">x</span>
+                </button>
+            </div>
+            <div class="contModal pt-2">
+                <div class="row">
+                    <table class="table small" style="border-radius: 20px;">
+                        <tr style="background-color: blue; color: white;">
+                          <th>CLIENTE</th>
+                          <th>NÓMINA</th>
+                          <th>EJECUTIVO</th>
+                          <th>SIRH</th>
+                          <th>DETALLE</th>
+                        </tr>
+                        <tr style="background-color: gray; color: white;">
+                            <td style="background-color: red;">Admin</td>
+                            <td>$1K</td>
+                            <td>USER TEST(ADMIN)</td>
+                            <td>1</td>
+                            <td>Detalle prueba hardcode</td>
+                        </tr>
+                    </table>
+                </div>
+                <label class="texto-general"><b>Información complementaria</b></label>
+                <form [formGroup]="form" class="contModal small">
+                    <div class="form-group row mb-2">
+                        <label class="col-sm-4 col-form-label text-left texto-general">* Número del Cliente:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control form-control-sm redondear" 
+                                formControlName="numcliente" pattern="^[0-9]" PatternOnlyDirective maxlength="6">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-2">
+                        <label class="col-sm-4 col-form-label text-left texto-general">* Nombre del Cliente:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control form-control-sm redondear" 
+                                formControlName="nomcliente" pattern="^[0-9]" PatternOnlyDirective maxlength="6">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-2">
+                        <label class="col-sm-4 col-form-label text-left texto-general">* Contrato:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control form-control-sm redondear" 
+                                formControlName="contrato" pattern="^[0-9]" PatternOnlyDirective maxlength="6">
+                        </div>
+                        <div class="col-sm-4 custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                            <label class="custom-control-label" for="customSwitch1">Habilitar contrato</label>
+                        </div>
+                    </div>
+                </form>
+                <label class="texto-general pt-4" style="color: red;"><b>*Campos obligatorios</b></label>
+                <div class="botones-modal pt-4">
+                    <button class="col-4 btn btn-success btn-border m-2" style="background-color: #00c851 !important;">Aceptar</button>
+                    <button class="col-4 btn btn-danger btn-border m-2" (click)="cerrarPopup()">Cancelar</button>
+                </div>
+            </div>
+        </app-modal>
+    </div>
+</div>

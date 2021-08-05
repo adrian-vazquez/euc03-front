@@ -1,0 +1,102 @@
+div.modal {
+    display: block;
+}
+
+.simplemodal-overlay {
+    background-color: #FFF;
+    overflow-y: auto;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    z-index: 1;
+}
+
+.simplemodal-header {
+    text-align: center;
+    background-color: #1D4E8A;
+    color: #FFFFFF;
+    padding: 8px;
+    font-size: 14px;
+    width: 100%;
+}
+
+#simplemodal-container {
+    width: 550px;
+    *width:620px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border: 1px solid #AAB7CE;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+.modal-header {
+    text-align: center !important;
+    background-color: #83cefa;
+    width: 100%;
+    cursor: move;
+}
+
+.modal-title{
+    color: #FFFFFF;
+}
+
+.simplemodal-body {
+    padding: 10px;
+}
+
+.cuadro {
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    text-align: center;
+    border: 1px solid #E0E0DE;
+    -moz-box-shadow: 0 0rem 1rem rgba(0,0,0,0.175);
+    -webkit-box-shadow: 0 0rem 1rem rgba(0,0,0,0.175);
+    box-shadow: 0 0rem 1rem rgba(0,0,0,0.175);
+    color: #000;
+    max-width: 90vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    margin-top: 12vh;
+}
+
+.cuadroG {
+    width: 750px;
+}
+
+.cuadroXG {
+    width: 1000px;
+}
+
+.cuadroM {
+    width: 500px;
+}
+
+.cuadroCh {
+    width:320px;
+}
+
+.btnCerrar {
+    text-align: right;
+    display: block;
+    width: 100%;
+}
+
+.btnCerrar img {
+    width: 23px;
+    cursor: pointer;
+}
+
+.contModal {
+    width: 94%;
+    margin: 15px auto;
+}
+
+option:nth-child(even){
+    background-color: rgb(244, 244, 244);
+}

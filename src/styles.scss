@@ -1,10 +1,13 @@
+/* Css para modal global */
+@import url('assets/scss/modal.scss');
+
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800');
 
-.modal {
+/* .modal {
     display: block !important;
-}
+} */
 
 .text-center {
     text-align: center;
@@ -184,6 +187,9 @@ h4 {
     border-radius: 11px !important;
 }
 
+.btn-border {
+    border-radius: 7px !important;
+}
 
 .etiqueta-dato{
     text-align: center;
@@ -202,5 +208,6 @@ h4 {
     background-color: lightgray;
     border-radius: 8px;
 }
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
