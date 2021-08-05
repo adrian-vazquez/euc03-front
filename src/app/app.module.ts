@@ -21,6 +21,7 @@ import { AddHeaderInterceptor } from './app.http.request.interceptor';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 import { ViewsModule } from './views/views.module';
+import { SharedModule } from './shared/shared.module';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -46,7 +47,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     FormsModule,
     FontAwesomeModule,
     AppRoutingModule,
-    ViewsModule
+    ViewsModule,
+    SharedModule
   ],
   providers: [
     {

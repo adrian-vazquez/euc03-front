@@ -1,18 +1,28 @@
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+//components
 import { SharedRoutingModule } from './shared-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ModalComponent } from './components/modal/modal.component';
-import { SliderComponent } from './components/slider/slider.component';
-import { IvyCarouselModule } from 'angular-responsive-carousel';
+//directives
+import { OnlyNumber } from './directives/only-number.directive';
 
+const COMPONENTS = [
+  HeaderComponent,
+  FooterComponent
+]
 
+const DIRECTIVES = [
+  OnlyNumber
+]
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, ModalComponent, SliderComponent],
-  exports:[HeaderComponent, FooterComponent, ModalComponent, SliderComponent],
+  declarations: [...COMPONENTS, ...DIRECTIVES],
+  exports:[
+    COMPONENTS,
+    DIRECTIVES
+  ],
   imports: [
     CommonModule,
     SharedRoutingModule,

@@ -1,1 +1,33 @@
-<p>vista-ejecutivo works!</p>
+<div>
+  <label><h1>Consulta de solicitud de tasas</h1></label>
+</div>
+
+<div class="row">
+    <div class="col col-md-8 input-group">
+          <div class="input-group-prepend">
+              <label class="input-group-text">Nómina ejecutivo</label>
+          </div>
+        <input 
+          [OnlyNumber]="true"
+          type="text"
+          class="form-control" 
+          placeholder="No. nómina"
+          aria-describedby="basic-addon2"
+        />
+          <div class="input-group-prepend">
+              <label class="input-group-text">Cliente</label>
+          </div>
+        <input
+          [OnlyNumber]="true"
+          type="text"
+          class="form-control"
+          placeholder="No. Cliente"
+          aria-describedby="basic-addon2"
+        />
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" (click)="searchClient()" ><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+</div>
+
+
