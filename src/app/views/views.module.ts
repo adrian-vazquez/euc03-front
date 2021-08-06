@@ -26,7 +26,8 @@ const COMPONENTS = [
     ReactiveFormsModule
   ],
   exports:[
-    SharedModule,
+    SharedModule
   ]
 })
+
 export class ViewsModule { }

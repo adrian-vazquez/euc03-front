@@ -9,12 +9,15 @@ import { FooterComponent } from './footer/footer.component';
 import { OnlyNumber } from './directives/only-number.directive';
 import { ModalComponent } from './components/modal/modal.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { NavconfigComponent } from './navconfig/navconfig.component';
+import { RouterModule } from '@angular/router';
 
 const COMPONENTS = [
   HeaderComponent,
   FooterComponent,
   ModalComponent, 
-  SliderComponent
+  SliderComponent,
+  NavconfigComponent
 ]
 
 const DIRECTIVES = [
@@ -22,7 +25,7 @@ const DIRECTIVES = [
 ]
 
 @NgModule({
-  declarations: [...COMPONENTS, ...DIRECTIVES],
+  declarations: [...COMPONENTS, ...DIRECTIVES ],
   exports:[
     COMPONENTS,
     DIRECTIVES
@@ -30,7 +33,8 @@ const DIRECTIVES = [
   imports: [
     CommonModule,
     SharedRoutingModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+    RouterModule
   ]
 })
 export class SharedModule { }
