@@ -10,7 +10,7 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 const COMPONENTS = [
   AclaracionesComponent,
-  PerfiladorComponent
+  PerfiladorComponent,
 ]
 
 @NgModule({

@@ -24,5 +24,11 @@ export class HeaderComponent implements OnInit {
   hideMenu(){
     this.classMenu = 'dropdown close-menu';
   }
+  
+  showSubSubMenu( isShow ): void {
+    debugger
+    let subSubMenu: HTMLElement = (document.querySelector('.sub-submenu-right') as HTMLElement)
+    subSubMenu.style.display = isShow ? 'block' : 'none';
+  }
 
 }

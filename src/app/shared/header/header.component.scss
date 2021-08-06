@@ -83,3 +83,11 @@
     color: #056DAE;
 }
 
+.sub-submenu-right {
+    display: none;
+    ul {
+        left: 200px !important;
+        width: 180px !important;
+    }
+}
+
