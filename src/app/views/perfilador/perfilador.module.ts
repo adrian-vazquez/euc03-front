@@ -9,11 +9,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { CitivsotrosComponent } from './citivsotros/citivsotros.component';
 import { ConfigRoutingModule } from './config/config-routing.module';
+import { ConfigModule } from './config/config.module';
+import { CampaniaspagareComponent } from './campaniaspagare/campaniaspagare.component';
 
 const COMPONENTS = [
   AclaracionesComponent,
   PerfiladorComponent,
-  CitivsotrosComponent
+  CitivsotrosComponent,
+  CampaniaspagareComponent
 ]
 
 @NgModule({
@@ -21,10 +24,10 @@ const COMPONENTS = [
   imports: [
     CommonModule,
     PerfiladorRoutingModule,
-    ConfigRoutingModule,
     SharedModule,
     ReactiveFormsModule,
-    PdfViewerModule
+    PdfViewerModule,
+    ConfigRoutingModule
   ],
   exports:[
   ]

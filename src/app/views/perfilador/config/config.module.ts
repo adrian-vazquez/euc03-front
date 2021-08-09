@@ -31,7 +31,10 @@ const COMPONENTS = [
     CommonModule,
     ConfigRoutingModule,
     SharedModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
+  ],
+  exports: [
+    
   ]
 })
 export class ConfigModule { }

@@ -1,0 +1,139 @@
+<div class="container-xxl pt-2">
+    <form [formGroup]="form">
+        <div class="card">
+            <div class="card-header" style="text-align: center !important; background-color: #056DAE;">
+                <label class="texto-general" style="color: white;"><b>{{titulo}}</b></label>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <label class="texto-general col-sm-12" style="text-align: right;"><b>Vigencia Fecha1 a Fecha2</b></label>
+              </div>
+              <div class="row">
+                <div class="col-3">
+                    <label class="texto-general"><b>Ingrese los datos de la Sucursal</b></label><br>
+                    <label class="texto-general pt-1">Sucursal N dígitos (info):</label>
+                </div>
+                <div class="col-6 pt-2">
+                    <input type="text" class="form-control form-control-sm mt-2" 
+                     maxlength="6">
+                </div>
+              </div>
+              <div class="row pt-4">
+                <div class="col-3">
+                    <label class="texto-general"><b>Ingrese los datos del Ejecutivo</b></label><br>
+                    <label class="texto-general pt-1">Nombre y Número de Ejecutivo:</label>
+                </div>
+                <div class="col-3 pt-3">
+                    <input type="text" class="form-control form-control-sm" 
+                     maxlength="6">
+                </div>
+                <div class="col-3 pt-3">
+                    <input type="text" class="form-control form-control-sm" 
+                    maxlength="6">
+                </div>
+              </div>
+              <div class="row pt-4">
+                <div class="col-3">
+                    <label class="texto-general"><b>Ingrese los datos del Cliente</b></label><br>
+                    <label class="texto-general pt-1">Nombre y Número de Cliente:</label><br>
+                    
+                </div>
+                <div class="col-3 pt-3">
+                    <input type="text" class="form-control form-control-sm" 
+                     maxlength="6">
+                </div>
+                <div class="col-3 pt-3">
+                    <input type="text" class="form-control form-control-sm" 
+                    maxlength="6">
+                </div>
+              </div>
+              <div class="row pt-2">
+                <div class="col-3">
+                    <label class="texto-general pt-1">Contrato:</label>
+                </div>
+                <div class="col-3">
+                    <input type="text" class="form-control form-control-sm" 
+                    maxlength="6">
+                </div>
+              </div>
+              <hr>
+              <div class="row pt-2">
+                <label class="texto-general col-sm-12" style="text-align: center;"><b>Producto: NNNN</b></label>
+              </div>
+              <div class="row pt-2">
+                <div class="col"></div>
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Monto a Invertir $</span>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col"></div>
+              </div>
+              <div class="row pt-4">
+                <div class="col"></div>
+                <div class="col-3">
+                    <div class="etiqueta-dato">
+                        <label class="texto-general"><b>Plazo real</b></label>
+                        <div class="separador" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="etiqueta-dato">
+                        <label class="texto-general"><b>Vigencia</b></label>
+                        <div class="separador" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="etiqueta-dato">
+                        <label class="texto-general"><b>Tasa</b></label>
+                        <div class="separador" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="col"></div>
+              </div>
+              <div class="row pt-2">
+                <div class="col"></div>
+                <div class="col-3" style="text-align: center;">
+                    <button class="btn btn-outline-info ml-2">{{plazo}}</button>
+                </div>
+                <div class="col-3" style="text-align: center;">
+                    <button class="btn btn-outline-info ml-2">{{vigencia}}</button>
+                </div>
+                <div class="col-3" style="text-align: center;">
+                    <button class="btn btn-outline-info ml-2">{{tasa}}</button>
+                </div>
+                <div class="col"></div>
+              </div>
+              <div *ngIf="cambio==1">
+                <hr>
+                <div class="row pt-4">
+                    <div class="col-3">
+                        <label class="texto-general pt-2">Justificación:</label><br>
+                    </div>
+                    <div class="col-6 pt-1">
+                        <input type="text" class="form-control form-control-sm" 
+                         maxlength="6">
+                    </div>
+                </div>
+                <div class="row pt-2">
+                    <div class="col-3">
+                        <label class="texto-general pt-3">Folio de Portabilidad (Id Digital):</label>
+                    </div>
+                    <div class="col-6 pt-1">
+                        <input type="text" class="form-control form-control-sm" 
+                        maxlength="6">
+                    </div>
+                  </div>
+              </div>
+              <div class="row pt-4">
+                <div class="col"></div>
+                <div class="btn-group col-sm-2 pt-4" style="text-align: center;">
+                    <button type="button" class="btn btn-primary btn-sm m-1 btn-border">Solicitar</button>
+                </div>
+                <div class="col"></div>
+              </div>
+            </div>
+          </div>
+    </form>
+</div>

@@ -2,23 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-menuadministracion',
-  templateUrl: './menuadministracion.component.html',
-  styleUrls: ['./menuadministracion.component.scss']
+  selector: 'app-campaniaspagare',
+  templateUrl: './campaniaspagare.component.html',
+  styleUrls: ['./campaniaspagare.component.scss']
 })
-export class MenuadministracionComponent implements OnInit {
+export class CampaniaspagareComponent implements OnInit {
 
-  titulo:string = '';
-  od:string = 'OFERTA DIGITAL'
-  cp:string = 'CONSULTAS DE PDFs DESDE EL PERFILADOR';
-
+  titulo = '';
+  cp:string = 'Campañas Pagaré';
+  pe:string = 'Portabilidad Especial de Nónima';
   cambio:number = 1;
-
-  active:boolean = false;
-
   form:FormGroup;
   keys: Array<string> = ['cliente','monto', 'numcliente', 'nomcliente','contrato'];
   baseForm:any = {};
+  plazo:string = '93 días';
+  vigencia:string = 'Fecha1 a Fecha2';
+  tasa:string = '4.01%';
 
   constructor(private formBuilder: FormBuilder) {
     let formValues: any = {};
@@ -27,22 +26,15 @@ export class MenuadministracionComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.valorCambia();
+    this.vistaCambio();
   }
 
-  valorCambia(){
-    if(this.cambio == 0){
-      this.titulo = this.od;
-    }else{
+  vistaCambio(){
+    if(this.cambio==0){
       this.titulo = this.cp;
+    }else{
+      this.titulo = this.pe;
     }
   }
 
-  abrirmodal(){
-    this.active = true;
-  }
-
-  cerrarPopup(){
-    this.active = false;
-  }
 }
