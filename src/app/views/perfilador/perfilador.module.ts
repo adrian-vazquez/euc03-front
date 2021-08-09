@@ -24,7 +24,7 @@ const COMPONENTS = [
     ConfigRoutingModule,
     SharedModule,
     ReactiveFormsModule,
-    PdfViewerModule
+    PdfViewerModule,
   ],
   exports:[
   ]
