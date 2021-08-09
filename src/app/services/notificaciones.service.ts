@@ -19,13 +19,14 @@ export class NotificacionesService {
   constructor() { }
 
   lanzarNotificacion(mensaje: string, titulo: string, tipo: 'warning' | 'error' | 'success' | 'info' | 'question') {
-    // const colorBoton = 
     return Swal.fire({
       title: titulo,
       text: mensaje, 
       icon: tipo,
       confirmButtonText: 'Aceptar',
       confirmButtonColor: this.colorBotones.find(color=> color.tipo === tipo).color,
+      cancelButtonText: 'Cancelar',
+      cancelButtonColor: ''
     });
   }
   lanzarToast(mensaje: string, titulo: string, tipo: 'warning' | 'error' | 'success' | 'info' | 'question') {

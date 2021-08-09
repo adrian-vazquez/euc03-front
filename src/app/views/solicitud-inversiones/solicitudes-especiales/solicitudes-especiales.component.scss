@@ -14,10 +14,22 @@ $colorPrincipalBlue: #3262d1;
     margin-bottom: 0%;
 }
 
-i{
+.icon-warning{
     color: yellow;
 }
 
 .label-cab{
     color: $colorPrincipalBlue;
+}
+
+.check-container{
+    min-height: 6em;
+    max-height: 6em;
+    overflow-y: scroll;
+    text-align: initial;
+}
+
+.table-header{
+    background-color: $colorPrincipalBlue;
+    color: white;
 }

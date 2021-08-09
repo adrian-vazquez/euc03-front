@@ -14,7 +14,7 @@ const COMPONENTS = [
   HeaderComponent,
   FooterComponent,
   ModalComponent, 
-  SliderComponent
+  SliderComponent,
 ]
 
 const DIRECTIVES = [
@@ -30,7 +30,7 @@ const DIRECTIVES = [
   imports: [
     CommonModule,
     SharedRoutingModule,
-    IvyCarouselModule
+    IvyCarouselModule,
   ]
 })
 export class SharedModule { }

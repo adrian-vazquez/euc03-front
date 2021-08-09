@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { NotificacionesService } from '../../../services/notificaciones.service';
+
+
 
 @Component({
   selector: 'app-vista-ejecutivo',
@@ -8,13 +10,12 @@ import { NotificacionesService } from '../../../services/notificaciones.service'
 })
 export class VistaEjecutivoComponent implements OnInit {
 
-  constructor(private notificacionesService: NotificacionesService) { }
+  constructor(private notificacionesService: NotificacionesService) {
+    
+  }
 
   ngOnInit(): void {
   }
 
-  searchClient(){
-    this.notificacionesService.lanzarNotificacion('Alerta', 'Titulo', 'success').catch((error) => {console.log(error)})
-  }
-
+  
 }

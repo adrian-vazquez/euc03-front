@@ -1,0 +1,15 @@
+<div class="row mb-3">
+    <div class="col-12 col-sm-auto">
+        <div class="input-group input-group-sm mr-sm-2 mb-3 mb-sm-0">
+            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+            <input class="form-control" #search (keyup)="myTable.gtSearch(search.value)" placeholder="Search">
+        </div>
+    </div>
+
+</div>
+<generic-table [gtClasses]="'table-sm text-center'" #myTable [gtSettings]="configObject.settings" [gtFields]="configObject.fields" [(gtData)]="configObject.data" [gtOptions]="{highlightSearch:true, rowSelection:true}"></generic-table>
+<div class="text-center">
+    <small><gt-table-info class="form-text text-muted mb-2" [genericTable]="myTable"></gt-table-info></small>
+    <gt-pagination [gtClasses]="'pagination-sm justify-content-center'" [genericTable]="myTable"></gt-pagination>
+</div>
+<small class="form-text text-muted col-12 col-xl-auto mb-2 mt-lg-2 my-xl-auto row">Number of selected rows: {{myTable.selectedRows.length}}</small>

@@ -7,6 +7,7 @@ import { ViewsComponent } from './views.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SolicitudInversionesModule } from './solicitud-inversiones/solicitud-inversiones.module';
 import { SitioEUCModule } from './sitioEUC/sitio-EUC.module';
+import { GenericTableAppAppModule } from '../@generic-table-app/generic-table.module';
 
 const COMPONENTS = [
   ViewsComponent,
@@ -23,10 +24,11 @@ const COMPONENTS = [
     SitioEUCModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   exports:[
     SharedModule,
+    GenericTableAppAppModule
   ]
 })
 export class ViewsModule { }
