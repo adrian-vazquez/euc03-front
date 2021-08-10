@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Autorizador, RangosTasas } from 'src/app/shared/models/solicitudes-especiales.models';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -27,14 +27,52 @@ export class SolicitudInversionesService {
     { rango: '182-365', tasa: '2.64' },
     { rango: '366-377', tasa: '2.64' },
     { rango: '378-378', tasa: '2.64' },
-  ]
-  constructor() { }
+  ];
+  tableData: any[] = [
+    { id: 1, bookName: 'Are You There, Vodka?', price: 200, author: 'A' },
+    {
+      id: 2,
+      bookName: 'The Devil Wears Prada',
+      price: 100,
+      cancel: true,
+      button: '',
+      author: 'A',
+      
+    },
+    {
+      id: 3,
+      bookName: 'The Curious Incident of the Dog',
+      price: 400,
+      cancel: true,
+      author: 'B'
+    },
+    {
+      id: 4,
+      bookName: 'How to Win Friends and Influence',
+      price: 300,
+      cancel: true,
+      author: 'B'
+    },
+    {
+      id: 5,
+      bookName: 'Cloudy with a Chance of Meatballs',
+      price: 200,
+      cancel: true,
+      author: 'C'
+    }
+  ];
 
+  constructor() { }
+  
   obtenerAutorizadores(){
     return this.autorizadores;
   }
-
+  
   obtenerRangosTasas(){
     return this.rangosTasasTable;
+  }
+
+  getList(): Observable<any> {
+    return of(this.tableData);
   }
 }
