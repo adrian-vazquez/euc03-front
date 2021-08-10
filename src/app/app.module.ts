@@ -1,5 +1,6 @@
+import { GenericTableAppAppModule } from './@generic-table-app/generic-table.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -16,7 +17,6 @@ import { AppComponent } from './app.component';
 import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { APP_BASE_HREF } from '@angular/common';
-import { NgxPaginationModule } from 'ngx-pagination';
 import { AddHeaderInterceptor } from './app.http.request.interceptor';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
@@ -40,7 +40,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     CommonModule,
     NgbModule,
     BrowserModule,
-    NgxPaginationModule,
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
@@ -48,7 +47,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     FontAwesomeModule,
     AppRoutingModule,
     ViewsModule,
-    SharedModule
+    SharedModule,
+    GenericTableAppAppModule
   ],
   providers: [
     {
@@ -65,6 +65,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
       multi: true,
     }
   ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

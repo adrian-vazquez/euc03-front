@@ -1,3 +1,4 @@
+import { GenericTableAppAppModule } from './../../@generic-table-app/generic-table.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SolicitudesEspecialesComponent } from './solicitudes-especiales/solicitudes-especiales.component';
@@ -16,7 +17,8 @@ const COMPONENTS = [
   imports: [
     CommonModule,
     SolicitudEspecialRoutingModule,
-    SharedModule
+    SharedModule,
+    GenericTableAppAppModule
   ]
 })
 export class SolicitudInversionesModule { }
