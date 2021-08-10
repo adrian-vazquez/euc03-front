@@ -53,6 +53,27 @@
     z-index: 3;
 }
 
+.submenu-left
+{
+ //   display: none;
+}
+.submenu-left {
+
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #EEF1F6;
+    width: 300px;
+    height: auto;
+    left: 300px;
+    bottom: 2em;
+    opacity: 1;
+    transition: opacity .5s;
+    box-shadow: 0 0rem 1rem rgba(0,0,0,0.175)!important;
+    z-index: 3;
+}
+
 .dropdown li ul li a {
     height: 28px;
     line-height: 35px;
