@@ -22,12 +22,12 @@
         </div>
         <div class="col"></div>
     </div>
-    <div class="row pt-3" style="text-align: center;">
+    <div class="row pt-2" style="text-align: center;">
         <div class="col-sm-12">
             <h4>REPORTE DE {{titulo}}</h4>
         </div>
     </div>
-    <div class="row pt-4">
+    <div class="row pt-2">
         <div class="col"></div>
         <div class="col-4">
             <div class="input-group mb-3">
@@ -49,6 +49,9 @@
             <button type="button" class="btn btn-success btn-sm m-1 btn-border">Buscar Registros</button>
         </div>
         <div class="col"></div>
+    </div>
+    <div class="mt-5">
+        <app-table [tableData]="tableData" [columnHeader]="columnHeader"></app-table>
     </div>
     <app-modal [active]="active" (envio)="cerrarPopup()" [size]="'g'">
         <div class="modal-header">
