@@ -20,14 +20,14 @@ const COMPONENTS = [
 ]
 
 @NgModule({
-  declarations: [...COMPONENTS],
+  declarations: [...COMPONENTS ],
   imports: [
     CommonModule,
     PerfiladorRoutingModule,
     SharedModule,
     ReactiveFormsModule,
     PdfViewerModule,
-    ConfigRoutingModule
+    ConfigRoutingModule,
   ],
   exports:[
   ]

@@ -8,6 +8,12 @@ import { ImagenprincipalComponent } from './imagenprincipal/imagenprincipal.comp
 import { MenuadministracionComponent } from './menuadministracion/menuadministracion.component';
 import { PdfComponent } from './pdf/pdf.component';
 import { SliderComponent } from './slider/slider.component';
+import { ConsultasComponent } from './catalogos/consultas/consultas.component';
+import { ClientesComponent } from './catalogos/clientes/clientes.component';
+import { EjecutivosSucursalComponent } from './catalogos/ejecutivos-sucursal/ejecutivos-sucursal.component';
+import { GuiasOperativasComponent } from './catalogos/guias-operativas/guias-operativas.component';
+import { PdfEspecialComponent } from './catalogos/pdf-especial/pdf-especial.component';
+import { ParametrosComponent } from './catalogos/parametros/parametros.component';
 
 const routes: Routes = [
   { path: 'config', component: MenuadministracionComponent },
@@ -18,7 +24,13 @@ const routes: Routes = [
   { path: 'gat', component: GatComponent },
   { path: 'imagen-principal', component: ImagenprincipalComponent },
   { path: 'cargas', component: CargasComponent },
-  { path: 'catalogos', component: CatalogosComponent }
+  { path: 'catalogos', component: CatalogosComponent },
+  { path: 'consultas', component: ConsultasComponent },
+  { path: 'clientes', component: ClientesComponent },
+  { path: 'ejecutivos-sucursal', component: EjecutivosSucursalComponent },
+  { path: 'guias-operativas', component: GuiasOperativasComponent },
+  { path: 'pdf-especial', component: PdfEspecialComponent },
+  { path: 'parametros', component: ParametrosComponent },
 ];
 
 @NgModule({

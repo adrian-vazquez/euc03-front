@@ -11,13 +11,15 @@ import { ModalComponent } from './components/modal/modal.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { NavconfigComponent } from './navconfig/navconfig.component';
 import { RouterModule } from '@angular/router';
+import { NavcatalogsComponent } from './navcatalogs/navcatalogs.component';
 
 const COMPONENTS = [
   HeaderComponent,
   FooterComponent,
   ModalComponent, 
   SliderComponent,
-  NavconfigComponent
+  NavconfigComponent,
+  NavcatalogsComponent
 ]
 
 const DIRECTIVES = [
