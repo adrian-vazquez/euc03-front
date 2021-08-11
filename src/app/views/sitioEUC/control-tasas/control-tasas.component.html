@@ -1,1 +1,102 @@
-<p>control-tasas works!</p>
+<div class="row">
+    <div class="col-md-12 text-center">
+        <label> <i style="font-size: 4em;" class="fas fa-envelope-open sobre-color"></i> Busqueda de Tasas sin
+            Autorización</label>
+    </div>
+
+    <div class="col-md-12 mt-2">
+        <button type="button" class="btn btn-success"><i class="fas fa-search"></i> Buscar Solicitudes
+            Pendientes</button>
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-auto ">
+        <label class="col-form-label">Registros localizados</label>
+      </div>
+      <div class="col-auto">
+        <input placeholder="Filtart resultados" type="text" class="form-control">
+      </div>
+    <div class="col-md-12" style="overflow: auto;">
+        <table style="width:100%" class="table">
+            <thead>
+                <tr>
+                    <th class="th-color" scope="col" *ngFor="let headerTable of columHeaderDummy">
+                        <label style="width: 7em;">{{headerTable.name}}</label></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of tableData">
+                    <td *ngIf="data.estatus === 'SOLICITADA'" class="text-center"><i (click)="open(content)" style="font-size: 2em;"
+                            class="fas fa-envelope"></i></td>
+                    <td>{{data.estatus}}</td>
+                    <td>{{data.fechaSolicitud}}</td>
+                    <td>{{data.tipoOferta}}</td>
+                    <td>{{data.contrato}}</td>
+                    <td>{{data.numCte}}</td>
+                    <td>{{data.nombreCte}}</td>
+                    <td>{{data.nomiEjec}}</td>
+                    <td>{{data.nombreEjec}}</td>
+                    <td>{{data.sucursalDiv}}</td>
+                    <td>{{data.plazo}}</td>
+                    <td>{{data.monto}}</td>
+                    <td>{{data.tasaSolic}}</td>
+                    <td>{{data.autorizador}}</td>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Cancelación</h4>
+      <h4 class="modal-title" id="modal-basic-title">Por favor introducir su nómina, nombre y justificación</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <ng-container>
+    <div class="modal-body">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Número y Suc. Operadora:</label>
+        <input formControlName="numSucursalOperadora" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Nombre del Cliente:</label>
+        <input formControlName="nombreCliente" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Número del Cliente:</label>
+        <input formControlName="numCliente" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Número de Contrato:</label>
+        <input formControlName="numContrato" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Monto:</label>
+        <input formControlName="monto" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Plazo:</label>
+        <input formControlName="plazo" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Tasa Bruta Solic:</label>
+        <input formControlName="tasaBrutaSolic" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Justificación de Solicitud:</label>
+        <input formControlName="justificacion" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Nombre del solicitante:</label>
+        <input formControlName="nombreSolic" type="text" class="form-control">
+      </div>
+    </div>
+  </ng-container>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-success" (click)="save()">Guardar</button>
+      <button type="button" class="btn btn-outline-dark" (click)="d('Cross click')">Cerrar</button>
+    </div>
+  </ng-template>

@@ -5,7 +5,7 @@ import { ReportesEUCComponent } from './reportes-euc/reportes-euc.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-    { path: 'control-tasas', component: HomeComponent },
+    { path: 'control-tasas', component: ControlTasasComponent },
     { path: 'reportes-EUC', component: ReportesEUCComponent },
     { path: '', component: HomeComponent, },
     { path: '**', redirectTo: '/' }
