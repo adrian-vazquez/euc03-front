@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pdf-especial.component.scss']
 })
 export class PdfEspecialComponent implements OnInit {
+  iconCarga:string = 'assets/images/Img/load.PNG';
 
   constructor() { }
 
