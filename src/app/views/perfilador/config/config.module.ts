@@ -12,6 +12,7 @@ import { CargasComponent } from './cargas/cargas.component';
 import { CatalogosComponent } from './catalogos/catalogos.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { GenericTableAppAppModule } from 'src/app/@generic-table-app/generic-table.module';
 
 
 const COMPONENTS = [
@@ -31,7 +32,8 @@ const COMPONENTS = [
     CommonModule,
     ConfigRoutingModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    GenericTableAppAppModule
   ],
   exports: [
     

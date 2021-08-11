@@ -11,6 +11,7 @@ import { CitivsotrosComponent } from './citivsotros/citivsotros.component';
 import { ConfigRoutingModule } from './config/config-routing.module';
 import { ConfigModule } from './config/config.module';
 import { CampaniaspagareComponent } from './campaniaspagare/campaniaspagare.component';
+import { GenericTableAppAppModule } from 'src/app/@generic-table-app/generic-table.module';
 
 const COMPONENTS = [
   AclaracionesComponent,
@@ -27,7 +28,8 @@ const COMPONENTS = [
     SharedModule,
     ReactiveFormsModule,
     PdfViewerModule,
-    ConfigRoutingModule
+    ConfigRoutingModule,
+    GenericTableAppAppModule
   ],
   exports:[
   ]

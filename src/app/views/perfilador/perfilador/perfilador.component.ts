@@ -19,6 +19,7 @@ export class PerfiladorComponent implements OnInit {
   showImaCliente: number = -1;
   showBanner:boolean = true;
   showCliente:number = -1;
+  showTablaCliente:number = -1;
   keys: Array<string> = ['cliente','monto', 'numcliente', 'nomcliente','contrato'];
   baseForm:any = {};
   valSaldo:string = '';
@@ -76,6 +77,18 @@ export class PerfiladorComponent implements OnInit {
 
   cerrarPopup(){
     this.active = false;
+  }
+
+  calcular(){
+    if(this.showCliente==1){
+      console.log('Cambio a tabla NO cliente');
+      this.showImaCliente = 2;
+      this.showCliente = 2;
+
+    }else{
+      console.log('Cambio a tabla Cliente');
+      this.showTablaCliente=1;
+    }
   }
 
 }
