@@ -12,6 +12,9 @@ import { GuiasOperativasComponent } from './guias-operativas/guias-operativas.co
 import { EjecutivosSucursalComponent } from './ejecutivos-sucursal/ejecutivos-sucursal.component';
 import { ParametrosComponent } from './parametros/parametros.component';
 import { PdfEspecialComponent } from './pdf-especial/pdf-especial.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 const COMPONENTS = [
   CatalogosComponent,
@@ -30,6 +33,10 @@ const COMPONENTS = [
     SharedModule,
     MatIconModule,
     MatButtonModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatFormFieldModule,
+  
     ReactiveFormsModule,
     FormsModule,
   ],

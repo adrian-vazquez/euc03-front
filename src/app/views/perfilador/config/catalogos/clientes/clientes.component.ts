@@ -7,7 +7,7 @@ import { NotificacionesService } from '../../../../../services/notificaciones.se
 @Component({
   selector: 'app-clientes',
   templateUrl: './clientes.component.html',
-  styleUrls: ['./clientes.component.scss']
+  styleUrls: ['./clientes.component.scss', '../catalogos.component.scss']
 })
 export class ClientesComponent implements OnInit {
   ofertaDirigida = [ 
@@ -52,7 +52,7 @@ export class ClientesComponent implements OnInit {
         password: ['', Validators.required],
         passwordRepeat: ['', Validators.required]
     });
-  } 
+  }  
 
   addClientForm(): void {
     this.clientes.push({
