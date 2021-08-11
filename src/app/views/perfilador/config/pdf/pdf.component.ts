@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PdfComponent implements OnInit {
 
+  iconCarga:string = 'assets/images/Img/load.PNG';
+  iconPdf:string = 'assets/images/dummy/pdficon.jpg';
+
   constructor() { }
 
   ngOnInit(): void {
