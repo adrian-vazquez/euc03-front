@@ -1,1 +1,5 @@
-<p>aclaraciones works!</p>
+<pdf-viewer 
+    [src]="pdfAclaraciones" 
+    (after-load-complete)="callBackFn($event)"    
+>
+</pdf-viewer>

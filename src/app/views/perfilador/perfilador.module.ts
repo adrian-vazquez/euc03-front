@@ -6,10 +6,18 @@ import { PerfiladorComponent } from './perfilador/perfilador.component';
 import { PerfiladorRoutingModule } from './perfilador-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { CitivsotrosComponent } from './citivsotros/citivsotros.component';
+import { ConfigRoutingModule } from './config/config-routing.module';
+import { ConfigModule } from './config/config.module';
+import { CampaniaspagareComponent } from './campaniaspagare/campaniaspagare.component';
+import { GenericTableAppAppModule } from 'src/app/@generic-table-app/generic-table.module';
 
 const COMPONENTS = [
   AclaracionesComponent,
-  PerfiladorComponent
+  PerfiladorComponent,
+  CitivsotrosComponent,
+  CampaniaspagareComponent
 ]
 
 @NgModule({
@@ -18,7 +26,10 @@ const COMPONENTS = [
     CommonModule,
     PerfiladorRoutingModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    PdfViewerModule,
+    ConfigRoutingModule,
+    GenericTableAppAppModule
   ],
   exports:[
   ]

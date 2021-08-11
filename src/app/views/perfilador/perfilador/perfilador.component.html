@@ -1,5 +1,5 @@
 <div class="container-header">
-    <div class="row pt-2">
+    <div class="row">
         <div class="col-3">
         </div>
         <div class="col container justify-content-center banner" [ngStyle]="{'display': (showBanner) ? 'block' : 'none'}">
@@ -25,102 +25,162 @@
 </div>
 <div class="container-fluid pt-1">
     <!-- Slider Header -->
-    <app-slider></app-slider>
+    <div *ngIf="showImaCliente!=2 && showTablaCliente!=1">
+        <app-slider></app-slider>
+    </div>
     <!-- End Slider -->
-    <div class="container justify-content-center mt-2">
-        <form [formGroup]="form">
-            <div class="row">
-                <div class="col">
-                    <label class="bienvenido pt-2 pr-2" style="text-align: left;">APERTURA DE CUENTA INVERSIÓN</label>
-                    <div class="separador" style="width: 85%;"></div>
-                    <div class="row">
-                        <div class="col">
-                            <label class="texto-general"><b>¿Eres cliente Citibanamex?</b></label>
-                        </div>
-                        <div class="col">
-                            <button class="btn btn-outline-info btn-border btn-sm ml-2" (click)="valFormYes()">Sí</button>
-                            <button class="btn btn-outline-info btn-border btn-sm ml-2" (click)="valFormNo()">No</button>
-                        </div>
+    <form [formGroup]="form">
+        <div class="row pt-2">
+            <div class="col">
+                <label class="bienvenido pt-2 pr-2" style="text-align: left;">APERTURA DE CUENTA INVERSIÓN</label>
+                <div class="separador" style="width: 85%;"></div>
+                <div class="row">
+                    <div class="col">
+                        <label class="texto-general"><b>¿Es cliente Citibanamex?</b></label>
                     </div>
-                    <div class="form-group row pt-4">
-                        <div class="col-3">
-                            <div class="form-group">
-                                <div *ngIf="showCliente==0">
-                                    <label class="texto-general"><b>No. de Cliente: </b></label><br>
-                                    <label class="texto-general pt-4"><b>Monto a Invertir: </b></label>
-                                </div>
-                                <div *ngIf="showCliente==1">
-                                    <label class="texto-general pt-4"><b>Monto a Invertir: </b></label>
-                                </div>
+                    <div class="col">
+                        <button class="btn btn-outline-info btn-border btn-sm ml-2" (click)="valFormYes()">Sí</button>
+                        <button class="btn btn-outline-info btn-border btn-sm ml-2" (click)="valFormNo()">No</button>
+                    </div>
+                </div>
+                <div class="form-group row pt-4">
+                    <div class="col-3">
+                        <div class="form-group">
+                            <div *ngIf="showCliente==0">
+                                <label class="texto-general"><b>No. de Cliente: </b></label><br>
+                                <label class="texto-general pt-4"><b>Monto a Invertir: </b></label>
                             </div>
-                        </div>
-                        <div class="col-5">
-                            <div class="form-group">
-                                <div *ngIf="showCliente==0">
-                                    <input type="text" class="form-control form-control-sm redondear" (blur)="getCliente($event)"
-                                        formControlName="cliente" pattern="^[0-9]" PatternOnlyDirective maxlength="6">
-                                    <input type="text" class="form-control form-control-sm mt-2 redondear" 
-                                    formControlName="monto" pattern="^[0-9]" [(ngModel)]="monto" PatternOnlyDirective maxlength="6">
-                                </div>
-                                <div *ngIf="showCliente==1">
-                                    <input type="text" class="form-control form-control-sm mt-2 redondear" 
-                                    formControlName="monto" pattern="^[0-9]" [(ngModel)]="monto" PatternOnlyDirective maxlength="6">
-                                </div>
+                            <div *ngIf="showCliente==1 || showCliente==2">
+                                <label class="texto-general pt-4"><b>Monto a Invertir: </b></label>
                             </div>
                         </div>
                     </div>
-                    <div *ngIf="showCliente!=-1">
-                        <div class="row pt-2">
-                            <div class="col-3">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <div *ngIf="showCliente==0">
+                                <input type="text" class="form-control form-control-sm redondear" (blur)="getCliente($event)"
+                                    formControlName="cliente" pattern="^[0-9]" PatternOnlyDirective maxlength="6">
+                                <input type="text" class="form-control form-control-sm mt-2 redondear" 
+                                formControlName="monto" pattern="^[0-9]" [(ngModel)]="monto" PatternOnlyDirective maxlength="6">
                             </div>
-                            <div class="col-6">
-                                <button type="button" class="btn btn-warning btn-sm m-1 btn-border" (click)="abrirmodal()">Calcular</button>
-                                <button type="button" class="btn btn-success btn-sm m-1 btn-border">Imprimir Selección</button>
+                            <div *ngIf="showCliente==1 || showCliente==2">
+                                <input type="text" class="form-control form-control-sm mt-2 redondear" 
+                                formControlName="monto" pattern="^[0-9]" [(ngModel)]="monto" PatternOnlyDirective maxlength="6">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div *ngIf="showImaCliente!=-1">
-                        <div *ngIf="showCliente!=-1">
-                            <div class="row">
-                                <div class="col-5">
-                                    <div class="etiqueta-dato">
-                                        <label class="texto-general"><b>Saldo 1</b></label>
-                                        <div class="separador" style="width: 100%;"></div>
-                                    </div>
-                                </div>
-                                <div class="col-5">
-                                    <div class="etiqueta-dato">
-                                        <label class="texto-general"><b>Tipo de Persona</b></label>
-                                        <div class="separador" style="width: 100%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-5" style="text-align: center;">
-                                    <!-- <input type="text" class="form-control form-control-sm input-dato"> -->
-                                    <button class="btn btn-outline-info ml-2" (click)="setSaldo()">{{valSaldo}}</button>
-                                </div>
-                                <div class="col-5" style="text-align: center;">
-                                    <!-- <input type="text" class="form-control form-control-sm input-dato"> -->
-                                    <button class="btn btn-outline-info ml-2">{{valTipoPersona}}</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div *ngIf="showImaCliente==-1">
-                        <div class="row">
-                            <div class="col-4" style="float: left;">
-                                <img class="img-position pt-4" style="max-width: 95%;" alt="Citi Info" [src]="iconH">
-                            </div>
+                <div *ngIf="showCliente!=-1">
+                    <div class="row pt-2">
+                        <div class="col-3"></div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-warning btn-sm m-1 btn-border" (click)="calcular()">Calcular</button>
+                            <button type="button" class="btn btn-success btn-sm m-1 btn-border">Imprimir Selección</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </form>
-        <app-modal [active]="active" (envio)="cerrarPopup()" [size]="'g'">
-            <div class="modal-header">
+            <div class="col">
+                <div *ngIf="showImaCliente==0">
+                    <div *ngIf="showCliente==0">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="etiqueta-dato">
+                                    <label class="texto-general"><b>Saldo 1</b></label>
+                                    <div class="separador" style="width: 100%;"></div>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="etiqueta-dato">
+                                    <label class="texto-general"><b>Tipo de Persona</b></label>
+                                    <div class="separador" style="width: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5" style="text-align: center;">
+                                <button class="btn btn-outline-info ml-2" (click)="setSaldo()">{{valSaldo}}</button>
+                            </div>
+                            <div class="col-5" style="text-align: center;">
+                                <button class="btn btn-outline-info ml-2">{{valTipoPersona}}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="showImaCliente==-1">
+                    <div class="row">
+                        <div class="col-4" style="float: left;">
+                            <img class="img-position pt-4" style="max-width: 95%;" alt="Citi Info" [src]="iconH">
+                        </div>
+                    </div>
+                </div>
+                <!-- Tabla NO cliente -->
+                <div *ngIf="showImaCliente==2">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <table class="table table-striped">
+                                <thead class="table-header" style="background-color: #056DAE; color: white;">
+                                    <tr>
+                                        <th scope="col">OFERTA</th>
+                                        <th scope="col">TASA BRUTA</th>
+                                        <th scope="col">PLAZO</th>
+                                        <th scope="col">RENDIMIENTOS BRUTOS</th>
+                                        <th scope="col"> MONTO DE INVERSIÓN</th>
+                                        <th scope="col">SELECCIONE</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Portabilidad Nómina Campaña</td>
+                                        <td>4.60%</td>
+                                        <td>60 días</td>
+                                        <td>$19.17</td>
+                                        <td>$2,500.00</td>
+                                        <td>
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch1" selected>
+                                                <label class="custom-control-label" for="customSwitch1">ON/OFF</label>
+                                                <button type="button" class="btn btn-primary btn-sm m-1 btn-border" (click)="abrirmodal()">Siguiente Paso</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Portabilidad Nómina Campaña</td>
+                                        <td>4.60%</td>
+                                        <td>60 días</td>
+                                        <td>$19.17</td>
+                                        <td>$2,500.00</td>
+                                        <td>
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                <label class="custom-control-label" for="customSwitch1">ON/OFF</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Portabilidad Nómina Campaña</td>
+                                        <td>4.60%</td>
+                                        <td>60 días</td>
+                                        <td>$19.17</td>
+                                        <td>$2,500.00</td>
+                                        <td>
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                <label class="custom-control-label" for="customSwitch1">ON/OFF</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tabla no cliente -->
+            </div>
+        </div>
+    </form>
+    <app-modal [active]="active" (envio)="cerrarPopup()" [size]="'g'">
+        <div class="modal-header">
                 <h3 class="modal-title" style="margin: 0;">
                     <b>Información adicional</b>
                 </h3>
@@ -181,6 +241,129 @@
                     <button class="col-4 btn btn-danger btn-border m-2" (click)="cerrarPopup()">Cancelar</button>
                 </div>
             </div>
-        </app-modal>
+    </app-modal>
+</div>
+<div class="container-fluid pt-4">
+    <!-- Tabla cliente -->
+    <div *ngIf="showTablaCliente==1">
+        <div class="row">
+            <label class="texto-general col-12" style="text-align: left; color: red;">Selecciona tu inversión:</label>
+        </div>
+        <div class="row">
+            <label class="texto-general col-3" style="text-align: right;">Monto para Inversión $NNNN</label>
+        </div>
+        <div class="row">
+            <label class="texto-general col-12" style="text-align: center">*<b>PRODUCTOS BANCO GARANTIZADOS POR IPAB</b>*</label>
+        </div>
+        <div class="row">
+            <label class="texto-general col-12" style="text-align: center">**<b>RENDIMIENTO ANTES DE IMPUESTOS</b>**</label>
+        </div>
+        <div class="row">
+            <label class="texto-general col-12" style="color: red; text-align: center">Oferta de campaña principal</label>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table table-striped">
+                    <thead class="table-header" style="background-color: #056DAE; color: white;">
+                        <tr>
+                            <th scope="col">OFERTA</th>
+                            <th scope="col">TASA BRUTA</th>
+                            <th scope="col">PLAZO</th>
+                            <th scope="col">RENDIMIENTOS BRUTOS</th>
+                            <th scope="col"> MONTO DE INVERSIÓN</th>
+                            <th scope="col">SELECCIONE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Portabilidad Nómina Campaña</td>
+                            <td>4.60%</td>
+                            <td>60 días</td>
+                            <td>$19.17</td>
+                            <td>$2,500.00</td>
+                            <td>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch1" selected>
+                                    <label class="custom-control-label" for="customSwitch1">ON/OFF</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Portabilidad Nómina Campaña</td>
+                            <td>4.60%</td>
+                            <td>60 días</td>
+                            <td>$19.17</td>
+                            <td>$2,500.00</td>
+                            <td>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                    <label class="custom-control-label" for="customSwitch1">ON/OFF</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Portabilidad Nómina Campaña</td>
+                            <td>4.60%</td>
+                            <td>60 días</td>
+                            <td>$19.17</td>
+                            <td>$2,500.00</td>
+                            <td>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                    <label class="custom-control-label" for="customSwitch1">ON/OFF</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Portabilidad Nómina Campaña</td>
+                            <td>4.60%</td>
+                            <td>60 días</td>
+                            <td>$19.17</td>
+                            <td>$2,500.00</td>
+                            <td>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                    <label class="custom-control-label" for="customSwitch1">ON/OFF</label>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <label class="texto-general col-12" style="color: red; text-align: center">Oferta digital</label>
+        </div>
+        <div class="row">
+            <div class="col" >
+                <table class="table table-striped">
+                    <thead class="table-header" style="background-color: #056DAE; color: white;">
+                        <tr>
+                            <th scope="col">OFERTA</th>
+                            <th scope="col">TASA BRUTA</th>
+                            <th scope="col">PLAZO</th>
+                            <th scope="col">RENDIMIENTOS BRUTOS</th>
+                            <th scope="col"> MONTO DE INVERSIÓN</th>
+                            <th scope="col">SELECCIONE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Portabilidad Nómina Campaña</td>
+                            <td>4.60%</td>
+                            <td>60 días</td>
+                            <td>$19.17</td>
+                            <td>$2,500.00</td>
+                            <td>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch1" selected>
+                                    <label class="custom-control-label" for="customSwitch1">ON/OFF</label>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </div>

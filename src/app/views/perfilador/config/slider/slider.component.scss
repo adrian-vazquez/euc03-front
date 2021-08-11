@@ -1,0 +1,47 @@
+.title-slider{
+
+}
+
+.subtitle-slider {
+    color: grey;
+    font-weight: bold; 
+    display: flex; 
+    justify-content: center;
+}
+::ng-deep .btn-primary {
+    background-color:  #3aa8d2 !important;
+    border-color: #3aa8d2 !important;
+    border: 1px solid #000000;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    padding: 10px;
+}
+
+.container-file {
+    background: cornflowerblue;
+    display: flex;
+    margin-bottom: 10px;
+    padding-top: 4px;
+}
+
+.label-file {
+    font-size: 12px;
+}
+
+.label-img {
+    font-size: 12px;
+    height: 34px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.load-button {
+    margin-bottom: 10px;
+    padding-top: 4px;
+    margin-left: 2px;
+}
+
+.file-container {
+    background: cornflowerblue;
+    margin-bottom: 10px;
+    padding-top: 4px;
+}

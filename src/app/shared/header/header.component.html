@@ -18,6 +18,25 @@
                                         <li>
                                             <a class="title-menu" [routerLink]="['aclaraciones']" routerLinkActive="true">Aclaraciones</a>
                                         </li>
+                                        <li (mouseenter)="showSubSubMenu(true)" (mouseleave)="showSubSubMenu(false)" >
+                                            <a class="title-menu" >Otros Sitios</a>
+                                            <div class="sub-submenu-right" >
+                                                <ul>
+                                                    <li>
+                                                        <a class="title-menu" href="http://localhost:4200/#/solicitudes-especiales" target="_blank">Sitio EUC</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="title-menu" href="http://localhost:4200/#/vista-ejecutivo" target="_blank">Sitio de solicitudes</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="title-menu" [routerLink]="['citivsotros']" routerLinkActive="true">Citibanamex vs otros</a>
+                                        </li>
+                                        <li>
+                                            <a class="title-menu" [routerLink]="['menu-administracion']" routerLinkActive="true">Funciones de configuración</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </li>
@@ -46,9 +65,6 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
-                            <li>
-                                <a class="title-menu" [routerLink]="['formularioedicion/index']" routerLinkActive="true">Formulario Edición</a>
                             </li>
                         </ul>
                     </nav>

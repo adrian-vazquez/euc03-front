@@ -1,0 +1,91 @@
+<app-navconfig></app-navconfig>
+<div class="container-xxl pt-2">
+    <div class="row pt-3">
+        <div class="col"></div>
+        <div class="col">
+            <table class="table small" style="border-radius: 20px;">
+                <thead>
+                    <tr style="background-color: #056DAE; color: white;">
+                        <th>Título</th>
+                        <th>Detalle</th>
+                        <th>Editar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: white; color: #056DAE;">
+                        <td>¡Atención Sucursales!</td>
+                        <td>Alguna Descripción</td>
+                        <td><a type="button" class="btn btn-primary btn-sm m-1 btn-border" (click)="abrirmodal()">Editar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col"></div>
+    </div>
+    <div class="row pt-2" style="text-align: center;">
+        <div class="col-sm-12">
+            <h4>REPORTE DE {{titulo}}</h4>
+        </div>
+    </div>
+    <div class="row pt-2">
+        <div class="col"></div>
+        <div class="col-4">
+            <div class="input-group mb-3">
+                <span class="input-group-text">Fecha Inicio</span>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="input-group mb-3">
+                <span class="input-group-text">Fecha Fin</span>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+    <div class="row pt-1">
+        <div class="col"></div>
+        <div class="btn-group col-sm-2 pt-4" style="text-align: center;">
+            <button type="button" class="btn btn-success btn-sm m-1 btn-border">Buscar Registros</button>
+        </div>
+        <div class="col"></div>
+    </div>
+    <div class="mt-5">
+        <app-table [tableData]="tableData" [columnHeader]="columnHeader"></app-table>
+    </div>
+    <app-modal [active]="active" (envio)="cerrarPopup()" [size]="'g'">
+        <div class="modal-header">
+            <h3 class="modal-title" style="margin: 0;">
+                <b>Edición</b>
+            </h3>
+            <button type="button" class="close" data-dismiss="modal" arial-label="Cerrar" (click)="cerrarPopup()">
+                <span class="m-1" aria-hidden="true">x</span>
+            </button>
+        </div>
+        <div class="contModal pt-2">
+            <form [formGroup]="form" class="contModal small">
+                <div class="form-group row mb-2">
+                    <div class="col-sm-12">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Título</span>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row mb-2">
+                    <div class="col-sm-12">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Descripción</span>
+                            <textarea type="text" class="form-control"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="botones-modal pt-4">
+                <button class="col-4 btn btn-success btn-border m-2" style="background-color: #00c851 !important;">Actualizar</button>
+                <button class="col-4 btn btn-danger btn-border m-2" (click)="cerrarPopup()">Cancelar</button>
+            </div>
+        </div>
+    </app-modal>
+</div>
+

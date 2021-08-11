@@ -31,4 +31,5 @@ const COMPONENTS = [
     GenericTableAppAppModule
   ]
 })
+
 export class ViewsModule { }
