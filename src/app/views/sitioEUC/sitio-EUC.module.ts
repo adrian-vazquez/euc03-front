@@ -17,7 +17,8 @@ const COMPONENTS = [
     declarations: [...COMPONENTS],
     imports: [
       CommonModule,
-      SitioEUCRoutingModule
+      SitioEUCRoutingModule,
+      
     ]
   })
 export class SitioEUCModule { }
