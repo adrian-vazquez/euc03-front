@@ -8,8 +8,9 @@
         <div class="input-group mb-2">
             <span class="input-group-text">División:</span>
             <select id="">
-                <option value="0">Aportaciones</option>
-                <option value="0">Otro</option>
+                <option value="0">Seleccione</option>
+                <option value="0">NOROESTE</option>
+                <option value="0">OCCIDENTE</option>
             </select>
         </div>
     </div>
@@ -139,17 +140,21 @@
                     </div>
                 </div>
                 <div class="form-group row mb-2">
-                    <label class="col-sm-4 col-form-label text-left texto-general">*Estatus:</label>
+                    <label class="col-sm-4 col-form-label text-left texto-general">Estatus:</label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control form-control-sm redondear" 
-                            pattern="^[0-9]" PatternOnlyDirective maxlength="6">
+                        <div class="input-group mb-2">
+                            <span class="input-group-text">Activo:</span>
+                            <input type="checkbox" class="form-control">
+                        </div>
                     </div>
                 </div>
                 <div class="form-group row mb-2">
-                    <label class="col-sm-4 col-form-label text-left texto-general">*Facultado para autorizaciones distritales:</label>
+                    <label class="col-sm-4 col-form-label text-left texto-general">Facultado para autorizaciones distritales:</label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control form-control-sm redondear" 
-                            pattern="^[0-9]" PatternOnlyDirective maxlength="6">
+                        <div class="input-group mb-2">
+                            <span class="input-group-text">Facultado:</span>
+                            <input type="checkbox" class="form-control">
+                        </div>
                     </div>
                 </div>
                 <div class="form-group row mb-2">
