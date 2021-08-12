@@ -1,0 +1,343 @@
+<div class="row">
+    <div class="col-md-2" id="elementTop">
+        <label class="mt-2"><i class="far fa-check-circle"></i>Liberación de tasas</label>
+    </div>
+    <div class="col-md-9 offset-md-1">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Recibe</span>
+            </div>
+            <div class="input-group-prepend">
+                <span class="input-group-text"><input type="checkbox"></span>
+            </div>
+
+            <div class="input-group-prepend">
+                <span class="input-group-text">Estatus</span>
+            </div>
+            <div class="input-group-prepend">
+                <select class="size-select">
+                    <option *ngFor="let catEstatus of catalogoEstatus">{{catEstatus.name}}</option>
+                </select>
+            </div>
+
+            <div class="input-group-prepend">
+                <span class="input-group-text">Cto</span>
+            </div>
+            <div class="input-group-prepend">
+                <input class="size-input" type="text" placeholder="Contrato">
+            </div>
+
+            <div class="input-group-prepend">
+                <span class="input-group-text">Cte</span>
+            </div>
+            <div class="input-group-prepend">
+                <input class="size-input" type="text" placeholder="Cliente">
+            </div>
+            <div class="input-group-prepend">
+                <span class="input-group-text" (click)="d.toggle()">
+                    <i class="far fa-calendar-check"></i>
+                </span>
+            </div>
+            <div class="input-group-prepend">
+                <input class="size-input" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker">
+            </div>
+            <div class="input-group-prepend">
+                <button class="btn color-button"><i class="fas fa-search"></i> Buscar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 mt-3" style="overflow: auto;" *ngIf="showSolicitudActualizar || showSolicitudCancelacion">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Registros localizados</span>
+            </div>
+            <div class="input-group-prepend">
+                <input class="" type="text" placeholder="Filtrar resultados">
+            </div>
+        </div>
+        <table style="width:100%" class="table">
+            <thead>
+                <tr>
+                    <th class="th-color" scope="col" *ngFor="let headerTable of columHeaderDummy">
+                        <label style="width: 7em;">{{headerTable.name}}</label>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of tableData">
+                    <td
+                        [ngClass]="{'color-verde' : data.minutosLlegada < 3, 'color-amarillo' : data.minutosLlegada >= 3 && data.minutosLlegada < 5}">
+                        <i (click)="mostrarEdit()" style="font-size: 2em;" class="fas fa-edit"></i>
+                    </td>
+                    <td>
+                        <i style="font-size: 1em;" class="fas fa-search"></i><br>
+                        {{data.asig}}
+                    </td>
+                    <td>{{data.oper}}</td>
+                    <td>{{data.estatus}}</td>
+                    <td>{{data.fechaSolicitud}}</td>
+                    <td>{{data.tipo}}</td>
+                    <td>{{data.contrato}}</td>
+                    <td>{{data.numCte}}</td>
+                    <td>{{data.nombreCte}}</td>
+                    <td> {{data.sucursalDiv}}</td>
+                    <td>{{data.plazo}}</td>
+                    <td>{{data.monto | currency}}</td>
+                    <td>{{data.tasaSolic}}</td>
+                    <td>{{data.fechaAuto}}</td>
+                    <td>{{data.autorizador}}</td>
+                    <td>{{data.fechaLiber}}</td>
+                    <td>{{data.folio}}</td>
+                    <td>{{data.observacion}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-md-4 offset-md-2 mt-5"  *ngIf="showSolicitudActualizar">
+   
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-md-4 col-form-label">Tipo Solicitud</label>
+            <div class="col-md-8">
+                <label for="inputEmail3" class="bg-light col-md-12 col-form-label">RETEN2011</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-md-4 col-form-label">Monto</label>
+            <div class="col-md-8">
+                <label for="inputEmail3" class="bg-light col-md-12 col-form-label">{{'99999999'|currency}}</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-md-4 col-form-label">Plazo</label>
+            <div class="col-md-8">
+                <label for="inputEmail3" class="bg-light col-md-12 col-form-label">90</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-md-4 col-form-label">Porcentaje</label>
+            <div class="col-md-8">
+                <label for="inputEmail3" class="bg-light col-md-12 col-form-label">0.000</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-md-4 col-form-label">Tasa</label>
+            <div class="col-md-8">
+                <label for="inputEmail3" class="bg-light col-md-12 col-form-label">4.000</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-md-4 col-form-label">CETE</label>
+            <div class="col-md-8">
+                <label for="inputEmail3" class="bg-light col-md-12 col-form-label">0.000</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-8 offset-md-4">
+                <hr>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-md-4 col-form-label">Justificación (campaña)</label>
+            <div class="col-md-8">
+                <textarea class="bg-light col-md-12 col-form-label"></textarea>
+            </div>
+        </div>
+    
+    </div>
+    <div class="col-md-5 offset-md-1 mt-5" *ngIf="showSolicitudCancelacion">
+            <div class="form-group row mb-2">
+                <label for="inputEmail3" class="col-md-4 col-form-label">Sucursal Operadora</label>
+                <div class="col-md-8">
+                    <label for="inputEmail3" class="bg-light col-md-12 col-form-label">100-oficina central, CDMX - METRO SUR</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-md-4 col-form-label">Nómina ejecutivo</label>
+                <div class="col-md-8">
+                    <label for="inputEmail3" class="bg-light col-md-12 col-form-label">8876876</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-md-4 col-form-label">Nombre Ejec.</label>
+                <div class="col-md-8">
+                    <label for="inputEmail3" class="bg-light col-md-12 col-form-label">Miguel Cruz</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-8 offset-md-4">
+                    <hr>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-md-4 col-form-label">Numero Cliente</label>
+                <div class="col-md-8">
+                    <label for="inputEmail3" class="bg-light col-md-12 col-form-label">786877</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-md-4 col-form-label">Nombre Cliente</label>
+                <div class="col-md-8">
+                    <label for="inputEmail3" class="bg-light col-md-12 col-form-label">Miguel Cruz</label>
+                </div>
+            </div>
+
+            <div class="form-group row mb-5">
+                <label for="inputEmail3" class="col-md-4 col-form-label">Contrato</label>
+                <div class="col-md-8">
+                    <label for="inputEmail3" class="bg-light col-md-12 col-form-label">8798798</label>
+                </div>
+            </div>
+
+            
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-md-4 col-form-label">Tipo Solicitud</label>
+                <div class="col-md-8">
+                    <label for="inputEmail3" class="bg-light col-md-12 col-form-label">PTU87987</label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-md-4 col-form-label">Monto</label>
+                <div class="col-md-8">
+                    <label for="inputEmail3" class="bg-light col-md-12 col-form-label">{{327665 | currency}}</label>
+                </div> 
+            </div>
+
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-md-4 col-form-label">Plazo</label>
+                <div class="col-md-8">
+                    <label for="inputEmail3" class="bg-light col-md-12 col-form-label">91</label>
+                </div> 
+            </div>
+
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-md-4 col-form-label">Taza</label>
+                <div class="col-md-8">
+                    <label for="inputEmail3" class="bg-light col-md-12 col-form-label">4.050</label>
+                </div> 
+            </div>
+
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-md-4 col-form-label">Autorizadores elegidos</label>
+                <div class="col-md-8">
+                    <label for="inputEmail3" class="bg-light col-md-12 col-form-label">Miguel cruz, Juan Pérez</label>
+                </div> 
+            </div>
+            
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-md-4 col-form-label">Autorizador</label>
+                <div class="col-md-8">
+                    <label for="inputEmail3" class="bg-light col-md-12 col-form-label">Sin autorizador</label>
+                </div> 
+            </div>
+
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-md-4 col-form-label">Justificación (campaña)</label>
+                <div class="col-md-8">
+                    <textarea class="col-md-12 col-form-label"></textarea>
+                </div> 
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-8 offset-md-4">
+                    <hr>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-md-4 col-form-label">NUM. AUT. EUC</label>
+                <div class="col-md-8">
+                    <input class="col-md-12 col-form-label" type="text">
+                </div> 
+            </div>
+
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-md-4 col-form-label">Observaciones</label>
+                <div class="col-md-8">
+                    <textarea class="col-md-12 col-form-label"></textarea>
+                </div> 
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-8 offset-md-4">
+                    <hr>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-md-4 col-form-label">Nómina Ejec Cancelar</label>
+                <div class="col-md-8">
+                    <input class="col-md-12 col-form-label" type="text">
+                </div> 
+            </div>
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-md-4 col-form-label">Nombe Ejec. Cancelar</label>
+                <div class="col-md-8">
+                    <input class="col-md-12 col-form-label" type="text">
+                </div> 
+            </div>
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-md-4 col-form-label">Justificación</label>
+                <div class="col-md-8">
+                    <input class="col-md-12 col-form-label" type="text">
+                </div> 
+            </div>
+    </div>
+
+    <div class="col-md-4 offset-md-2 mt-5">
+        <table class="table table-striped mt-3">
+            <thead class="table-header">
+                <tr>
+                    <th scope="col">Rango</th>
+                    <th scope="col">Más de 1,000,000</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let rangoTasa of rangosTasas">
+                    <th>{{rangoTasa.rango}}</th>
+                    <td>{{rangoTasa.tasa}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <ng-container *ngIf="showSolicitudActualizar">
+        <div class="col-md-6 offset-md-3 mb-5">
+            <button type="submit" class="btn btn-success btn-sm mr-3"><i class="fas fa-check"></i> Aceptar</button>
+            <button type="submit" class="btn btn-danger btn-sm mr-3" (click)="showCancela()"><i class="fas fa-times"></i> Cancelar</button>
+            <button type="submit" class="btn btn-warning btn-sm mr-3"><i class="fas fa-times"></i> Rechazar Cancelación</button>
+            <button type="submit" class="btn btn-primary btn-sm btn-dropbox" (click)="cerrarTodo()"><i class="fas fa-window-minimize"></i> Cerrar</button>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="showSolicitudCancelacion">
+        <div class="col-md-6 offset-md-3 mb-5">
+            <button type="submit" class="btn btn-warning btn-sm mr-2"><i class="fas fa-times"></i> Rechazar Cancelación</button>
+            <button type="submit" class="btn btn-primary btn-sm btn-danger mr-4"><i class="fas fa-ban"></i> Cancelar</button>
+            <button type="submit" class="btn btn-primary btn-sm btn-dropbox" (click)="cerrarTodo()"><i class="fas fa-window-minimize"></i> Cerrar</button>
+        </div>
+    </ng-container>
+    
+
+    <ng-container *ngIf="showSolicitudActualizar">
+        <div class="col-md-1 offset-md-5 mt-5">
+            <button type="submit" class="btn btn-primary btn-sm btn-success"><i class="fas fa-times"></i> Cerrar</button>
+        </div>
+        <div class="col-md-1 offset-md-5 mt-5" style="text-align: end;">
+            <button type="submit" class="btn btn-primary btn-sm btn-danger" (click)="getTop()">Top</button>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="showSolicitudCancelacion">
+        <div class="col-md-1 offset-md-10 mt-5" style="text-align: end;">
+            <button type="submit" class="btn btn-primary btn-sm btn-danger" (click)="getTop()">Top</button>
+        </div>
+    </ng-container>
+    
+    
+
+</div>

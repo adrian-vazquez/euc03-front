@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
 import { FormControl, FormGroup } from '@angular/forms';
-
 @Component({
-  selector: 'app-control-tasas',
-  templateUrl: './control-tasas.component.html',
-  styleUrls: ['./control-tasas.component.scss'],
+  selector: 'app-reenvio-solicitudes-especiales',
+  templateUrl: './reenvio-solicitudes-especiales.component.html',
+  styleUrls: ['./reenvio-solicitudes-especiales.component.scss'],
   providers: [NgbModalConfig, NgbModal],
 })
-export class ControlTasasComponent implements OnInit {
+export class ReenvioSolicitudesEspecialesComponent implements OnInit {
   columHeaderDummy = [
     { name: '' },
     { name: 'Estatus' },
@@ -76,4 +75,3 @@ export class ControlTasasComponent implements OnInit {
     this.modalService.open(content);
   }
 }
-
