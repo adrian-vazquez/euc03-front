@@ -9,8 +9,9 @@ const routes: Routes = [
     { path: 'control-tasas', component: ControlTasasComponent },
     { path: 'reportes-EUC', component: ReportesEUCComponent },
     { path: '', component: HomeComponent, },
-    { path: '**', redirectTo: '/' },
-    { path: 'vista-campanas', component: CampanasOnlineComponent }
+    { path: 'vista-campanas', component: CampanasOnlineComponent },
+    { path: '**', redirectTo: '/' }
+
     
 ];
 

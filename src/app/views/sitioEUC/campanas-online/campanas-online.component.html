@@ -1,11 +1,24 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12">
-            <button class="btn p-2" style="background-color: rgb(239, 239, 241);">Ejecutivos Pyme</button>
-            <button class="btn"><i class="fas fa-calculator"></i></button>
-            <button class="btn p-2" style="background-color: rgb(55, 120, 183); color: rgb(239, 239, 241);" >Calcular</button>
+            <button class="btn p-2" style="background-color: rgb(239, 239, 241);" (click)="ejecutivosPyme();">
+                Ejecutivos Pyme
+            </button>
+            <button class="btn"></button>
+
+            <button class="btn p-2" style="background-color: rgb(55, 120, 183); color: rgb(239, 239, 241);" (click)="calcular();" >
+                <i class="fas fa-calculator"></i> Calcular
+            </button>
         </div>
     </div>
+
+    <div class="alert alert-secondary mt-2 alert-dismissible fade show" role="alert" *ngIf="mostrarMensaje">
+        <strong>{{ mensaje}}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
     <div class="row p-3">
         <div class="col-12 graficas">
             <div class="row">
@@ -13,15 +26,6 @@
                     <p class="d-flex justify-content-center"> Solicitudes por Campaña</p>
 
                     <canvas id="graficaSolicitudesCampana"></canvas>
-
-                    <!--                    <canvas baseChart
-                   [datasets]="barChartData"
-                   [labels]="barChartLabels"
-                   [options]="barChartOptions"
-                   [plugins]="barChartPlugins"
-                   [legend]="barChartLegend"
-                   [chartType]="barChartType">
-                 </canvas> -->
 
                 </div>
                 <div class="col-4 ">
@@ -43,11 +47,22 @@
 
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="row  d-flex justify-content-center" >
-                        <div class="col-sm-1">
+                    <div class="row d-flex justify-content-center" >
+
+                        <button class="btn d-flex justify-content-center"><i class="fas fa-step-forward d-flex align-items-center" ></i></button>
+                        <button class="btn d-flex justify-content-center"><i class="fas fa-arrow-circle-right d-flex align-items-center" ></i></button>
+
+                        
+                            <input type="text" id="uno" class="form-control col-sm-1 text-center" placeholder="1">
+                                <label for="" class="d-flex align-items-center">of {{ numeroPaginas }} ?</label>
+                        
+                        <button class="btn d-flex justify-content-center"><i class="fas fa-step-forward d-flex align-items-center" ></i></button>
+                        <button class="btn d-flex justify-content-center"><i class="fas fa-arrow-alt-circle-left d-flex align-items-center" ></i></button>
+
+                        <div class="col-sm-2">
                             <div class="form-group">
                                 <select class="form-control" id="exampleFormControlSelect1">
-                                    <option>1</option>
+                                    <option>100%</option>
                                     <option>2</option>
                                     <option>3</option>
                                     <option>4</option>
@@ -157,3 +172,5 @@
     </div>
 
 </div>
+
+
