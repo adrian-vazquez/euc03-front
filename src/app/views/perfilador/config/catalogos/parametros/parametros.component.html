@@ -1,1 +1,30 @@
-<p>parametros works!</p>
+
+<form class="container-form z-depth-2 pt-2">
+    <h2 class="d-flex justify-content-center">Edicion</h2> 
+    <hr> 
+    <div class="col-auto">
+        <label class="sr-only" for="inlineFormInputGroup">AVISO IMPORTANTE</label>
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Titulo</div>
+          </div>
+          <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="AVISO IMPORTANTE">
+        </div>
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Descripción</div>
+          </div>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      </div>
+    <div class="row align-items-baseline justify-content-center">
+        <div class="" style="text-align: center;">
+            <button class="btn btn-success btn-border m-2" style="background-color: #00c851 !important;" (click)="save()">Actualizar</button>
+        </div>
+        <div class="" style="text-align: center;">
+            <button class="btn btn-danger btn-border m-2">Cancelar</button>
+        </div>
+    </div>
+    
+</form>
+
