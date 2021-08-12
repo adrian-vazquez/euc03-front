@@ -8,13 +8,16 @@ import { OperacionesEspecialesComponent } from './control-tasas/operaciones-espe
 import { ReenvioSolicitudesEspecialesComponent } from './control-tasas/reenvio-solicitudes-especiales/reenvio-solicitudes-especiales.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CampanasOnlineComponent } from './campanas-online/campanas-online.component';
+
 
 const COMPONENTS = [
     ControlTasasComponent,
     ReportesEUCComponent,
     OperacionesEspecialesComponent,
     HomeComponent,
-    ReenvioSolicitudesEspecialesComponent
+    ReenvioSolicitudesEspecialesComponent,
+    CampanasOnlineComponent
   ]
   
   

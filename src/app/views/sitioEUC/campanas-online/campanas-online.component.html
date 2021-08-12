@@ -1,0 +1,159 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <button class="btn p-2" style="background-color: rgb(239, 239, 241);">Ejecutivos Pyme</button>
+            <button class="btn"><i class="fas fa-calculator"></i></button>
+            <button class="btn p-2" style="background-color: rgb(55, 120, 183); color: rgb(239, 239, 241);" >Calcular</button>
+        </div>
+    </div>
+    <div class="row p-3">
+        <div class="col-12 graficas">
+            <div class="row">
+                <div class="col-4 ">
+                    <p class="d-flex justify-content-center"> Solicitudes por Campaña</p>
+
+                    <canvas id="graficaSolicitudesCampana"></canvas>
+
+                    <!--                    <canvas baseChart
+                   [datasets]="barChartData"
+                   [labels]="barChartLabels"
+                   [options]="barChartOptions"
+                   [plugins]="barChartPlugins"
+                   [legend]="barChartLegend"
+                   [chartType]="barChartType">
+                 </canvas> -->
+
+                </div>
+                <div class="col-4 ">
+                    <p class="d-flex justify-content-center">Monto por Campaña en Millones</p>
+                    <canvas id="graficaMontoCampana"></canvas>
+                </div>
+                <div class="col-4">
+                    <p class="d-flex justify-content-center">Monto Semanal en Millones</p>
+
+                    <canvas id="myChartPastel"></canvas>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row p-3">
+        <div class="col-12" style="width: 150em; height: 13em;">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row  d-flex justify-content-center" >
+                        <div class="col-sm-1">
+                            <div class="form-group">
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 d-flex justify-content-center">
+                            <div class="form-group d-flex align-items-center">
+                                <input type="text">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-2 d-flex justify-content-start">
+                            <div class="form-group d-flex align-items-center">
+                                <a href="#">Find &nbsp;</a> | &nbsp; <a href="#"> Next</a> 
+                            </div>
+                        </div>
+                        <div class="col-sm-2 d-flex justify-content-start border">
+                            <button class="btn">
+                                <i class="fas fa-save d-flex align-items-center"></i>
+                            </button>
+                            <button class="btn">
+                                <i class="fas fa-redo"></i>
+                            </button>
+                            <button class="btn">
+                                <i class="fas fa-print d-flex align-items-center"></i>
+                            </button>
+ 
+                            
+                            
+                            
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="row border">
+                <div class="col-12 d-flex justify-content-end">
+                    <table class="table table-sm" style="font-size: 0.7em;">
+                        <thead>
+                            <tr class="col-sm-12" style="background-color: rgb(8, 66, 131); color: rgb(196, 218, 238);">
+                                <th scope="col">RK</th>
+                                <th scope="col">División</th>
+                                <th scope="col">#Ejecutivos</th>
+                                <th scope="col">#Ventas</th>
+                                <th scope="col">$ Importe</th>
+                                <th scope="col">Per Cápital</th>
+                                <th scope="col">Promedio</th>
+                                <th scope="col">Suc Sn/Vtas</th>
+                                <th scope="col">#Ventas</th>
+                                <th scope="col">$Importe</th>
+                                <th scope="col">#Ventas</th>
+                                <th scope="col">$Importe</th>
+                                <th scope="col">#Ventas</th>
+                                <th scope="col">$Importe</th>
+                                <th scope="col">#Ventas</th>
+                            </tr>
+                        </thead>
+                        <tbody class="col-sm-12 justify-content-center font-weight-bold">
+                            <tr >
+                                <td>1</td>
+                                <td>NORTE</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                <td>3</td>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                <td>3</td>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                            <tr >
+                                <td>2</td>
+                                <td>SUR</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                <td>3</td>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                <td>3</td>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
