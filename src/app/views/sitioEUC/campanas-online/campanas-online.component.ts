@@ -5,6 +5,7 @@ import { ChartDataSets, ChartOptions, ChartType, Label } from 'chart.js';
  //import * as pluginDataLabels from 'chartjs-plugin-datalabels';
 
  import Chart from 'chart.js';
+import { IColores } from './congifGraficas/IColores';
 
 
 
@@ -323,12 +324,4 @@ new Chart(cnx, {
 
 
 }
-interface IColores
-{
-    AutDistritales: String;
-    AutDivicionales: String;
-    ExcepcionGerencia: String;
-    PortabilidadEspNomina: String;
-    Reten2021: String;
-    RetenSaldoBase: String;
-}
+
