@@ -6,19 +6,25 @@ import { SitioEUCRoutingModule } from './sitio-EUC.routing.mudule';
 import { HomeComponent } from './home/home.component';
 import { OperacionesEspecialesComponent } from './control-tasas/operaciones-especiales/operaciones-especiales.component';
 import { ReenvioSolicitudesEspecialesComponent } from './control-tasas/reenvio-solicitudes-especiales/reenvio-solicitudes-especiales.component';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const COMPONENTS = [
     ControlTasasComponent,
-    ReportesEUCComponent
+    ReportesEUCComponent,
+    OperacionesEspecialesComponent,
+    HomeComponent,
+    ReenvioSolicitudesEspecialesComponent
   ]
   
   
   @NgModule({
-    declarations: [...COMPONENTS, HomeComponent, OperacionesEspecialesComponent, ReenvioSolicitudesEspecialesComponent],
+    declarations: [...COMPONENTS],
     imports: [
       CommonModule,
-      SitioEUCRoutingModule
+      SitioEUCRoutingModule,
+      NgbModule,
+      ReactiveFormsModule
     ]
   })
 export class SitioEUCModule { }
