@@ -9,7 +9,7 @@ import { CampanasOnlineComponent } from './campanas-online/campanas-online.compo
 const COMPONENTS = [
     ControlTasasComponent,
     ReportesEUCComponent,
-    CampanasOnlineComponent
+    CampanasOnlineComponent,
   ]
   
   
