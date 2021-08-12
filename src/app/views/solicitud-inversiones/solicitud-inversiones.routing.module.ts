@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SolicitudesEspecialesComponent } from './solicitudes-especiales/solicitudes-especiales.component';
 import { VistaEjecutivoComponent } from './vista-ejecutivo/vista-ejecutivo.component';
+import { HomeSolicitudInversionesComponent } from './home-solicitud-inversiones/home-solicitud-inversiones.component';
 
 const routes: Routes = [
     { path: 'solicitudes-especiales', component: SolicitudesEspecialesComponent },

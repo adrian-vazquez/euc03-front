@@ -7,21 +7,33 @@ import { HomeComponent } from './home/home.component';
 import { AutorizadoresComponent } from './autorizadores/autorizadores.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { GerenciareporteacumuladoComponent } from './gerenciareporteacumulado/gerenciareporteacumulado.component';
+import { OperacionesEspecialesComponent } from './control-tasas/operaciones-especiales/operaciones-especiales.component';
+import { ReenvioSolicitudesEspecialesComponent } from './control-tasas/reenvio-solicitudes-especiales/reenvio-solicitudes-especiales.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CampanasOnlineComponent } from './campanas-online/campanas-online.component';
 
 
 const COMPONENTS = [
   HomeComponent,
   ControlTasasComponent,
   ReportesEUCComponent,
-  AutorizadoresComponent
-]
+  AutorizadoresComponent,
+  OperacionesEspecialesComponent,
+  HomeComponent,
+  ReenvioSolicitudesEspecialesComponent,
+  CampanasOnlineComponent,
+  GerenciareporteacumuladoComponent
+];
   
 @NgModule({
-  declarations: [...COMPONENTS, GerenciareporteacumuladoComponent],
+  declarations: [...COMPONENTS],
   imports: [
     CommonModule,
     SitioEUCRoutingModule,
-    SharedModule
+    SharedModule,
+    NgbModule,
+    ReactiveFormsModule
   ]
 })
 export class SitioEUCModule { }

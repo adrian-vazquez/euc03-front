@@ -1,0 +1,46 @@
+$colorPrincipalBlue: #3262d1;
+
+.size-input{
+    width: 5.8em;
+    margin-right: 0.07em;
+}
+
+.size-select{
+    width: 6.7em;
+    margin-right: 0.05em;
+}
+
+.color-button{
+    background-color: $colorPrincipalBlue;
+    color: white;
+}
+
+.sobre-color{
+    color: #028ee1;
+}
+table{
+  width: 80%;
+  text-align: center;
+    th, td{
+      border: 1px solid rgb(0, 0, 0);
+      padding: 0%;
+    }
+  }
+
+td{
+  text-align: center;
+}
+  .th-color{
+    color: white;
+    background-color:  #028ee1;
+  }
+
+.color-amarillo{
+  background-color: #dde102;
+  color: $colorPrincipalBlue;
+}
+
+.color-verde{
+  background-color: #4dd7f0;
+  color: $colorPrincipalBlue;
+}

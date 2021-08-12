@@ -9,9 +9,9 @@ import { ComparativoComponent } from './comparativo/comparativo.component';
 import { GatComponent } from './gat/gat.component';
 import { ImagenprincipalComponent } from './imagenprincipal/imagenprincipal.component';
 import { CargasComponent } from './cargas/cargas.component';
-import { CatalogosComponent } from './catalogos/catalogos.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CatalogosModule } from './catalogos/catalogos.module';
 import { GenericTableAppAppModule } from 'src/app/@generic-table-app/generic-table.module';
 
 
@@ -23,7 +23,6 @@ const COMPONENTS = [
   GatComponent,
   ImagenprincipalComponent,
   CargasComponent,
-  CatalogosComponent
 ];
 
 @NgModule({
@@ -33,7 +32,8 @@ const COMPONENTS = [
     ConfigRoutingModule,
     SharedModule,
     ReactiveFormsModule,
-    GenericTableAppAppModule
+    CatalogosModule,
+    GenericTableAppAppModule,
   ],
   exports: [
     

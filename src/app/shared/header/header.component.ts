@@ -26,7 +26,6 @@ export class HeaderComponent implements OnInit {
   }
   
   showSubSubMenu( isShow:any ): void {
-    debugger
     let subSubMenu: HTMLElement = (document.querySelector('.sub-submenu-right') as HTMLElement)
     subSubMenu.style.display = isShow ? 'block' : 'none';
   }

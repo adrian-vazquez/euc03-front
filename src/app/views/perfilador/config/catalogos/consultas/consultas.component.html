@@ -1,0 +1,17 @@
+
+      <form class="container-form z-depth-2 pt-2">
+        <h2 class="ml-2">Consultas</h2> 
+        <hr>
+        <div class="row justify-content-center">
+          <div class="row flex-column align-items-center" >
+            <ng-container *ngFor="let file of files" >
+              <label for="btn-campanias">{{file.label}}</label>
+              <button class="mb-4" mat-fab color="warn" aria-label="Example icon button with a home icon" (click)="onClickDownloadPdf(file.label)">
+                <mat-icon>
+                  <span class="material-icons">cloud_download</span>
+                </mat-icon>
+              </button> 
+            </ng-container>
+          </div>
+        </div>
+      </form>
