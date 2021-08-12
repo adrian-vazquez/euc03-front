@@ -4,19 +4,24 @@ import { ControlTasasComponent } from './control-tasas/control-tasas.component';
 import { ReportesEUCComponent } from './reportes-euc/reportes-euc.component';
 import { SitioEUCRoutingModule } from './sitio-EUC.routing.mudule';
 import { HomeComponent } from './home/home.component';
+import { AutorizadoresComponent } from './autorizadores/autorizadores.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { GerenciareporteacumuladoComponent } from './gerenciareporteacumulado/gerenciareporteacumulado.component';
 
 
 const COMPONENTS = [
-    ControlTasasComponent,
-    ReportesEUCComponent
+  HomeComponent,
+  ControlTasasComponent,
+  ReportesEUCComponent,
+  AutorizadoresComponent
+]
+  
+@NgModule({
+  declarations: [...COMPONENTS, GerenciareporteacumuladoComponent],
+  imports: [
+    CommonModule,
+    SitioEUCRoutingModule,
+    SharedModule
   ]
-  
-  
-  @NgModule({
-    declarations: [...COMPONENTS, HomeComponent],
-    imports: [
-      CommonModule,
-      SitioEUCRoutingModule
-    ]
-  })
+})
 export class SitioEUCModule { }

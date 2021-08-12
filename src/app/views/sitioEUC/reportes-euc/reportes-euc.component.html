@@ -1,1 +1,171 @@
-<p>reportes-euc works!</p>
+<div class="container pt-2">
+    <div class="row justify-content-center align-items-baseline">
+        <img [src]="iconCarga" class="mb-4 pr-2">
+        <h4><label class="texto-general" style="text-align: center;"><b>Cargador de Insumos de Tasas</b></label></h4>
+    </div>
+    <div class="cborder">
+        <div class="row pt-2">
+            <div class="col-sm-12" style="text-align: center;">
+                <label class="texto-general" style="text-align: center;">Carga de Archivos de Inversiones Aplicadas</label>
+            </div>
+        </div>
+        <div class="row pr-4 pl-4">
+            <div class="col-sm-9">
+                <div class="input-group mb-2">
+                    <span class="input-group-text">Carga Archivo Platino:</span>
+                    <input type="file" class="form-control" name="Examinar">
+                </div>
+            </div>
+            <div class="col-sm-3" style="text-align: center;">
+                <button class="btn btn-success btn-sm m-1 btn-border" style="background-color: #00c851 !important;">Subir Archivo</button>
+                <button type="button" class="btn btn-outline-primary btn-sm m-1 btn-border">Limpiar</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="cborder">
+        <div class="row pt-2">
+            <div class="col-sm-12" style="text-align: center;">
+                <label class="texto-general" style="text-align: center;">Carga de Registro de Solicitudes</label>
+            </div>
+        </div>
+        <div class="row pr-4 pl-4">
+            <div class="col-sm-10">
+                <div class="input-group mb-2">
+                    <span class="input-group-text">Carga Archivo txt separado por Tabuladores:</span>
+                    <input type="file" class="form-control" name="Examinar">
+                </div>
+            </div>
+            <div class="col-sm-2" style="text-align: center;">
+                <button class="btn btn-success btn-sm m-1 btn-border" style="background-color: #00c851 !important;">Subir Archivo</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="cborder">
+        <div class="row pt-2">
+            <div class="col-sm-12" style="text-align: center;">
+                <label class="texto-general" style="text-align: center;">Carga de Archivo de Autorizadores / Eliminación de carga de Registros del Día</label>
+            </div>
+        </div>
+        <div class="row pl-1">
+            <div class="col-sm-4">
+                <div class="input-group mb-2">
+                    <span class="input-group-text">Fecha de Operación</span>
+                    <input type="date" class="form-control">
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="input-group mb-2">
+                    <span class="input-group-text">Archivo Autorizadores:</span>
+                    <input type="file" class="form-control" name="Examinar">
+                </div>
+            </div>
+            <div class="col" style="text-align: center;">
+                <button class="btn btn-success btn-sm m-1 btn-border" style="background-color: #00c851 !important;">Subir Archivo</button>
+                <button type="button" class="btn btn-warning btn-sm m-1 btn-border">Calcular</button>
+            </div>
+        </div>
+        <div class="row pl-1">
+            <div class="col-sm-4">
+                <div class="input-group mb-2">
+                    <span class="input-group-text">Fecha de Eliminación</span>
+                    <input type="date" class="form-control">
+                </div>
+            </div>
+            <div class="col-3" style="text-align: center;">
+                <button class="btn btn-danger btn-sm m-1 btn-border" style="background-color: #00c851 !important;">Eliminar día de Carga</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="cborder">
+        <div class="row pt-2">
+            <div class="col-sm-12" style="text-align: center;">
+                <label class="texto-general" style="text-align: center;">Búsqueda de Solicitudes Aplicadas sin Datos:</label>
+            </div>
+        </div>
+        <div class="row pr-4 pl-4">
+            <div class="col-sm-5">
+                <div class="input-group mb-2">
+                    <span class="input-group-text">Fecha de Eliminación</span>
+                    <input type="date" class="form-control">
+                </div>
+            </div>
+            <div class="col-sm-2" style="text-align: center;">
+                <button type="button" class="btn btn-primary btn-sm m-1 btn-border">Buscar</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="cborder">
+        <div class="row pt-2">
+            <div class="col-sm-12" style="text-align: center;">
+                <label class="texto-general" style="text-align: center;">Actualización de Sucursales-Divisiones:</label>
+            </div>
+        </div>
+        <div class="row pr-4 pl-4">
+            <div class="col-sm-8">
+                <div class="input-group mb-2">
+                    <span class="input-group-text">Sucursales</span>
+                    <button type="button" class="btn btn-primary btn-sm m-1 btn-border">Buscar Reg. sin Suc</button>
+                    <button class="btn btn-success btn-sm m-1 btn-border" style="background-color: #00c851 !important;">Actualizar</button>
+                    <button type="button" class="btn btn-primary btn-sm m-1 btn-border">Agregar Sucursal</button>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="input-group mb-2">
+                    <span class="input-group-text">Divisiones</span>
+                    <button class="btn btn-success btn-sm m-1 btn-border" style="background-color: #00c851 !important;">Actualizar</button>
+                    <button type="button" class="btn btn-primary btn-sm m-1 btn-border">Actualizar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="cborder">
+    <div class="row pt-2">
+        <div class="col-sm-12" style="text-align: center;">
+            <label class="texto-general" style="text-align: center;">Reportes Diarios / Reportes de Boletines</label>
+        </div>
+    </div>
+    <div class="row pr-1 pl-1">
+        <div class="input-group mb-2 col-sm-3">
+            <span class="input-group-text">Fecha Inicio</span>
+            <input type="date" class="form-control">
+        </div>
+        <div class="input-group mb-2 col-sm-3">
+            <span class="input-group-text">Fecha Fin</span>
+            <input type="date" class="form-control">
+        </div>
+        <select class="col-sm-2 m-2" id="">
+            <option value="0">Aportaciones</option>
+            <option value="0">Otro</option>
+        </select>
+        <div class="col-sm-2" style="text-align: center;">
+            <button type="button" class="btn btn-warning btn-sm m-1 btn-border">Ver Archivo</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-group mb-2 col-sm-3">
+            <span class="input-group-text">Fecha Inicio</span>
+            <input type="date" class="form-control">
+        </div>
+        <div class="input-group mb-2 col-sm-3">
+            <span class="input-group-text">Fecha Fin</span>
+            <input type="date" class="form-control">
+        </div>
+        <select class="col-sm-1 m-2" id="">
+            <option value="0">Aportaciones</option>
+            <option value="0">Otro</option>
+        </select>
+        <input type="checkbox" class="form-control" style="width: 2%;">
+        <label class="texto-general pt-3 pl-2" style="text-align: center !important;">Enfoque EUC</label>
+        <div class="col-sm-3">
+            <button type="button" class="btn btn-primary btn-sm m-1 btn-border">Boletín</button>
+            <button class="btn btn-success btn-sm m-1 btn-border" style="background-color: #00c851 !important;">Indicadores</button>
+            <button type="button" class="btn btn-primary btn-sm m-1 btn-border">Autorizadores</button>
+        </div>
+    </div>
+</div>

@@ -25,9 +25,15 @@ export class HeaderComponent implements OnInit {
     this.classMenu = 'dropdown close-menu';
   }
   
-  showSubSubMenu( isShow ): void {
+  showSubSubMenu( isShow:any ): void {
     debugger
     let subSubMenu: HTMLElement = (document.querySelector('.sub-submenu-right') as HTMLElement)
+    subSubMenu.style.display = isShow ? 'block' : 'none';
+  }
+
+  showSubSubMenuA( isShow:any ): void {
+    debugger
+    let subSubMenu: HTMLElement = (document.querySelector('.sub-submenu-left') as HTMLElement)
     subSubMenu.style.display = isShow ? 'block' : 'none';
   }
 

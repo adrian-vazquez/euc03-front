@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportesEUCComponent implements OnInit {
 
+  iconCarga:string = 'assets/images/Img/load.PNG';
+  
   constructor() { }
 
   ngOnInit(): void {
