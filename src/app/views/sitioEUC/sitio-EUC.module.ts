@@ -12,7 +12,15 @@ import { ReenvioSolicitudesEspecialesComponent } from './control-tasas/reenvio-s
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CampanasOnlineComponent } from './campanas-online/campanas-online.component';
+<<<<<<< HEAD
 import { GenericTableAppAppModule } from 'src/app/@generic-table-app/generic-table.module';
+=======
+import { CetesComponent } from './control-tasas/cetes/cetes.component';
+import { KpiComponent } from './control-tasas/kpi/kpi.component';
+import { CompletarInformacionKpiComponent } from './control-tasas/completar-informacion-kpi/completar-informacion-kpi.component';
+import { ListaFestivosComponent } from './lista-festivos/lista-festivos.component';
+
+>>>>>>> 6b4b6d50bf676318c3233845f1a0efb32a7d9826
 
 
 const COMPONENTS = [
@@ -24,8 +32,13 @@ const COMPONENTS = [
   HomeComponent,
   ReenvioSolicitudesEspecialesComponent,
   CampanasOnlineComponent,
-  GerenciareporteacumuladoComponent
-];
+  GerenciareporteacumuladoComponent,
+  CetesComponent, 
+  KpiComponent,
+  CompletarInformacionKpiComponent,
+  ListaFestivosComponent
+]
+  
   
 @NgModule({
   declarations: [...COMPONENTS],

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgbDatepickerModule, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDatepickerModule, NgbDateStruct, NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
 import { CatalogosService } from '../../../../services/catalogos.service';
 import { SolicitudInversionesService } from '../../../../services/solicitud-inverciones/solicitud-inversiones.service';
 import { RangosTasas } from '../../../../shared/models/solicitudes-especiales.models';
@@ -154,44 +154,150 @@ export class OperacionesEspecialesComponent implements OnInit {
       observacion: 'no hay'
     },
   ];
+
+  columHeaderConsult = [
+    { name: 'Estatus' },
+    { name: 'Fecha Solicitud' },
+    { name: 'Tipo' },
+    { name: 'Contrato' },
+    { name: 'Num.Cte' },
+    { name: 'Sucursal-Div' },
+    { name: 'Plazo' },
+    { name: 'Monto' },
+    { name: 'Tasa Solic' },
+    { name: 'Fecha_Liber_UEC ' },
+    { name: 'FolioUEC ' },
+    { name: 'Observaciones' },
+  ];
+
+  data = [
+    { 
+      estatus: 'LIBERADA',
+      fechaSolic: '21-03-21',
+      tipo: 'UYD76878',
+      contrato: '766865',
+      numCte: '090988',
+      sucursalDiv: '1300 Gualdalaja',
+      plazo: '91',
+      monto: '1339387',
+      tasaSolic: '4.01',
+      fechaLibeEUC: '21-05-21',
+      folioEUC: '567',
+      observaciones: 'no hay',
+    },
+    { 
+      estatus: 'RECHAZADA',
+      fechaSolic: '21-03-21',
+      tipo: 'UYD76878',
+      contrato: '766865',
+      numCte: '090988',
+      sucursalDiv: '1300 Gualdalaja',
+      plazo: '91',
+      monto: '1339387',
+      tasaSolic: '4.01',
+      fechaLibeEUC: '21-05-21',
+      folioEUC: '567',
+      observaciones: 'no hay',
+    },
+    { 
+      estatus: 'LIBERADA',
+      fechaSolic: '21-03-21',
+      tipo: 'UYD76878',
+      contrato: '766865',
+      numCte: '090988',
+      sucursalDiv: '1300 Gualdalaja',
+      plazo: '91',
+      monto: '1339387',
+      tasaSolic: '4.01',
+      fechaLibeEUC: '21-05-21',
+      folioEUC: '567',
+      observaciones: 'no hay',
+    },
+    { 
+      estatus: 'CANCELADA',
+      fechaSolic: '21-03-21',
+      tipo: 'UYD76878',
+      contrato: '766865',
+      numCte: '090988',
+      sucursalDiv: '1300 Gualdalaja',
+      plazo: '91',
+      monto: '1339387',
+      tasaSolic: '4.01',
+      fechaLibeEUC: '21-05-21',
+      folioEUC: '567',
+      observaciones: 'no hay',
+    },
+    { 
+      estatus: 'LIBERADA',
+      fechaSolic: '21-03-21',
+      tipo: 'UYD76878',
+      contrato: '766865',
+      numCte: '090988',
+      sucursalDiv: '1300 Gualdalaja',
+      plazo: '91',
+      monto: '1339387',
+      tasaSolic: '4.01',
+      fechaLibeEUC: '21-05-21',
+      folioEUC: '567',
+      observaciones: 'no hay',
+    },
+  ]
   catalogoEstatus = [];
   rangosTasas: RangosTasas[];
   model: NgbDateStruct;
   showSolicitudActualizar = false;
   showSolicitudCancelacion = false;
-  constructor(private catalogosService: CatalogosService, private solicitudInversionesService:SolicitudInversionesService) { }
+  showResult = false;
+  constructor( 
+                private catalogosService: CatalogosService,  
+                private solicitudInversionesService: SolicitudInversionesService,
+                private config: NgbModalConfig, 
+                private modalService: NgbModal) { }
 
   ngOnInit(): void {
     this.obtenerCatalogos();
     this.rangosTasas = this.solicitudInversionesService.rangosTasasTable;
   }
 
-  obtenerCatalogos(){
+  obtenerCatalogos() {
     this.catalogosService.obtenetCatEstatus().subscribe(data => {
       this.catalogoEstatus = data;
       console.log(this.catalogoEstatus);
     })
   }
 
-  mostrarEdit(){
+  mostrarEdit() {
     this.showSolicitudActualizar = true;
     this.showSolicitudCancelacion = false;
   }
 
-  showCancela(){
+  showCancela() {
     this.showSolicitudActualizar = false;
     this.showSolicitudCancelacion = true;
     console.log('entro');
-    
+
   }
 
   getTop() {
-      window.scroll(0,0);
+    window.scroll(0, 0);
   }
 
-  cerrarTodo(){
+  buscar() {
+    this.showResult = true;
+  }
+
+
+  cerrarTodo() {
     this.showSolicitudActualizar = false;
     this.showSolicitudCancelacion = false;
+  }
+
+  openXl(content) {
+    this.modalService.open(content, { centered: true, size: 'xl', scrollable: true });
+  }
+
+  save(data) {
+    this.modalService.dismissAll();
   }
 
 }

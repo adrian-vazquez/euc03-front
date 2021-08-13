@@ -78,7 +78,7 @@ export class ReportesEUCComponent implements OnInit {
 
   verDatoDiario(){
     Swal.fire({
-      title: '¿Qué desea ver?',
+      title: 'Archivo Diario:',
       showDenyButton: true,
       showCancelButton: false,
       confirmButtonText: `6. Campañas (Detalles de Operación)`,
