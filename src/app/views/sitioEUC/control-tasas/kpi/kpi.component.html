@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-md-12 text-center">
+        <label><button class="btn btn-warning button-radius" routerLink='/control-tasas/completar-informacion-KPI'><i class="fas fa-sign-in-alt"></i> Completar Información KPI</button>
+        </label>
+        <br>
+        <label class="mt-4"><i class="fas fa-map-marker-alt icon-reporte"></i> Reporte de KPI</label>
+        <br>
+
+        <label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Seleccionar un día sábado</span>
+                </div>
+                <div class="input-group-prepend">
+                    <span class="input-group-text" (click)="d.toggle()">
+                        <i class="far fa-calendar-check"></i>
+                    </span>
+                </div>
+                <div class="input-group-prepend">
+                    <input class="size-input" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker">
+                </div>
+                <div class="input-group-prepend ml-3">
+                    <button class="btn btn-success button-radius"><i class="fas fa-calculator"></i> Calcular KPI</button>
+                </div>
+            </div>
+        </label>
+    </div>
+</div>
+
+<div style="margin-top: 5em;">
+    <iframe src="https://docs.google.com/viewer?srcid=1AdyzEZ8rhItZZ6PtQpHYsX4MyIpuYHgJ&pid=explorer&efh=false&a=v&chrome=false&embedded=true" 
+        width="100%" height="680px"></iframe>
+</div>
