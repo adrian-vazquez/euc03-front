@@ -1,0 +1,135 @@
+<div class="row">
+    <div class="col-md-12 text-center">
+        <label class="label-color">
+            <h2><i class="far fa-check-circle"></i>Cargador de resultados de subasta</h2>
+        </label>
+    </div>
+
+    <div class="col-md-4">
+        <hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">¿Es subasta de 4 plazos?</span>
+            </div>
+            <div class="input-group-prepend">
+                <span class="input-group-text"><input type="checkbox"></span>
+            </div>
+        </div>
+        <hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Plazo 1</span>
+            </div>
+            <div class="input-group-prepend">
+                <input type="text" class="form-control size-input">
+            </div>
+            <div class="input-group-prepend">
+                <span class="input-group-text">Tasa Actual</span>
+            </div>
+            <div class="input-group-prepend">
+                <input type="text" class="form-control size-input">
+            </div>
+        </div>
+        <hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Plazo 2</span>
+            </div>
+            <div class="input-group-prepend">
+                <input type="text" class="form-control size-input">
+            </div>
+            <div class="input-group-prepend">
+                <span class="input-group-text">Tasa Actual</span>
+            </div>
+            <div class="input-group-prepend">
+                <input type="text" class="form-control size-input">
+            </div>
+        </div>
+        <hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Plazo 3</span>
+            </div>
+            <div class="input-group-prepend">
+                <input type="text" class="form-control size-input">
+            </div>
+            <div class="input-group-prepend">
+                <span class="input-group-text">Tasa Actual</span>
+            </div>
+            <div class="input-group-prepend">
+                <input type="text" class="form-control size-input">
+            </div>
+        </div>
+        <hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Plazo 4</span>
+            </div>
+            <div class="input-group-prepend">
+                <input type="text" class="form-control size-input">
+            </div>
+            <div class="input-group-prepend">
+                <span class="input-group-text">Tasa Actual</span>
+            </div>
+            <div class="input-group-prepend">
+                <input type="text" class="form-control size-input">
+            </div>
+        </div>
+
+        <div class="mt-3">
+            <button class="btn btn-success mr-2 btn-sm"><i class="fas fa-calculator"></i>Calcular</button>
+            <button class="btn btn-primary mr-2 btn-sm" ><i class="fas fa-print"></i>Imprimir</button>
+            <button class="btn btn-warning mr-2 btn-sm"><i class="fas fa-print"></i>Imprimir Histórico</button>
+        </div>
+    </div>
+
+    <div class="col-md-7 offset-md-1" style="margin-top: 12em;">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Cargar Curva CETES(operativa)</span>
+            </div>
+            <div class="input-group-prepend">
+                <input type="file" class=" bg-file form-control">
+            </div>
+        </div>
+
+        <div class="input-group mt-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    Fecha Inicial
+                </span>
+            </div>
+
+            <div class="input-group-prepend">
+                <span class="input-group-text icon-calendar" (click)="d.toggle()">
+                    <i class="far fa-calendar-check"></i>
+                </span>
+            </div>
+            <div class="input-group-prepend">
+                <input class="size-text-calendar" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker">
+            </div>
+            
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    Fecha Final
+                </span>
+            </div>
+            <div class="input-group-prepend">
+                <span class="input-group-text icon-calendar" (click)="e.toggle()">
+                    <i class="far fa-calendar-check"></i>
+                </span>
+            </div>
+            <div class="input-group-prepend">
+                <input class="size-text-calendar" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #e="ngbDatepicker">
+            </div>
+            <div class="input-group-prepend">
+                <button class="btn btn-success"><i class="fas fa-upload"></i>Subir CETES</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-3">
+    <iframe src="https://docs.google.com/viewer?srcid=1AdyzEZ8rhItZZ6PtQpHYsX4MyIpuYHgJ&pid=explorer&efh=false&a=v&chrome=false&embedded=true" 
+        width="100%" height="680px"></iframe>
+</div>

@@ -9,6 +9,11 @@ import { ReenvioSolicitudesEspecialesComponent } from './control-tasas/reenvio-s
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CampanasOnlineComponent } from './campanas-online/campanas-online.component';
+import { CetesComponent } from './control-tasas/cetes/cetes.component';
+import { KpiComponent } from './control-tasas/kpi/kpi.component';
+import { CompletarInformacionKpiComponent } from './control-tasas/completar-informacion-kpi/completar-informacion-kpi.component';
+import { ListaFestivosComponent } from './lista-festivos/lista-festivos.component';
+
 
 
 const COMPONENTS = [
@@ -17,7 +22,11 @@ const COMPONENTS = [
     OperacionesEspecialesComponent,
     HomeComponent,
     ReenvioSolicitudesEspecialesComponent,
-    CampanasOnlineComponent
+    CampanasOnlineComponent,
+    CetesComponent, 
+    KpiComponent,
+    CompletarInformacionKpiComponent,
+    ListaFestivosComponent
   ]
   
   
