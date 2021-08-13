@@ -12,6 +12,7 @@ import { ReenvioSolicitudesEspecialesComponent } from './control-tasas/reenvio-s
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CampanasOnlineComponent } from './campanas-online/campanas-online.component';
+import { GenericTableAppAppModule } from 'src/app/@generic-table-app/generic-table.module';
 
 
 const COMPONENTS = [
@@ -33,7 +34,8 @@ const COMPONENTS = [
     SitioEUCRoutingModule,
     SharedModule,
     NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    GenericTableAppAppModule
   ]
 })
 export class SitioEUCModule { }
