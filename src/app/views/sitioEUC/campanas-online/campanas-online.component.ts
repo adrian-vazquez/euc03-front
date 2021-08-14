@@ -2,10 +2,10 @@ import { DOCUMENT } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 
-import { GraficasImpl } from './congifGraficas/GraficasImpl';
+import { GraficasImpl } from './congifGraficas/Graficas';
 import { DatosGraficas } from './congifGraficas/DatosGraficas';
+import { Tablas } from './congifGraficas/Tablas';
 
-import { Chart } from "chart.js";
 
 @Component({
   selector: 'app-campanas-online',
@@ -15,14 +15,30 @@ import { Chart } from "chart.js";
 export class CampanasOnlineComponent implements OnInit {
 
     numeroPaginas: number;
-    mostrarMensaje: Boolean;;
+    mostrarMensaje: Boolean;
     mensaje: string;
+    tablaDivisionales: Boolean;
+    tablaSucursales: Boolean;
+    tablaGerMercado: Boolean;
+    tablaRegionales: Boolean;
+
+    mostrarTablas: Array<Boolean>;
 
   constructor() {   }
  
   ngOnInit(): void 
   {
     this.mostrarMensaje = false;
+    this.tablaDivisionales = true;
+    this.tablaSucursales = false;
+    this.tablaGerMercado = false;
+    this.tablaRegionales = false;
+
+    this.mostrarTablas = [ this.tablaDivisionales,
+                            this.tablaSucursales, 
+                            this.tablaGerMercado ,
+                            this.tablaRegionales ];
+
     this.mensaje = "";
    
 
@@ -32,10 +48,23 @@ export class CampanasOnlineComponent implements OnInit {
           let graficas: GraficasImpl = new GraficasImpl();
           let datos: DatosGraficas = new DatosGraficas();
 
-          graficas.grafica(datos.datosFechas(), datos.datosColores(), 'graficaSolicitudesCampana');
-          graficas.grafica(datos.datosFechas(), datos.datosColores(), 'graficaMontoCampana');
+          let datosGrafica:Array<number> = this.getRandom(50,300);
+
+          
+
+          graficas.grafica(datos.datosFechas(), datos.datosColores(), 'graficaSolicitudesCampana', datosGrafica);
+          graficas.grafica(datos.datosFechas(), datos.datosColores(), 'graficaMontoCampana', datosGrafica);
           graficas.graficaPastel();
         
+  }
+  private getRandom(min: number, max: number): Array<number> {
+    let datosGraficas: Array<number> = [Math.random() * (max - min) + min,
+                                        Math.random() * (max - min) + min,
+                                        Math.random() * (max - min) + min,
+                                        Math.random() * (max - min) + min,
+                                        Math.random() * (max - min) + min,
+                                        Math.random() * (max - min) + min];
+    return datosGraficas;
   }
 
 //   El Botón “Calcular” permite recalcular las gráficas en cualquier momento.
@@ -55,11 +84,34 @@ export class CampanasOnlineComponent implements OnInit {
   {
 
   }
+       
+ 
+  public mostrarTablaDivisiones(): void
+  {
+    
+    
+    this.mostrarTablas = Tablas.mostrarTablas(0);
+
+  }
+  public mostrarTablaSucursales(): void
+  {
+    this.mostrarTablas = Tablas.mostrarTablas(1);
+  }
+  public mostrarTablaGerMercado(): void
+  {
+this.mostrarTablas = Tablas.mostrarTablas(2);
+  }
+  public mostrarTablaRegionales(): void
+  {
+    this.mostrarTablas = Tablas.mostrarTablas(3);
+  }
 
 
 
 
-  
+
+
 
 }
+
 

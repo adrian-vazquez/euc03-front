@@ -1,17 +1,16 @@
 import { IColores } from "./IColores";
-import { IGraficas } from "./IGraficas";
 
 import Chart from 'chart.js';
 import { DatosGraficas } from "./DatosGraficas";
 
 
 
-export class GraficasImpl implements IGraficas
+export class GraficasImpl
 {
 
-    grafica( fechas: string [], color: IColores, grafica: string  )
+    grafica( fechas: string [], color: IColores, grafica: string, datos:Array<number>  )
     {
-        let numeroMayor: Array<number> = [180,250,350,400,364, 500];
+        let numeroMayor: Array<number> = datos;
         
 
          const myChart = <HTMLCanvasElement> document.getElementById(grafica);
@@ -58,8 +57,8 @@ export class GraficasImpl implements IGraficas
       const datos00042021 = {
         label: ["RETEN SUELDO BASE"],
         data: DatosGraficas.datos(numeroMayor[5]), 
-        backgroundColor:  DatosGraficas.color(color.Reten2021),// Color de fondo,
-        borderColor: DatosGraficas.color(color.Reten2021),
+        backgroundColor:  DatosGraficas.color(color.RetenSaldoBase),// Color de fondo,
+        borderColor: DatosGraficas.color(color.RetenSaldoBase),
         borderWidth: 1,
     };
 
@@ -79,11 +78,17 @@ new Chart(cnx, {
         ]
     },
     options: {
+        layout: {
+            padding: {
+                top: 8
+            }
+        },
         legend:{
             display: true,
             labels:{
                 fontSize:8,
-            }
+            },
+            
         },
         scales: {
             yAxes: [{
@@ -93,7 +98,7 @@ new Chart(cnx, {
                     min: 0,
               	    max:( Math.max(... numeroMayor) + 50),
                     
-                }
+                },
             }],
             xAxes: [{
                 ticks: {
@@ -102,6 +107,7 @@ new Chart(cnx, {
                 }
             }],
         },
+        
     }
   });
       
@@ -154,7 +160,8 @@ new Chart(cnx, {
             display: true,
             labels:{
                 fontSize: 8
-            }
+            },
+            position: 'right'
         }
     }
 });

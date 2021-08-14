@@ -27,3 +27,66 @@ table tbody tr > td:nth-child(2)
     background-color: rgb(97, 162, 189);
     color: rgb( 221, 219, 222);
 }
+.btnColorEjecutivosPyme
+{
+    background-color: rgb(239, 239, 241);
+}
+.btnCalcular
+{
+    background-color: rgb(55, 120, 183); color: rgb(239, 239, 241);
+}
+.widthCheck
+{
+    width: 3em;
+}
+.mt-check
+{
+    margin-top: 0.8em
+}
+
+  .tabla-over
+  {
+    width: 1800px;
+    margin: auto;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+ 
+  .layout {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+  
+  .over {
+    display: table-cell;
+    overflow-x: auto;
+    width: 100%;
+  }
+  .over th
+  {
+      font-size: 0.5em;
+  }
+
+  .tablas-dev
+  {
+      position: relative;
+      bottom: 7em;
+      width: 125em;
+      border: 1px solid red;
+  }
+  
+  .dropdown-menu li > a
+  {
+      cursor: pointer;
+      
+      
+  }
+  .dropdown-menu li > a:hover
+  {
+      color: blue;
+  }

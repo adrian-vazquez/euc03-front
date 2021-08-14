@@ -40,7 +40,7 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li>
+                            <li >
                                 <a class="title-menu">Solicitud de inversiones</a>
                                 <div class="submenu-right">
                                     <ul>
@@ -63,9 +63,9 @@
                                         <li>
                                             <a class="title-menu" [routerLink]="['reportes-EUC']" routerLinkActive="true">reportes EUC</a>
                                         </li>
-                                        <li>
+                                        <li (mouseenter)="showSubMenu(true)" (mouseleave)="showSubMenu(false)" >
                                             <a class="title-menu" >gerencia</a>
-                                            <div class="submenu-left">
+                                            <div class="sub-menu-right" >
                                                 <ul >
                                                     <li>
                                                         <a class="title-menu" [routerLink]="['vista-campanas']" routerLinkActive="true">Campañas On-Line</a>
