@@ -22,32 +22,58 @@
             <div class="col"></div>
         </div>
         <hr>
-        <div class="row">
-            <div class="col"></div>
-            <div class="col" >
-                <table class="table table-striped">
-                    <thead class="table-header" style="background-color: #056DAE; color: white;">
-                        <tr>
-                            <th scope="col">Fecha</th>
-                            <th scope="col">Tabla Tasa</th>
-                            <th scope="col">Tabla Acumulado</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>27-04-2021</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <div *ngIf="showTablaBusqueda==1">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col" >
+                    <table class="table table-striped">
+                        <thead class="table-header" style="background-color: #056DAE; color: white;">
+                            <tr>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Tabla Tasa</th>
+                                <th scope="col">Tabla Acumulado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>16-08-2021</td>
+                                <td>412</td>
+                                <td>412</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col"></div>
             </div>
-            <div class="col"></div>
+        </div>
+        <div *ngIf="showTablaBusqueda==0">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col" >
+                    <table class="table table-striped">
+                        <thead class="table-header" style="background-color: #056DAE; color: white;">
+                            <tr>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Tabla Tasa</th>
+                                <th scope="col">Tabla Acumulado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>16-08-2021</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col"></div>
+            </div>
         </div>
         <hr>
         <div class="row">
             <div class="col-sm-4 text-center">
-                <button class="btn btn-success btn-sm m-1 btn-border" style="background-color: #00c851 !important;">Búsqueda de Registros</button>
+                <button class="btn btn-success btn-sm m-1 btn-border" style="background-color: #00c851 !important;" (click)="buscaRegistros()">Búsqueda de Registros</button>
             </div>
             <div class="col-sm-4 text-center">
                 <button type="button" class="btn btn-primary btn-sm m-1 btn-border">Transferir Registros</button>
@@ -66,8 +92,20 @@
     <div class="row pt-2">
         <div class="col"></div>
         <div class="col text-center">
-            <button type="button" class="btn btn-warning btn-sm m-1 btn-border">Generar Reporte</button>
+            <button type="button" class="btn btn-warning btn-sm m-1 btn-border" (click)="muestraTablaDatos()">Generar Reporte</button>
         </div>
         <div class="col"></div>
+    </div>
+</div>
+<div [ngStyle]="{'display': (showDataTable) ? 'block' : 'none'}">
+    <div class="mt-4">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col">
+                <label class="texto-general pt-3 pl-2 text-right"><b>Reporte Acumulado al Día: 16-08-2021</b></label>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <app-table [tableData]="tableData" [columnHeader]="columnHeader"></app-table>
     </div>
 </div>

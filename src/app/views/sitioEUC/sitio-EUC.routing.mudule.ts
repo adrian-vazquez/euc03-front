@@ -14,6 +14,7 @@ import { ReenvioSolicitudesEspecialesComponent } from './control-tasas/reenvio-s
 import { KpiComponent } from './control-tasas/kpi/kpi.component';
 import { ListaFestivosComponent } from './lista-festivos/lista-festivos.component';
 import { VistaporcampaniasaplicadasComponent } from './gerencia/vistaporcampaniasaplicadas/vistaporcampaniasaplicadas.component';
+import { CampaniasonlinestimelinessComponent } from './gerencia/campaniasonlinestimeliness/campaniasonlinestimeliness.component';
 
 const routes: Routes = [
     {
@@ -30,7 +31,8 @@ const routes: Routes = [
     {
         path: 'gerencia', component: ControlTasasComponent,
         children: [
-            { path: 'vista-por-campañas-aplicadas', component: VistaporcampaniasaplicadasComponent }
+            { path: 'vista-por-campañas-aplicadas', component: VistaporcampaniasaplicadasComponent },
+            { path: 'campanias-online-timeliness', component: CampaniasonlinestimelinessComponent }
         ]
     },
     { path: 'reportes-EUC', component: ReportesEUCComponent },
