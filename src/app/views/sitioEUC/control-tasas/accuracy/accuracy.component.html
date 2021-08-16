@@ -1,0 +1,160 @@
+<div class="container">
+    <div class="row justify-content-center align-items-baseline">
+        <img [src]="iconCarga" class="pt-2" style="width: 3%;">
+        <h4><label class="texto-general mb-2 text-center"><b>Consulta de Posibles Reprocesos</b></label></h4>
+    </div>
+</div>
+<div class="cborder">
+    <div class="row pr-4 pl-4 pt-2">
+        <div class="col">
+            <div class="input-group mb-2">
+                <span class="input-group-text"><label class="texto-general text-center">Fecha Inicial:</label></span>
+                <input type="date" class="form-control">
+            </div>
+        </div>
+        <div class="col">
+            <div class="input-group mb-2">
+                <span class="input-group-text"><label class="texto-general text-center">Fecha Final:</label></span>
+                <input type="date" class="form-control">
+            </div>
+        </div>
+        <div class="col-sm-3" style="text-align: center;">
+            <button class="btn btn-success btn-sm m-1 btn-border" style="background-color: #00c851 !important;" (click)="buscaRegistros()">Busqueda de Registros</button>
+        </div>
+    </div>
+    <div class="row pr-4 pl-4 pt-2">
+        <div class="col"></div>
+        <div class="col" style="text-align: center;">
+            <button class="btn btn-success btn-sm m-1 btn-border" style="background-color: #00c851 !important;" (click)="onSubmit()">Almacenar Registros</button>
+            <button class="btn btn-primary btn-sm m-1 btn-border">Ver Reporte</button>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+<div [ngStyle]="{'display': (showDataTable) ? 'block' : 'none'}">
+    <div class="row pt-4 text-center">
+        <div class="col-5"></div>
+        <div class="col-2"><label class="texto-general mb-2">Registros Recolectados</label></div>
+        <div class="col-5"></div>
+    </div>
+    <div class="row pt-4 text-center">
+        <div class="col-5"></div>
+        <div class="col-2"><button class="btn btn-danger btn-sm m-1 btn-border">Borrar</button></div>
+        <div class="col-5"></div>
+    </div>
+    <div class="mt-4 text-center">
+        <div class="row pt-4">
+            <table class="txt-small w-100 m-auto table table-striped pt-4">
+                <thead>
+                    <tr>
+                        <th class="texto-general" style="cursor: pointer;">
+                            Id
+                        </th>
+                        <th class="texto-general" style="cursor: pointer;">
+                            Folio
+                        </th>
+                        <th class="texto-general" style="cursor: pointer;">
+                            Fecha
+                        </th>
+                        <th class="texto-general" style="cursor: pointer;">
+                            Suc.
+                        </th>
+                        <th class="texto-general" style="cursor: pointer;">
+                            Monto
+                        </th>
+                        <th class="texto-general" style="cursor: pointer;">
+                            Plaza
+                        </th>
+                        <th class="texto-general" style="cursor: pointer;">
+                            Tasa
+                        </th>
+                        <th class="texto-general" style="cursor: pointer;">
+                            Estatus
+                        </th>
+                        <th class="texto-general" style="cursor: pointer;">
+                            Num. Cte
+                        </th>
+                        <th class="texto-general" style="cursor: pointer;">
+                            Nom. Cte
+                        </th>
+                        <th class="texto-general" style="cursor: pointer;">
+                            Contrato
+                        </th>
+                        <th class="texto-general" style="cursor: pointer;">
+                            Operador
+                        </th>
+                        <th class="texto-general" style="cursor: pointer;">
+                            ID Oferta
+                        </th>
+                        <th class="texto-general" style="cursor: pointer;">
+                            NomEjec
+                        </th>
+                        <th class="texto-general" style="cursor: pointer;">
+                            Observa
+                        </th>
+                        <th class="texto-general" style="cursor: pointer;">
+                            SOIED Resp:
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="mat-body">
+                    <tr>
+                        <td class="mat-cell p-2"><input type="checkbox">12345</td>
+                        <td class="mat-cell p-1">92</td>
+                        <td class="mat-cell p-1">16/06/2021</td>
+                        <td class="mat-cell p-1">623</td>
+                        <td class="mat-cell p-1">$198,910.00</td>
+                        <td class="mat-cell p-1">91</td>
+                        <td class="mat-cell p-1">4.05</td>
+                        <td class="mat-cell p-1">1</td>
+                        <td class="mat-cell p-1">78383500</td>
+                        <td class="mat-cell p-1"><input type="text" style="width: 98%;"></td>
+                        <td class="mat-cell p-1">7949488566</td>
+                        <td class="mat-cell p-1">CZ20497</td>
+                        <td class="mat-cell p-1">PTUSDO12021</td>
+                        <td class="mat-cell p-1"><input type="text" style="width: 95%;"></td>
+                        <td class="mat-cell p-1"><input type="text" style="width: 95%;"></td>
+                        <td class="mat-cell p-2"><input type="text" style="width: 75%;"></td>
+                    </tr>
+                    <tr>
+                        <td class="mat-cell p-2"><input type="checkbox">12345</td>
+                        <td class="mat-cell p-1">92</td>
+                        <td class="mat-cell p-1">16/06/2021</td>
+                        <td class="mat-cell p-1">623</td>
+                        <td class="mat-cell p-1">$198,910.00</td>
+                        <td class="mat-cell p-1">91</td>
+                        <td class="mat-cell p-1">4.05</td>
+                        <td class="mat-cell p-1">1</td>
+                        <td class="mat-cell p-1">78383500</td>
+                        <td class="mat-cell p-1"><input type="text" style="width: 98%;"></td>
+                        <td class="mat-cell p-1">7949488566</td>
+                        <td class="mat-cell p-1">CZ20497</td>
+                        <td class="mat-cell p-1">PTUSDO12021</td>
+                        <td class="mat-cell p-1"><input type="text" style="width: 95%;"></td>
+                        <td class="mat-cell p-1"><input type="text" style="width: 95%;"></td>
+                        <td class="mat-cell p-2"><input type="text" style="width: 75%;"></td>
+                    </tr>
+                    <tr>
+                        <td class="mat-cell p-2"><input type="checkbox">12345</td>
+                        <td class="mat-cell p-1">92</td>
+                        <td class="mat-cell p-1">16/06/2021</td>
+                        <td class="mat-cell p-1">623</td>
+                        <td class="mat-cell p-1">$198,910.00</td>
+                        <td class="mat-cell p-1">91</td>
+                        <td class="mat-cell p-1">4.05</td>
+                        <td class="mat-cell p-1">1</td>
+                        <td class="mat-cell p-1">78383500</td>
+                        <td class="mat-cell p-1"><input type="text" style="width: 98%;"></td>
+                        <td class="mat-cell p-1">7949488566</td>
+                        <td class="mat-cell p-1">CZ20497</td>
+                        <td class="mat-cell p-1">PTUSDO12021</td>
+                        <td class="mat-cell p-1"><input type="text" style="width: 95%;"></td>
+                        <td class="mat-cell p-1"><input type="text" style="width: 95%;"></td>
+                        <td class="mat-cell p-2"><input type="text" style="width: 75%;"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

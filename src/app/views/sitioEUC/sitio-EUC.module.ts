@@ -19,6 +19,7 @@ import { CompletarInformacionKpiComponent } from './control-tasas/completar-info
 import { ListaFestivosComponent } from './lista-festivos/lista-festivos.component';
 import { GerenciaRoutingModule } from './gerencia/gerencia-routing.module';
 import { VistaporcampaniasaplicadasComponent } from './gerencia/vistaporcampaniasaplicadas/vistaporcampaniasaplicadas.component';
+import { AccuracyComponent } from './control-tasas/accuracy/accuracy.component';
 
 
 
@@ -34,6 +35,7 @@ const COMPONENTS = [
   GerenciareporteacumuladoComponent,
   CetesComponent, 
   KpiComponent,
+  AccuracyComponent,
   CompletarInformacionKpiComponent,
   ListaFestivosComponent,
   VistaporcampaniasaplicadasComponent

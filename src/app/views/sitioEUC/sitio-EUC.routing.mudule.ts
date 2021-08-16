@@ -15,6 +15,7 @@ import { KpiComponent } from './control-tasas/kpi/kpi.component';
 import { ListaFestivosComponent } from './lista-festivos/lista-festivos.component';
 import { VistaporcampaniasaplicadasComponent } from './gerencia/vistaporcampaniasaplicadas/vistaporcampaniasaplicadas.component';
 import { CampaniasonlinestimelinessComponent } from './gerencia/campaniasonlinestimeliness/campaniasonlinestimeliness.component';
+import { AccuracyComponent } from './control-tasas/accuracy/accuracy.component';
 
 const routes: Routes = [
     {
@@ -23,6 +24,7 @@ const routes: Routes = [
             { path: 'CETES', component: CetesComponent },
             { path: 'completar-informacion-KPI', component: CompletarInformacionKpiComponent },
             { path: 'KPI', component: KpiComponent },
+            { path: 'accuracy', component: AccuracyComponent },
             { path: 'operaciones-especiales', component: OperacionesEspecialesComponent },
             { path: 'reenvio-solicitudes-especiales', component: ReenvioSolicitudesEspecialesComponent },
             { path: 'lista-dias-festivos', component: ListaFestivosComponent },
