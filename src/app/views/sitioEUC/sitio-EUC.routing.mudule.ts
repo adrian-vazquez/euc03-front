@@ -13,6 +13,7 @@ import { OperacionesEspecialesComponent } from './control-tasas/operaciones-espe
 import { ReenvioSolicitudesEspecialesComponent } from './control-tasas/reenvio-solicitudes-especiales/reenvio-solicitudes-especiales.component';
 import { KpiComponent } from './control-tasas/kpi/kpi.component';
 import { ListaFestivosComponent } from './lista-festivos/lista-festivos.component';
+import { VistaporcampaniasaplicadasComponent } from './gerencia/vistaporcampaniasaplicadas/vistaporcampaniasaplicadas.component';
 
 const routes: Routes = [
     {
@@ -24,6 +25,12 @@ const routes: Routes = [
             { path: 'operaciones-especiales', component: OperacionesEspecialesComponent },
             { path: 'reenvio-solicitudes-especiales', component: ReenvioSolicitudesEspecialesComponent },
             { path: 'lista-dias-festivos', component: ListaFestivosComponent },
+        ]
+    },
+    {
+        path: 'gerencia', component: ControlTasasComponent,
+        children: [
+            { path: 'vista-por-campañas-aplicadas', component: VistaporcampaniasaplicadasComponent }
         ]
     },
     { path: 'reportes-EUC', component: ReportesEUCComponent },

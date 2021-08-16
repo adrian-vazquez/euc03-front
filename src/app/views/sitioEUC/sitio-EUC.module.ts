@@ -17,6 +17,8 @@ import { CetesComponent } from './control-tasas/cetes/cetes.component';
 import { KpiComponent } from './control-tasas/kpi/kpi.component';
 import { CompletarInformacionKpiComponent } from './control-tasas/completar-informacion-kpi/completar-informacion-kpi.component';
 import { ListaFestivosComponent } from './lista-festivos/lista-festivos.component';
+import { GerenciaRoutingModule } from './gerencia/gerencia-routing.module';
+import { VistaporcampaniasaplicadasComponent } from './gerencia/vistaporcampaniasaplicadas/vistaporcampaniasaplicadas.component';
 
 
 
@@ -33,7 +35,8 @@ const COMPONENTS = [
   CetesComponent, 
   KpiComponent,
   CompletarInformacionKpiComponent,
-  ListaFestivosComponent
+  ListaFestivosComponent,
+  VistaporcampaniasaplicadasComponent
 ]
   
   
@@ -42,6 +45,7 @@ const COMPONENTS = [
   imports: [
     CommonModule,
     SitioEUCRoutingModule,
+    GerenciaRoutingModule,
     SharedModule,
     NgbModule,
     ReactiveFormsModule,
