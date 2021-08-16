@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -8,10 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComparativoComponent implements OnInit {
   dataSource = ELEMENT_DATA;
+  title: string;
+  edit: boolean;
 
 
-  constructor() {
+  constructor(private route: ActivatedRoute) {
+    this.route.queryParams
+      .subscribe(params => {
+        console.log(params);
+        const edit =  params?.edit === 'true';
+
+        if( edit ) {
+          this.title = 'COMPARATIVO BRUTO';
+        } else {
+          this.title = 'RENDIMIENTO BRUTO';
+        }
+        this.edit = edit;
+      }
+    );
   }
+
   ngOnInit(): void {
   }
 }
