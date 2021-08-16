@@ -23,13 +23,19 @@ $colorPrincipalBlue: #3262d1;
     background-color: $colorPrincipalBlue ;
   }
 
-  .td-aceptada{
+  .td-liberada{
     color: white;
-    background-color: #7a8fc0 ;
+    background-color: #009D71
+    ;
   }
   .td-cancelada{
     color: white;
-    background-color: #368f83 ;
+    background-color: gray ;
+  }
+
+  .rechazada{
+    color: white;
+    background-color: rgb(211, 66, 66);
   }
   th{
     width: 6em;

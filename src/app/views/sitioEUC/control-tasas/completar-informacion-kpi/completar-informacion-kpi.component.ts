@@ -11,7 +11,7 @@ export class CompletarInformacionKpiComponent implements OnInit {
   columHeader = [
     {name: 'ID_TASAAUTO'},
     {name: 'FECHA SOLICITUD'},
-    {name: 'CAMPAÑA'},
+    {name: 'OFERTA'},
     {name: 'FECHA SOEID ASIG'},
     {name: 'SOEID OPE'},
     {name: 'SOEID PROC'},
@@ -22,7 +22,7 @@ export class CompletarInformacionKpiComponent implements OnInit {
     {
       id_tasaAuto: '24002497989',
       fechaSolic: '21-04-2021 23:10:18',
-      campania: 'AutoCETE98',
+      oferta: 'AutoCETE98',
       fechaSoeidAsig: '',
       soeidOpe: '',
       soeidProc: '',
@@ -31,7 +31,7 @@ export class CompletarInformacionKpiComponent implements OnInit {
     {
       id_tasaAuto: '24002497989',
       fechaSolic: '21-04-2021 23:10:18',
-      campania: 'AutoCETE98',
+      oferta: 'AutoCETE98',
       fechaSoeidAsig: '',
       soeidOpe: '',
       soeidProc: '',
@@ -40,7 +40,7 @@ export class CompletarInformacionKpiComponent implements OnInit {
     {
       id_tasaAuto: '24002497989',
       fechaSolic: '21-04-2021 23:10:18',
-      campania: 'AutoCETE98',
+      oferta: 'AutoCETE98',
       fechaSoeidAsig: '',
       soeidOpe: '',
       soeidProc: '',
@@ -49,7 +49,7 @@ export class CompletarInformacionKpiComponent implements OnInit {
     {
       id_tasaAuto: '24002497989',
       fechaSolic: '21-04-2021 23:10:18',
-      campania: 'AutoCETE98',
+      oferta: 'AutoCETE98',
       fechaSoeidAsig: '',
       soeidOpe: '',
       soeidProc: '',
@@ -58,7 +58,7 @@ export class CompletarInformacionKpiComponent implements OnInit {
     {
       id_tasaAuto: '24002497989',
       fechaSolic: '21-04-2021 23:10:18',
-      campania: 'AutoCETE98',
+      oferta: 'AutoCETE98',
       fechaSoeidAsig: '',
       soeidOpe: '',
       soeidProc: '',
@@ -67,7 +67,7 @@ export class CompletarInformacionKpiComponent implements OnInit {
     {
       id_tasaAuto: '24002497989',
       fechaSolic: '21-04-2021 23:10:18',
-      campania: 'AutoCETE98',
+      oferta: 'AutoCETE98',
       fechaSoeidAsig: '',
       soeidOpe: '',
       soeidProc: '',
