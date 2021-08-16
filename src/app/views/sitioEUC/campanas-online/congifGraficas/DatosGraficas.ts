@@ -6,7 +6,7 @@ export class DatosGraficas
     private fechas: Array<string>;
     private color: IColores;
 
-    public DatosGraficas(){}
+    constructor(){}
 
     public datosColores(): IColores
     {
