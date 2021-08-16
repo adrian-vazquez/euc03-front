@@ -15,6 +15,9 @@ import { PdfEspecialComponent } from './pdf-especial/pdf-especial.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { ComparativoComponent } from './comparativo/comparativo.component';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { TableComparativoComponent } from './comparativo/table-comparativo/table-comparativo.component';
 
 const COMPONENTS = [
   CatalogosComponent,
@@ -24,10 +27,11 @@ const COMPONENTS = [
   EjecutivosSucursalComponent,
   ParametrosComponent,
   PdfEspecialComponent,
+  ComparativoComponent,
 ]
 
 @NgModule({
-  declarations: [... COMPONENTS, ],
+  declarations: [... COMPONENTS, TableComparativoComponent, ],
   imports: [
     CommonModule,
     SharedModule,
@@ -36,7 +40,7 @@ const COMPONENTS = [
     MatTableModule,
     MatPaginatorModule,
     MatFormFieldModule,
-  
+    MatButtonToggleModule,
     ReactiveFormsModule,
     FormsModule,
   ],

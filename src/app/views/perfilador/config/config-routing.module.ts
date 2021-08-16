@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CargasComponent } from './cargas/cargas.component';
 import { CatalogosComponent } from './catalogos/catalogos.component';
-import { ComparativoComponent } from './comparativo/comparativo.component';
+import { ComparativoComponent } from './catalogos/comparativo/comparativo.component';
 import { GatComponent } from './gat/gat.component';
 import { ImagenprincipalComponent } from './imagenprincipal/imagenprincipal.component';
 import { MenuadministracionComponent } from './menuadministracion/menuadministracion.component';
