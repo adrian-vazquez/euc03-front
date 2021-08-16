@@ -22,6 +22,8 @@ export class CampanasOnlineComponent implements OnInit {
     tablaGerMercado: Boolean;
     tablaRegionales: Boolean;
 
+    seleccion: string;
+
     mostrarTablas: Array<Boolean>;
 
   constructor() {   }
@@ -40,21 +42,13 @@ export class CampanasOnlineComponent implements OnInit {
                             this.tablaRegionales ];
 
     this.mensaje = "";
-   
+    this.seleccion = "Divisionales";
+   this.mostrarGraficas();
 
 
       this.numeroPaginas = 2;
 
-          let graficas: GraficasImpl = new GraficasImpl();
-          let datos: DatosGraficas = new DatosGraficas();
-
-          let datosGrafica:Array<number> = this.getRandom(50,300);
-
-          
-
-          graficas.grafica(datos.datosFechas(), datos.datosColores(), 'graficaSolicitudesCampana', datosGrafica);
-          graficas.grafica(datos.datosFechas(), datos.datosColores(), 'graficaMontoCampana', datosGrafica);
-          graficas.graficaPastel();
+ 
         
   }
   private getRandom(min: number, max: number): Array<number> {
@@ -72,6 +66,8 @@ export class CampanasOnlineComponent implements OnInit {
   {
     this.mostrarMensaje = !this.mostrarMensaje;
     this.mensaje = "Mensaje";
+    this.mostrarGraficas();
+    
   }
   ejecutivosPyme(): void
   {
@@ -88,22 +84,38 @@ export class CampanasOnlineComponent implements OnInit {
  
   public mostrarTablaDivisiones(): void
   {
-    
-    
     this.mostrarTablas = Tablas.mostrarTablas(0);
-
+    this.seleccion = "Divisionales";
   }
   public mostrarTablaSucursales(): void
   {
     this.mostrarTablas = Tablas.mostrarTablas(1);
+    this.seleccion = "Sucursales";
   }
   public mostrarTablaGerMercado(): void
   {
 this.mostrarTablas = Tablas.mostrarTablas(2);
+this.seleccion = "Ger Mercado";
   }
   public mostrarTablaRegionales(): void
   {
     this.mostrarTablas = Tablas.mostrarTablas(3);
+    this.seleccion = "Regionales";
+  }
+
+
+  private mostrarGraficas():void
+  {
+    let graficas: GraficasImpl = new GraficasImpl();
+    let datos: DatosGraficas = new DatosGraficas();
+
+    let datosGrafica:Array<number> = this.getRandom(50,300);
+
+    
+
+    graficas.grafica(datos.datosFechas(), datos.datosColores(), 'graficaSolicitudesCampana', datosGrafica);
+    graficas.grafica(datos.datosFechas(), datos.datosColores(), 'graficaMontoCampana', datosGrafica);
+    graficas.graficaPastel();
   }
 
 

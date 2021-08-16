@@ -44,24 +44,18 @@ table tbody tr > td:nth-child(2)
     margin-top: 0.8em
 }
 
-  .tabla-over
-  {
-    width: 1800px;
-    margin: auto;
-  }
+
   table {
-    width: 100%;
+    width: 150%;
     border-collapse: collapse;
     text-align: center;
   }
-  
- 
   .layout {
     display: table;
     table-layout: fixed;
     width: 100%;
   }
-  
+
   .over {
     display: table-cell;
     overflow-x: auto;
@@ -71,13 +65,12 @@ table tbody tr > td:nth-child(2)
   {
       font-size: 0.5em;
   }
-
   .tablas-dev
   {
       position: relative;
-      bottom: 7em;
-      width: 125em;
-      border: 1px solid red;
+      bottom: 10em;
+      width: 80em;
+      
   }
   
   .dropdown-menu li > a
@@ -89,4 +82,15 @@ table tbody tr > td:nth-child(2)
   .dropdown-menu li > a:hover
   {
       color: blue;
+  }
+
+  .color-colum
+  {
+    background-color: rgb(97, 162, 191);
+    color: rgb(255, 255, 255);
+  }
+  table tbody tr td
+  {
+      font-size: 0.5em;
+      font-weight: bold;
   }
