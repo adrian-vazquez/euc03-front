@@ -79,7 +79,7 @@ const bodyTemplateGuide = `
   templateUrl: './ejecutivos-sucursal.component.html',
   styleUrls: ['./ejecutivos-sucursal.component.scss',  '../catalogos.component.scss']
 })
-export class EjecutivosSucursalComponent implements OnInit {
+export class EjecutivosSucursalComponent implements OnInit, AfterViewInit {
   displayedColumns: string[] = ['nomina', 'nombre', 'puestoTipo', 'edit'];
   dataSource: MatTableDataSource<IEjecutivo>;
 

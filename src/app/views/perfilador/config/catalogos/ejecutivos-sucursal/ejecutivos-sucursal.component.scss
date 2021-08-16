@@ -5,3 +5,12 @@
  .container-find {
      width: 400px;
  }
+
+::ng-deep .mat-header-row {
+     background: blue !important;
+     color: white !important;
+
+     th {
+        color: white !important;
+    }
+ }
