@@ -1,0 +1,193 @@
+<h3 class="row justify-content-center mt-3">{{title}}</h3>
+
+<div class="example-container mat-elevation-z8" *ngIf="dataSource">
+  <table mat-table [dataSource]="dataSource" *ngFor="let table of tables">
+    <ng-container matColumnDef="range" [sticky]="true">
+      <th mat-header-cell *matHeaderCellDef class="hf-table"> Range </th>
+      <td mat-cell *matCellDef="let element" class="range"> {{element.range}} </td>
+   </ng-container>
+  
+
+  
+    <!-- DATA AND HEADER -->
+    <ng-container matColumnDef="perfiles">
+      <th mat-header-cell *matHeaderCellDef class="hf-table"> Perfiles </th>
+      <td mat-cell *matCellDef="let element"> 
+          <div *ngIf="!edit">
+            {{element.perfiles}} 
+          </div>
+          <div *ngIf="edit">
+            <input class="form-control form-control-sm" type="text" [value]="element.perfiles"/>
+          </div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="integral">
+      <th mat-header-cell *matHeaderCellDef class="hf-table"> Integral </th>
+      <td mat-cell *matCellDef="let element"> 
+          <div *ngIf="!edit">
+            {{element.integral}} 
+          </div>
+          <div *ngIf="edit">
+            <input class="form-control form-control-sm" type="text" [value]="element.integral"/>
+          </div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="pagTBase28">
+      <th mat-header-cell *matHeaderCellDef class="hf-table"> Pag. T Base 28 días </th>
+      <td mat-cell *matCellDef="let element"> 
+          <div *ngIf="!edit">
+            {{element.pagTBase28}} 
+          </div>
+          <div *ngIf="edit">
+            <input class="form-control form-control-sm" type="text" [value]="element.pagTBase28"/>
+          </div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="pagTBase60">
+      <th mat-header-cell *matHeaderCellDef class="hf-table"> Pag. T Base 60 días </th>
+      <td mat-cell *matCellDef="let element"> 
+          <div *ngIf="!edit">
+            {{element.pagTBase60}} 
+          </div>
+          <div *ngIf="edit">
+            <input class="form-control form-control-sm" type="text" [value]="element.pagTBase60"/>
+          </div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="pagTBase90">
+      <th mat-header-cell *matHeaderCellDef class="hf-table"> Pag. T Base 90 días </th>
+      <td mat-cell *matCellDef="let element"> 
+          <div *ngIf="!edit">
+            {{element.pagTBase90}} 
+          </div>
+          <div *ngIf="edit">
+            <input class="form-control form-control-sm" type="text" [value]="element.pagTBase90"/>
+          </div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="pagMargFex14">
+        <th mat-header-cell *matHeaderCellDef class="hf-table"> Pag. Marg. Flex 14d </th>
+        <td mat-cell *matCellDef="let element"> 
+            <div *ngIf="!edit">
+              {{element.pagMargFex14}} 
+            </div>
+            <div *ngIf="edit">
+              <input class="form-control form-control-sm" type="text" [value]="element.pagMargFex14"/>
+            </div>
+        </td>
+    </ng-container>
+    <ng-container matColumnDef="pagMargFex90">
+      <th mat-header-cell *matHeaderCellDef class="hf-table"> Pag. Marg. Flex 90d </th>
+      <td mat-cell *matCellDef="let element"> 
+          <div *ngIf="!edit">
+            {{element.pagMargFex90}} 
+          </div>
+          <div *ngIf="edit">
+            <input class="form-control form-control-sm" type="text" [value]="element.pagMargFex90"/>
+          </div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="pagMargFex180">
+      <th mat-header-cell *matHeaderCellDef class="hf-table"> Pag. Marg. Flex 180d </th>
+      <td mat-cell *matCellDef="let element"> 
+          <div *ngIf="!edit">
+            {{element.pagMargFex180}} 
+          </div>
+          <div *ngIf="edit">
+            <input class="form-control form-control-sm" type="text" [value]="element.pagMargFex180"/>
+          </div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="pagMargFex366">
+      <th mat-header-cell *matHeaderCellDef class="hf-table"> Pag. Marg. Flex 366d </th>
+      <td mat-cell *matCellDef="let element"> 
+          <div *ngIf="!edit">
+            {{element.pagMargFex366}} 
+          </div>
+          <div *ngIf="edit">
+            <input class="form-control form-control-sm" type="text" [value]="element.pagMargFex366"/>
+          </div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="bancanet60">
+      <th mat-header-cell *matHeaderCellDef class="hf-table"> Bancanet 60d </th>
+      <td mat-cell *matCellDef="let element"> 
+          <div *ngIf="!edit">
+            {{element.bancanet60}} 
+          </div>
+          <div *ngIf="edit">
+            <input class="form-control form-control-sm" type="text" [value]="element.bancanet60"/>
+          </div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="porta30">
+      <th mat-header-cell *matHeaderCellDef class="hf-table"> Porta 30 días </th>
+      <td mat-cell *matCellDef="let element"> 
+          <div *ngIf="!edit">
+            {{element.porta30}} 
+          </div>
+          <div *ngIf="edit">
+            <input class="form-control form-control-sm" type="text" [value]="element.porta30"/>
+          </div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="porta60">
+      <th mat-header-cell *matHeaderCellDef class="hf-table"> Porta 60 días </th>
+      <td mat-cell *matCellDef="let element"> 
+          <div *ngIf="!edit">
+            {{element.porta60}} 
+          </div>
+          <div *ngIf="edit">
+            <input class="form-control form-control-sm" type="text" [value]="element.porta60"/>
+          </div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="porta90">
+      <th mat-header-cell *matHeaderCellDef class="hf-table"> Porta 90 días </th>
+      <td mat-cell *matCellDef="let element"> 
+          <div *ngIf="!edit">
+            {{element.porta90}} 
+          </div>
+          <div *ngIf="edit">
+            <input class="form-control form-control-sm" type="text" [value]="element.porta90"/>
+          </div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="porta120">
+      <th mat-header-cell *matHeaderCellDef class="hf-table"> Porta 120 días </th>
+      <td mat-cell *matCellDef="let element"> 
+          <div *ngIf="!edit">
+            {{element.porta120}} 
+          </div>
+          <div *ngIf="edit">
+            <input class="form-control form-control-sm" type="text" [value]=""/>
+          </div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="porta180">
+      <th mat-header-cell *matHeaderCellDef class="hf-table"> Porta 180 días </th>
+      <td mat-cell *matCellDef="let element"> 
+          <div *ngIf="!edit">
+            {{element.porta180}} 
+          </div>
+          <div *ngIf="edit">
+            <input class="form-control form-control-sm" type="text" [value]=""/>
+          </div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="porta365">
+      <th mat-header-cell *matHeaderCellDef class="hf-table"> Porta 365 días </th>
+      <td mat-cell *matCellDef="let element"> 
+          <div *ngIf="!edit">
+            {{element.porta365}} 
+          </div>
+          <div *ngIf="edit">
+            <input class="form-control form-control-sm" type="text" [value]=""/>
+          </div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

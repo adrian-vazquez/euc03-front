@@ -1,4 +1,8 @@
 <app-navconfig></app-navconfig> 
 <app-navcatalogs></app-navcatalogs>
-<app-table-comparativo [dataSource]="dataSource"  [title]="title" [edit]="edit"></app-table-comparativo>
+<app-table-comparativo [dataSource]="dataSource"  [title]="title" [edit]="edit" *ngIf="edit; else tableRendimiento"></app-table-comparativo>
+
+<ng-template #tableRendimiento>
+    <app-table-rendimiento [dataSource]="dataSource"  [title]="title" [edit]="edit"></app-table-rendimiento>
+</ng-template>
 
