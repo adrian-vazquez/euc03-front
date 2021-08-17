@@ -22,6 +22,8 @@ export class MenuadministracionComponent implements OnInit {
   };
   tableData: any[];
 
+  showDataGrid:boolean = false;
+
   titulo:string = '';
   od:string = 'OFERTA DIGITAL'
   cp:string = 'CONSULTAS DE PDFs DESDE EL PERFILADOR';
@@ -46,7 +48,6 @@ export class MenuadministracionComponent implements OnInit {
   }
 
   valOperacionTabla(){
-    // Apply condition on edit and delete button
     let aux = [
       {'fecha':'10/08/2021','numerocuenta':'1234','contrato':'567890','tasa':'102','plazo':'91','monto':'12345','nomina':'67890','ejecutivo':'Luis Pozo','sirh':'267'},
       {'fecha':'10/08/2021','numerocuenta':'1234','contrato':'567890','tasa':'102','plazo':'91','monto':'12345','nomina':'67890','ejecutivo':'Luis Pozo','sirh':'267'},
@@ -72,4 +73,9 @@ export class MenuadministracionComponent implements OnInit {
   cerrarPopup(){
     this.active = false;
   }
+
+  buscaRegistros(){
+    this.showDataGrid = true;
+  }
 }
+

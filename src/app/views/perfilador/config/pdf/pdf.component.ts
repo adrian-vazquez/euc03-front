@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-pdf',
@@ -13,6 +14,27 @@ export class PdfComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
+    Swal.fire({
+      title: 'Confirmación',
+      text: "¿Deseas cargar la información?",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Guardar',
+      cancelButtonText: 'Cancelar',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          '¡Guardado!',
+          'Se guardó el registro con éxito',
+          'success'
+        )
+      }
+    })
   }
 
 }
