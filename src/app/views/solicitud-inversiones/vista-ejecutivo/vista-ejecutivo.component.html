@@ -44,7 +44,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let data of tableData">
-            <td [ngClass]="{'td-aceptada': data.estatus === 'ACEPTADA', 'td-cancelada' : data.estatus === 'CANCELADA'}">
+            <td [ngClass]="{'td-liberada': data.estatus === 'LIBERADA', 'td-cancelada' : data.estatus === 'CANCELADA', 'rechazada' : data.estatus === 'RECHAZADA'}">
               {{data.estatus}}</td>
             <td>{{data.folio}}</td>
             <td>{{data.fechaSolic}}</td>

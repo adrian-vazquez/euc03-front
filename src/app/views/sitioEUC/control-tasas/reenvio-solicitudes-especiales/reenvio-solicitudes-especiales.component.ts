@@ -50,6 +50,7 @@ export class ReenvioSolicitudesEspecialesComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.createForm();
   }
 
   createForm(){

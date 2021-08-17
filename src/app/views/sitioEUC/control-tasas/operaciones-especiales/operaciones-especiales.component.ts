@@ -18,6 +18,7 @@ export class OperacionesEspecialesComponent implements OnInit {
     { name: 'Estatus' },
     { name: 'FechaSolic' },
     { name: 'Tipo Oferta' },
+    { name: 'Tipo Campaña' },
     { name: 'Contrato' },
     { name: 'Num.Cte.' },
     { name: 'Nombre Cte.' },
@@ -40,6 +41,7 @@ export class OperacionesEspecialesComponent implements OnInit {
       estatus: 'SOLICITADA',
       fechaSolicitud: '21-04-12 22:10',
       tipoOferta: 'RETE656',
+      tipoCampania: '97788',
       contrato: '7676776667',
       numCte: '9876576',
       nombreCte: 'Miguel Cruz Bucio',
@@ -57,9 +59,10 @@ export class OperacionesEspecialesComponent implements OnInit {
       minutosLlegada: 2,
       asig: 'GBKSAD8',
       oper: 'C286887',
-      estatus: 'SOLICITADA',
+      estatus: 'CANCELADA',
       fechaSolicitud: '21-04-12 22:10',
       tipoOferta: 'RETE656',
+      tipoCampania: '76678',
       contrato: '7676776667',
       numCte: '9876576',
       nombreCte: 'Miguel Cruz Bucio',
@@ -80,6 +83,7 @@ export class OperacionesEspecialesComponent implements OnInit {
       estatus: 'SOLICITADA',
       fechaSolicitud: '21-04-12 22:10',
       tipoOferta: 'RETE656',
+      tipoCampania: '76678',
       contrato: '7676776667',
       numCte: '9876576',
       nombreCte: 'Miguel Cruz Bucio',
@@ -97,9 +101,10 @@ export class OperacionesEspecialesComponent implements OnInit {
       minutosLlegada: 2,
       asig: 'P97642',
       oper: 'C286887',
-      estatus: 'SOLICITADA',
+      estatus: 'CANCELADA',
       fechaSolicitud: '21-04-12 22:10',
       tipoOferta: 'RETE656',
+      tipoCampania: '76678',
       contrato: '7676776667',
       numCte: '9876576',
       nombreCte: 'Miguel Cruz Bucio',
@@ -120,6 +125,7 @@ export class OperacionesEspecialesComponent implements OnInit {
       estatus: 'SOLICITADA',
       fechaSolicitud: '21-04-12 22:10',
       tipoOferta: 'RETE656',
+      tipoCampania: '76678',
       contrato: '7676776667',
       numCte: '9876576',
       nombreCte: 'Miguel Cruz Bucio',
@@ -140,6 +146,7 @@ export class OperacionesEspecialesComponent implements OnInit {
       estatus: 'SOLICITADA',
       fechaSolicitud: '21-04-12 22:10',
       tipoOferta: 'RETE656',
+      tipoCampania: '76678',
       contrato: '7676776667',
       numCte: '9876576',
       nombreCte: 'Miguel Cruz Bucio',
@@ -266,9 +273,15 @@ export class OperacionesEspecialesComponent implements OnInit {
     })
   }
 
-  mostrarEdit() {
-    this.showSolicitudActualizar = true;
-    this.showSolicitudCancelacion = false;
+  mostrarEdit(estatus: string) {
+    console.log(estatus)
+    if(estatus === 'CANCELADA'){
+      this.showSolicitudActualizar = false;
+      this.showSolicitudCancelacion = true
+    }else {
+      this.showSolicitudActualizar = true;
+      this.showSolicitudCancelacion = false;
+    }
   }
 
   showCancela() {

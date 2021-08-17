@@ -109,6 +109,27 @@ export class VistaEjecutivoComponent implements OnInit {
       descargar: true,
       sirh: '1',
       observaciones: 'Prueba exitosa',
+    },
+    {
+      estatus:'RECHAZADA',
+      folio:'0',
+      fechaSolic:'2021-03-08 12:35',
+      tipoOferta: '',
+      tipoCampania: '',
+      tipo: 'RET099767',
+      contrato: '66576576576',
+      numCliente: '289',
+      plazo: '62',
+      Monto: '10000000',
+      tasa: '4.07',
+      autorizadores: 'AT876655|AT456655',
+      fechaAutori: '12/08/2021',
+      autorizador: '0',
+      fechaLibera: '2021-05-06 10:18',
+      cancelacion: true,
+      descargar: true,
+      sirh: '1',
+      observaciones: 'Prueba exitosa',
     }
   ]
   tableData: any[];
