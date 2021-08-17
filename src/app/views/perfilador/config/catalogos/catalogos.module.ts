@@ -18,6 +18,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ComparativoComponent } from './comparativo/comparativo.component';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { TableComparativoComponent } from './comparativo/table-comparativo/table-comparativo.component';
+import { TableRendimientoComponent } from './comparativo/table-rendimiento/table-rendimiento.component';
 
 const COMPONENTS = [
   CatalogosComponent,
@@ -31,7 +32,7 @@ const COMPONENTS = [
 ]
 
 @NgModule({
-  declarations: [... COMPONENTS, TableComparativoComponent, ],
+  declarations: [... COMPONENTS, TableComparativoComponent, TableRendimientoComponent, ],
   imports: [
     CommonModule,
     SharedModule,
