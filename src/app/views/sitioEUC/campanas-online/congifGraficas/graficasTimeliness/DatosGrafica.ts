@@ -47,8 +47,7 @@ export class DatosGraficasTime
       }
       public obtenerColoresBarraCampanaRETEN2021(): Array<string>
       {
-          let colores = [this.datosColores().sinNombre,
-              this.datosColores().liberada];
+          let colores = [this.datosColores().liberada,this.datosColores().sinNombre];
               
           return colores;
       }

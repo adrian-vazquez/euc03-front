@@ -16,12 +16,7 @@
 
     </div>
 
-    <div class="alert alert-secondary mt-2 alert-dismissible fade show" role="alert" *ngIf="mostrarMensaje">
-        <strong>{{ mensaje}}</strong>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
+
 
     <div class="row p-3">
         <div class="col-12 graficas">
@@ -42,8 +37,13 @@
                     <canvas id="myChartPastel"></canvas>
                 </div>
             </div>
-
+            <div class="row">
+                <div class="col-12 d-flex justify-content-end mt-2">
+                    <p style="color: blue;">Core Operations (GEOTACO) Dashboard</p>
+                </div>
+            </div>
         </div>
+     
     </div>
 
     <div class="row p-3">
@@ -80,17 +80,17 @@
                         </div>
                         <div class="col-sm-2 d-flex justify-content-center">
                             <div class="form-group d-flex align-items-center">
-                                <input type="text">
+                                <input type="text" class="form-control">
                             </div>
+                        </div>
+
+                        <div class="col-sm-1 d-flex justify-content-start" >
+                            
+                                <a href="#" class="mt-2">Find &nbsp;</a> <b class="mt-2">|</b> &nbsp; <a href="#" class="mt-2"> Next</a>
+                            
                         </div>
 
                         <div class="col-sm-2 d-flex justify-content-start">
-                            <div class="form-group d-flex align-items-center">
-                                <a href="#">Find &nbsp;</a> | &nbsp; <a href="#"> Next</a>
-                            </div>
-
-                        </div>
-                        <div class="col-sm-1 d-flex justify-content-start">
                             <button class="btn">
                                 <i class="fas fa-save d-flex align-items-center"></i>
                             </button>
@@ -129,6 +129,7 @@
             </div>
         </div>
     </div>
+
 
 </div>
 

@@ -2,10 +2,18 @@ import { IColores } from "./IColores";
 
 import Chart from 'chart.js';
 import { DatosGraficas } from "./DatosGraficas";
+import { ILabelGrafica, LabelGrafica } from "./graficasTimeliness/ILabelGrafica";
 
 
 
 export class GraficasImpl {
+
+    private etiquetasLabel: ILabelGrafica;
+
+    constructor()
+    {
+        this.etiquetasLabel = new LabelGrafica().nombreGrafica;
+    }
 
     grafica(fechas: string[], color: IColores, grafica: string, datos: Array<number>) {
         let numeroMayor: Array<number> = datos;
@@ -16,7 +24,7 @@ export class GraficasImpl {
 
         const etiquetas = fechas;
         const datos19042021 = {
-            label: ["AUTO.DISTRITALES"],
+            label: [this.etiquetasLabel.AutDistritales],
             data: DatosGraficas.datos(numeroMayor[0]),
             backgroundColor: DatosGraficas.color(color.AutDistritales),// Color de fondo,
             borderColor: DatosGraficas.color(color.AutDistritales),
@@ -24,7 +32,7 @@ export class GraficasImpl {
             borderWidth: 1,
         };
         const datos20042021 = {
-            label: ["AUTO. DIVISIONALES"],
+            label: [this.etiquetasLabel.AutDivicionales],
             data: DatosGraficas.datos(numeroMayor[1]),
             backgroundColor: DatosGraficas.color(color.AutDivicionales),// Color de fondo,
             borderColor: DatosGraficas.color(color.AutDivicionales),
@@ -32,28 +40,28 @@ export class GraficasImpl {
         };
 
         const datos21042021 = {
-            label: ["EXCEPCION GERENCIAL"],
+            label: [this.etiquetasLabel.ExcepcionGerencia],
             data: DatosGraficas.datos(numeroMayor[2]),
             backgroundColor: DatosGraficas.color(color.ExcepcionGerencia),// Color de fondo,
             borderColor: DatosGraficas.color(color.ExcepcionGerencia),
             borderWidth: 1,
         };
         const datos22042021 = {
-            label: ["PORTABILIDAD ESP. NOMINA"],
+            label: [this.etiquetasLabel.PortabilidadEspNomina],
             data: DatosGraficas.datos(numeroMayor[3]),
             backgroundColor: DatosGraficas.color(color.PortabilidadEspNomina),// Color de fondo,
             borderColor: DatosGraficas.color(color.PortabilidadEspNomina),
             borderWidth: 1,
         };
         const datos23042021 = {
-            label: ["RETEN 2021"],
+            label: [this.etiquetasLabel.Reten2021],
             data: DatosGraficas.datos(numeroMayor[4]),
             backgroundColor: DatosGraficas.color(color.Reten2021),// Color de fondo,
             borderColor: DatosGraficas.color(color.Reten2021),
             borderWidth: 1,
         };
         const datos00042021 = {
-            label: ["RETEN SUELDO BASE"],
+            label: [this.etiquetasLabel.RetenSaldoBase],
             data: DatosGraficas.datos(numeroMayor[5]),
             backgroundColor: DatosGraficas.color(color.RetenSaldoBase),// Color de fondo,
             borderColor: DatosGraficas.color(color.RetenSaldoBase),
@@ -118,9 +126,12 @@ export class GraficasImpl {
         let myChart = <HTMLCanvasElement>document.getElementById('myChartPastel');
         var cnx: CanvasRenderingContext2D = myChart.getContext('2d');
 
-        const etiquetas =
-            ["AUT.DISTRITALES", "AUT. DIVISIONALES", "EXCEPCION GERENCIA",
-                "PORTABLIDAD ESP. NOMINA", "RETEN 2021", "RETEN SALDO BASE"];
+
+
+
+        const etiquetas =[this.etiquetasLabel.AutDistritales,this.etiquetasLabel.AutDivicionales,
+            this.etiquetasLabel.ExcepcionGerencia,this.etiquetasLabel.PortabilidadEspNomina,
+            this.etiquetasLabel.Reten2021,this.etiquetasLabel.RetenSaldoBase];
         // Podemos tener varios conjuntos de datos. Comencemos con uno
         const datosIngresos = {
             data: [300, 15, 170, 15, 200, 300], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
