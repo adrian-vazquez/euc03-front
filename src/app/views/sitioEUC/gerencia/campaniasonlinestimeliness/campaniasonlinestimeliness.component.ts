@@ -13,13 +13,13 @@ export class CampaniasonlinestimelinessComponent implements OnInit {
 
   ngOnInit(): void 
   {
-       // Va en otro apartado, solo esta aqui de ejemplo
+       
    this.mostrarGraficasTimeLiness();
 
   }
 
       // Evento para calcular los datos para las gráficas Campaña On-LineTimeliness
-  // Solo esta aqui para ejemplo, agregarlo en su lugar y borarlo de este ts
+  
   public calcularTimeliness():void{this.mostrarGraficasTimeLiness();}
 
   // Muestra las gráficas de la vista Campaña On-LineTimeliness

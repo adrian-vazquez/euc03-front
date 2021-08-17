@@ -19,8 +19,7 @@ import { DatosGraficasTime } from './congifGraficas/graficasTimeliness/DatosGraf
 export class CampanasOnlineComponent implements OnInit {
 
     numeroPaginas: number;
-    mostrarMensaje: Boolean;
-    mensaje: string;
+
     tablaDivisionales: Boolean;
     tablaSucursales: Boolean;
     tablaGerMercado: Boolean;
@@ -34,7 +33,7 @@ export class CampanasOnlineComponent implements OnInit {
  
   ngOnInit(): void 
   {
-    this.mostrarMensaje = false;
+    
     this.tablaDivisionales = true;
     this.tablaSucursales = false;
     this.tablaGerMercado = false;
@@ -45,7 +44,7 @@ export class CampanasOnlineComponent implements OnInit {
                             this.tablaGerMercado ,
                             this.tablaRegionales ];
 
-    this.mensaje = "";
+    
     this.seleccion = "Divisionales";
    this.mostrarGraficas();
 
@@ -68,15 +67,11 @@ export class CampanasOnlineComponent implements OnInit {
 //   El Botón “Calcular” permite recalcular las gráficas en cualquier momento.
   calcular():void
   {
-    this.mostrarMensaje = !this.mostrarMensaje;
-    this.mensaje = "Mensaje";
     this.mostrarGraficas();
     
   }
   ejecutivosPyme(): void
   {
-    this.mostrarMensaje = !this.mostrarMensaje;
-    this.mensaje = "Mensaje";
   }
 
 
