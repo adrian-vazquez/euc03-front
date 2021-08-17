@@ -2,162 +2,166 @@
     <div class="col-md-12">
         <div class="card text-center border-card">
             <div class="card-header card-header-background">
-                Featured
+                <i class="fas fa-chart-line"></i>
+                Tasas Especiales
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-8">
-                            <div class=" form-group row text-left">
-                                <label class="col-md-6 label-cab"><i class="fas fa-info-circle icon-warning"></i>Ingrese
-                                    los datos de la
-                                    sucursal</label>
+                    <div class="col-md-8" [formGroup]="formSolicitud">
+                        <div class="form-group row mt-3  text-left">
+                            <label for="idSucrsal" class="col-md-6 col-form-label">
+                                Sucursal 4 dígitos (SIRH)
+                            </label>
+                            <div class="col-md-6">
+                                <input [OnlyNumber]="true" maxlength="4" type="text" class="form-control" id="idSucrsal"
+                                    formControlName="sucursal" placeholder="Dónde se realiza la operación">
                             </div>
-                            <div class="form-group row  text-left">
-                                <label for="idSucrsal" class="col-md-6 col-form-label">
-                                    Sucursal 4 dígitos (SIRH)
-                                </label>
-                                <div class="col-md-6">
-                                    <input [OnlyNumber]="true" type="text" class="form-control" id="idSucrsal"
-                                        placeholder="Dónde se realiza la operación">
+                        </div>
+
+                        <div class="form-group row mt-3 text-left">
+                            <label for="noEjecutivo" class="col-md-6 col-form-label">
+                                Nómina y nombre del ejecutivo
+                            </label>
+                            <div class="col-md-6">
+                                <div class="input-group-prepend">
+                                    <input type="text" class="form-control" formControlName="nominaEjec"
+                                        [OnlyNumber]="true" maxlength="7" placeholder="No. nómina ejecutivo">
+                                    <input type="text" class="form-control" formControlName="nombreEjec"
+                                        placeholder="Nombre ejecutivo" />
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="form-group row text-left" style="margin-top: 1em;">
-                                <label class="col-md-6 label-cab"><i class="fas fa-info-circle icon-warning"></i>Ingrese
-                                    los datos del
-                                    ejecutivo</label>
+                        <div class="form-group row mt-3 text-left">
+                            <label for="idSucrsal" class="col-md-6 col-form-label">
+                                Número y nombre del cliente
+                            </label>
+                            <div class="col-md-6">
+                                <div class="input-group-prepend">
+                                    <input type="text" class="form-control" formControlName="numeroCliente"
+                                        maxlength="12" placeholder="Número cliente">
+                                    <input type="text" class="form-control" formControlName="nombreCliente" required
+                                        placeholder="Nombre cliente" />
+                                </div>
                             </div>
-                            <div class="form-group row  text-left">
-                                <label for="noEjecutivo" class="col-md-6 col-form-label">
-                                    Nómina y nombre del ejecutivo
-                                </label>
-                                <div class="col-md-6">
-                                    <div class="input-group-prepend">
-                                        <input type="text" class="form-control" placeholder="No. nómina ejecutivo">
-                                        <input type="text" class="form-control" placeholder="Nombre ejecutivo" />
+                        </div>
+
+                        <div class="form-group row mt-3 text-left" style="margin-top: 0.5em;">
+                            <label for="idSucrsal" class="col-md-6 col-form-label">
+                                Contrato
+                            </label>
+                            <div class="col-md-6">
+                                <div class="input-group-prepend">
+                                    <input type="text" class="form-control" formControlName="contrato" maxlength="10"
+                                        [OnlyNumber]="true" placeholder="Contrato">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row mt-3 text-left">
+                            <label for="idSucrsal" class="col-md-6 col-form-label">
+                                Tipo de solicitud
+                            </label>
+                            <div class="col-md-6">
+                                <select formControlName="tipoSolicitud" class="form-control"
+                                    id="exampleFormControlSelect1">
+                                    <option selected value="">seleccione</option>
+                                    <option>Tasa Autoriazciones Divisionales</option>
+                                    <option>Tasa Autoriazciones Distritales</option>
+                                    <option>Tasas Excepción Gerencia</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row mt-3  text-left" style="margin-top: 1em;">
+                            <label for="idSucrsal" class="col-md-6 col-form-label">
+                                Datos inversión
+                            </label>
+                            <div class="col-md-6">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Plazo</span>
+                                    <input type="text" class="form-control" formControlName="plazo" [OnlyNumber]="true"
+                                        maxlength="3" required placeholder="Plazo">
+                                    <span class="input-group-text">$</span>
+                                    <input type="text" class="form-control" formControlName="monto" maxlength="15"
+                                        [OnlyNumber]="true" placeholder="Monto">
+                                    <span class="input-group-text">Tasa</span>
+                                    <input type="text" class="form-control" formControlName="tasa" maxlength="6"
+                                        [OnlyNumber]="true" placeholder="Tasa">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row mt-3">
+                            <div class="col-md-6 offset-md-6">
+                                <div class="form-group">
+                                        <label class="col-md-6" for="">Plazo real</label>
+                                        <label class="col-md-6">Vigencia </label>
+                                </div>
+                                <div class="form-group">
+                                        <label class="col-md-6" for="">(NNN)</label>
+                                        <label class="col-md-6">(DD/MM/AAAA) </label>
+                                </div>
+                                <div class="form-group mt-3">
+                                        <label class="col-md-6" for="">Tasa sugerida</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row mt-3 text-left mt-5">
+                            <label class="col-md-6 col-form-label">
+                                Justificación real
+                            </label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" maxlength="128" formControlName="justificacion"
+                                    placeholder="escriba la justificación de la solución">
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-6 offset-md-6">
+                                <button [disabled]="formSolicitud.get('tipoSolicitud').value === ''" (click)="showAutorizadores = !showAutorizadores" style="margin-left: 5em;"
+                                    type="button" class="btn btn-success">Ver
+                                    autorizadores</button>
+                            </div>
+                        </div>
+                        <div class="row align-items-start mt-2">
+                            <div class="col-md-6 offset-md-6 check-container">
+                                <ng-container *ngIf="showAutorizadores">
+                                    <div class="form-check" *ngFor="let autorizador of autorizadores">
+                                        <input class="form-check-input" type="checkbox" [value]="autorizador"
+                                            formControlName="autorizador" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            {{autorizador.name}}
+                                        </label>
                                     </div>
-                                </div>
+                                </ng-container>
                             </div>
+                        </div>
 
-                            <div class=" form-group row text-left" style="margin-top: 1em;">
-                                <label class="col-md-6 label-cab"><i class="fas fa-info-circle icon-warning"></i>Ingrese
-                                    los datos del
-                                    cliente</label>
+                        <div class="row align-items-start mt-2">
+                            <div class="col-md-8 offset-md-4 text-right">
+                                <button disabled type="button" class="btn btn-primary btn-sm"><i
+                                        class="far fa-save"></i> Solicitar</button>
                             </div>
-                            <div class="form-group row  text-left">
-                                <label for="idSucrsal" class="col-md-6 col-form-label">
-                                    Número y nombre del cliente
-                                </label>
-                                <div class="col-md-6">
-                                    <div class="input-group-prepend">
-                                        <input type="text" class="form-control" placeholder="Número cliente">
-                                        <input type="text" class="form-control" placeholder="Nombre cliente" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group row  text-left" style="margin-top: 0.5em;">
-                                <label for="idSucrsal" class="col-md-6 col-form-label">
-                                    Contrato y celular
-                                </label>
-                                <div class="col-md-6">
-                                    <div class="input-group-prepend">
-                                        <input type="text" class="form-control" placeholder="Contrato">
-                                        <input type="text" class="form-control" placeholder="Celular" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class=" form-group row text-left">
-                                <label class="col-md-10" style="font-size: 0.8em;">*Importante este número será la fecha
-                                    de su
-                                    vencimiento</label>
-                            </div>
-
-                            <div class="form-group row  text-left">
-                                <label for="idSucrsal" class="col-md-6 col-form-label">
-                                    Tipo de solicitud
-                                </label>
-                                <div class="col-md-6">
-                                    <select class="form-control" id="exampleFormControlSelect1">
-                                        <option selected>seleccione</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="form-group row  text-left" style="margin-top: 1em;">
-                                <label for="idSucrsal" class="col-md-6 col-form-label">
-                                    Tipo de solicitud
-                                </label>
-                                <div class="col-md-6">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Plazo</span>
-                                        <input type="text" class="form-control" placeholder="Plazo">
-                                        <span class="input-group-text">$</span>
-                                        <input type="text" class="form-control" placeholder="Monto">
-                                        <span class="input-group-text">Tasa</span>
-                                        <input type="text" class="form-control" placeholder="Tasa">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group row  text-left mt-5">
-                                <label class="col-md-6 col-form-label">
-                                    Justificación real
-                                </label>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" 
-                                        placeholder="escriba la justificación de la solución">
-                                </div>
-                            </div>
-                            <div class="row mt-2">
-                                <div class="col-md-6 offset-md-6">
-                                    <button (click)="showAutorizadores = !showAutorizadores" style="margin-left: 5em;"
-                                        type="button" class="btn btn-success">Ver
-                                        autorizadores</button>
-                                </div>
-                            </div>
-                            <div class="row align-items-start mt-2">
-                                <div class="col-md-6 offset-md-6 check-container">
-                                    <ng-container *ngIf="showAutorizadores">
-                                        <div class="form-check" *ngFor="let autorizador of autorizadores">
-                                            <input class="form-check-input" type="checkbox" [value]="autorizador"
-                                                id="flexCheckDefault">
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                {{autorizador.name}}
-                                            </label>
-                                        </div>
-                                    </ng-container>
-                                </div>
-                            </div>
-
-                            <div class="row align-items-start mt-2">
-                                <div class="col-md-8 offset-md-4 text-right">
-                                    <button disabled type="button" class="btn btn-primary btn-sm"><i
-                                            class="far fa-save"></i> Solicitar</button>
-                                </div>
-                            </div>
+                        </div>
                     </div>
                     <div class="col-md-4">
 
-                            <table class="table table-striped">
-                                <thead class="table-header">
-                                    <tr>
-                                        <th scope="col">Rango</th>
-                                        <th scope="col">Más de 1,000,000</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr *ngFor="let rangoTasa of rangosTasas">
-                                        <th>{{rangoTasa.rango}}</th>
-                                        <td>{{rangoTasa.tasa}}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <table class="table table-striped">
+                            <thead class="table-header">
+                                <tr>
+                                    <th scope="col">Rango</th>
+                                    <th scope="col">Más de 1,000,000</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let rangoTasa of rangosTasas">
+                                    <th>{{rangoTasa.rango}}</th>
+                                    <td>{{rangoTasa.tasa}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 

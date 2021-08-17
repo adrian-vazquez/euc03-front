@@ -61,16 +61,33 @@
                                             <a class="title-menu" [routerLink]="['control-tasas']" routerLinkActive="true">Control de tasas</a>
                                         </li>
                                         <li>
-                                            <a class="title-menu" [routerLink]="['reportes-EUC']" routerLinkActive="true">reportes EUC</a>
+                                            <a class="title-menu" [routerLink]="['operaciones-especiales']" routerLinkActive="true">Operaciones Especiales</a>
                                         </li>
-                                        <li (mouseenter)="showSubMenu(true)" (mouseleave)="showSubMenu(false)" >
-                                            <a class="title-menu" >gerencia</a>
-                                            <div class="sub-menu-right" >
+                                        <li>
+                                            <a class="title-menu" [routerLink]="['reenvio-solicitudes-especiales']" routerLinkActive="true">Reenvío de Solicitudes Especiales</a>
+                                        </li>
+                                        <li>
+                                            <a class="title-menu" [routerLink]="['reportes-EUC']" routerLinkActive="true">Reportes EUC</a>
+                                        </li>
+                                        <li>
+                                            <a class="title-menu" [routerLink]="['autorizadores']" routerLinkActive="true">Autorizadores</a>
+                                        </li>
+                                        <li>
+                                            <a class="title-menu" [routerLink]="['gerenciareporteacumulado']" routerLinkActive="true">Gerencia Reporte Acumulado</a>
+                                        </li>
+                                        <li>
+                                            <a class="title-menu" >Gerencia</a>
+                                            <div class="submenu-left">
                                                 <ul >
                                                     <li>
                                                         <a class="title-menu" [routerLink]="['vista-campanas']" routerLinkActive="true">Campañas On-Line</a>
                                                     </li>
-                                      
+                                                    <li>
+                                                        <a class="title-menu" [routerLink]="['gerencia/vista-por-campañas-aplicadas']" routerLinkActive="true">Vista por Campañas Aplicadas</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="title-menu" [routerLink]="['gerencia/campanias-online-timeliness']" routerLinkActive="true">Gerencias Online Timeliness</a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </li>

@@ -49,9 +49,6 @@ export class CampanasOnlineComponent implements OnInit {
     this.seleccion = "Divisionales";
    this.mostrarGraficas();
 
-   // Va en otro apartado, solo esta aqui de ejemplo
-   this.mostrarGraficasTimeLiness();
-
 
       this.numeroPaginas = 2;
 
@@ -122,26 +119,7 @@ this.seleccion = "Ger Mercado";
     graficas.graficaPastel();
   }
 
-  // Evento para calcular los datos para las gráficas Campaña On-LineTimeliness
-  // Solo esta aqui para ejemplo, agregarlo en su lugar y borarlo de este ts
-  public calcularTimeliness():void{this.mostrarGraficasTimeLiness();}
 
-  // Muestra las gráficas de la vista Campaña On-LineTimeliness
-  private mostrarGraficasTimeLiness(): void
-  {
-    const graficascalcularTimeliness: GraficasTime  = new GraficasTime();
-    let datos: DatosGraficasTime = new DatosGraficasTime();
-
-    graficascalcularTimeliness.graficaToroide("graficaToroideEspecialesTiempo");
-    graficascalcularTimeliness.graficaToroide("graficaToroideCampanaRETEN2021");
-
-    graficascalcularTimeliness.grafica(datos.datosEtiquetas(),datos.obtenerColores() ,"graficaBarraEspecialesEstatus");
-    graficascalcularTimeliness.grafica(datos.datosEtiquetas(),datos.obtenerColores() ,"graficaBarraCampanaRETEN2021");
-    graficascalcularTimeliness.grafica(datos.etiquetasBarraCampanaRETEN2021(),
-                                      datos.obtenerColoresBarraCampanaRETEN2021() ,
-                                      "graficaBarraEXCEPGEREstatus");
- 
-  }
 
 
 

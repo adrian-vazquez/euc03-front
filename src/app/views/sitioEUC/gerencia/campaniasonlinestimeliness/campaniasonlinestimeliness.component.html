@@ -1,0 +1,59 @@
+
+
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-6 d-flex justify-content-start">
+            <button class="btn p-2 btnCalcular" (click)="calcularTimeliness();">
+                <i class="fas fa-calculator"></i> Calcular
+            </button>
+        </div>
+        <div class="col-6 d-flex justify-content-end">
+            <p class="font-weight-bold"> Fecha-Hora Consulta: 23/04/2021, 10:48:19 AM</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-8" style=" 
+                        height:30em; 
+                        border: 0.4em dashed #d8d7d9; 
+                        margin-top: 3em; 
+                        border-radius: 4em;">
+
+            <div class="row ">
+                <div class="col-5  ">
+                    <p class="d-flex justify-content-center mt-3">Especiales por tiempo</p>
+                    <canvas class="" id="graficaToroideEspecialesTiempo"></canvas>
+                </div>
+                <div class="col-5 ">
+                    <p class="d-flex justify-content-center mt-3">Campaña RETEN2021 por tiempo</p>
+                    <canvas id="graficaToroideCampanaRETEN2021"></canvas>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4 ">
+                    <p class="d-flex justify-content-center mt-2">Especiales por Estatus</p>
+                    <canvas id="graficaBarraEspecialesEstatus"></canvas>
+                </div>
+                <div class="col-4 ">
+                    <p class="d-flex justify-content-center mt-2">Campaña RETEN2021 gana por Estatus</p>
+                    <canvas id="graficaBarraCampanaRETEN2021"></canvas>
+                </div>
+                <div class="col-4 ">
+                    <p class="d-flex justify-content-center mt-2">EXCEPGER por Estatus</p>
+                    <canvas id="graficaBarraEXCEPGEREstatus"></canvas>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-end mt-2">
+                    <p>Core Operations (GEOTACO) Dashboard</p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>

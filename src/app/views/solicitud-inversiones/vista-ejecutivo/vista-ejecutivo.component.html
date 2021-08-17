@@ -1,107 +1,104 @@
 <div>
-  <label><h1>Consulta de solicitud de tasas</h1></label>
+  <label>
+    <h1>Consulta de solicitud de tasas</h1>
+  </label>
 </div>
 
 <div class="row">
   <ng-container [formGroup]="formSearch">
     <div class="col col-md-8 input-group">
-          <div class="input-group-prepend">
-              <label class="input-group-text">Nómina ejecutivo</label>
-          </div>
-        <input 
-          [OnlyNumber]="true"
-          type="text"
-          class="form-control" 
-          placeholder="No. nómina"
-          aria-describedby="basic-addon2"
-          formControlName="numEjecutivo"
-        />
-          <div class="input-group-prepend">
-              <label class="input-group-text">Cliente</label>
-        
-        
-            </div>
-        <input
-          [OnlyNumber]="true"
-          type="text"
-          class="form-control"
-          placeholder="No. Cliente"
-          aria-describedby="basic-addon2"
-          formControlName="numCliente"
-        />
-        <div class="input-group-append">
-          <button (click)="search()" class="btn btn-outline-secondary" type="button" ><i class="fas fa-search"></i></button>
-        </div>
+      <div class="input-group-prepend">
+        <label class="input-group-text">Nómina ejecutivo</label>
       </div>
-    </ng-container>
+      <input [OnlyNumber]="true" type="text" class="form-control" placeholder="No. nómina"
+        aria-describedby="basic-addon2" formControlName="nominaEjec" maxlength="7" />
+      <div class="input-group-prepend">
+        <label class="input-group-text">Cliente</label>
+
+
+      </div>
+      <input [OnlyNumber]="true" type="text" class="form-control" placeholder="No. Cliente"
+        aria-describedby="basic-addon2" formControlName="numCliente" maxlength="10" />
+      <div class="input-group-append">
+        <button (click)="search()" class="btn btn-outline-secondary" type="button"><i
+            class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </ng-container>
 </div>
 
 <div *ngIf="showTable">
-<div class="row mt-3">
-  <div class="col-auto ">
-    <label class="col-form-label">Registros localizados {{tableData.length}}</label>
-  </div>
-  <div class="col-auto">
-    <input placeholder="Filtart resultados" type="text" class="form-control">
-  </div>
-  <div class="col-auto" style="overflow: auto;">
-    <table class="table">
-      <thead>
-        <tr >
-          <th class="th-color" scope="col" *ngFor="let headerTable of columHeaderDummy">{{headerTable.name}}</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor ="let data of tableData">
-          <td [ngClass]="{'td-aceptada': data.estatus === 'ACEPTADA', 'td-cancelada' : data.estatus === 'CANCELADA'}">{{data.estatus}}</td>
-          <td>{{data.folio}}</td>
-          <td>{{data.fechaSolic}}</td>
-          <td>{{data.tipoOferta}}</td>
-          <td>{{data.tipoCampania}}</td>
-          <td>{{data.tipo}}</td>
-          <td>{{data.contrato}}</td>
-          <td>{{data.numCliente}}</td>
-          <td>{{data.plazo}}</td>
-          <td>{{data.Monto}}</td>
-          <td>{{data.tasa}}</td>
-          <td>{{data.autorizadores}}</td>
-          <td>{{data.fechaAutori}}</td>
-          <td>{{data.autorizador}}</td>
-          <td>{{data.fechaLibera}}</td>
-          <td style="text-align: center;"> <button class="btn btn-danger" (click)="open(content)"><i class="fa fa-edit"></i></button> </td>
-          <td *ngIf="data.descargar"><button class="btn btn-success">Descargar</button></td>
-          <td>{{data.sirh}}</td>
-          <td>{{data.observaciones}}</td>
+  <div class="row mt-3">
+    <div class="col-auto ">
+      <label class="col-form-label">Registros localizados {{tableData.length}}</label>
+    </div>
+    <div class="col-auto">
+      <input placeholder="Filtart resultados" type="text" class="form-control">
+    </div>
+    <div class="col-auto" style="overflow: auto;">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="th-color" scope="col" *ngFor="let headerTable of columHeaderDummy">{{headerTable.name}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of tableData">
+            <td [ngClass]="{'td-aceptada': data.estatus === 'ACEPTADA', 'td-cancelada' : data.estatus === 'CANCELADA'}">
+              {{data.estatus}}</td>
+            <td>{{data.folio}}</td>
+            <td>{{data.fechaSolic}}</td>
+            <td>{{data.tipoOferta}}</td>
+            <td>{{data.tipoCampania}}</td>
+            <td>{{data.tipo}}</td>
+            <td>{{data.contrato}}</td>
+            <td>{{data.numCliente}}</td>
+            <td>{{data.plazo}}</td>
+            <td>{{data.Monto}}</td>
+            <td>{{data.tasa}}</td>
+            <td>{{data.autorizadores}}</td>
+            <td>{{data.fechaAutori}}</td>
+            <td>{{data.autorizador}}</td>
+            <td>{{data.fechaLibera}}</td>
+            <td style="text-align: center;"> <button class="btn btn-danger" (click)="open(content)"><i
+                  class="fa fa-edit"></i></button> </td>
+            <td *ngIf="data.descargar"><button class="btn btn-success">Descargar</button></td>
+            <td>{{data.sirh}}</td>
+            <td>{{data.observaciones}}</td>
         </tbody>
       </table>
     </div>
-</div>
+  </div>
 </div>
 
 <ng-template #content let-c="close" let-d="dismiss">
-  <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Cancelación</h4>
-    <h4 class="modal-title" id="modal-basic-title">Por favor introducir su nómina, nombre y justificación</h4>
-    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
+  <div class="modal-header d-block">
+    <div class="d-flex">
+      <h3 class="modal-title">Cancelación</h3>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <h5 style="text-align: initial;" class="modal-title">Favor de introducir su nómina, nombre y justificación</h5>
   </div>
   <ng-container [formGroup]="formCancelacion">
-  <div class="modal-body">
-    <div class="form-group">
-      <label for="exampleInputEmail1">Nómina</label>
-      <input formControlName="numEjecutivo" type="text" class="form-control" placeholder="Nómina ejecutivo">
+    <div class="modal-body">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Nómina</label>
+        <input formControlName="numeroEjec" maxlength="7" [OnlyNumber]="true" type="text" class="form-control"
+          placeholder="Nómina ejecutivo">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Nombre</label>
+        <input formControlName="nombreEjec" maxlength="128" type="text" class="form-control" placeholder="Nombre ejecutivo">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Justificación</label>
+        <textarea formControlName="justificacion" maxlength="128" class="form-control"
+          placeholder="Escriba su justificación aquí"></textarea>
+      </div>
     </div>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Nombre</label>
-      <input formControlName="nombreEjecutivo" type="text" class="form-control" placeholder="Nombre ejecutivo">
-    </div>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Justificación</label>
-      <textarea formControlName="justificacion" class="form-control" placeholder="Escriba su justificación aquí"></textarea>
-    </div>
-  </div>
-</ng-container>
+  </ng-container>
   <div class="modal-footer">
     <button type="button" class="btn btn-success" (click)="save()">Guardar</button>
     <button type="button" class="btn btn-outline-dark" (click)="d('Cross click')">Cerrar</button>

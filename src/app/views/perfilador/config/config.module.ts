@@ -5,7 +5,6 @@ import { ConfigRoutingModule } from './config-routing.module';
 import { MenuadministracionComponent } from './menuadministracion/menuadministracion.component';
 import { SliderComponent } from './slider/slider.component';
 import { PdfComponent } from './pdf/pdf.component';
-import { ComparativoComponent } from './comparativo/comparativo.component';
 import { GatComponent } from './gat/gat.component';
 import { ImagenprincipalComponent } from './imagenprincipal/imagenprincipal.component';
 import { CargasComponent } from './cargas/cargas.component';
@@ -19,7 +18,6 @@ const COMPONENTS = [
   MenuadministracionComponent,
   SliderComponent,
   PdfComponent,
-  ComparativoComponent,
   GatComponent,
   ImagenprincipalComponent,
   CargasComponent,

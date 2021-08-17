@@ -1,1 +1,366 @@
-<p>reportes-euc works!</p>
+<div class="container pt-2">
+    <div class="row justify-content-center align-items-baseline">
+        <img [src]="iconCarga" class="mb-4 pr-2">
+        <h4><label class="texto-general" style="text-align: center;"><b>Cargador de Insumos de Tasas</b></label></h4>
+    </div>
+    <div class="cborder">
+        <div class="row pt-2">
+            <div class="col-sm-12" style="text-align: center;">
+                <label class="texto-general" style="text-align: center;">Carga de Archivos de Inversiones Aplicadas</label>
+            </div>
+        </div>
+        <div class="row pr-4 pl-4">
+            <div class="col-sm-9">
+                <div class="input-group mb-2">
+                    <span class="input-group-text">Carga Archivo Platino:</span>
+                    <input type="file" class="form-control" name="Examinar">
+                </div>
+            </div>
+            <div class="col-sm-3" style="text-align: center;">
+                <button class="btn btn-success btn-sm m-1 btn-border" style="background-color: #00c851 !important;">Subir Archivo</button>
+                <button type="button" class="btn btn-outline-primary btn-sm m-1 btn-border">Limpiar</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="cborder">
+        <div class="row pt-2">
+            <div class="col-sm-12" style="text-align: center;">
+                <label class="texto-general" style="text-align: center;">Carga de Registro de Solicitudes</label>
+            </div>
+        </div>
+        <div class="row pr-4 pl-4">
+            <div class="col-sm-10">
+                <div class="input-group mb-2">
+                    <span class="input-group-text">Carga Archivo txt separado por Tabuladores:</span>
+                    <input type="file" class="form-control" name="Examinar">
+                </div>
+            </div>
+            <div class="col-sm-2" style="text-align: center;">
+                <button class="btn btn-success btn-sm m-1 btn-border" style="background-color: #00c851 !important;">Subir Archivo</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="cborder">
+        <div class="row pt-2">
+            <div class="col-sm-12" style="text-align: center;">
+                <label class="texto-general" style="text-align: center;">Carga de Archivo de Autorizadores / Eliminación de carga de Registros del Día</label>
+            </div>
+        </div>
+        <div class="row pl-1">
+            <div class="col-sm-4">
+                <div class="input-group mb-2">
+                    <span class="input-group-text">Fecha de Operación</span>
+                    <input type="date" class="form-control">
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="input-group mb-2">
+                    <span class="input-group-text">Archivo Autorizadores:</span>
+                    <input type="file" class="form-control" name="Examinar">
+                </div>
+            </div>
+            <div class="col" style="text-align: center;">
+                <button class="btn btn-success btn-sm m-1 btn-border" style="background-color: #00c851 !important;">Subir Archivo</button>
+                <button type="button" class="btn btn-warning btn-sm m-1 btn-border">Calcular</button>
+            </div>
+        </div>
+        <div class="row pl-1">
+            <div class="col-sm-4">
+                <div class="input-group mb-2">
+                    <span class="input-group-text">Fecha de Eliminación</span>
+                    <input type="date" class="form-control">
+                </div>
+            </div>
+            <div class="col-3" style="text-align: center;">
+                <button class="btn btn-danger btn-sm m-1 btn-border" style="background-color: #00c851 !important;">Eliminar día de Carga</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="cborder">
+        <div class="row pt-2">
+            <div class="col-sm-12" style="text-align: center;">
+                <label class="texto-general" style="text-align: center;">Búsqueda de Solicitudes Aplicadas sin Datos:</label>
+            </div>
+        </div>
+        <div class="row pr-4 pl-4">
+            <div class="col-sm-5">
+                <div class="input-group mb-2">
+                    <span class="input-group-text">Fecha de Eliminación</span>
+                    <input type="date" class="form-control">
+                </div>
+            </div>
+            <div class="col-sm-2" style="text-align: center;">
+                <button type="button" class="btn btn-primary btn-sm m-1 btn-border" (click)="busquedaSinDatos()">Buscar</button>
+            </div>
+        </div>
+        <div *ngIf="showBusquedaSinDatos==1">
+            <div class="row pr-4 pl-4 pt-2">
+                <div class="col" >
+                    <table class="table table-striped">
+                        <thead class="table-header" style="background-color: #056DAE; color: white;">
+                            <tr>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Cliente</th>
+                                <th scope="col">Contrato</th>
+                                <th scope="col">Suc</th>
+                                <th scope="col"> Folio EUC</th>
+                                <th scope="col">Plazo</th>
+                                <th scope="col">Monto</th>
+                                <th scope="col">Tasa</th>
+                                <th scope="col">Nom Cte</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>13/08/2021</td>
+                                <td>0</td>
+                                <td>32389954032</td>
+                                <td>7176</td>
+                                <td>469</td>
+                                <td>28</td>
+                                <td>9000</td>
+                                <td>4.27</td>
+                                <td><input type="textarea"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="cborder">
+        <div class="row pt-2">
+            <div class="col-sm-12" style="text-align: center;">
+                <label class="texto-general" style="text-align: center;">Actualización de Sucursales-Divisiones:</label>
+            </div>
+        </div>
+        <div class="row pr-4 pl-4">
+            <div class="col-sm-8">
+                <div class="input-group mb-2">
+                    <span class="input-group-text">Sucursales</span>
+                    <button type="button" class="btn btn-primary btn-sm m-1 btn-border">Buscar Reg. sin Suc</button>
+                    <button class="btn btn-success btn-sm m-1 btn-border" style="background-color: #00c851 !important;">Actualizar</button>
+                    <button type="button" class="btn btn-primary btn-sm m-1 btn-border">Agregar Sucursal</button>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="input-group mb-2">
+                    <span class="input-group-text">Divisiones</span>
+                    <button class="btn btn-success btn-sm m-1 btn-border" style="background-color: #00c851 !important;">Actualizar</button>
+                    <button type="button" class="btn btn-primary btn-sm m-1 btn-border">Actualizar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="cborder">
+    <div class="row pt-2">
+        <div class="col-sm-12" style="text-align: center;">
+            <label class="texto-general" style="text-align: center;">Reportes Diarios / Reportes de Boletines</label>
+        </div>
+    </div>
+    <div class="row pr-1 pl-1">
+        <div class="input-group mb-2 col-sm-3">
+            <span class="input-group-text">Fecha Inicio</span>
+            <input type="date" class="form-control">
+        </div>
+        <div class="input-group mb-2 col-sm-3">
+            <span class="input-group-text">Fecha Fin</span>
+            <input type="date" class="form-control">
+        </div>
+        <select class="col-sm-2 m-2" id="">
+            <option value="0">Aplicadas</option>
+            <option value="0">Otro</option>
+        </select>
+        <div class="col-sm-2" style="text-align: center;">
+            <button type="button" class="btn btn-warning btn-sm m-1 btn-border" (click)="verDatoDiario()">Ver Archivo Diario</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-group mb-2 col-sm-3">
+            <span class="input-group-text">Fecha Inicio</span>
+            <input type="date" class="form-control">
+        </div>
+        <div class="input-group mb-2 col-sm-3">
+            <span class="input-group-text">Fecha Fin</span>
+            <input type="date" class="form-control">
+        </div>
+        <select class="col-sm-1 m-2" id="">
+            <option value="0">Todas</option>
+            <option value="0">Otros</option>
+        </select>
+        <input type="checkbox" class="form-control" style="width: 2%;">
+        <label class="texto-general pt-3 pl-2" style="text-align: center !important;">Enfoque EUC</label>
+        <div class="col-sm-3">
+            <button type="button" class="btn btn-primary btn-sm m-1 btn-border" (click)="boletinMes()">Boletín</button>
+            <button class="btn btn-success btn-sm m-1 btn-border" style="background-color: #00c851 !important;">Indicadores</button>
+            <button type="button" class="btn btn-primary btn-sm m-1 btn-border">Autorizadores</button>
+        </div>
+    </div>
+</div>
+<div [ngStyle]="{'display': (showDataTable6) ? 'block' : 'none'}">
+    <div class="mt-4">
+        <app-table [tableData]="tableData6" [columnHeader]="columnHeader6"></app-table>
+    </div>
+</div>
+<div [ngStyle]="{'display': (showDataTable7) ? 'block' : 'none'}">
+    <div class="mt-4">
+        <app-table [tableData]="tableData7" [columnHeader]="columnHeader7"></app-table>
+    </div>
+</div>
+<div [ngStyle]="{'display': (showDataGrid) ? 'block' : 'none'}">
+    <div class="mt-4">
+        <div class="row">
+            <label class="texto-general col-12 text-center"><b>AGOSTO 2021</b></label>
+        </div>
+        <div class="row">
+            <label class="texto-general col-12 text-center"><b>Por Tipo de Persona</b></label>
+        </div>
+        <div class="row">
+            
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table table-striped">
+                    <thead class="table-header" style="background-color: #056DAE; color: white;">
+                        <tr>
+                            <th scope="col">OFERTA</th>
+                            <th scope="col">TASA BRUTA</th>
+                            <th scope="col">PLAZO</th>
+                            <th scope="col">RENDIMIENTOS BRUTOS</th>
+                            <th scope="col"> MONTO DE INVERSIÓN</th>
+                            <th scope="col">SELECCIONE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Portabilidad Nómina Campaña</td>
+                            <td>4.60%</td>
+                            <td>60 días</td>
+                            <td>$19.17</td>
+                            <td>$2,500.00</td>
+                            <td>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch1" selected>
+                                    <label class="custom-control-label" for="customSwitch1">ON/OFF</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Portabilidad Nómina Campaña</td>
+                            <td>4.60%</td>
+                            <td>60 días</td>
+                            <td>$19.17</td>
+                            <td>$2,500.00</td>
+                            <td>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                    <label class="custom-control-label" for="customSwitch1">ON/OFF</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Portabilidad Nómina Campaña</td>
+                            <td>4.60%</td>
+                            <td>60 días</td>
+                            <td>$19.17</td>
+                            <td>$2,500.00</td>
+                            <td>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                    <label class="custom-control-label" for="customSwitch1">ON/OFF</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Portabilidad Nómina Campaña</td>
+                            <td>4.60%</td>
+                            <td>60 días</td>
+                            <td>$19.17</td>
+                            <td>$2,500.00</td>
+                            <td>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                    <label class="custom-control-label" for="customSwitch1">ON/OFF</label>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <label class="texto-general col-12 text-center"><b>Por Estrategia / Tipo de Tasa</b></label>
+        </div>
+        <div class="row">
+            <div class="col" >
+                <table class="table table-striped">
+                    <thead class="table-header" style="background-color: #056DAE; color: white;">
+                        <tr>
+                            <th scope="col">OFERTA</th>
+                            <th scope="col">TASA BRUTA</th>
+                            <th scope="col">PLAZO</th>
+                            <th scope="col">RENDIMIENTOS BRUTOS</th>
+                            <th scope="col"> MONTO DE INVERSIÓN</th>
+                            <th scope="col">SELECCIONE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Portabilidad Nómina Campaña</td>
+                            <td>4.60%</td>
+                            <td>60 días</td>
+                            <td>$19.17</td>
+                            <td>$2,500.00</td>
+                            <td>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch1" selected>
+                                    <label class="custom-control-label" for="customSwitch1">ON/OFF</label>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <label class="texto-general col-12 text-center"><b>Por División</b></label>
+        </div>
+        <div class="row">
+            <div class="col" >
+                <table class="table table-striped">
+                    <thead class="table-header" style="background-color: #056DAE; color: white;">
+                        <tr>
+                            <th scope="col">OFERTA</th>
+                            <th scope="col">TASA BRUTA</th>
+                            <th scope="col">PLAZO</th>
+                            <th scope="col">RENDIMIENTOS BRUTOS</th>
+                            <th scope="col"> MONTO DE INVERSIÓN</th>
+                            <th scope="col">SELECCIONE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Portabilidad Nómina Campaña</td>
+                            <td>4.60%</td>
+                            <td>60 días</td>
+                            <td>$19.17</td>
+                            <td>$2,500.00</td>
+                            <td>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch1" selected>
+                                    <label class="custom-control-label" for="customSwitch1">ON/OFF</label>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

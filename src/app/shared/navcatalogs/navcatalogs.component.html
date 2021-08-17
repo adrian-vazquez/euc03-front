@@ -1,5 +1,12 @@
-<div class="container pt-0">
-    <nav class="navbar navbar-light" style="background-color: #e3ffee;">
+ <div class="container pt-0 mb-4">
+    <nav class="navbar navbar-light" style="background-color: #fff5e3;">
         <a class="nav-link" [routerLink]="['/consultas']" routerLinkActive="true">Consulta</a>
+        <a class="nav-link" [routerLink]="['/comparativo']" [queryParams]="{ edit: false }" routerLinkActive="true">Comparativo Rendimiento</a>
+        <a class="nav-link" [routerLink]="['/comparativo']" [queryParams]="{ edit: true }" routerLinkActive="true">Edición Comparativo Rendimiento</a>
+        <a class="nav-link" [routerLink]="['/clientes']"  routerLinkActive="true">Clientes</a>
+        <a class="nav-link" [routerLink]="['/guias-operativas']"  routerLinkActive="true">Guías Informativas</a>
+        <a class="nav-link" [routerLink]="['/pdf-especial']"  routerLinkActive="true">PDF Especial</a>
+        <a class="nav-link" [routerLink]="['/ejecutivos-sucursal']"  routerLinkActive="true">Ejecutivos de Sucursal</a>
+        <a class="nav-link" [routerLink]="['/parametros']"  routerLinkActive="true">Parametros</a>
     </nav>
-</div>
+</div>  

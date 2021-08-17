@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-md-12 text-center">
+        <label><button class="btn btn-warning" routerLink="/control-tasas/KPI"><i style="font-size: 2em;"
+                    class="fas fa-map-marker-alt"></i>Regresar a KPI</button>
+        </label>
+        <br>
+        <br>
+        <label>
+            <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Fecha</span>
+            </div>
+            <div class="input-group-prepend">
+                <span class="input-group-text" (click)="d.toggle()">
+                    <i class="far fa-calendar-check"></i>
+                </span>
+            </div>
+            <div class="input-group-prepend">
+                <input class="size-input" [OnlyNumber]="true" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker">
+            </div>
+
+            <div class="input-group-prepend ml-3">
+                <button class="btn btn-success " (click)="showTable = !showTable"><i class="fas fa-search"></i> Buscar</button>
+            </div>
+            </div>
+        </label>
+
+        <div class="mt-4">
+            <table class="table" *ngIf="showTable">
+                <thead class="th-color">
+                  <tr>
+                    <th class="th-color" *ngFor="let colum of columHeader">{{colum.name}}</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let info of data">                    
+                    <td>{{info.id_tasaAuto}}</td>
+                    <td>{{info.fechaSolic}}</td>
+                    <td>{{info.oferta}}</td>
+                    <td><textarea specialIsAlphaNumeric maxlength="7"></textarea></td>
+                    <td><textarea maxlength="7"></textarea></td>
+                    <td><textarea maxlength="7"></textarea></td>
+                    <td>{{info.estatus}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+    </div>
+</div>

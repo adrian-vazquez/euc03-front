@@ -42,12 +42,12 @@
                 <input class="size-input" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker">
             </div>
             <div class="input-group-prepend">
-                <button class="btn color-button"><i class="fas fa-search"></i> Buscar</button>
+                <button class="btn color-button" (click)="buscar()"><i class="fas fa-search"></i> Buscar</button>
             </div>
         </div>
     </div>
 
-    <div class="col-md-12 mt-3" style="overflow: auto;" *ngIf="showSolicitudActualizar || showSolicitudCancelacion">
+    <div class="col-md-12 mt-3" style="overflow: auto;" *ngIf="showResult">
         <div class="input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text">Registros localizados</span>
@@ -71,7 +71,7 @@
                         <i (click)="mostrarEdit()" style="font-size: 2em;" class="fas fa-edit"></i>
                     </td>
                     <td>
-                        <i style="font-size: 1em;" class="fas fa-search"></i><br>
+                        <i (click)="openXl(content)" style="font-size: 1em;" class="fas fa-search"></i><br>
                         {{data.asig}}
                     </td>
                     <td>{{data.oper}}</td>
@@ -288,7 +288,7 @@
             </div>
     </div>
 
-    <div class="col-md-4 offset-md-2 mt-5">
+    <div class="col-md-4 offset-md-2 mt-5" *ngIf="showSolicitudActualizar || showSolicitudCancelacion">
         <table class="table table-striped mt-3">
             <thead class="table-header">
                 <tr>
@@ -322,7 +322,6 @@
         </div>
     </ng-container>
     
-
     <ng-container *ngIf="showSolicitudActualizar">
         <div class="col-md-1 offset-md-5 mt-5">
             <button type="submit" class="btn btn-primary btn-sm btn-success"><i class="fas fa-times"></i> Cerrar</button>
@@ -337,7 +336,45 @@
             <button type="submit" class="btn btn-primary btn-sm btn-danger" (click)="getTop()">Top</button>
         </div>
     </ng-container>
-    
-    
-
+        
 </div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="row"></div>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Consulta</h4>
+    </div>
+    <div class="modal-body">
+        <table style="width:100%" class="table"> 
+            <thead>
+                <tr>
+                    <th class="th-color" scope="col" *ngFor="let headerTable of columHeaderConsult">
+                        <label style="width: 7em;">{{headerTable.name}}</label>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of data">
+                    <td [ngClass]="{'bgVerde': data.estatus === 'LIBERADA', 'bgRojo': data.estatus === 'RECHAZADA'}">{{data.estatus}}</td>
+                    <td>{{data.fechaSolic}}</td>
+                    <td>{{data.tipo}}</td>
+                    <td>{{data.contrato}}</td>
+                    <td>{{data.numCte}}</td>
+                    <td>{{data.sucursalDiv}}</td>
+                    <td>{{data.plazo}}</td>
+                    <td>{{data.monto}}</td>
+                    <td> {{data.tasaSolic}}</td>
+                    <td>{{data.fechaLibeEUC}}</td>
+                    <td>{{data.folioEUC}}</td>
+                    <td>{{data.observaciones}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="modal-footer text-center">
+        <label class="col-md-12 text-center">
+            <button type="button" class="btn btn-success" (click)="d('Cross click')"><i class="fas fa-times"></i> Cerrar</button>
+        </label>
+    </div>
+  </ng-template>

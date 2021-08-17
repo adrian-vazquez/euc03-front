@@ -1,0 +1,55 @@
+<div class="row justify-content-center align-items-baseline">
+    <div class="col">
+        <div class="input-group mb-2">
+            <span class="input-group-text">Fecha Inicial:</span>
+            <input type="date" class="form-control">
+        </div>
+    </div>
+    <div class="col">
+        <div class="input-group mb-2">
+            <span class="input-group-text">Fecha Final:</span>
+            <input type="date" class="form-control">
+        </div>
+    </div>
+    <div class="col">
+        <div class="input-group mb-2">
+            <span class="input-group-text">Campaña:</span>
+            <select id="">
+                <option value="0">Seleccione una opción</option>
+                <option value="0">FINA2020</option>
+                <option value="0">Otro</option>
+            </select>
+        </div>
+    </div>
+    <div class="col">
+        <div class="input-group">
+            <span class="input-group-text">Premio:</span>
+            <input type="checkbox" class="form-control">
+        </div>
+    </div>
+</div>
+<div class="row pt-4">
+    <div class="col"></div>
+    <div class="col text-center">
+        <div class="col" style="text-align: center;">
+            <button type="button" class="btn btn-warning btn-border" (click)="muestraTablaDatos()">Calcular e Imprimir</button>
+        </div>
+    </div>
+    <div class="col"></div>
+</div>
+
+<div [ngStyle]="{'display': (showDataTable) ? 'block' : 'none'}">
+    <div class="mt-4">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col">
+                <label class="texto-general pt-3 pl-2 text-right"><b>Seguimiento Campaña Divisiones Date1 a Date2</b></label>
+            </div>
+            <div class="col">
+                <label class="texto-general pt-3 pl-2 text-left"><b>Campaña</b></label>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <app-table [tableData]="tableData" [columnHeader]="columnHeader"></app-table>
+    </div>
+</div>

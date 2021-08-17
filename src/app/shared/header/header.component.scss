@@ -8,6 +8,10 @@
     margin-bottom: auto;
 }
 
+.float-right {
+    float: right !important;
+}
+
 .position {
     margin-right: 10px;
 }
@@ -26,6 +30,10 @@
     display: flex;
     list-style: none;
     background-color: transparent;
+}
+
+.dropdown li {
+    position: relative;
 }
 
 .dropdown li a {

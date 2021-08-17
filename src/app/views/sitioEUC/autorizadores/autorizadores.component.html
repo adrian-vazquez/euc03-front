@@ -1,0 +1,177 @@
+<div class="row">
+    <div class="col-sm-12 text-center" >
+        <label class="texto-general"><b>CONTROL DE FACULTAMIENTO</b></label>
+    </div>
+</div>
+<div class="row pt-4">
+    <div class="col-sm-3">
+        <div class="input-group mb-2">
+            <span class="input-group-text">División:</span>
+            <select id="">
+                <option value="0">Seleccione</option>
+                <option value="0">NOROESTE</option>
+                <option value="0">OCCIDENTE</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="input-group mb-2">
+            <span class="input-group-text">Iniciales:</span>
+            <input type="text" class="form-control">
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <button class="btn btn-success btn-sm m-1 btn-border" style="background-color: #00c851 !important;">Buscar</button>
+        <button type="button" class="btn btn-primary btn-sm m-1 btn-border" (click)="abrirmodal()">Agregar Nuevo Facultado</button>
+    </div>
+</div>
+<br>
+<div class="row pt-4">
+    <div class="col-sm-6">
+        <div class="input-group mb-2">
+            <span class="input-group-text">Filtrar:</span>
+            <input type="text" class="form-control">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col" >
+        <table class="table table-striped">
+            <thead class="table-header" style="background-color: #056DAE; color: white;">
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col"> División</th>
+                    <th scope="col">Estatus</th>
+                    <th scope="col">Escalamiento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><button type="button" class="btn btn-primary btn-sm m-1 btn-border">Editar</button></td>
+                    <td><button type="button" class="btn btn-primary btn-sm m-1 btn-border">Borrar</button></td>
+                    <td>Divisional</td>
+                    <td>JORGE</td>
+                    <td>NOROESTE</td>
+                    <td>Inactivo</td>
+                    <td>JMA</td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="btn btn-primary btn-sm m-1 btn-border">Editar</button></td>
+                    <td><button type="button" class="btn btn-primary btn-sm m-1 btn-border">Borrar</button></td>
+                    <td>Divisional</td>
+                    <td>Rogelio Jacobo Marquez Acevedo</td>
+                    <td>OCCIDENTE</td>
+                    <td>Activo</td>
+                    <td>RJMA</td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="btn btn-primary btn-sm m-1 btn-border">Editar</button></td>
+                    <td><button type="button" class="btn btn-primary btn-sm m-1 btn-border">Borrar</button></td>
+                    <td>Divisional</td>
+                    <td>TEST</td>
+                    <td>OCCIDENTE</td>
+                    <td>Inactivo</td>
+                    <td>TEST</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<app-modal [active]="active" (envio)="cerrarPopup()" [size]="'g'">
+    <div class="modal-header">
+            <h3 class="modal-title" style="margin: 0;">
+                <b>Control de Facultamiento</b>
+            </h3>
+            <button type="button" class="close" data-dismiss="modal" arial-label="Cerrar" (click)="cerrarPopup()">
+                <span class="m-1" aria-hidden="true">x</span>
+            </button>
+        </div>
+        <div class="contModal pt-2">
+                <div class="form-group row mb-2">
+                    <label class="col-sm-4 col-form-label text-left texto-general">*Soeid:</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control form-control-sm redondear" 
+                            pattern="^[0-9]" PatternOnlyDirective maxlength="6">
+                    </div>
+                </div>
+                <div class="form-group row mb-2">
+                    <label class="col-sm-4 col-form-label text-left texto-general">División:</label>
+                    <div class="col-sm-4">
+                        <select id="">
+                            <option value="0">Aportaciones</option>
+                            <option value="0">Otro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row mb-2">
+                    <label class="col-sm-4 col-form-label text-left texto-general">*Nombre:</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control form-control-sm redondear" 
+                            pattern="^[0-9]" PatternOnlyDirective maxlength="6">
+                    </div>
+                </div>
+                <div class="form-group row mb-2">
+                    <label class="col-sm-4 col-form-label text-left texto-general">Iniciales:</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control form-control-sm redondear" 
+                            pattern="^[0-9]" PatternOnlyDirective maxlength="6">
+                    </div>
+                </div>
+                <div class="form-group row mb-2">
+                    <label class="col-sm-4 col-form-label text-left texto-general">Fecha Inicial:</label>
+                    <div class="col-sm-4">
+                        <input type="date" class="form-control form-control-sm redondear">
+                    </div>
+                </div>
+                <div class="form-group row mb-2">
+                    <label class="col-sm-4 col-form-label text-left texto-general">Fecha Termino:</label>
+                    <div class="col-sm-4">
+                        <input type="date" class="form-control form-control-sm redondear">
+                    </div>
+                </div>
+                <div class="form-group row mb-2">
+                    <label class="col-sm-4 col-form-label text-left texto-general">*Correo:</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control form-control-sm redondear" 
+                            pattern="^[0-9]" PatternOnlyDirective maxlength="6">
+                    </div>
+                </div>
+                <div class="form-group row mb-2">
+                    <label class="col-sm-4 col-form-label text-left texto-general">Estatus:</label>
+                    <div class="col-sm-4">
+                        <div class="input-group mb-2">
+                            <span class="input-group-text">Activo:</span>
+                            <input type="checkbox" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row mb-2">
+                    <label class="col-sm-4 col-form-label text-left texto-general">Facultado para autorizaciones distritales:</label>
+                    <div class="col-sm-4">
+                        <div class="input-group mb-2">
+                            <span class="input-group-text">Facultado:</span>
+                            <input type="checkbox" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row mb-2">
+                    <label class="col-sm-4 col-form-label text-left texto-general">Nivel Autorizador:</label>
+                    <div class="col-sm-4">
+                        <select id="">
+                            <option value="0">Seleccione</option>
+                            <option value="0">Divisional</option>
+                            <option value="0">Distrital</option>
+                            <option value="0">Facultado</option>
+                            <option value="0">Gerencia Inv</option>
+                        </select>
+                    </div>
+                </div>
+            <div class="botones-modal pt-4">
+                <button class="col-4 btn btn-success btn-border m-2" style="background-color: #00c851 !important;">Aplicar</button>
+                <button class="col-4 btn btn-danger btn-border m-2" (click)="cerrarPopup()">Cancelar</button>
+            </div>
+        </div>
+</app-modal>
