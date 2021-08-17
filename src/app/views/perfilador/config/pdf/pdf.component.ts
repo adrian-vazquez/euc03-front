@@ -29,8 +29,8 @@ export class PdfComponent implements OnInit {
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire(
-          '¡Guardado!',
-          'Se guardó el registro con éxito',
+          '¡Cargado!',
+          'Se cargó el registro con éxito',
           'success'
         )
       }

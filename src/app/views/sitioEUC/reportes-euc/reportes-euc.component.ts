@@ -81,8 +81,8 @@ export class ReportesEUCComponent implements OnInit {
       title: 'Archivo Diario:',
       showDenyButton: true,
       showCancelButton: false,
-      confirmButtonText: `6. Campañas (Detalles de Operación)`,
-      denyButtonText: `7. Resumen`,
+      confirmButtonText: `5. Campañas (Detalles de Operación)`,
+      denyButtonText: `6. Resumen`,
     }).then((result) => {
       if (result.isConfirmed) {
         this.showDataTable6 = true;

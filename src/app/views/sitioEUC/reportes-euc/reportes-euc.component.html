@@ -195,7 +195,7 @@
             <option value="0">Otros</option>
         </select>
         <input type="checkbox" class="form-control" style="width: 2%;">
-        <label class="texto-general txt-small pt-3 pl-2" style="text-align: center !important;">Enfoque EUC</label>
+        <label class="texto-general txt-small pt-2 pl-2">Enfoque EUC</label>
         <div class="col-sm-3">
             <button type="button" class="btn btn-primary btn-sm m-1 btn-border" (click)="boletinMes()">Boletín</button>
             <button class="btn btn-success btn-sm m-1 btn-border" style="background-color: #00c851 !important;">Indicadores</button>
@@ -215,148 +215,193 @@
 </div>
 <div [ngStyle]="{'display': (showDataGrid) ? 'block' : 'none'}">
     <div class="mt-4">
-        <div class="row">
+        <div class="row pt-2">
             <label class="texto-general col-12 text-center"><b>AGOSTO 2021</b></label>
         </div>
-        <div class="row">
+        <div class="row pt-2">
             <label class="texto-general col-12 text-center"><b>Por Tipo de Persona</b></label>
         </div>
-        <div class="row">
-            
-        </div>
-        <div class="row">
+        <div class="row pt-2">
             <div class="col">
-                <table class="table table-striped">
-                    <thead class="table-header" style="background-color: #056DAE; color: white;">
+                <table class="txt-small w-100 m-auto table table-striped pt-4">
+                    <thead style="background-color: #056DAE;">
                         <tr>
-                            <th scope="col">OFERTA</th>
-                            <th scope="col">TASA BRUTA</th>
-                            <th scope="col">PLAZO</th>
-                            <th scope="col">RENDIMIENTOS BRUTOS</th>
-                            <th scope="col"> MONTO DE INVERSIÓN</th>
-                            <th scope="col">SELECCIONE</th>
+                            <th class="texto-general" style="cursor: pointer; color: white;">
+                                Tipo Persona
+                            </th>
+                            <th class="texto-general" style="cursor: pointer; color: white;">
+                                Operaciones
+                            </th>
+                            <th class="texto-general" style="cursor: pointer; color: white;">
+                                Monto
+                            </th>
+                            <th class="texto-general" style="cursor: pointer; color: white;">
+                                Tasa P.
+                            </th>
+                            <th class="texto-general" style="cursor: pointer; color: white;">
+                                Operaciones
+                            </th>
+                            <th class="texto-general" style="cursor: pointer; color: white;">
+                                Monto
+                            </th>
+                            <th class="texto-general" style="cursor: pointer; color: white;">
+                                Tasa P.
+                            </th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="mat-body">
                         <tr>
-                            <td>Portabilidad Nómina Campaña</td>
-                            <td>4.60%</td>
-                            <td>60 días</td>
-                            <td>$19.17</td>
-                            <td>$2,500.00</td>
-                            <td>
-                                <div class="custom-control custom-switch">
-                                    <input type="checkbox" class="custom-control-input" id="customSwitch1" selected>
-                                    <label class="custom-control-label" for="customSwitch1">ON/OFF</label>
-                                </div>
-                            </td>
+                            <td class="mat-cell p-2" style="color: #056DAE;"><b>Persona Física</b></td>
+                            <td class="mat-cell p-2">552</td>
+                            <td class="mat-cell p-2">$45,453,976</td>
+                            <td class="mat-cell p-2">3.12</td>
+                            <td class="mat-cell p-2">63,115</td>
+                            <td class="mat-cell p-2">$31,620,983,025.00</td>
+                            <td class="mat-cell p-2">3.71</td>
                         </tr>
                         <tr>
-                            <td>Portabilidad Nómina Campaña</td>
-                            <td>4.60%</td>
-                            <td>60 días</td>
-                            <td>$19.17</td>
-                            <td>$2,500.00</td>
-                            <td>
-                                <div class="custom-control custom-switch">
-                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                    <label class="custom-control-label" for="customSwitch1">ON/OFF</label>
-                                </div>
-                            </td>
+                            <td class="mat-cell p-2" style="color: #056DAE;"><b>Persona Moral</b></td>
+                            <td class="mat-cell p-2">552</td>
+                            <td class="mat-cell p-2">$45,453,976</td>
+                            <td class="mat-cell p-2">3.12</td>
+                            <td class="mat-cell p-2">63,115</td>
+                            <td class="mat-cell p-2">$31,620,983,025.00</td>
+                            <td class="mat-cell p-2">3.71</td>
                         </tr>
                         <tr>
-                            <td>Portabilidad Nómina Campaña</td>
-                            <td>4.60%</td>
-                            <td>60 días</td>
-                            <td>$19.17</td>
-                            <td>$2,500.00</td>
-                            <td>
-                                <div class="custom-control custom-switch">
-                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                    <label class="custom-control-label" for="customSwitch1">ON/OFF</label>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Portabilidad Nómina Campaña</td>
-                            <td>4.60%</td>
-                            <td>60 días</td>
-                            <td>$19.17</td>
-                            <td>$2,500.00</td>
-                            <td>
-                                <div class="custom-control custom-switch">
-                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                    <label class="custom-control-label" for="customSwitch1">ON/OFF</label>
-                                </div>
-                            </td>
+                            <td class="mat-cell p-2" style="color: #056DAE;"><b>Total</b></td>
+                            <td class="mat-cell p-2"><b>552</b></td>
+                            <td class="mat-cell p-2"><b>$45,453,976</b></td>
+                            <td class="mat-cell p-2"><b>3.12</b></td>
+                            <td class="mat-cell p-2"><b>63,115</b></td>
+                            <td class="mat-cell p-2"><b>$31,620,983,025.00</b></td>
+                            <td class="mat-cell p-2"><b>3.71</b></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-        <div class="row">
+        <div class="row pt-2">
             <label class="texto-general col-12 text-center"><b>Por Estrategia / Tipo de Tasa</b></label>
         </div>
-        <div class="row">
+        <div class="row pt-2">
             <div class="col" >
-                <table class="table table-striped">
-                    <thead class="table-header" style="background-color: #056DAE; color: white;">
+                <table class="txt-small w-100 m-auto table table-striped pt-4">
+                    <thead style="background-color: #056DAE;">
                         <tr>
-                            <th scope="col">OFERTA</th>
-                            <th scope="col">TASA BRUTA</th>
-                            <th scope="col">PLAZO</th>
-                            <th scope="col">RENDIMIENTOS BRUTOS</th>
-                            <th scope="col"> MONTO DE INVERSIÓN</th>
-                            <th scope="col">SELECCIONE</th>
+                            <th class="texto-general" style="cursor: pointer; color: white;">
+                                Tipo Persona
+                            </th>
+                            <th class="texto-general" style="cursor: pointer; color: white;">
+                                Operaciones
+                            </th>
+                            <th class="texto-general" style="cursor: pointer; color: white;">
+                                Monto
+                            </th>
+                            <th class="texto-general" style="cursor: pointer; color: white;">
+                                Tasa P.
+                            </th>
+                            <th class="texto-general" style="cursor: pointer; color: white;">
+                                Operaciones
+                            </th>
+                            <th class="texto-general" style="cursor: pointer; color: white;">
+                                Monto
+                            </th>
+                            <th class="texto-general" style="cursor: pointer; color: white;">
+                                Tasa P.
+                            </th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="mat-body">
                         <tr>
-                            <td>Portabilidad Nómina Campaña</td>
-                            <td>4.60%</td>
-                            <td>60 días</td>
-                            <td>$19.17</td>
-                            <td>$2,500.00</td>
-                            <td>
-                                <div class="custom-control custom-switch">
-                                    <input type="checkbox" class="custom-control-input" id="customSwitch1" selected>
-                                    <label class="custom-control-label" for="customSwitch1">ON/OFF</label>
-                                </div>
-                            </td>
+                            <td class="mat-cell p-2" style="color: #056DAE;"><b>Tasas Autorizadas</b></td>
+                            <td class="mat-cell p-2">552</td>
+                            <td class="mat-cell p-2">$45,453,976</td>
+                            <td class="mat-cell p-2">3.12</td>
+                            <td class="mat-cell p-2">63,115</td>
+                            <td class="mat-cell p-2">$31,620,983,025.00</td>
+                            <td class="mat-cell p-2">3.71</td>
+                        </tr>
+                        <tr>
+                            <td class="mat-cell p-2" style="color: #056DAE;"><b>Tasas Campaña</b></td>
+                            <td class="mat-cell p-2">552</td>
+                            <td class="mat-cell p-2">$45,453,976</td>
+                            <td class="mat-cell p-2">3.12</td>
+                            <td class="mat-cell p-2">63,115</td>
+                            <td class="mat-cell p-2">$31,620,983,025.00</td>
+                            <td class="mat-cell p-2">3.71</td>
+                        </tr>
+                        <tr>
+                            <td class="mat-cell p-2" style="color: #056DAE;"><b>Total</b></td>
+                            <td class="mat-cell p-2"><b>552</b></td>
+                            <td class="mat-cell p-2"><b>$45,453,976</b></td>
+                            <td class="mat-cell p-2"><b>3.12</b></td>
+                            <td class="mat-cell p-2"><b>63,115</b></td>
+                            <td class="mat-cell p-2"><b>$31,620,983,025.00</b></td>
+                            <td class="mat-cell p-2"><b>3.71</b></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-        <div class="row">
+        <div class="row pt-2">
             <label class="texto-general col-12 text-center"><b>Por División</b></label>
         </div>
-        <div class="row">
+        <div class="row pt-2">
             <div class="col" >
-                <table class="table table-striped">
-                    <thead class="table-header" style="background-color: #056DAE; color: white;">
+                <table class="txt-small w-100 m-auto table table-striped pt-4">
+                    <thead style="background-color: #056DAE;">
                         <tr>
-                            <th scope="col">OFERTA</th>
-                            <th scope="col">TASA BRUTA</th>
-                            <th scope="col">PLAZO</th>
-                            <th scope="col">RENDIMIENTOS BRUTOS</th>
-                            <th scope="col"> MONTO DE INVERSIÓN</th>
-                            <th scope="col">SELECCIONE</th>
+                            <th class="texto-general" style="cursor: pointer; color: white;">
+                                Tipo Persona
+                            </th>
+                            <th class="texto-general" style="cursor: pointer; color: white;">
+                                Operaciones
+                            </th>
+                            <th class="texto-general" style="cursor: pointer; color: white;">
+                                Monto
+                            </th>
+                            <th class="texto-general" style="cursor: pointer; color: white;">
+                                Tasa P.
+                            </th>
+                            <th class="texto-general" style="cursor: pointer; color: white;">
+                                Operaciones
+                            </th>
+                            <th class="texto-general" style="cursor: pointer; color: white;">
+                                Monto
+                            </th>
+                            <th class="texto-general" style="cursor: pointer; color: white;">
+                                Tasa P.
+                            </th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="mat-body">
                         <tr>
-                            <td>Portabilidad Nómina Campaña</td>
-                            <td>4.60%</td>
-                            <td>60 días</td>
-                            <td>$19.17</td>
-                            <td>$2,500.00</td>
-                            <td>
-                                <div class="custom-control custom-switch">
-                                    <input type="checkbox" class="custom-control-input" id="customSwitch1" selected>
-                                    <label class="custom-control-label" for="customSwitch1">ON/OFF</label>
-                                </div>
-                            </td>
+                            <td class="mat-cell p-2" style="color: #056DAE;"><b>División 1</b></td>
+                            <td class="mat-cell p-2">552</td>
+                            <td class="mat-cell p-2">$45,453,976</td>
+                            <td class="mat-cell p-2">3.12</td>
+                            <td class="mat-cell p-2">63,115</td>
+                            <td class="mat-cell p-2">$31,620,983,025.00</td>
+                            <td class="mat-cell p-2">3.71</td>
+                        </tr>
+                        <tr>
+                            <td class="mat-cell p-2" style="color: #056DAE;"><b>División 2</b></td>
+                            <td class="mat-cell p-2">552</td>
+                            <td class="mat-cell p-2">$45,453,976</td>
+                            <td class="mat-cell p-2">3.12</td>
+                            <td class="mat-cell p-2">63,115</td>
+                            <td class="mat-cell p-2">$31,620,983,025.00</td>
+                            <td class="mat-cell p-2">3.71</td>
+                        </tr>
+                        <tr>
+                            <td class="mat-cell p-2" style="color: #056DAE;"><b>Total</b></td>
+                            <td class="mat-cell p-2"><b>552</b></td>
+                            <td class="mat-cell p-2"><b>$45,453,976</b></td>
+                            <td class="mat-cell p-2"><b>3.12</b></td>
+                            <td class="mat-cell p-2"><b>63,115</b></td>
+                            <td class="mat-cell p-2"><b>$31,620,983,025.00</b></td>
+                            <td class="mat-cell p-2"><b>3.71</b></td>
                         </tr>
                     </tbody>
                 </table>
