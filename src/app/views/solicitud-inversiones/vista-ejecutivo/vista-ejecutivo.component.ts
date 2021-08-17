@@ -27,7 +27,7 @@ export class VistaEjecutivoComponent implements OnInit {
   columHeaderDummy = [
     {name: 'Estatus'},
     {name: 'Folio'},
-    {name: 'Fecha.Solic'},
+    {name: 'Fecha Sol.'},
     {name: 'Tipo'},
     {name: 'Tipo de oferta'},
     {name: 'Tipo de campaña'},
@@ -60,7 +60,7 @@ export class VistaEjecutivoComponent implements OnInit {
       Monto: '10000000',
       tasa: '4.07',
       autorizadores: 'AT876655|AT456655',
-      fechaAutori: '',
+      fechaAutori: '12/08/2021',
       autorizador: '0',
       fechaLibera: '2021-05-06 10:18',
       cancelacion: true,
@@ -69,7 +69,7 @@ export class VistaEjecutivoComponent implements OnInit {
       observaciones: 'Prueba exitosa',
     },
     {
-      estatus:'ACEPTADA',
+      estatus:'LIBERADA',
       folio:'0',
       fechaSolic:'2021-03-08 12:35',
       tipoOferta: '',
@@ -81,7 +81,7 @@ export class VistaEjecutivoComponent implements OnInit {
       Monto: '10000000',
       tasa: '4.07',
       autorizadores: 'AT876655|AT456655',
-      fechaAutori: '',
+      fechaAutori: '12/08/2021',
       autorizador: '0',
       fechaLibera: '2021-05-06 10:18',
       cancelacion: true,
@@ -90,7 +90,7 @@ export class VistaEjecutivoComponent implements OnInit {
       observaciones: 'Prueba exitosa',
     },
     {
-      estatus:'ACEPTADA',
+      estatus:'LIBERADA',
       folio:'0',
       fechaSolic:'2021-03-08 12:35',
       tipoOferta: '',
@@ -102,7 +102,28 @@ export class VistaEjecutivoComponent implements OnInit {
       Monto: '10000000',
       tasa: '4.07',
       autorizadores: 'AT876655|AT456655',
-      fechaAutori: '',
+      fechaAutori: '12/08/2021',
+      autorizador: '0',
+      fechaLibera: '2021-05-06 10:18',
+      cancelacion: true,
+      descargar: true,
+      sirh: '1',
+      observaciones: 'Prueba exitosa',
+    },
+    {
+      estatus:'RECHAZADA',
+      folio:'0',
+      fechaSolic:'2021-03-08 12:35',
+      tipoOferta: '',
+      tipoCampania: '',
+      tipo: 'RET099767',
+      contrato: '66576576576',
+      numCliente: '289',
+      plazo: '62',
+      Monto: '10000000',
+      tasa: '4.07',
+      autorizadores: 'AT876655|AT456655',
+      fechaAutori: '12/08/2021',
       autorizador: '0',
       fechaLibera: '2021-05-06 10:18',
       cancelacion: true,
@@ -141,20 +162,23 @@ export class VistaEjecutivoComponent implements OnInit {
 
   crearFormulario(){
     this.formSearch = new FormGroup({
-      numEjecutivo: new FormControl(''),
+      nominaEjec: new FormControl(''),
       numCliente: new FormControl(''),
     })
   }
   crearFormularioCancelacion(){
     this.formCancelacion = new FormGroup({
-      numEjecutivo: new FormControl(''),
-      nombreEjecutivo: new FormControl(''),
+      numeroEjec: new FormControl(''),
+      nombreEjec: new FormControl(''),
       justificacion: new FormControl(''),
     })
   }
   search(){
     console.log(this.formSearch.value)
-    const filter = this.data.filter(data => data.numCliente == this.formSearch.get('numCliente').value);
+    const filter = this.data.filter(data => 
+      data.numCliente == this.formSearch.get('numCliente').value
+      
+      );
     console.log(filter)
     this.tableData = filter;
     this.showTable = true

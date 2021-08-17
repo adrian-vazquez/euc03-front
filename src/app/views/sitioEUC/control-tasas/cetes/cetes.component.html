@@ -21,13 +21,13 @@
                 <span class="input-group-text">Plazo 1</span>
             </div>
             <div class="input-group-prepend">
-                <input type="text" class="form-control size-input">
+                <input [OnlyNumber]="true" maxlength="3" type="text" class="form-control size-input">
             </div>
             <div class="input-group-prepend">
                 <span class="input-group-text">Tasa Actual</span>
             </div>
             <div class="input-group-prepend">
-                <input type="text" class="form-control size-input">
+                <input type="text" [OnlyNumber]="true" maxlength="6" class="form-control size-input">
             </div>
         </div>
         <hr>
@@ -36,13 +36,13 @@
                 <span class="input-group-text">Plazo 2</span>
             </div>
             <div class="input-group-prepend">
-                <input type="text" class="form-control size-input">
+                <input type="text" [OnlyNumber]="true" maxlength="3" class="form-control size-input">
             </div>
             <div class="input-group-prepend">
                 <span class="input-group-text">Tasa Actual</span>
             </div>
             <div class="input-group-prepend">
-                <input type="text" class="form-control size-input">
+                <input type="text" [OnlyNumber]="true" maxlength="6" class="form-control size-input">
             </div>
         </div>
         <hr>
@@ -51,13 +51,13 @@
                 <span class="input-group-text">Plazo 3</span>
             </div>
             <div class="input-group-prepend">
-                <input type="text" class="form-control size-input">
+                <input type="text" [OnlyNumber]="true" maxlength="3" class="form-control size-input">
             </div>
             <div class="input-group-prepend">
                 <span class="input-group-text">Tasa Actual</span>
             </div>
             <div class="input-group-prepend">
-                <input type="text" class="form-control size-input">
+                <input type="text" [OnlyNumber]="true" maxlength="6" class="form-control size-input">
             </div>
         </div>
         <hr>
@@ -66,13 +66,13 @@
                 <span class="input-group-text">Plazo 4</span>
             </div>
             <div class="input-group-prepend">
-                <input type="text" class="form-control size-input">
+                <input type="text" [OnlyNumber]="true" maxlength="3" class="form-control size-input">
             </div>
             <div class="input-group-prepend">
                 <span class="input-group-text">Tasa Actual</span>
             </div>
             <div class="input-group-prepend">
-                <input type="text" class="form-control size-input">
+                <input type="text" [OnlyNumber]="true" maxlength="6" class="form-control size-input">
             </div>
         </div>
 
@@ -83,13 +83,13 @@
         </div>
     </div>
 
-    <div class="col-md-7 offset-md-1" style="margin-top: 12em;">
+    <div class="col-md-7 offset-md-1" style="margin-top: 12em;" [formGroup]="formCetesDoc">
         <div class="input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text">Cargar Curva CETES(operativa)</span>
             </div>
             <div class="input-group-prepend">
-                <input type="file" class=" bg-file form-control">
+                <input formControlName="fileCurva" type="file" class=" bg-file form-control">
             </div>
         </div>
 
@@ -106,7 +106,7 @@
                 </span>
             </div>
             <div class="input-group-prepend">
-                <input class="size-text-calendar" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker">
+                <input formControlName="fechaInicial" class="size-text-calendar" [OnlyNumber]="true" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker">
             </div>
             
             <div class="input-group-prepend">
@@ -120,10 +120,10 @@
                 </span>
             </div>
             <div class="input-group-prepend">
-                <input class="size-text-calendar" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #e="ngbDatepicker">
+                <input formControlName="fechaFinal" class="size-text-calendar" [OnlyNumber]="true" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #e="ngbDatepicker">
             </div>
             <div class="input-group-prepend">
-                <button class="btn btn-success"><i class="fas fa-upload"></i>Subir CETES</button>
+                <button class="btn btn-success" [disabled]="formCetesDoc.get('fileCurva').value === ''"><i class="fas fa-upload"></i>Subir CETES</button>
             </div>
         </div>
     </div>

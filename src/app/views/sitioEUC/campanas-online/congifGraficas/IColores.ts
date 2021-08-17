@@ -2,10 +2,10 @@
 
 export interface IColores
 {
-    AutDistritales: String;
-    AutDivicionales: String;
-    ExcepcionGerencia: String;
-    PortabilidadEspNomina: String;
-    Reten2021: String;
-    RetenSaldoBase: String;
+    AutDistritales: string;
+    AutDivicionales: string;
+    ExcepcionGerencia: string;
+    PortabilidadEspNomina: string;
+    Reten2021: string;
+    RetenSaldoBase: string;
 }

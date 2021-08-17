@@ -12,6 +12,8 @@ import { SliderComponent } from './components/slider/slider.component';
 import { NavconfigComponent } from './navconfig/navconfig.component';
 import { RouterModule } from '@angular/router';
 import { NavcatalogsComponent } from './navcatalogs/navcatalogs.component';
+import { SpecialCharacterDirective } from './directives/alphaNumeric.directive';
+import { InputRestrictionDirective } from './directives/caracteres-especiales.directive';
 
 const COMPONENTS = [
   HeaderComponent,
@@ -23,7 +25,9 @@ const COMPONENTS = [
 ]
 
 const DIRECTIVES = [
-  OnlyNumber
+  OnlyNumber,
+  SpecialCharacterDirective,
+  InputRestrictionDirective
 ]
 
 @NgModule({

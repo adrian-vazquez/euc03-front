@@ -18,22 +18,22 @@ export class ListaFestivosComponent implements OnInit {
   data = [
     { 
       descripcion: 'Inicio del Año',
-      fecha: '01-01',
+      fecha: '01-01-2021',
       actions: false
     },
     { 
       descripcion: 'Día de la Independencia',
-      fecha: '16-09',
+      fecha: '16-09-2021',
       actions: false
     },
     { 
       descripcion: 'Día de Muertos',
-      fecha: '02-11',
+      fecha: '02-11-2021',
       actions: false
     },
     { 
       descripcion: 'Día de Navidad',
-      fecha: '25-12',
+      fecha: '25-12-2021',
       actions: false
     },
     { 
@@ -51,7 +51,8 @@ export class ListaFestivosComponent implements OnInit {
       fecha: '20-04-2021',
       actions: true
     },
-  ]
+  ];
+  ActionTitle: string
 
   constructor( private modalService: NgbModal, private _NS: NotificacionesService) { }
 

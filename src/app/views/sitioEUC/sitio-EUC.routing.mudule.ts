@@ -21,6 +21,7 @@ const routes: Routes = [
     {
         path: 'control-tasas', component: ControlTasasComponent,
         children: [
+            { path: '', component: HomeComponent  },
             { path: 'CETES', component: CetesComponent },
             { path: 'completar-informacion-KPI', component: CompletarInformacionKpiComponent },
             { path: 'KPI', component: KpiComponent },
@@ -45,7 +46,7 @@ const routes: Routes = [
     { path: 'home', component: ViewsComponent, children:[{path:'',component: HomeComponent}] },
     { path: 'vista-campanas', component: CampanasOnlineComponent },
     { path: '', component: HomeComponent },
-    { path: '**', redirectTo: '/' },
+    { path: '**', redirectTo: '/' }
 
 ];
 

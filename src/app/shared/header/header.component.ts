@@ -30,6 +30,11 @@ export class HeaderComponent implements OnInit {
     subSubMenu.style.display = isShow ? 'block' : 'none';
   }
 
+  showSubMenu( isShow: Boolean): void {
+    
+    let subMenu: HTMLElement = (document.querySelector('.sub-menu-right') as HTMLElement)
+    subMenu.style.display = isShow ? 'block' : 'none';
+  }
   showSubSubMenuA( isShow:any ): void {
     debugger
     let subSubMenu: HTMLElement = (document.querySelector('.sub-submenu-left') as HTMLElement)

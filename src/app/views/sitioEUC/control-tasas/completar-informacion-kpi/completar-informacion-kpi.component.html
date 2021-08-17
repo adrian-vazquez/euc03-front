@@ -16,11 +16,11 @@
                 </span>
             </div>
             <div class="input-group-prepend">
-                <input class="size-input" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker">
+                <input class="size-input" [OnlyNumber]="true" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker">
             </div>
 
             <div class="input-group-prepend ml-3">
-                <button class="btn btn-success "><i class="fas fa-search"></i> Buscar</button>
+                <button class="btn btn-success " (click)="showTable = !showTable"><i class="fas fa-search"></i> Buscar</button>
             </div>
             </div>
         </label>
@@ -37,10 +37,10 @@
                   <tr *ngFor="let info of data">                    
                     <td>{{info.id_tasaAuto}}</td>
                     <td>{{info.fechaSolic}}</td>
-                    <td>{{info.campania}}</td>
-                    <td><textarea></textarea></td>
-                    <td><textarea></textarea></td>
-                    <td><textarea></textarea></td>
+                    <td>{{info.oferta}}</td>
+                    <td><textarea specialIsAlphaNumeric maxlength="7"></textarea></td>
+                    <td><textarea maxlength="7"></textarea></td>
+                    <td><textarea maxlength="7"></textarea></td>
                     <td>{{info.estatus}}</td>
                   </tr>
                 </tbody>
