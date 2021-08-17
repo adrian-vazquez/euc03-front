@@ -50,15 +50,17 @@
 </div>
 
 <ng-template #content let-c="close" let-d="dismiss">
-    <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">Cancelación</h4>
-      <h4 class="modal-title" id="modal-basic-title">Por favor introducir su nómina, nombre y justificación</h4>
-      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
+    <div class="modal-header d-block">
+      <div class="d-flex">
+        <h3 class="modal-title">Cancelación</h3>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <h5 style="text-align: initial;" class="modal-title">Favor de introducir su nómina, nombre y justificación</h5>
     </div>
     <ng-container>
-    <div class="modal-body">
+    <div class="modal-body" [formGroup]="formSolicitudTasa">
       <div class="form-group">
         <label for="exampleInputEmail1">Número y Suc. Operadora:</label>
         <input formControlName="numSucursalOperadora" type="text" class="form-control">

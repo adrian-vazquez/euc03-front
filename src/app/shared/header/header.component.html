@@ -58,7 +58,26 @@
                                 <div class="submenu-right">
                                     <ul>
                                         <li>
-                                            <a class="title-menu" [routerLink]="['control-tasas']" routerLinkActive="true">Control de tasas</a>
+                                            <a class="title-menu" [routerLink]="['control-tasas']" routerLinkActive="true" >Control de tasas</a>
+                                            <div class="submenu-left">
+                                                <ul >
+                                                    <li>
+                                                        <a class="title-menu" [routerLink]="['control-tasas/reenvio-solicitudes-especiales']" routerLinkActive="true">Reenvío de Solicitudes Especiales</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="title-menu" [routerLink]="['control-tasas/operaciones-especiales']" routerLinkActive="true">Operaciones EUC</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="title-menu" [routerLink]="['control-tasas/CETES']" routerLinkActive="true">CETES</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="title-menu" [routerLink]="['control-tasas/Accuracy']" routerLinkActive="true">Accuracy</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="title-menu" [routerLink]="['control-tasas/lista-dias-festivos']" routerLinkActive="true">Fechas Festivas</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </li>
                                         <li>
                                             <a class="title-menu" [routerLink]="['operaciones-especiales']" routerLinkActive="true">Operaciones Especiales</a>

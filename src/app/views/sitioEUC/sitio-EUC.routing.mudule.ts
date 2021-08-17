@@ -20,6 +20,7 @@ const routes: Routes = [
     {
         path: 'control-tasas', component: ControlTasasComponent,
         children: [
+            { path: '', component: HomeComponent  },
             { path: 'CETES', component: CetesComponent },
             { path: 'completar-informacion-KPI', component: CompletarInformacionKpiComponent },
             { path: 'KPI', component: KpiComponent },
