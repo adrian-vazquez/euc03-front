@@ -30,7 +30,7 @@ export class TableRendimientoComponent implements OnInit {
     this.displayedColumns[11] = 'porta30';
     this.displayedColumns[12] = 'porta60';
     this.displayedColumns[13] = 'porta90';
-    this.displayedColumns[14] = 'porta120';
+    this.displayedColumns[14] = 'porta120'; 
     this.displayedColumns[15] = 'porta180';
     this.displayedColumns[16] = 'porta365';
     
