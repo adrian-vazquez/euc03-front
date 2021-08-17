@@ -91,4 +91,26 @@ export class PerfiladorComponent implements OnInit {
     }
   }
 
+  onSubmit(){
+    Swal.fire({
+      title: 'Confirmación',
+      text: "¿Deseas guardar la información?",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Guardar',
+      cancelButtonText: 'Cancelar',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          '¡Guardado!',
+          'Se guardó el registro con éxito',
+          'success'
+        );
+        this.active = false;
+      }
+    })
+  }
+
 }
