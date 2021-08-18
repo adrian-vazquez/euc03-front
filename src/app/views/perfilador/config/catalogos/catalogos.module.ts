@@ -19,6 +19,8 @@ import { ComparativoComponent } from './comparativo/comparativo.component';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { TableComparativoComponent } from './comparativo/table-comparativo/table-comparativo.component';
 import { TableRendimientoComponent } from './comparativo/table-rendimiento/table-rendimiento.component';
+import { PdfEspecialCargaComponent } from './pdf-especial/pdf-especial-carga/pdf-especial-carga.component';
+import { SanitizePipe } from '../../../../shared/pipes/sanitize.pipe';
 
 const COMPONENTS = [
   CatalogosComponent,
@@ -26,13 +28,16 @@ const COMPONENTS = [
   ClientesComponent,
   GuiasOperativasComponent,
   EjecutivosSucursalComponent,
-  ParametrosComponent,
+  ParametrosComponent, 
   PdfEspecialComponent,
   ComparativoComponent,
+  TableComparativoComponent, 
+  TableRendimientoComponent, 
+  PdfEspecialCargaComponent,
 ]
 
 @NgModule({
-  declarations: [... COMPONENTS, TableComparativoComponent, TableRendimientoComponent, ],
+  declarations: [... COMPONENTS ],
   imports: [
     CommonModule,
     SharedModule,
