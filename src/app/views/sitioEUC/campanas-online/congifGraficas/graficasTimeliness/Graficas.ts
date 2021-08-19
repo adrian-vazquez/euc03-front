@@ -73,25 +73,18 @@ export class GraficasTime {
     }
 
 
-    public graficaToroide(nombreGrafica: string): void {
+    public graficaToroide(nombreGrafica: string, etique:Array<string>, color: Array<string>, dts: Array<number>): void {
 
         let myChart = <HTMLCanvasElement>document.getElementById(nombreGrafica);
         var cnx: CanvasRenderingContext2D = myChart.getContext('2d');
 
-        const etiquetas =
-            ["En tiempo"];
+        const etiquetas = etique;
         // Podemos tener varios conjuntos de datos. Comencemos con uno
         const datosIngresos = {
-            data: [DatosGraficasTime.getRandom(10, 300), DatosGraficasTime.getRandom(1, 10)], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
+            data: dts, // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
             // Ahora debería haber tantos background colors como datos, es decir, para este ejemplo, 4
-            backgroundColor: [
-                'rgba(170, 73, 132)',
-                'rgba(255,255,255)'
-            ],// Color de fondo
-            borderColor: [
-                'rgba(170, 73, 132)',
-                'rgba(255,255,255)'
-            ],// Color del borde
+            backgroundColor: color,// Color de fondo
+            borderColor: color,// Color del borde
             borderWidth: 1,// Ancho del borde
         };
         new Chart(cnx, {

@@ -12,17 +12,23 @@ export class GraficasImpl {
 
     constructor()
     {
+        // nombre de las etiquetas que se veran reflejadas en las bar del lado superior
         this.etiquetasLabel = new LabelGrafica().nombreGrafica;
     }
 
-    grafica(fechas: string[], color: IColores, grafica: string, datos: Array<number>) {
+    // función que recibe 3 parámetros para generar los datos de las gráficas
+    public grafica(fechas: string[], color: IColores, grafica: string, datos: Array<number>) {
+
+        // variable que guarda el número mayor de los datos que le envíen
         let numeroMayor: Array<number> = datos;
 
 
         const myChart = <HTMLCanvasElement>document.getElementById(grafica);
         const cnx = myChart.getContext('2d');
 
+        // constante que recibe los nombres de las etiquetas para las gráficas en el aldo inferior de las mismas
         const etiquetas = fechas;
+
         const datos19042021 = {
             label: [this.etiquetasLabel.AutDistritales],
             data: DatosGraficas.datos(numeroMayor[0]),
@@ -92,7 +98,7 @@ export class GraficasImpl {
                 legend: {
                     display: true,
                     labels: {
-                        fontSize: 8,
+                        fontSize: 8, // cambiar font al label que está en el lado superior de la gráfica de barra
                     },
 
                 },
@@ -125,9 +131,6 @@ export class GraficasImpl {
 
         let myChart = <HTMLCanvasElement>document.getElementById('myChartPastel');
         var cnx: CanvasRenderingContext2D = myChart.getContext('2d');
-
-
-
 
         const etiquetas =[this.etiquetasLabel.AutDistritales,this.etiquetasLabel.AutDivicionales,
             this.etiquetasLabel.ExcepcionGerencia,this.etiquetasLabel.PortabilidadEspNomina,

@@ -1,3 +1,5 @@
+import { DatosGraficasTime } from "./graficasTimeliness/DatosGrafica";
+import { ILabelGrafica, LabelGrafica } from "./graficasTimeliness/ILabelGrafica";
 import { IColores } from "./IColores";
 
 
@@ -6,8 +8,21 @@ export class DatosGraficas
     private fechas: Array<string>;
     private color: IColores;
 
-    constructor(){}
+    private etiquetas: Array<string>;
 
+    constructor()
+    {
+        
+    }
+
+    public static etiquetasGraficas()
+    {
+        return ['En tiempo'];
+    }
+    public colorGraficas(): Array<string>
+    {
+        return [this.datosColores().AutDistritales, "rgb(255,255,255)"];
+    }
     public datosColores(): IColores
     {
     return { 
@@ -31,5 +46,31 @@ export class DatosGraficas
     {
         return [colorFondo, colorFondo, colorFondo, colorFondo, colorFondo, colorFondo];
     }
+
+    public coloresGrafica(): Array<string>
+    {
+        return [ this.datosColores().AutDistritales , this.datosColores().AutDivicionales , this.datosColores().ExcepcionGerencia , this.datosColores().PortabilidadEspNomina , this.datosColores().Reten2021 , this.datosColores().RetenSaldoBase];
+    }
+
+    public static datosGrafica(): Array<number>
+    {
+        return [DatosGraficasTime.getRandom(10, 300), DatosGraficasTime.getRandom(1, 10)];
+    }
+
+    public static datosGraficaOnline(): Array<number>
+    {
+        return [DatosGraficasTime.getRandom(0, 350), DatosGraficasTime.getRandom(0, 350),DatosGraficasTime.getRandom(0, 350), DatosGraficasTime.getRandom(0, 350),DatosGraficasTime.getRandom(0, 350), DatosGraficasTime.getRandom(0, 350) ];
+    }
+
+    public static etiquetasGraficaOnline(): Array<string>
+    {
+        let etiquetasLabel: ILabelGrafica =  new LabelGrafica().nombreGrafica;
+       
+
+        return [ etiquetasLabel.AutDistritales,etiquetasLabel.AutDivicionales,
+            etiquetasLabel.ExcepcionGerencia, etiquetasLabel.PortabilidadEspNomina,
+            etiquetasLabel.Reten2021, etiquetasLabel.RetenSaldoBase ];
+    }
+
 
 }
