@@ -7,41 +7,18 @@ import {MatTableDataSource} from '@angular/material/table';
 import Swal from 'sweetalert2';
 import { NotificacionesService } from '../../../../../services/notificaciones.service';
 
-interface IPDFEspecial {
-  pdfEspecialOfertaId?: string,
-  pdfEspecialNombreArchivo?: IPdf,
-  pdfEspecialUrl?: string,
-  pdfEspecialTipo?: boolean,
-}
+interface IOferta {
+  participacionId: number,
+  participacionDescripcion: string,
 
-interface IPdf {
-  name: string,
-  base64: string,
 }
 
  
 const bodyTemplateGuide = ` 
 <form>
   <div class="form-group row flex-column">
-    <label for="pdfEspecialNombreArchivo" class="col col-form-label">Nombre del archivo</label>
-    <div >
-      <input type="text"  class="form-control-plaintext form-control-sm" id="pdfEspecialNombreArchivo">
-    </div>
-  </div>
-  <div class="form-group row flex-column">
-    <label for="pdfEspecialNombreArchivo" class="col col-form-label">Archivo</label>
-    <div class="col">
-      <input type="file"  id="pdfEspecialFile" accept="pdf/*" style="display: none;">
-      <label class="label-file" for="pdfEspecialFile">Selecciona un Archivo...</label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="form-group ml-2 col">
-      <label for="pdfEspecialTipo">Tipo de PDF Epecial.</label>
-      <select class="form-control-plaintext form-control-sm" style="width: 163px; margin: auto;" id="pdfEspecialTipo">
-        <option value="true">Foleado</option>
-        <option value="false">No Foleado</option>
-      </select>
+    <div class="form-floating">
+        <textarea class="form-control form-control-sm" placeholder="Descripción" id="participacionDescripcion"></textarea>
     </div>
   </div>
 </form>  
@@ -56,8 +33,8 @@ import { base64Pdf } from '../../../../../../assets/data/pdf-base-64';
   styleUrls: ['./ofertas.component.scss', '../catalogos.component.scss', '../ejecutivos-sucursal/ejecutivos-sucursal.component.scss']
 })
 export class OfertasComponent implements OnInit {
-  displayedColumns: string[] = ['pdfEspecialOfertaId', 'pdfEspecialNombreArchivo', 'pdfEspecialUrl', 'pdfEspecialTipo' , 'edit'];
-  dataSource: MatTableDataSource<IPDFEspecial>;
+  displayedColumns: string[] = ['participacionId', 'participacionDescripcion',  'edit'];
+  dataSource: MatTableDataSource<IOferta>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -66,28 +43,19 @@ export class OfertasComponent implements OnInit {
 
   constructor(private notificacionesService: NotificacionesService) {
     // Create 100 users
-    const pdfsEspeciales: IPDFEspecial[] = [
+    const ofertas: IOferta[] = [
       {
-        pdfEspecialOfertaId: '1',
-        pdfEspecialNombreArchivo: {
-          name: 'nombre archivo 1',
-          base64: base64Pdf
-        } ,
-        pdfEspecialTipo: true,
-        pdfEspecialUrl: 'https://www.alberguemontfalco.com/fotosbd/120520140951280826.pdf'
+        participacionId: 1,
+        participacionDescripcion: 'Descripción 1'
       },
       {
-        pdfEspecialOfertaId: '2',
-        pdfEspecialNombreArchivo: {
-          name: 'nombre archivo 2',
-          base64: base64Pdf
-        } ,        pdfEspecialTipo: false,
-        pdfEspecialUrl: 'https://www.alberguemontfalco.com/fotosbd/120520140951280826.pdf'
+        participacionId: 2,
+        participacionDescripcion: 'Descripción 2'
       },
     ]  
 
     // Assign the data to the data source for the table to render
-    this.dataSource = new MatTableDataSource(pdfsEspeciales);
+    this.dataSource = new MatTableDataSource(ofertas);
   }
 
   ngOnInit(): void { 
@@ -102,36 +70,19 @@ export class OfertasComponent implements OnInit {
     this.openModal('Agregar', 'Guardar', 'Regresar','Ejecutivo agregado exitosamente','Error al agregar ejecutivo', this.bodyTemplateEjecutivo);
   }
 
-  openModalEdit( pdfEspecial: IPDFEspecial) {
-    console.log(pdfEspecial);
+  openModalEdit( oferta: IOferta) {
+    console.log(oferta);
     let body = `
     <form>
-        <div class="form-group row flex-column">
-          <label for="pdfEspecialNombreArchivo" class="col col-form-label">Nombre del archivo</label>
-          <div >
-            <input type="text"  class="form-control-plaintext form-control-sm" id="pdfEspecialNombreArchivo" value="${pdfEspecial.pdfEspecialNombreArchivo.name}">
-          </div>
+      <div class="form-group row flex-column">
+        <div class="form-floating">
+            <textarea class="form-control form-control-sm" placeholder="Descripción" id="participacionDescripcion">${oferta.participacionDescripcion}</textarea>
         </div>
-        <div class="form-group row flex-column">
-          <label for="pdfEspecialNombreArchivo" class="col col-form-label">Archivo</label>
-          <div class="col">
-            <input type="file"  id="pdfEspecialFile" accept="pdf/*" style="display: none;">
-            <label class="label-file" for="pdfEspecialFile">Selecciona un Archivo...</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="form-group ml-2 col">
-            <label for="pdfEspecialTipo">Tipo de PDF Epecial.</label>
-            <select class="form-control-plaintext form-control-sm" style="width: 163px; margin: auto;" id="pdfEspecialTipo">
-              <option selected="${pdfEspecial.pdfEspecialTipo === false ? true : false}" value="true">Foleado</option>
-              <option selected="${pdfEspecial.pdfEspecialTipo === true ? true : false}" value="false">No Foleado</option>
-            </select>
-          </div>
-        </div>
-      </form> 
+      </div>
+    </form> 
     `;
 
-    this.openModal('EDICIÓN DE USUARIO', 'GUARDAR', 'CANCELAR','Usuario editado exitosamente','Error al editar la usuario', body);
+    this.openModal('EDICIÓN DE OFERTA', 'GUARDAR', 'CANCELAR','Oferta editada exitosamente','Error al editar la Oferta', body);
   }
 
   openModal(title: string, btnOk: string, btnCancel: string, successMessage: string, errorMessage: string, body: string ) {
@@ -177,6 +128,6 @@ export class OfertasComponent implements OnInit {
     this.downloadPdf(base64String, nameFile);
   }
 }
-
+ 
 
 
