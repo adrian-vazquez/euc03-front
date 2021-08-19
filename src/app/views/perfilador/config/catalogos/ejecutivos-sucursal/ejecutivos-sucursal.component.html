@@ -26,17 +26,16 @@
     </div>
     <div class="row justify-content-center z-depth-2 flex-column ">
         <h3 class="row justify-content-center my-2">Usuarios Ejecutivos</h3> 
-        <div> 
-          <button 
-            class="btn  btn-border m-2" 
-            style="background-color: green !important; color: white;">
-            Importar
-          </button>
-          <button 
-            class="btn  btn-border m-2" 
-            style="background-color: green !important; color: white;">
-            Exportar
-          </button>
+        <div class="row align-items-lg-center"> 
+          <div class="ml-3">
+            <input type="file"  id="import" accept="pdf/*" style="display: none;" class="btn btn-border">
+            <label class="label-file btn  btn-border" for="import" style="background-color: green !important; color: white">Importar</label> 
+          </div>
+          <div class="ml-3">
+            <button  class="btn btn-border mt-2" color="warn" style="background-color: green !important; color: white" (click)="onClickDownloadPdf('Ejecutivos de sucursal')">
+              Exportar
+            </button> 
+          </div>
         </div>
         <div class="z-depth-2">
             <table mat-table [dataSource]="dataSource" matSort>
