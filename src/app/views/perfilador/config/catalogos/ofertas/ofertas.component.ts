@@ -1,12 +1,14 @@
-import { Component, ViewChild, OnInit, AfterViewInit } from '@angular/core';
+
+
+import {Component, ViewChild, OnInit} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import Swal from 'sweetalert2';
-import { NotificacionesService } from '../../../../../../services/notificaciones.service';
+import { NotificacionesService } from '../../../../../services/notificaciones.service';
 
-export interface IPDFEspecial {
-  pdfEspecialOfertaId?: number,
+interface IPDFEspecial {
+  pdfEspecialOfertaId?: string,
   pdfEspecialNombreArchivo?: IPdf,
   pdfEspecialUrl?: string,
   pdfEspecialTipo?: boolean,
@@ -17,25 +19,6 @@ interface IPdf {
   base64: string,
 }
 
-export const pdfsEspecialesCatalog = [
-  {
-    pdfEspecialOfertaId: 1,
-    pdfEspecialNombreArchivo: {
-      name: 'nombre archivo 1',
-      base64: base64Pdf
-    } ,
-    pdfEspecialTipo: true,
-    pdfEspecialUrl: 'https://www.alberguemontfalco.com/fotosbd/120520140951280826.pdf'
-  },
-  {
-    pdfEspecialOfertaId: 2,
-    pdfEspecialNombreArchivo: {
-      name: 'nombre archivo 2',
-      base64: base64Pdf
-    } ,        pdfEspecialTipo: false,
-    pdfEspecialUrl: 'https://www.alberguemontfalco.com/fotosbd/120520140951280826.pdf'
-  },
-] ;
  
 const bodyTemplateGuide = ` 
 <form>
@@ -61,18 +44,18 @@ const bodyTemplateGuide = `
       </select>
     </div>
   </div>
-</form> 
+</form>  
 `;
 
-import { base64Pdf } from '../../../../../../../assets/data/pdf-base-64';
+import { base64Pdf } from '../../../../../../assets/data/pdf-base-64';
 
 
 @Component({
-  selector: 'app-pdf-especial-carga',
-  templateUrl: './pdf-especial-carga.component.html',
-  styleUrls: ['./pdf-especial-carga.component.scss', '../../catalogos.component.scss', '../../ejecutivos-sucursal/ejecutivos-sucursal.component.scss']
+  selector: 'app-ofertas',
+  templateUrl: './ofertas.component.html',
+  styleUrls: ['./ofertas.component.scss', '../catalogos.component.scss', '../ejecutivos-sucursal/ejecutivos-sucursal.component.scss']
 })
-export class PdfEspecialCargaComponent implements OnInit, AfterViewInit {
+export class OfertasComponent implements OnInit {
   displayedColumns: string[] = ['pdfEspecialOfertaId', 'pdfEspecialNombreArchivo', 'pdfEspecialUrl', 'pdfEspecialTipo' , 'edit'];
   dataSource: MatTableDataSource<IPDFEspecial>;
 
@@ -83,7 +66,25 @@ export class PdfEspecialCargaComponent implements OnInit, AfterViewInit {
 
   constructor(private notificacionesService: NotificacionesService) {
     // Create 100 users
-    const pdfsEspeciales: IPDFEspecial[] = pdfsEspecialesCatalog;
+    const pdfsEspeciales: IPDFEspecial[] = [
+      {
+        pdfEspecialOfertaId: '1',
+        pdfEspecialNombreArchivo: {
+          name: 'nombre archivo 1',
+          base64: base64Pdf
+        } ,
+        pdfEspecialTipo: true,
+        pdfEspecialUrl: 'https://www.alberguemontfalco.com/fotosbd/120520140951280826.pdf'
+      },
+      {
+        pdfEspecialOfertaId: '2',
+        pdfEspecialNombreArchivo: {
+          name: 'nombre archivo 2',
+          base64: base64Pdf
+        } ,        pdfEspecialTipo: false,
+        pdfEspecialUrl: 'https://www.alberguemontfalco.com/fotosbd/120520140951280826.pdf'
+      },
+    ]  
 
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(pdfsEspeciales);
@@ -176,3 +177,6 @@ export class PdfEspecialCargaComponent implements OnInit, AfterViewInit {
     this.downloadPdf(base64String, nameFile);
   }
 }
+
+
+

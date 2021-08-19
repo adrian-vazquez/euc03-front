@@ -20,7 +20,10 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { TableComparativoComponent } from './comparativo/table-comparativo/table-comparativo.component';
 import { TableRendimientoComponent } from './comparativo/table-rendimiento/table-rendimiento.component';
 import { PdfEspecialCargaComponent } from './pdf-especial/pdf-especial-carga/pdf-especial-carga.component';
-import { SanitizePipe } from '../../../../shared/pipes/sanitize.pipe';
+import { FoliosComponent } from './folios/folios.component';
+import { SucursalesComponent } from './sucursales/sucursales.component';
+import {MatRadioModule} from '@angular/material/radio';
+import { OfertasComponent } from './ofertas/ofertas.component';
 
 const COMPONENTS = [
   CatalogosComponent,
@@ -34,6 +37,9 @@ const COMPONENTS = [
   TableComparativoComponent, 
   TableRendimientoComponent, 
   PdfEspecialCargaComponent,
+  FoliosComponent,
+  SucursalesComponent,
+  OfertasComponent,
 ]
 
 @NgModule({
@@ -47,6 +53,7 @@ const COMPONENTS = [
     MatPaginatorModule,
     MatFormFieldModule,
     MatButtonToggleModule,
+    MatRadioModule,
     ReactiveFormsModule,
     FormsModule,
   ],
