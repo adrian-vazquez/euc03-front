@@ -1,0 +1,259 @@
+<app-navconfig></app-navconfig>
+<app-navcatalogs></app-navcatalogs> 
+<div class="container-form">
+    <h2 class="row justify-content-center">Ofertas Carga</h2> 
+    <hr>
+    <div class="row justify-content-center z-depth-2 flex-column ">
+      <div class="row flex-column m-0" style="background-color: blue; color: white;">
+        <h3 class="row justify-content-center">Búsqueda</h3> 
+      </div>
+      <div class="row m-4">
+          <input type="text" class="form-control form-control-sm p-3" placeholder="Buscar">
+      </div>
+      <div class="row align-items-baseline justify-content-center mb-2">
+            <div class="" style="text-align: center;">
+                <button class="btn  btn-border m-2" style="background-color: orange !important; color: white;" >Buscar</button>
+            </div>
+            <div class="" style="text-align: center;">
+                <button 
+                    class="btn  btn-border m-2" 
+                    style="background-color: blue !important; color: white;"
+                    (click)="openModalAdd()">
+                    Agregar
+                </button>
+            </div>
+       </div> 
+    </div>
+    <div class="row justify-content-center z-depth-2 flex-column ">
+        <h3 class="row justify-content-center my-2">Ofertas Carga</h3> 
+        <div class="row align-items-lg-center"> 
+          <div class="ml-3">
+            <input type="file"  id="import" accept="pdf/*" style="display: none;" class="btn btn-border">
+            <label class="label-file btn  btn-border" for="import" style="background-color: green !important; color: white">Importar</label> 
+          </div>
+          <div class="ml-3">
+            <button  class="btn btn-border mt-2" color="warn" style="background-color: green !important; color: white" (click)="onClickDownloadPdf('PDF Especial.pdf')">
+              Exportar
+            </button> 
+          </div>
+        </div>
+        <div class="z-depth-2 col-md-12" style="overflow: auto; padding: 0%;">
+            <table mat-table [dataSource]="dataSource" matSort>
+          
+              <ng-container matColumnDef="ofertaId">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta ID </th>
+                <td mat-cell *matCellDef="let row"> {{row.ofertaId}} </td>
+              </ng-container>
+          
+              <ng-container matColumnDef="ofertaTipoDirigida">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta Dirigida </th>
+                <td mat-cell *matCellDef="let row">  
+                  {{row.ofertaTipoDirigida}}
+                </td>
+              </ng-container>
+              
+              <ng-container matColumnDef="ofertaDigital">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta dígital </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaDigital}}
+                </td>
+              </ng-container>  
+              
+              <ng-container matColumnDef="ofertaNTD">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta NTD </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaNTD}}
+                </td>
+              </ng-container>  
+              
+              <ng-container matColumnDef="ofertaNTP">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta NTP </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaNTP}}
+                </td>
+              </ng-container>  
+              
+              <ng-container matColumnDef="ofertaECM">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta ECM </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaECM}}
+                </td>
+              </ng-container>  
+              
+              <ng-container matColumnDef="ofertaNTB">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta NTB </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaNTB}}
+                </td>
+              </ng-container>  
+              
+              <ng-container matColumnDef="ofertaBAU">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta BAU </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaBAU}}
+                </td>
+              </ng-container>  
+              
+              <ng-container matColumnDef="ofertaClienteTipoPersona">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta Cliente Tipo Persona </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaClienteTipoPersona}}
+                </td>
+              </ng-container>  
+              
+              <ng-container matColumnDef="ofertaSegmento">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta Segmento </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaSegmento}}
+                </td>
+              </ng-container>  
+              
+              <ng-container matColumnDef="ofertaNombreLargo">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta Nombre Largo </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaNombreLargo}}
+                </td>
+              </ng-container>  
+              
+              <ng-container matColumnDef="ofertaCampaniaId">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta Campaña Id </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaCampaniaId}}
+                </td>
+              </ng-container>  
+              
+              <ng-container matColumnDef="ofertaMontoDesde">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta Monto Desde </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaMontoDesde}}
+                </td>
+              </ng-container>  
+              
+              <ng-container matColumnDef="ofertaDineroNuevoMin">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta Dinero Nuevo Mín.</th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaDineroNuevoMin}}
+                </td>
+              </ng-container>  
+              
+              <ng-container matColumnDef="ofertaMontoHasta">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta Monto Desde </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaMontoHasta}}
+                </td>
+              </ng-container>  
+              
+              <ng-container matColumnDef="ofertaDineroNuevoMax">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta Dinero Nuevo Máx. </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaDineroNuevoMax}}
+                </td>
+              </ng-container>  
+              
+              <ng-container matColumnDef="ofertaPlazoMinimo">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta Plazo Miínimo </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaPlazoMinimo}}
+                </td>
+              </ng-container>  
+              
+              <ng-container matColumnDef="ofertaPlazoMaximo">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta Plazo Máximo </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaPlazoMaximo}}
+                </td>
+              </ng-container>  
+              
+              <ng-container matColumnDef="ofertaTasaId">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta Tasa Id </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaTasaId}}
+                </td>
+              </ng-container>  
+              
+              <ng-container matColumnDef="ofertaParticipacionUnica">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta Participación Única </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaParticipacionUnica}}
+                </td>
+              </ng-container>  
+              
+              <ng-container matColumnDef="ofertaDiasCliente">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta Ofertas Cliente </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaDiasCliente}}
+                </td>
+              </ng-container>  
+              
+              <ng-container matColumnDef="ofertaSiguentePaso">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Ofertas Siguente Paso </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaSiguentePaso}}
+                </td>
+              </ng-container>  
+              
+              <ng-container matColumnDef="ofertaInformativaFondos">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta Informativa Fondos </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaInformativaFondos}}
+                </td>
+
+              </ng-container>  
+            
+              <ng-container matColumnDef="ofertaSeccion">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta Sección </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaSeccion}}
+                </td>
+
+              </ng-container>  
+              
+              <ng-container matColumnDef="ofertaPrimeraBusqueda">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta Primera Búsqueda </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaPrimeraBusqueda}}
+                </td>
+              </ng-container>  
+              
+              <ng-container matColumnDef="ofertaSegundaBusqueda">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta Segunda Búsqueda </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaSegundaBusqueda}}
+                </td>
+              </ng-container>   
+              
+              <ng-container matColumnDef="ofertaGuiaInformativaId">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta Guía Informativa Id </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaGuiaInformativaId}}
+                </td>
+              </ng-container>  
+              
+              <ng-container matColumnDef="ofertaPdfEspecialId">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Oferta PDF Especial </th>
+                <td mat-cell *matCellDef="let row"> 
+                  {{row.ofertaPdfEspecialId}}
+                </td>
+              </ng-container>  
+
+              <ng-container matColumnDef="edit">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Editar </th>
+                <td mat-cell *matCellDef="let row">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon" style="cursor: pointer;" (click)="openModalEdit(row)">create</mat-icon>
+                </td>
+              </ng-container>
+          
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          
+              <!-- Row shown when there is no matching data. -->
+              <tr class="mat-row" *matNoDataRow>
+                <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+              </tr>
+            </table>
+          
+            <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+          </div>
+    </div>
+      
+  </div>
