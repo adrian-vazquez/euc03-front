@@ -15,6 +15,8 @@ interface IEjecutivo {
 
 }
 
+import { base64Pdf } from '../../../../../../assets/data/pdf-base-64';
+
 const bodyTemplateGuide = `
 <form>
   <div class="form-group row">
@@ -213,7 +215,19 @@ export class EjecutivosSucursalComponent implements OnInit, AfterViewInit {
     .catch( err => {
       console.log('error', err)
     } )
-  
+  }
+
+  downloadPdf(base64String, fileName) {
+    const source = `${base64String}`;
+    const link = document.createElement("a"); 
+    link.href = source;
+    link.download = `${fileName}` 
+    link.click();
+  }
+
+  onClickDownloadPdf(nameFile: string){
+    let base64String = base64Pdf;
+    this.downloadPdf(base64String, nameFile);
   }
 
 

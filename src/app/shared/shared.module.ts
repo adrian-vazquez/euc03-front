@@ -14,6 +14,7 @@ import { RouterModule } from '@angular/router';
 import { NavcatalogsComponent } from './navcatalogs/navcatalogs.component';
 import { SpecialCharacterDirective } from './directives/alphaNumeric.directive';
 import { InputRestrictionDirective } from './directives/caracteres-especiales.directive';
+import { SanitizePipe } from './pipes/sanitize.pipe';
 
 const COMPONENTS = [
   HeaderComponent,
@@ -30,11 +31,16 @@ const DIRECTIVES = [
   InputRestrictionDirective
 ]
 
+const PIPES = [
+  SanitizePipe
+]
+
 @NgModule({
-  declarations: [...COMPONENTS, ...DIRECTIVES ],
+  declarations: [...COMPONENTS, ...DIRECTIVES, ...PIPES ],
   exports:[
     COMPONENTS,
-    DIRECTIVES
+    DIRECTIVES,
+    PIPES,
   ],
   imports: [
     CommonModule,
