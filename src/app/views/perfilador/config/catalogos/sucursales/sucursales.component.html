@@ -1,7 +1,7 @@
 <app-navconfig></app-navconfig>
 <app-navcatalogs></app-navcatalogs>
 <div class="container-form">
-    <h2 class="row justify-content-center">Usuarios Ejecutivos</h2> 
+    <h2 class="row justify-content-center">Sucursales Carga</h2> 
     <hr>
     <div class="row justify-content-center z-depth-2 flex-column ">
       <div class="row flex-column m-0" style="background-color: blue; color: white;">
@@ -25,14 +25,14 @@
        </div> 
     </div>
     <div class="row justify-content-center z-depth-2 flex-column ">
-        <h3 class="row justify-content-center my-2">Usuarios Ejecutivos</h3> 
+        <h3 class="row justify-content-center my-2">Sucursales Carga</h3> 
         <div class="row align-items-lg-center"> 
           <div class="ml-3">
             <input type="file"  id="import" accept="pdf/*" style="display: none;" class="btn btn-border">
             <label class="label-file btn  btn-border" for="import" style="background-color: green !important; color: white">Importar</label> 
           </div>
           <div class="ml-3">
-            <button  class="btn btn-border mt-2" color="warn" style="background-color: green !important; color: white" (click)="onClickDownloadPdf('Ejecutivos de sucursal')">
+            <button  class="btn btn-border mt-2" color="warn" style="background-color: green !important; color: white" (click)="onClickDownloadPdf('PDF Especial.pdf')">
               Exportar
             </button> 
           </div>
@@ -40,20 +40,33 @@
         <div class="z-depth-2">
             <table mat-table [dataSource]="dataSource" matSort>
           
-              <ng-container matColumnDef="nomina">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Nómina </th>
-                <td mat-cell *matCellDef="let row"> {{row.nomina}} </td>
+              <ng-container matColumnDef="pdfEspecialOfertaId">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+                <td mat-cell *matCellDef="let row"> {{row.pdfEspecialOfertaId}} </td>
               </ng-container>
           
-              <ng-container matColumnDef="nombre">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
-                <td mat-cell *matCellDef="let row"> {{row.nombre}} </td>
-              </ng-container>
+              <ng-container matColumnDef="pdfEspecialNombreArchivo">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre del Archivo </th>
+                <td mat-cell *matCellDef="let row"> 
+                    <a [download]="row.pdfEspecialNombreArchivo.name" [href]="row.pdfEspecialNombreArchivo.base64 | sanitize: 'url'"> {{row.pdfEspecialNombreArchivo.name}}</a>
+                </td>
+              </ng-container>  
 
-              <ng-container matColumnDef="puestoTipo">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Tipo de Usuario </th>
-                <td mat-cell *matCellDef="let row"> {{row.puestoTipo}} </td>
+              <ng-container matColumnDef="pdfEspecialUrl">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> URL </th>
+                <td mat-cell *matCellDef="let row">
+                    <a [href]="row.pdfEspecialUrl" target="_blank" rel="noopener noreferrer">
+                        {{row.pdfEspecialUrl}}
+                    </a>
+                </td>
               </ng-container>
+            
+              <ng-container matColumnDef="pdfEspecialTipo">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Tipo de PDF </th>
+                <td mat-cell *matCellDef="let row">
+                   {{row.pdfEspecialTipo ? 'Foleado' : 'No Foleado'}}
+                </td>
+              </ng-container> 
           
               <ng-container matColumnDef="edit">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Editar </th>
