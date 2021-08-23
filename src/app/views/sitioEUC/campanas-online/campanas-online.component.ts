@@ -124,12 +124,12 @@ export class CampanasOnlineComponent implements OnInit {
 
   // grádica de barra, solicita los datos que irán en la grafica en la parte inferior, los colores de la gráfica, el id del canvas
   // y los datos que llevará la gráfica
-    graficaBar.grafica('graficaSolicitudesCampana', null);
+    graficaBar.grafica('graficaSolicitudesCampana', datosGrafica);
     // datosGrafica
 
      // grádica de barra, solicita los datos que irán en la grafica en la parte inferior, los colores de la gráfica, el id del canvas,
   //  los datos que llevará la gráfica y llevará un tipo de gráfica type line
-    graficaBarLine.grafica('graficaMontoCampana', null);
+    graficaBarLine.grafica('graficaMontoCampana', datosGrafica);
     // datosGrafica
     
 
