@@ -24,6 +24,7 @@ import { FoliosComponent } from './folios/folios.component';
 import { SucursalesComponent } from './sucursales/sucursales.component';
 import {MatRadioModule} from '@angular/material/radio';
 import { OfertasComponent } from './ofertas/ofertas.component';
+import { OfertasGeneralComponent } from './ofertas/ofertas-general/ofertas-general.component';
 
 const COMPONENTS = [
   CatalogosComponent,
@@ -40,6 +41,7 @@ const COMPONENTS = [
   FoliosComponent,
   SucursalesComponent,
   OfertasComponent,
+  OfertasGeneralComponent
 ]
 
 @NgModule({
