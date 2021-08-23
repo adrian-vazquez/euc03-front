@@ -9,6 +9,11 @@ import { Tablas } from './congifGraficas/Tablas';
 import { GraficasTime } from './congifGraficas/graficasTimeliness/Graficas';
 import { DatosGraficasTime } from './congifGraficas/graficasTimeliness/DatosGrafica';
 import { LabelGrafica } from './congifGraficas/graficasTimeliness/ILabelGrafica';
+import { IGrafica } from './congifGraficas/graficasTimeliness/graficas/IGrafica';
+import { GraficaBarraImpl } from './congifGraficas/graficasTimeliness/graficas/graficaBarraImpl';
+import { GraficaBarLineImpl } from './congifGraficas/graficasTimeliness/graficas/GraficaBarLineImpl';
+import { IColores } from './congifGraficas/IColores';
+import { Observable } from 'rxjs';
 
 
 
@@ -20,7 +25,7 @@ import { LabelGrafica } from './congifGraficas/graficasTimeliness/ILabelGrafica'
 export class CampanasOnlineComponent implements OnInit {
 
   numeroPaginas: number;
-
+  
   // banderas para mostrar u ocultar las tablas de las campañas
   tablaDivisionales: Boolean;
   tablaSucursales: Boolean;
@@ -109,17 +114,28 @@ export class CampanasOnlineComponent implements OnInit {
 
     // se instancian las clases que contienen las funciones para generar las gráficas y
     // los datos Fecha, y colores que tendran las gráficas
-    let graficas: GraficasImpl = new GraficasImpl();
+    let graficaBar: IGrafica = new GraficaBarraImpl();
+    let graficaBarLine: IGrafica = new GraficaBarLineImpl();
+
     let datos: DatosGraficas = new DatosGraficas();
 
+    
     let datosGrafica: Array<number> = this.getRandom(50, 300);
 
-    graficas.grafica(datos.datosFechas(), datos.datosColores(), 'graficaSolicitudesCampana', datosGrafica);
+  // grádica de barra, solicita los datos que irán en la grafica en la parte inferior, los colores de la gráfica, el id del canvas
+  // y los datos que llevará la gráfica
+    graficaBar.grafica('graficaSolicitudesCampana', null);
+    // datosGrafica
 
-    graficas.grafica(datos.datosFechas(), datos.datosColores(), 'graficaMontoCampana', datosGrafica);
+     // grádica de barra, solicita los datos que irán en la grafica en la parte inferior, los colores de la gráfica, el id del canvas,
+  //  los datos que llevará la gráfica y llevará un tipo de gráfica type line
+    graficaBarLine.grafica('graficaMontoCampana', null);
+    // datosGrafica
+    
+
     
     new GraficasTime().graficaToroide("myChartPastel", DatosGraficas.etiquetasGraficaOnline(), new DatosGraficas().coloresGrafica(), DatosGraficas.datosGraficaOnline() );
-   // graficas.graficaPastel();
+
   }
 
 

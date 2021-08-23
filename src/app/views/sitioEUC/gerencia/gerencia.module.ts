@@ -8,12 +8,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { GenericTableAppAppModule } from 'src/app/@generic-table-app/generic-table.module';
 import { CampaniasonlinestimelinessComponent } from './campaniasonlinestimeliness/campaniasonlinestimeliness.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
   declarations: [VistaporcampaniasaplicadasComponent, CampaniasonlinestimelinessComponent],
   imports: [
     CommonModule,
+    BrowserModule,
     GerenciaRoutingModule,
     SharedModule,
     NgbModule,

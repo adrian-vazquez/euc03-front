@@ -5,11 +5,7 @@ import { IColores } from "./IColores";
 
 export class DatosGraficas
 {
-    private fechas: Array<string>;
-    private color: IColores;
-
-    private etiquetas: Array<string>;
-
+ 
     constructor()
     {
         
