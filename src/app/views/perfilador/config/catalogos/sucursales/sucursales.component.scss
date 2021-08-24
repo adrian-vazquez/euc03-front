@@ -1,0 +1,14 @@
+
+.mat-header-cell, .mat-footer-cell, .mat-cell {
+  min-width: 90px;
+  box-sizing: border-box;
+}
+
+.mat-cell {
+    min-width: fit-content !important;
+}
+
+::ng-deep .swal2-content {
+  max-height: 70vh !important;
+  overflow-y: auto !important;
+}

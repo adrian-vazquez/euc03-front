@@ -1,3 +1,6 @@
 /node_modules/
 /node_modules.zip
 /dist/
+src/app/views/perfilador/config/catalogos/campanias/campanias.component.html
+src/app/views/perfilador/config/catalogos/campanias/campanias.component.scss
+src/app/views/perfilador/config/catalogos/campanias/campanias.component.ts
