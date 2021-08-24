@@ -25,64 +25,76 @@ interface ITasas
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
  
 const bodyTemplateGuide = ` 
-<form>
-  <div class="form-group row flex-column">
-    <div class="form-floating">
-        <textarea class="form-control form-control-sm" placeholder="Descripción" id="tasaDescripcion"></textarea>
-    </div>
-  </div>
+        <form>
+              <div class="form-group row flex-column">
+                <div class="form-floating">
+                    <textarea class="form-control form-control-sm" placeholder="Descripción" id="tasaDescripcion"></textarea>
+                </div>
+              </div>
 
-  <div class="form-group row flex-column">
-  <div class="form-floating">
-  <input class="form-control form-control-sm" placeholder="Tasa monto desde " id="tasaMontoDesde" disabled/>
-  </div>
-</div>
+              <div class="form-group row flex-column">
+              <div class="form-floating">
+              <input class="form-control form-control-sm" placeholder="Tasa monto desde " id="tasaMontoDesde" disabled/>
+              </div>
+            </div>
 
-<div class="form-group row flex-column">
-<div class="form-floating">
-<input class="form-control form-control-sm" placeholder="Tasa monto hasta" id="tasaMontoHasta"/>
-</div>
-</div>
+            <div class="form-group row flex-column">
+            <div class="form-floating">
+            <input class="form-control form-control-sm" placeholder="Tasa monto hasta" id="tasaMontoHasta"/>
+            </div>
+            </div>
 
-<div class="form-group row flex-column">
-<div class="form-floating">
-<input class="form-control form-control-sm" placeholder="Plazo tasa" id="tasaPlazo" disabled/>
-</div>
-</div>
+            <div class="form-group row flex-column">
+            <div class="form-floating">
+            <input class="form-control form-control-sm" placeholder="Plazo tasa" id="tasaPlazo" disabled/>
+            </div>
+            </div>
 
-<div class="form-group row flex-column">
-<div class="form-floating">
-<input class="form-control form-control-sm" placeholder="Tipo de Tasa" id="tasaTipo"/> // podríamos agregar un select
-</div>
-</div>
+            <div class="form-group row flex-column">
+            <div class="form-floating">
+            <input class="form-control form-control-sm" placeholder="Tipo de Tasa" id="tasaTipo"/> 
+            </div>
+            </div>
 
-<div class="form-group row flex-column">
-<div class="form-floating">
-<input class="form-control form-control-sm" placeholder="ID tasa de referencia" id="idTasaReferencia"/>
-</div>
-</div>
+            <div class="form-group row flex-column">
+            <div class="form-floating">
+            <input class="form-control form-control-sm" placeholder="ID tasa de referencia" id="idTasaReferencia"/>
+            </div>
+            </div>
 
-<div class="form-group row flex-column">
-<div class="form-floating">
-<input class="form-control form-control-sm" placeholder="Porcentaje de tasa" id="porcentajeTasa"/>
-</div>
-</div>
+            <div class="form-group row flex-column">
+            <div class="form-floating">
+            <input class="form-control form-control-sm" placeholder="Porcentaje de tasa" id="porcentajeTasa"/>
+            </div>
+            </div>
 
-<div class="form-group row flex-column">
-<div class="form-floating">
-<input class="form-control form-control-sm" placeholder="Sobre tasa a tasa" id="sobretasaTasa"/>
-</div>
-</div>
+            <div class="form-group row flex-column">
+            <div class="form-floating">
+            <input class="form-control form-control-sm" placeholder="Sobre tasa a tasa" id="sobretasaTasa"/>
+            </div>
+            </div>
 
-<div class="form-group row flex-column">
-<div class="form-floating">
-<input class="form-control form-control-sm" placeholder="Tasa tasa" id="tasaTasa"/>
-</div>
-</div>
+            <div class="form-group row flex-column">
+            <div class="form-floating">
+            <input class="form-control form-control-sm" placeholder="Tasa tasa" id="tasaTasa"/>
+            </div>
+            </div>
 
-</form>  
+        </form>  
 `;
 
 import { base64Pdf } from '../../../../../../assets/data/pdf-base-64';

@@ -42,7 +42,7 @@ const routes: Routes = [
   { path: 'sucursales', component: SucursalesComponent },
   { path: 'ofertas', component: OfertasComponent },
   { path: 'tasas', component: TasasComponent },
-  { path: 'campanias', component: CampaniaComponent }
+  { path: 'campanas', component: CampaniaComponent }
 ];
 
 @NgModule({
