@@ -29,7 +29,7 @@
             </thead>
             <tbody>
                 <tr *ngFor="let data of tableData">
-                    <td *ngIf="data.estatus === 'SOLICITADA'" class="text-center"><i (click)="open(content)" style="font-size: 2em;"
+                    <td *ngIf="data.estatus === 'SOLICITADA'" class="text-center"><i (click)="enviarCorreo()" style="font-size: 2em;"
                             class="fas fa-envelope"></i></td>
                     <td>{{data.estatus}}</td>
                     <td>{{data.fechaSolicitud}}</td>
