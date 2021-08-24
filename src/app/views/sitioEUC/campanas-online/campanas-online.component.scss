@@ -3,9 +3,25 @@
 .graficas
 {
     width: 150em;
-     height: 19em;
+    height: 19em;
+    border: 0.2em dashed #d8d7d9; 
+    border-radius: 3em;
+}
+@media (max-width: 576px)
+{ 
+    .graficas
+    {
+      width: 120em;
+      height: 25em;
       border: 0.2em dashed #d8d7d9; 
       border-radius: 3em;
+      background-color: rgb(115, 133, 140);
+      font-size: 0.5em;
+    }
+    #graficaSolicitudesCampana
+    {
+        height:20em;
+    }
 }
 
 table tbody tr > td:nth-child(2)
@@ -93,4 +109,5 @@ table tbody tr > td:nth-child(2)
   {
       font-size: 0.5em;
       font-weight: bold;
+      width: 40px;
   }

@@ -23,6 +23,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ViewsModule } from './views/views.module';
 import { SharedModule } from './shared/shared.module';
 
+
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
   wheelSpeed: 2,
