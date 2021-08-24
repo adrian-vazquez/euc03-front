@@ -18,6 +18,8 @@ import { PdfEspecialCargaComponent } from './catalogos/pdf-especial/pdf-especial
 import { FoliosComponent } from './catalogos/folios/folios.component';
 import { SucursalesComponent } from './catalogos/sucursales/sucursales.component';
 import { OfertasComponent } from './catalogos/ofertas/ofertas.component';
+import { TasasComponent } from './catalogos/tasas/tasas.component';
+import { CampaniaComponent } from './catalogos/campania/campania.component';
 
 const routes: Routes = [
   { path: 'config', component: MenuadministracionComponent },
@@ -39,6 +41,8 @@ const routes: Routes = [
   { path: 'folios', component: FoliosComponent },
   { path: 'sucursales', component: SucursalesComponent },
   { path: 'ofertas', component: OfertasComponent },
+  { path: 'tasas', component: TasasComponent },
+  { path: 'campanias', component: CampaniaComponent }
 ];
 
 @NgModule({

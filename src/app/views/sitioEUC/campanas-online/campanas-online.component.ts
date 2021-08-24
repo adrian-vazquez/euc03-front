@@ -132,7 +132,6 @@ export class CampanasOnlineComponent implements OnInit {
     graficaBarLine.grafica('graficaMontoCampana', datosGrafica);
     // datosGrafica
     
-
     
     new GraficasTime().graficaToroide("myChartPastel", DatosGraficas.etiquetasGraficaOnline(), new DatosGraficas().coloresGrafica(), DatosGraficas.datosGraficaOnline() );
 
