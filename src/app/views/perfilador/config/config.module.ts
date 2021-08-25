@@ -12,6 +12,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CatalogosModule } from './catalogos/catalogos.module';
 import { GenericTableAppAppModule } from 'src/app/@generic-table-app/generic-table.module';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 const COMPONENTS = [
@@ -32,6 +33,7 @@ const COMPONENTS = [
     ReactiveFormsModule,
     CatalogosModule,
     GenericTableAppAppModule,
+    MatPaginatorModule
   ],
   exports: [
     

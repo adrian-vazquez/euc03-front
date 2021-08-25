@@ -167,7 +167,7 @@ export class FoliosComponent implements OnInit, AfterViewInit {
   }
 
   getPdfEspecialName(id: number) {
-    debugger
+    // debugger
     return pdfsEspecialesCatalog.find( pe => pe.pdfEspecialOfertaId === id)?.pdfEspecialNombreArchivo?.name;
   }
 }
