@@ -20,7 +20,6 @@ import { SucursalesComponent } from './catalogos/sucursales/sucursales.component
 import { OfertasComponent } from './catalogos/ofertas/ofertas.component';
 import { TasasComponent } from './catalogos/tasas/tasas.component';
 import { CampaniaComponent } from './catalogos/campania/campania.component';
-import { OfertasGeneralComponent } from './catalogos/ofertas/ofertas-general/ofertas-general.component';
 
 const routes: Routes = [
   { path: 'config', component: MenuadministracionComponent },
@@ -43,8 +42,7 @@ const routes: Routes = [
   { path: 'sucursales', component: SucursalesComponent },
   { path: 'ofertas', component: OfertasComponent },
   { path: 'tasas', component: TasasComponent },
-  { path: 'campanas', component: CampaniaComponent },
-  { path: 'ofertas-generar', component: OfertasGeneralComponent }
+  { path: 'campanas', component: CampaniaComponent }
 ];
 
 @NgModule({

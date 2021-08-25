@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
 import { FormControl, FormGroup } from '@angular/forms';
-import { NotificacionesService } from '../../../../services/notificaciones.service';
 @Component({
   selector: 'app-reenvio-solicitudes-especiales',
   templateUrl: './reenvio-solicitudes-especiales.component.html',
@@ -45,7 +44,7 @@ export class ReenvioSolicitudesEspecialesComponent implements OnInit {
   ];
   formSolicitudTasa: FormGroup;
 
-  constructor(config: NgbModalConfig, private modalService: NgbModal, private _NS: NotificacionesService) { 
+  constructor(config: NgbModalConfig, private modalService: NgbModal) { 
     config.backdrop = 'static';
     config.keyboard = false;
   }
@@ -75,9 +74,5 @@ export class ReenvioSolicitudesEspecialesComponent implements OnInit {
 
   open(content) {
     this.modalService.open(content);
-  }
-
-  enviarCorreo(){
-    this._NS.lanzarNotificacion('Se ha enviado el correo exitosamente', '', 'success');
   }
 }

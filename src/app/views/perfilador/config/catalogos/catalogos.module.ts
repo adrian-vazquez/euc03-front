@@ -26,7 +26,6 @@ import {MatRadioModule} from '@angular/material/radio';
 import { OfertasComponent } from './ofertas/ofertas.component';
 import { CampaniaComponent } from './campania/campania.component';
 import { TasasComponent } from './tasas/tasas.component';
-import { OfertasGeneralComponent } from './ofertas/ofertas-general/ofertas-general.component';
 
 const COMPONENTS = [
   CatalogosComponent,
@@ -44,8 +43,7 @@ const COMPONENTS = [
   SucursalesComponent,
   OfertasComponent,
   CampaniaComponent, 
-  TasasComponent,
-  OfertasGeneralComponent
+  TasasComponent
 ]
 
 @NgModule({
