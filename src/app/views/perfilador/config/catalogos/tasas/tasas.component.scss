@@ -1,0 +1,28 @@
+
+.mat-table {
+    overflow-x: scroll;
+  }
+  
+  .mat-cell,
+  .mat-header-cell {
+    word-wrap: initial;
+    display: table-cell;
+    padding: 0px 20px;
+    line-break: unset;
+    width: 0%;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+  
+  .mat-row,
+  .mat-header-row {
+    display: table-row;
+  }
+
+  .scroll-table
+  {
+    height: 18em; 
+    width: 66em;
+    overflow-x: scroll;
+  }

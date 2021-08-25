@@ -9,8 +9,8 @@
             <span class="input-group-text">División:</span>
             <select id="">
                 <option value="0">Seleccione</option>
-                <option value="0">NOROESTE</option>
-                <option value="0">OCCIDENTE</option>
+                <option value="1">NOROESTE</option>
+                <option value="2">OCCIDENTE</option>
             </select>
         </div>
     </div>
@@ -22,7 +22,7 @@
     </div>
     <div class="col-sm-3">
         <button class="btn btn-success btn-sm m-1 btn-border" style="background-color: #00c851 !important;">Buscar</button>
-        <button type="button" class="btn btn-primary btn-sm m-1 btn-border" (click)="abrirmodal()">Agregar Nuevo Facultado</button>
+        <button type="button" class="btn btn-primary btn-sm m-1 btn-border" (click)="openXl(content)">Agregar Nuevo Facultado</button>
     </div>
 </div>
 <br>
@@ -50,26 +50,24 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><button type="button" class="btn btn-primary btn-sm m-1 btn-border">Editar</button></td>
-                    <td><button type="button" class="btn btn-primary btn-sm m-1 btn-border" (click)="delete()">Borrar</button></td>
-                    <td>Divisional</td>
+                    <td><button type="button" class="btn btn-secondary btn-sm m-1 btn-border">Editar</button></td>
+                    <td><button type="button" class="btn btn-secondary btn-sm m-1 btn-border"><i class="fas fa-ban"  (click)="openXl(content)"></i></button></td>                    <td>Divisional</td>
                     <td>JORGE</td>
                     <td>NOROESTE</td>
                     <td>Inactivo</td>
                     <td>JMA</td>
                 </tr>
                 <tr>
-                    <td><button type="button" class="btn btn-primary btn-sm m-1 btn-border">Editar</button></td>
-                    <td><button type="button" class="btn btn-primary btn-sm m-1 btn-border" (click)="delete()">Borrar</button></td>
-                    <td>Divisional</td>
+                    <td><button type="button" class="btn btn-secondary btn-sm m-1 btn-border">Editar</button></td>
+                    <td><button type="button" class="btn btn-secondary btn-sm m-1 btn-border"><i class="fas fa-ban"  (click)="openXl(content)"></i></button></td>                    <td>Divisional</td>
                     <td>Rogelio Jacobo Marquez Acevedo</td>
                     <td>OCCIDENTE</td>
                     <td>Activo</td>
                     <td>RJMA</td>
                 </tr>
                 <tr>
-                    <td><button type="button" class="btn btn-primary btn-sm m-1 btn-border">Editar</button></td>
-                    <td><button type="button" class="btn btn-primary btn-sm m-1 btn-border" (click)="delete()">Borrar</button></td>
+                    <td><button type="button" class="btn btn-secondary btn-sm m-1 btn-border">Editar</button></td>
+                    <td><button type="button" class="btn btn-secondary btn-sm m-1 btn-border"><i class="fas fa-ban"  (click)="openXl(content)"></i></button></td>
                     <td>Divisional</td>
                     <td>TEST</td>
                     <td>OCCIDENTE</td>
@@ -80,16 +78,18 @@
         </table>
     </div>
 </div>
-<app-modal [active]="active" (envio)="cerrarPopup()" [size]="'g'">
+
+
+<ng-template #content let-c="close" let-d="dismiss">
     <div class="modal-header">
             <h3 class="modal-title" style="margin: 0;">
                 <b>Control de Facultamiento</b>
             </h3>
-            <button type="button" class="close" data-dismiss="modal" arial-label="Cerrar" (click)="cerrarPopup()">
+            <button type="button" class="close" data-dismiss="modal" arial-label="Cerrar" (click)="d('Cross click')" >
                 <span class="m-1" aria-hidden="true">x</span>
             </button>
         </div>
-        <div class="contModal pt-2">
+        <div class="contModal pt-2" style="overflow: auto; overflow-x: hidden ">
                 <div class="form-group row mb-2">
                     <label class="col-sm-4 col-form-label text-left texto-general">*Soeid:</label>
                     <div class="col-sm-4">
@@ -168,18 +168,42 @@
                 <div class="form-group row mb-2">
                     <label class="col-sm-4 col-form-label text-left texto-general">Nivel Autorizador:</label>
                     <div class="col-sm-4">
-                        <select id="">
+                        <select id="" [(ngModel)]="nivelAutori">
                             <option value="0">Seleccione</option>
-                            <option value="0">Divisional</option>
-                            <option value="0">Distrital</option>
-                            <option value="0">Facultado</option>
-                            <option value="0">Gerencia Inv</option>
+                            <option value="1">Divisional</option>
+                            <option value="2">Distrital</option>
+                            <option value="3">Facultado</option>
+                            <option value="4">Gerencia Inv</option>
                         </select>
                     </div>
                 </div>
-            <div class="botones-modal pt-1">
-                <button class="col-4 btn btn-success btn-border m-2" style="background-color: #00c851 !important;" (click)="submit()">Aplicar</button>
-                <button class="col-4 btn btn-danger btn-border m-2" (click)="cerrarPopup()">Cancelar</button>
+                <div class="form-group row mb-2">
+                    <label class="col-sm-4 col-form-label text-left texto-general">Autorizador Divisional:</label>
+                    <div class="col-sm-4">
+                        <select id="">
+                            <option value="0">Seleccione</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row mb-2">
+                    <label class="col-sm-4 col-form-label text-left texto-general">Distrito:</label>
+                    <div class="col-sm-4">
+                        <select id="">
+                            <option value="0">Seleccione</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row mb-2">
+                    <label class="col-sm-4 col-form-label text-left texto-general">Autorizador Distrital:</label>
+                    <div class="col-sm-4">
+                        <select id="">
+                            <option value="0">Seleccione</option>
+                        </select>
+                    </div>
+                </div>
+            <div class="botones-modal pt-4">
+                <button class="col-4 btn btn-success btn-border m-2" style="background-color: #00c851 !important;" (click)="d('Cross click')">Aplicar</button>
+                <button class="col-4 btn btn-danger btn-border m-2" (click)="d('Cross click')" >Cancelar</button>
             </div>
         </div>
-</app-modal>
+</ng-template>

@@ -1,33 +1,40 @@
-import { IColores } from "./IColores";
 
+
+import { IGrafica } from "./IGrafica";
 import Chart from 'chart.js';
-import { DatosGraficas } from "./DatosGraficas";
-import { ILabelGrafica, LabelGrafica } from "./graficasTimeliness/ILabelGrafica";
+import { IColores } from "../../IColores";
+import { ILabelGrafica, LabelGrafica } from "../ILabelGrafica";
+import { DatosGraficas } from "../../DatosGraficas";
 
 
-
-export class GraficasImpl {
-
+export class GraficaBarLineImpl implements IGrafica {
     private etiquetasLabel: ILabelGrafica;
 
-    constructor()
-    {
+    constructor() {
         // nombre de las etiquetas que se veran reflejadas en las bar del lado superior
         this.etiquetasLabel = new LabelGrafica().nombreGrafica;
     }
 
     // función que recibe 3 parámetros para generar los datos de las gráficas
-    public grafica(fechas: string[], color: IColores, grafica: string, datos: Array<number>) {
+    public grafica( grafica: string, datos: Array<number>): void {
+
+        if( grafica !== null && grafica !== '' && datos !== null )
+    {
+        if(  datos.length > 0  )
+        {
 
         // variable que guarda el número mayor de los datos que le envíen
         let numeroMayor: Array<number> = datos;
 
+        let dts: DatosGraficas = new DatosGraficas();
+        let color: IColores =  dts.datosColores();
+        
 
         const myChart = <HTMLCanvasElement>document.getElementById(grafica);
         const cnx = myChart.getContext('2d');
 
         // constante que recibe los nombres de las etiquetas para las gráficas en el aldo inferior de las mismas
-        const etiquetas = fechas;
+        const etiquetas = dts.datosFechas();
 
         const datos19042021 = {
             label: [this.etiquetasLabel.AutDistritales],
@@ -73,29 +80,32 @@ export class GraficasImpl {
             borderColor: DatosGraficas.color(color.RetenSaldoBase),
             borderWidth: 1,
         };
+        const datoPromedio = {
+            label: ["Promedio"],
+            type: 'line',
+            data: [100, 80, 70, 60, 50, 20],
+            backgroundColor:"#FFFFFF",// Color de fondo,
+            borderColor: "#A09593",
+            borderWidth: 1,
+            fill: false
+        };
 
 
         new Chart(cnx, {
             type: 'bar',// Tipo de gráfica
             data: {
                 labels: etiquetas,
-                datasets: [{
-                    data: [100,80,70,60,50,20],
-                    label: "Ejemplo Linea",
-                    borderColor: "#3e95cd",
-                    backgroundColor: "rgb(62,149,205)",
-                    borderWidth: 1,
-                    type: 'line',
-                    fill: false
-                },
-                   
+                datasets: [
+                    datoPromedio,
                     datos19042021,
                     datos20042021,
                     datos21042021,
                     datos22042021,
                     datos23042021,
-                    datos00042021
-                   
+                    datos00042021,
+                  
+                    
+
                     // Aquí más datos...
                 ]
             },
@@ -110,7 +120,6 @@ export class GraficasImpl {
                     labels: {
                         fontSize: 8, // cambiar font al label que está en el lado superior de la gráfica de barra
                     },
-
                 },
                 scales: {
                     yAxes: [{
@@ -134,6 +143,6 @@ export class GraficasImpl {
         });
 
     }
-
-
+}
+}
 }

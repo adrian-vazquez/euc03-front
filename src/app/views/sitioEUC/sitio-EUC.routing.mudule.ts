@@ -26,7 +26,7 @@ const routes: Routes = [
             { path: 'completar-informacion-KPI', component: CompletarInformacionKpiComponent },
             { path: 'KPI', component: KpiComponent },
             { path: 'accuracy', component: AccuracyComponent },
-            { path: 'operaciones-especiales', component: OperacionesEspecialesComponent },
+            { path: 'operaciones-EUC', component: OperacionesEspecialesComponent },
             { path: 'reenvio-solicitudes-especiales', component: ReenvioSolicitudesEspecialesComponent },
             { path: 'lista-dias-festivos', component: ListaFestivosComponent },
         ]

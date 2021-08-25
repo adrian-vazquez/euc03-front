@@ -14,6 +14,12 @@ import { EjecutivosSucursalComponent } from './catalogos/ejecutivos-sucursal/eje
 import { GuiasOperativasComponent } from './catalogos/guias-operativas/guias-operativas.component';
 import { PdfEspecialComponent } from './catalogos/pdf-especial/pdf-especial.component';
 import { ParametrosComponent } from './catalogos/parametros/parametros.component';
+import { PdfEspecialCargaComponent } from './catalogos/pdf-especial/pdf-especial-carga/pdf-especial-carga.component';
+import { FoliosComponent } from './catalogos/folios/folios.component';
+import { SucursalesComponent } from './catalogos/sucursales/sucursales.component';
+import { OfertasComponent } from './catalogos/ofertas/ofertas.component';
+import { TasasComponent } from './catalogos/tasas/tasas.component';
+import { CampaniaComponent } from './catalogos/campania/campania.component';
 
 const routes: Routes = [
   { path: 'config', component: MenuadministracionComponent },
@@ -31,6 +37,12 @@ const routes: Routes = [
   { path: 'guias-operativas', component: GuiasOperativasComponent },
   { path: 'pdf-especial', component: PdfEspecialComponent },
   { path: 'parametros', component: ParametrosComponent },
+  { path: 'pdf-especial-carga', component: PdfEspecialCargaComponent },
+  { path: 'folios', component: FoliosComponent },
+  { path: 'sucursales', component: SucursalesComponent },
+  { path: 'ofertas', component: OfertasComponent },
+  { path: 'tasas', component: TasasComponent },
+  { path: 'campanas', component: CampaniaComponent }
 ];
 
 @NgModule({

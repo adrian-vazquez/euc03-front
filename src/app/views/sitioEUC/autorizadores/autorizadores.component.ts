@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-autorizadores',
@@ -9,14 +10,14 @@ import Swal from 'sweetalert2';
 export class AutorizadoresComponent implements OnInit {
 
   active:boolean = false;
-
-  constructor() { }
+  nivelAutori = '';
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
   }
 
-  abrirmodal(){
-    this.active = true;
+  openXl(content) {
+    this.modalService.open(content, { centered: true, size: 'xl', scrollable: true });
   }
 
   cerrarPopup(){
