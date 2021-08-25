@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SolicitudInversionesService } from 'src/app/services/solicitud-inverciones/solicitud-inversiones.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-menuadministracion',
@@ -20,7 +21,13 @@ export class MenuadministracionComponent implements OnInit {
     ejecutivo: 'Ejecutivo',
     sirh: 'SIRH'
   };
-  tableData: any[];
+  tableData: any[] = [
+    {'fecha':'10/08/2021','numerocuenta':'1234','contrato':'567890','tasa':'102','plazo':'91','monto':'12345','nomina':'67890','ejecutivo':'Luis Pozo','sirh':'267'},
+    {'fecha':'10/08/2021','numerocuenta':'1234','contrato':'567890','tasa':'102','plazo':'91','monto':'12345','nomina':'67890','ejecutivo':'Luis Pozo','sirh':'267'},
+    {'fecha':'10/08/2021','numerocuenta':'1234','contrato':'567890','tasa':'102','plazo':'91','monto':'12345','nomina':'67890','ejecutivo':'Luis Pozo','sirh':'267'},
+    {'fecha':'10/08/2021','numerocuenta':'1234','contrato':'567890','tasa':'102','plazo':'91','monto':'12345','nomina':'67890','ejecutivo':'Luis Pozo','sirh':'267'},
+    {'fecha':'10/08/2021','numerocuenta':'1234','contrato':'567890','tasa':'102','plazo':'91','monto':'12345','nomina':'67890','ejecutivo':'Luis Pozo','sirh':'267'}
+  ];
 
   showDataGrid:boolean = false;
 
@@ -77,5 +84,27 @@ export class MenuadministracionComponent implements OnInit {
   buscaRegistros(){
     this.showDataGrid = true;
   }
+
+  submit(){
+    Swal.fire({
+      title: 'Confirmación',
+      text: "¿Estás seguro de continuar con la operación?",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Aceptar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Hecho',
+          'El registro ha sido actualizado',
+          'success'
+        )
+      }
+    });
+  }
+
 }
 

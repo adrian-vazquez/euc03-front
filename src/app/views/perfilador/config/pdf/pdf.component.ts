@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RestAppServices } from 'src/app/app-rest.services';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -11,7 +12,12 @@ export class PdfComponent implements OnInit {
   iconCarga:string = 'assets/images/Img/load.PNG';
   iconPdf:string = 'assets/images/dummy/pdficon.jpg';
 
-  constructor() { }
+  constructor(private peticinoHttp: RestAppServices) { }
+
+  private parametrosWS: any = {
+    modulo: 'Rest',
+    subModulo: 'rest'
+  };
 
   ngOnInit(): void {
   }
@@ -28,13 +34,19 @@ export class PdfComponent implements OnInit {
       cancelButtonText: 'Cancelar',
     }).then((result) => {
       if (result.isConfirmed) {
-        Swal.fire(
-          '¡Cargado!',
-          'Se cargó el registro con éxito',
-          'success'
-        )
+        //this.parametrosWS.parametros = {'reporte': 'pdf'}; //objeto prueba
+        this.parametrosWS.operacion = 'pdf-ver';
+        console.log(this.parametrosWS);
+        this.parametrosWS.callBack = (data: any) => {
+          Swal.fire('¡Cargado!','Se cargó el registro con éxito '+ data,'success');
+          console.log(data);
+        };
+        this.parametrosWS.error = (data:any) => {
+          Swal.fire('Error',data.error?.message || 'Se presento un problema con la operacion', 'error');
+        };
+        this.peticinoHttp.peticion(this.parametrosWS);
       }
-    })
+    });
   }
 
 }

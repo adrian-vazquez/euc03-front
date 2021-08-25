@@ -12,11 +12,14 @@ import { ConfigRoutingModule } from './config/config-routing.module';
 import { ConfigModule } from './config/config.module';
 import { CampaniaspagareComponent } from './campaniaspagare/campaniaspagare.component';
 import { GenericTableAppAppModule } from 'src/app/@generic-table-app/generic-table.module';
+import { EspecialportaComponent } from './especialporta/especialporta.component';
 
 const COMPONENTS = [
   AclaracionesComponent,
   PerfiladorComponent,
   CitivsotrosComponent,
+  CampaniaspagareComponent,
+  EspecialportaComponent,
   CampaniaspagareComponent
 ]
 

@@ -4,10 +4,12 @@ import { PerfiladorComponent } from './perfilador/perfilador.component';
 import { AclaracionesComponent } from './aclaraciones/aclaraciones.component';
 import { CitivsotrosComponent } from './citivsotros/citivsotros.component';
 import { CampaniaspagareComponent } from './campaniaspagare/campaniaspagare.component';
+import { EspecialportaComponent } from './especialporta/especialporta.component';
 
 const routes: Routes = [
     { path: 'perfilador', component: PerfiladorComponent },
-    { path: 'campaniaspagare', component: CampaniaspagareComponent },
+    { path: 'ptufina', component: CampaniaspagareComponent },
+    { path: 'especialporta', component: EspecialportaComponent },
     { path: 'aclaraciones', component: AclaracionesComponent },
     { path: 'citivsotros', component: CitivsotrosComponent }
 ];

@@ -51,7 +51,7 @@
             <tbody>
                 <tr>
                     <td><button type="button" class="btn btn-primary btn-sm m-1 btn-border">Editar</button></td>
-                    <td><button type="button" class="btn btn-primary btn-sm m-1 btn-border">Borrar</button></td>
+                    <td><button type="button" class="btn btn-primary btn-sm m-1 btn-border" (click)="delete()">Borrar</button></td>
                     <td>Divisional</td>
                     <td>JORGE</td>
                     <td>NOROESTE</td>
@@ -60,7 +60,7 @@
                 </tr>
                 <tr>
                     <td><button type="button" class="btn btn-primary btn-sm m-1 btn-border">Editar</button></td>
-                    <td><button type="button" class="btn btn-primary btn-sm m-1 btn-border">Borrar</button></td>
+                    <td><button type="button" class="btn btn-primary btn-sm m-1 btn-border" (click)="delete()">Borrar</button></td>
                     <td>Divisional</td>
                     <td>Rogelio Jacobo Marquez Acevedo</td>
                     <td>OCCIDENTE</td>
@@ -69,7 +69,7 @@
                 </tr>
                 <tr>
                     <td><button type="button" class="btn btn-primary btn-sm m-1 btn-border">Editar</button></td>
-                    <td><button type="button" class="btn btn-primary btn-sm m-1 btn-border">Borrar</button></td>
+                    <td><button type="button" class="btn btn-primary btn-sm m-1 btn-border" (click)="delete()">Borrar</button></td>
                     <td>Divisional</td>
                     <td>TEST</td>
                     <td>OCCIDENTE</td>
@@ -142,18 +142,26 @@
                 <div class="form-group row mb-2">
                     <label class="col-sm-4 col-form-label text-left texto-general">Estatus:</label>
                     <div class="col-sm-4">
-                        <div class="input-group mb-2">
-                            <span class="input-group-text">Activo:</span>
-                            <input type="checkbox" class="form-control">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Activo</span>
+                            </div>
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><input type="checkbox"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="form-group row mb-2">
                     <label class="col-sm-4 col-form-label text-left texto-general">Facultado para autorizaciones distritales:</label>
                     <div class="col-sm-4">
-                        <div class="input-group mb-2">
-                            <span class="input-group-text">Facultado:</span>
-                            <input type="checkbox" class="form-control">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Facultado</span>
+                            </div>
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><input type="checkbox"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -169,8 +177,8 @@
                         </select>
                     </div>
                 </div>
-            <div class="botones-modal pt-4">
-                <button class="col-4 btn btn-success btn-border m-2" style="background-color: #00c851 !important;">Aplicar</button>
+            <div class="botones-modal pt-1">
+                <button class="col-4 btn btn-success btn-border m-2" style="background-color: #00c851 !important;" (click)="submit()">Aplicar</button>
                 <button class="col-4 btn btn-danger btn-border m-2" (click)="cerrarPopup()">Cancelar</button>
             </div>
         </div>

@@ -13,6 +13,8 @@ export const environment = {
   restAPI: `${BACK_SERVER}${EUC20_APP}rest`,
   restFileAPI: `${FILES}rest`,
   seguridadAPI : BACK_SERVER + "euc-seguridad/rest",
+  //se agrega para conexion back prueba
+  url: 'http://localhost:9080'
 };
 
 
