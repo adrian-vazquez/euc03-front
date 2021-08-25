@@ -4,7 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import Swal from 'sweetalert2';
-import { NotificacionesService } from '../../../../../../services/notificaciones.service';
+import { NotificacionesService } from '../../../../../services/notificaciones.service';
 
 interface IOferta {
     ofertaId: number,
@@ -193,12 +193,12 @@ const bodyTemplateGuide = `
 </form> 
 `;
 
-import { base64Pdf } from '../../../../../../../assets/data/pdf-base-64';
+import { base64Pdf } from '../../../../../../assets/data/pdf-base-64';
 
 @Component({
     selector: 'app-ofertas-general',
     templateUrl: './ofertas-general.component.html',
-    styleUrls: ['./ofertas-general.component.scss', '../../catalogos.component.scss', '../../ejecutivos-sucursal/ejecutivos-sucursal.component.scss']
+    styleUrls: ['./ofertas-general.component.scss', '../catalogos.component.scss', '../ejecutivos-sucursal/ejecutivos-sucursal.component.scss']
 })
 export class OfertasGeneralComponent implements OnInit {
 

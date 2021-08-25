@@ -44,8 +44,8 @@ export class AddHeaderInterceptor implements HttpInterceptor {
                     //log error 
                 }
                 return of(err);
-            }));
-    
+            })
+            ); 
       }
     
       private addAuthenticationToken(request: HttpRequest<any>): HttpRequest<any> {

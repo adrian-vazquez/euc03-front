@@ -48,7 +48,35 @@
     </div>
     <div [ngStyle]="{'display': (showDataGrid) ? 'block' : 'none'}">
         <div class="mt-5">
-            <app-table [tableData]="tableData" [columnHeader]="columnHeader"></app-table>
+            <!-- <app-table [tableData]="tableData" [columnHeader]="columnHeader"></app-table> -->
+            <table class="table table-striped">
+                <thead class="table-header" style="background-color: #056DAE; color: white;">
+                    <tr>
+                        <th scope="col">{{columnHeader.fecha}}</th>
+                        <th scope="col">{{columnHeader.numerocuenta}}</th>
+                        <th scope="col">{{columnHeader.contrato}}</th>
+                        <th scope="col">{{columnHeader.tasa}}</th>
+                        <th scope="col">{{columnHeader.plazo}}</th>
+                        <th scope="col">{{columnHeader.monto}}</th>
+                        <th scope="col">{{columnHeader.nomina}}</th>
+                        <th scope="col">{{columnHeader.ejecutivo}}</th>
+                        <th scope="col">{{columnHeader.sirh}}</th>
+                    </tr>
+                </thead>
+                <tbody class="mat-body">
+                    <tr *ngFor="let item of tableData">
+                        <td>{{item.fecha}}</td>
+                        <td>{{item.numerocuenta}}</td>
+                        <td>{{item.contrato}}</td>
+                        <td>{{item.tasa}}</td>
+                        <td>{{item.plazo}}</td>
+                        <td>{{item.monto}}</td>
+                        <td>{{item.nomina}}</td>
+                        <td>{{item.ejecutivo}}</td>
+                        <td>{{item.sirh}}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
     <app-modal [active]="active" (envio)="cerrarPopup()" [size]="'g'">
@@ -80,10 +108,9 @@
                 </div>
             </form>
             <div class="botones-modal pt-4">
-                <button class="col-4 btn btn-success btn-border m-2" style="background-color: #00c851 !important;">Actualizar</button>
+                <button class="col-4 btn btn-success btn-border m-2" style="background-color: #00c851 !important;" (click)="submit()">Actualizar</button>
                 <button class="col-4 btn btn-danger btn-border m-2" (click)="cerrarPopup()">Cancelar</button>
             </div>
         </div>
     </app-modal>
 </div>
-

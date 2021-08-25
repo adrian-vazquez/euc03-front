@@ -25,6 +25,8 @@ export class PerfiladorComponent implements OnInit {
   valSaldo:string = '';
   valTipoPersona:string = '';
   monto:any;
+  contador:number=1;
+  muestrabtn:number=-1;
 
   constructor(private formBuilder: FormBuilder) { 
     let formValues: any = {};
@@ -111,6 +113,16 @@ export class PerfiladorComponent implements OnInit {
         this.active = false;
       }
     })
+  }
+
+  siguentepaso(eve:any){
+    this.contador+=1;
+    if(this.contador%2==0){
+      this.muestrabtn = 1;
+    }else{
+      this.muestrabtn = 0;
+    }
+    console.log(eve.target.value);
   }
 
 }

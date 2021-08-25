@@ -3,16 +3,16 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-campaniaspagare',
-  templateUrl: './campaniaspagare.component.html',
-  styleUrls: ['./campaniaspagare.component.scss']
+  selector: 'app-especialporta',
+  templateUrl: './especialporta.component.html',
+  styleUrls: ['./especialporta.component.scss']
 })
-export class CampaniaspagareComponent implements OnInit {
+export class EspecialportaComponent implements OnInit {
 
   titulo = '';
   cp:string = 'Campañas Pagaré';
   pe:string = 'Portabilidad Especial de Nónima';
-  cambio:number = 0;
+  cambio:number = 1;
   form:FormGroup;
   keys: Array<string> = ['cliente','monto', 'numcliente', 'nomcliente','contrato'];
   baseForm:any = {};

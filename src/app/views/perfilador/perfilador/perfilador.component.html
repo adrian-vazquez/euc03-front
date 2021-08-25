@@ -138,9 +138,11 @@
                                         <td>$2,500.00</td>
                                         <td>
                                             <div class="custom-control custom-switch">
-                                                <input type="checkbox" class="custom-control-input" id="customSwitch1" selected>
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch1" (change)="siguentepaso($event)">
                                                 <label class="custom-control-label" for="customSwitch1">ON/OFF</label>
-                                                <button type="button" class="btn btn-primary btn-sm m-1 btn-border" (click)="abrirmodal()">Siguiente Paso</button>
+                                                <div *ngIf="muestrabtn==1">
+                                                    <button type="button" class="btn btn-primary btn-sm m-1 btn-border" (click)="abrirmodal()">Siguiente Paso</button>
+                                                </div>
                                             </div>
                                         </td>
                                     </tr>
@@ -333,6 +335,40 @@
         </div>
         <div class="row">
             <label class="texto-general col-12" style="color: red; text-align: center">Oferta digital</label>
+        </div>
+        <div class="row">
+            <div class="col" >
+                <table class="table table-striped">
+                    <thead class="table-header" style="background-color: #056DAE; color: white;">
+                        <tr>
+                            <th scope="col">OFERTA</th>
+                            <th scope="col">TASA BRUTA</th>
+                            <th scope="col">PLAZO</th>
+                            <th scope="col">RENDIMIENTOS BRUTOS</th>
+                            <th scope="col"> MONTO DE INVERSIÓN</th>
+                            <th scope="col">SELECCIONE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Portabilidad Nómina Campaña</td>
+                            <td>4.60%</td>
+                            <td>60 días</td>
+                            <td>$19.17</td>
+                            <td>$2,500.00</td>
+                            <td>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch1" selected>
+                                    <label class="custom-control-label" for="customSwitch1">ON/OFF</label>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <label class="texto-general col-12" style="color: red; text-align: center">Oferta BAU</label>
         </div>
         <div class="row">
             <div class="col" >
