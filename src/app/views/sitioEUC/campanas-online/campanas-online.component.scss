@@ -1,113 +1,184 @@
+.graficas-container {
+    height: 50vh;
+    width: 80vw;
+    border: 0.2em dashed #d8d7d9;
+    border-radius: 3em;
+    margin-top: 1.5em;
+}
+.grafica-una1 {
+    position: relative;
+    height: 100%;
+    width: 33.3%;
+}
+.grafica-una2 {
+    position: relative;
+    left: 28.8em;
+    bottom: 25.7em;
+    height: 100%;
+    width: 33.3%;
+}
+.grafica-una3 {
+    position: relative;
+    left: 57.6em;
+    bottom: 50.4em;
+    height: 100%;
+    width: 33.3%;
+}
+.letra-footer {
+    position: relative;
+    bottom: 54em;
+    height: 5%;
+    width: 100%;
+    color: blue;
+}
 
+@media only screen and (max-width: 1200px) {
+    .graficas-container {
+        
+    }
+    .grafica-una1 {
+        position: relative;
+        height: 20em;
+        width: 33.3%;
+        
+    }
+    .grafica-una2 {
+        position: relative;
+        bottom: 20em;
+        left: 22.3em;
+        height: 20em;
+        width: 33.3%;
+        
+    }
+    .grafica-una3 {
+        position: relative;
+        left: 44.7em;
+        bottom: 40em;
+        height: 20em;
+        width: 33.3%;
+        
+    }
+    .letra-footer
+    {
+        position: relative;
+        
+        bottom: 38em;
+        left: -1em;
+        height: 4%;
+        width: 100%; 
+        
+    }
+}
+@media only screen and (max-width: 960px) {
+    .graficas-container {
+        height: 90em;
+        width: 36em;
+        border: 0.2em dashed #d8d7d9;
+        border-radius: 3em;
+        margin-top: 1.5em;
+        
+    }
+    .grafica-una1 {
+        position: relative;
+        height: 32%;
+        width: 100%;
+    }
+    .grafica-una2 {
+        position: relative;
+        left: 0em;
+        top: 0em;
+        height: 32%;
+        width: 100%;
+    }
+    .grafica-una3 {
+        position: relative;
+        left: 0em;
+        top: 0em;
+        height: 32%;
+        width: 100%;
+    }
+    .letra-footer {
+        position: relative;
+        bottom: 0em;
+        height: 4%;
+        width: 100%;
+    }
+}
 
-.graficas
-{
+.graficas {
     width: 150em;
-    height: 19em;
-    border: 0.2em dashed #d8d7d9; 
+    height: 23em;
+    border: 0.2em dashed #d8d7d9;
     border-radius: 3em;
 }
-@media (max-width: 576px)
-{ 
-    .graficas
-    {
-      width: 120em;
-      height: 25em;
-      border: 0.2em dashed #d8d7d9; 
-      border-radius: 3em;
-      background-color: rgb(115, 133, 140);
-      font-size: 0.5em;
-    }
-    #graficaSolicitudesCampana
-    {
-        height:20em;
-    }
+
+table tbody tr > td:nth-child(2) {
+    background-color: rgb(221, 219, 222);
 }
 
-table tbody tr > td:nth-child(2)
-{
-    background-color: rgb( 221, 219, 222);
-}
-
-.color-tabla-column
-{
+.color-tabla-column {
     background-color: rgb(72, 127, 181);
 }
-.color-tabla-column-
-{
+.color-tabla-column- {
     background-color: rgb(115, 133, 140);
-    color: rgb( 221, 219, 222);
+    color: rgb(221, 219, 222);
 }
-.color-column
-{
+.color-column {
     background-color: rgb(97, 162, 189);
-    color: rgb( 221, 219, 222);
+    color: rgb(221, 219, 222);
 }
-.btnColorEjecutivosPyme
-{
+.btnColorEjecutivosPyme {
     background-color: rgb(239, 239, 241);
 }
-.btnCalcular
-{
-    background-color: rgb(55, 120, 183); color: rgb(239, 239, 241);
+.btnCalcular {
+    background-color: rgb(55, 120, 183);
+    color: rgb(239, 239, 241);
 }
-.widthCheck
-{
+.widthCheck {
     width: 3em;
 }
-.mt-check
-{
-    margin-top: 0.8em
+.mt-check {
+    margin-top: 0.8em;
 }
 
-
-  table {
+table {
     width: 150%;
     border-collapse: collapse;
     text-align: center;
-  }
-  .layout {
+}
+.layout {
     display: table;
     table-layout: fixed;
     width: 100%;
-  }
+}
 
-  .over {
+.over {
     display: table-cell;
     overflow-x: auto;
     width: 100%;
-  }
-  .over th
-  {
-      font-size: 0.5em;
-  }
-  .tablas-dev
-  {
-      position: relative;
-      bottom: 10em;
-      width: 80em;
-      
-  }
-  
-  .dropdown-menu li > a
-  {
-      cursor: pointer;
-      
-      
-  }
-  .dropdown-menu li > a:hover
-  {
-      color: blue;
-  }
+}
+.over th {
+    font-size: 0.5em;
+}
+.tablas-dev {
+    position: relative;
+    bottom: 10em;
+    width: 80em;
+}
 
-  .color-colum
-  {
+.dropdown-menu li > a {
+    cursor: pointer;
+}
+.dropdown-menu li > a:hover {
+    color: blue;
+}
+
+.color-colum {
     background-color: rgb(97, 162, 191);
     color: rgb(255, 255, 255);
-  }
-  table tbody tr td
-  {
-      font-size: 0.5em;
-      font-weight: bold;
-      width: 40px;
-  }
+}
+table tbody tr td {
+    font-size: 0.5em;
+    font-weight: bold;
+    width: 40px;
+}
