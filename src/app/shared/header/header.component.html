@@ -23,10 +23,10 @@
                                             <div class="sub-submenu-right" >
                                                 <ul>
                                                     <li>
-                                                        <a class="title-menu" href="http://localhost:4200/#/vista-campanas" target="_blank">Sitio EUC</a>
+                                                        <a class="title-menu" [routerLink]="['vista-campanas']" routerLinkActive="true">Sitio UEC</a>
                                                     </li>
                                                     <li>
-                                                        <a class="title-menu" href="http://localhost:4200/#/solicitudes-especiales" target="_blank">Solicitud de Inversiones</a>
+                                                        <a class="title-menu" [routerLink]="['vista-ejecutivo']" routerLinkActive="true">Vista Ejecutivo</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -54,7 +54,7 @@
                                 </div>
                             </li>
                             <li>
-                                <a class="title-menu">Sitio EUC</a>
+                                <a class="title-menu">Sitio UEC</a>
                                 <div class="submenu-right">
                                     <ul>
                                         <li class="nav-item dropdown">
@@ -63,7 +63,7 @@
                                             </a>
                                             <div class="dropdown-menu text-right" aria-labelledby="navbarDropdownMenuLink">
                                                 <a class="dropdown-item" [routerLink]="['control-tasas/reenvio-solicitudes-especiales']" routerLinkActive="true">Reenvío de Solicitudes Especiales</a>
-                                                <a class="dropdown-item" [routerLink]="['control-tasas/operaciones-EUC']" routerLinkActive="true">Operaciones EUC</a>
+                                                <a class="dropdown-item" [routerLink]="['control-tasas/operaciones-EUC']" routerLinkActive="true">Operaciones UEC</a>
                                                 <a class="dropdown-item" [routerLink]="['control-tasas/CETES']" routerLinkActive="true">CETES</a>
                                                 <a class="dropdown-item" [routerLink]="['control-tasas/KPI']" routerLinkActive="true">KPI</a>
                                                 <a class="dropdown-item" [routerLink]="['control-tasas/accuracy']" routerLinkActive="true">Accuracy</a>
@@ -71,7 +71,7 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <a class="title-menu" [routerLink]="['reportes-EUC']" routerLinkActive="true">Reportes EUC</a>
+                                            <a class="title-menu" [routerLink]="['reportes-EUC']" routerLinkActive="true">Reportes UEC</a>
                                         </li>
                                         <li>
                                             <a class="title-menu" [routerLink]="['vista-campanas']" routerLinkActive="true">Gerencia Online</a>
