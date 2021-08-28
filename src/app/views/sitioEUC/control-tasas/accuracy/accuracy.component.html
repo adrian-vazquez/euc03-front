@@ -31,8 +31,225 @@
         <div class="col"></div>
     </div>
 </div>
-<div [ngStyle]="{'display': (showDataTable) ? 'block' : 'none'}">
-    <div class="row pt-4 text-center">
+<div *ngIf="showDataTable">
+    <div class="mt-4 text-center" style="overflow: auto;">
+
+        <div class="mt-5 col-md-12">
+            <label>Contratos Repetidos en registros de Tasas (MIS)</label>
+        </div>
+            <table class="txt-small w-100 m-auto table table-striped pt-4">
+                <thead>
+                    <tr>
+                        <th *ngFor="let columHeader of tableHeader" class="texto-general" style="cursor: pointer;">
+                            {{columHeader.nombre}}
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="mat-body">
+                    <tr *ngFor="let data of tableValue">
+                        <td class="mat-cell p-2"><input type="checkbox">{{data.id}}</td>
+                        <td class="mat-cell p-1">{{data.folio}}</td>
+                        <td class="mat-cell p-1">{{data.fecha}}</td>
+                        <td class="mat-cell p-1">{{data.sucursal}}</td>
+                        <td class="mat-cell p-1">{{data.monto}}</td>
+                        <td class="mat-cell p-1">{{data.plaza}}</td>
+                        <td class="mat-cell p-1">{{data.tasa}}</td>
+                        <td class="mat-cell p-1">{{data.estatus}}</td>
+                        <td class="mat-cell p-1">{{data.numeroCte}}</td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.nombreCte" style="width: 8em"></td>
+                        <td class="mat-cell p-1">{{data.contrato}}</td>
+                        <td class="mat-cell p-1">{{data.operador}}</td>
+                        <td class="mat-cell p-1">{{data.idOferta}}</td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.nombreEjec" style="width: 8em;"></td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.observaciones" style="width: 8em;"></td>
+                        <td class="mat-cell p-2"><input type="text" [value]="data.SOIEDResp" style="width: 3em;"></td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+
+    <!-- Contratos Repetidos en registros de Tasas (Operativo) -->
+    <div class="mt-4 text-center" style="overflow: auto;">
+
+        <div class="mt-5 col-md-12">
+            <label>Contratos Repetidos en registros de Tasas (Operativo)</label>
+        </div>
+            <table class="txt-small w-100 m-auto table table-striped pt-4">
+                <thead>
+                    <tr>
+                        <th *ngFor="let columHeader of tableHeader" class="texto-general" style="cursor: pointer;">
+                            {{columHeader.nombre}}
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="mat-body">
+                    <tr *ngFor="let data of tableValue">
+                        <td class="mat-cell p-2"><input type="checkbox">{{data.id}}</td>
+                        <td class="mat-cell p-1">{{data.folio}}</td>
+                        <td class="mat-cell p-1">{{data.fecha}}</td>
+                        <td class="mat-cell p-1">{{data.sucursal}}</td>
+                        <td class="mat-cell p-1">{{data.monto}}</td>
+                        <td class="mat-cell p-1">{{data.plaza}}</td>
+                        <td class="mat-cell p-1">{{data.tasa}}</td>
+                        <td class="mat-cell p-1">{{data.estatus}}</td>
+                        <td class="mat-cell p-1">{{data.numeroCte}}</td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.nombreCte" style="width: 8em"></td>
+                        <td class="mat-cell p-1">{{data.contrato}}</td>
+                        <td class="mat-cell p-1">{{data.operador}}</td>
+                        <td class="mat-cell p-1">{{data.idOferta}}</td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.nombreEjec" style="width: 8em;"></td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.observaciones" style="width: 8em;"></td>
+                        <td class="mat-cell p-2"><input type="text" [value]="data.SOIEDResp" style="width: 3em;"></td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+
+    <!-- Clientes Repetidos en registros de Tasas (MIS) -->
+    <div class="mt-4 text-center" style="overflow: auto;">
+
+        <div class="mt-5 col-md-12">
+            <label>Clientes Repetidos en registros de Tasas (MIS)</label>
+        </div>
+            <table class="txt-small w-100 m-auto table table-striped pt-4">
+                <thead>
+                    <tr>
+                        <th *ngFor="let columHeader of tableHeader" class="texto-general" style="cursor: pointer;">
+                            {{columHeader.nombre}}
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="mat-body">
+                    <tr *ngFor="let data of tableValue">
+                        <td class="mat-cell p-2"><input type="checkbox">{{data.id}}</td>
+                        <td class="mat-cell p-1">{{data.folio}}</td>
+                        <td class="mat-cell p-1">{{data.fecha}}</td>
+                        <td class="mat-cell p-1">{{data.sucursal}}</td>
+                        <td class="mat-cell p-1">{{data.monto}}</td>
+                        <td class="mat-cell p-1">{{data.plaza}}</td>
+                        <td class="mat-cell p-1">{{data.tasa}}</td>
+                        <td class="mat-cell p-1">{{data.estatus}}</td>
+                        <td class="mat-cell p-1">{{data.numeroCte}}</td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.nombreCte" style="width: 8em"></td>
+                        <td class="mat-cell p-1">{{data.contrato}}</td>
+                        <td class="mat-cell p-1">{{data.operador}}</td>
+                        <td class="mat-cell p-1">{{data.idOferta}}</td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.nombreEjec" style="width: 8em;"></td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.observaciones" style="width: 8em;"></td>
+                        <td class="mat-cell p-2"><input type="text" [value]="data.SOIEDResp" style="width: 3em;"></td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+
+    <!-- Clientes Repetidos en registros de Tasas (Operativo) -->
+    <div class="mt-4 text-center" style="overflow: auto;">
+
+        <div class="mt-5 col-md-12">
+            <label>Clientes Repetidos en registros de Tasas (Operativo)</label>
+        </div>
+            <table class="txt-small w-100 m-auto table table-striped pt-4">
+                <thead>
+                    <tr>
+                        <th *ngFor="let columHeader of tableHeader" class="texto-general" style="cursor: pointer;">
+                            {{columHeader.nombre}}
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="mat-body">
+                    <tr *ngFor="let data of tableValue">
+                        <td class="mat-cell p-2"><input type="checkbox">{{data.id}}</td>
+                        <td class="mat-cell p-1">{{data.folio}}</td>
+                        <td class="mat-cell p-1">{{data.fecha}}</td>
+                        <td class="mat-cell p-1">{{data.sucursal}}</td>
+                        <td class="mat-cell p-1">{{data.monto}}</td>
+                        <td class="mat-cell p-1">{{data.plaza}}</td>
+                        <td class="mat-cell p-1">{{data.tasa}}</td>
+                        <td class="mat-cell p-1">{{data.estatus}}</td>
+                        <td class="mat-cell p-1">{{data.numeroCte}}</td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.nombreCte" style="width: 8em"></td>
+                        <td class="mat-cell p-1">{{data.contrato}}</td>
+                        <td class="mat-cell p-1">{{data.operador}}</td>
+                        <td class="mat-cell p-1">{{data.idOferta}}</td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.nombreEjec" style="width: 8em;"></td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.observaciones" style="width: 8em;"></td>
+                        <td class="mat-cell p-2"><input type="text" [value]="data.SOIEDResp" style="width: 3em;"></td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+
+    <!-- Datos repetidos (monto, plazo y tasa) -->
+    <div class="mt-4 text-center" style="overflow: auto;">
+        <div class="mt-5 col-md-12">
+            <label>Datos repetidos (monto, plazo y tasa)</label>
+        </div>
+            <table class="txt-small w-100 m-auto table table-striped pt-4">
+                <thead>
+                    <tr>
+                        <th *ngFor="let columHeader of tableHeader" class="texto-general" style="cursor: pointer;">
+                            {{columHeader.nombre}}
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="mat-body">
+                    <tr *ngFor="let data of tableValue">
+                        <td class="mat-cell p-2"><input type="checkbox">{{data.id}}</td>
+                        <td class="mat-cell p-1">{{data.folio}}</td>
+                        <td class="mat-cell p-1">{{data.fecha}}</td>
+                        <td class="mat-cell p-1">{{data.sucursal}}</td>
+                        <td class="mat-cell p-1">{{data.monto}}</td>
+                        <td class="mat-cell p-1">{{data.plaza}}</td>
+                        <td class="mat-cell p-1">{{data.tasa}}</td>
+                        <td class="mat-cell p-1">{{data.estatus}}</td>
+                        <td class="mat-cell p-1">{{data.numeroCte}}</td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.nombreCte" style="width: 8em"></td>
+                        <td class="mat-cell p-1">{{data.contrato}}</td>
+                        <td class="mat-cell p-1">{{data.operador}}</td>
+                        <td class="mat-cell p-1">{{data.idOferta}}</td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.nombreEjec" style="width: 8em;"></td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.observaciones" style="width: 8em;"></td>
+                        <td class="mat-cell p-2"><input type="text" [value]="data.SOIEDResp" style="width: 3em;"></td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+
+    <!-- Registros de Timeliness -->
+    <div class="mt-4 text-center" style="overflow: auto;">
+        <div class="mt-5 col-md-12">
+            <label>Registros de Timeliness</label>
+        </div>
+            <table class="txt-small w-100 m-auto table table-striped pt-4">
+                <thead>
+                    <tr>
+                        <th *ngFor="let columHeader of tableHeaderTimeLinnes" class="texto-general" style="cursor: pointer;">
+                            {{columHeader.nombre}}
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="mat-body">
+                    <tr *ngFor="let data of tableValueTimeLiness">
+                        <td class="mat-cell p-2"><input type="checkbox">{{data.id}}</td>
+                        <td class="mat-cell p-1">{{data.asignado}}</td>
+                        <td class="mat-cell p-1">{{data.operadoPor}}</td>
+                        <td class="mat-cell p-1">{{data.contrato}}</td>
+                        <td class="mat-cell p-1">{{data.numeroCte}}</td>
+                        <td class="mat-cell p-1">{{data.estatus}}</td>
+                        <td class="mat-cell p-1">{{data.fecha_Captura}}</td>
+                        <td class="mat-cell p-1">{{data.fecha_Autoriza}}</td>
+                        <td class="mat-cell p-1">{{data.fecha_Estatus}}</td>
+                        <td class="mat-cell p-1">{{data.observa}}</td>
+                        <td class="mat-cell p-1">{{data.oferta}}</td>
+                        <td class="mat-cell p-1">{{data.SOIEDResp}}</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+</div>
+
+<div *ngIf="showRegistrosAlmacenados">
+    <div class="row mt-4 pt-4 text-center">
         <div class="col-5"></div>
         <div class="col-2"><label class="texto-general mb-2">Registros Recolectados</label></div>
         <div class="col-5"></div>
@@ -42,119 +259,267 @@
         <div class="col-2"><button class="btn btn-danger btn-sm m-1 btn-border">Borrar</button></div>
         <div class="col-5"></div>
     </div>
-    <div class="mt-4 text-center">
-        <div class="row pt-4">
+    <div class="mt-2 text-center" style="overflow: auto;">
+        <div class="col-md-12">
+            <label>Contratos Repetidos en registros de Tasas (MIS)</label>
+        </div>
             <table class="txt-small w-100 m-auto table table-striped pt-4">
                 <thead>
                     <tr>
-                        <th class="texto-general" style="cursor: pointer;">
-                            Id
-                        </th>
-                        <th class="texto-general" style="cursor: pointer;">
-                            Folio
-                        </th>
-                        <th class="texto-general" style="cursor: pointer;">
-                            Fecha
-                        </th>
-                        <th class="texto-general" style="cursor: pointer;">
-                            Suc.
-                        </th>
-                        <th class="texto-general" style="cursor: pointer;">
-                            Monto
-                        </th>
-                        <th class="texto-general" style="cursor: pointer;">
-                            Plaza
-                        </th>
-                        <th class="texto-general" style="cursor: pointer;">
-                            Tasa
-                        </th>
-                        <th class="texto-general" style="cursor: pointer;">
-                            Estatus
-                        </th>
-                        <th class="texto-general" style="cursor: pointer;">
-                            Num. Cte
-                        </th>
-                        <th class="texto-general" style="cursor: pointer;">
-                            Nom. Cte
-                        </th>
-                        <th class="texto-general" style="cursor: pointer;">
-                            Contrato
-                        </th>
-                        <th class="texto-general" style="cursor: pointer;">
-                            Operador
-                        </th>
-                        <th class="texto-general" style="cursor: pointer;">
-                            ID Oferta
-                        </th>
-                        <th class="texto-general" style="cursor: pointer;">
-                            NomEjec
-                        </th>
-                        <th class="texto-general" style="cursor: pointer;">
-                            Observa
-                        </th>
-                        <th class="texto-general" style="cursor: pointer;">
-                            SOIED Resp:
+                        <th *ngFor="let columHeader of tableHeader" class="texto-general" style="cursor: pointer;">
+                            {{columHeader.nombre}}
                         </th>
                     </tr>
                 </thead>
                 <tbody class="mat-body">
-                    <tr>
-                        <td class="mat-cell p-2"><input type="checkbox">12345</td>
-                        <td class="mat-cell p-1">92</td>
-                        <td class="mat-cell p-1">16/06/2021</td>
-                        <td class="mat-cell p-1">623</td>
-                        <td class="mat-cell p-1">$198,910.00</td>
-                        <td class="mat-cell p-1">91</td>
-                        <td class="mat-cell p-1">4.05</td>
-                        <td class="mat-cell p-1">1</td>
-                        <td class="mat-cell p-1">78383500</td>
-                        <td class="mat-cell p-1"><input type="text" style="width: 98%;"></td>
-                        <td class="mat-cell p-1">7949488566</td>
-                        <td class="mat-cell p-1">CZ20497</td>
-                        <td class="mat-cell p-1">PTUSDO12021</td>
-                        <td class="mat-cell p-1"><input type="text" style="width: 95%;"></td>
-                        <td class="mat-cell p-1"><input type="text" style="width: 95%;"></td>
-                        <td class="mat-cell p-2"><input type="text" style="width: 75%;"></td>
-                    </tr>
-                    <tr>
-                        <td class="mat-cell p-2"><input type="checkbox">12345</td>
-                        <td class="mat-cell p-1">92</td>
-                        <td class="mat-cell p-1">16/06/2021</td>
-                        <td class="mat-cell p-1">623</td>
-                        <td class="mat-cell p-1">$198,910.00</td>
-                        <td class="mat-cell p-1">91</td>
-                        <td class="mat-cell p-1">4.05</td>
-                        <td class="mat-cell p-1">1</td>
-                        <td class="mat-cell p-1">78383500</td>
-                        <td class="mat-cell p-1"><input type="text" style="width: 98%;"></td>
-                        <td class="mat-cell p-1">7949488566</td>
-                        <td class="mat-cell p-1">CZ20497</td>
-                        <td class="mat-cell p-1">PTUSDO12021</td>
-                        <td class="mat-cell p-1"><input type="text" style="width: 95%;"></td>
-                        <td class="mat-cell p-1"><input type="text" style="width: 95%;"></td>
-                        <td class="mat-cell p-2"><input type="text" style="width: 75%;"></td>
-                    </tr>
-                    <tr>
-                        <td class="mat-cell p-2"><input type="checkbox">12345</td>
-                        <td class="mat-cell p-1">92</td>
-                        <td class="mat-cell p-1">16/06/2021</td>
-                        <td class="mat-cell p-1">623</td>
-                        <td class="mat-cell p-1">$198,910.00</td>
-                        <td class="mat-cell p-1">91</td>
-                        <td class="mat-cell p-1">4.05</td>
-                        <td class="mat-cell p-1">1</td>
-                        <td class="mat-cell p-1">78383500</td>
-                        <td class="mat-cell p-1"><input type="text" style="width: 98%;"></td>
-                        <td class="mat-cell p-1">7949488566</td>
-                        <td class="mat-cell p-1">CZ20497</td>
-                        <td class="mat-cell p-1">PTUSDO12021</td>
-                        <td class="mat-cell p-1"><input type="text" style="width: 95%;"></td>
-                        <td class="mat-cell p-1"><input type="text" style="width: 95%;"></td>
-                        <td class="mat-cell p-2"><input type="text" style="width: 75%;"></td>
+                    <tr *ngFor="let data of tableValue">
+                        <td class="mat-cell p-2"><input type="checkbox">{{data.id}}</td>
+                        <td class="mat-cell p-1">{{data.folio}}</td>
+                        <td class="mat-cell p-1">{{data.fecha}}</td>
+                        <td class="mat-cell p-1">{{data.sucursal}}</td>
+                        <td class="mat-cell p-1">{{data.monto}}</td>
+                        <td class="mat-cell p-1">{{data.plaza}}</td>
+                        <td class="mat-cell p-1">{{data.tasa}}</td>
+                        <td class="mat-cell p-1">{{data.estatus}}</td>
+                        <td class="mat-cell p-1">{{data.numeroCte}}</td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.nombreCte" style="width: 8em"></td>
+                        <td class="mat-cell p-1">{{data.contrato}}</td>
+                        <td class="mat-cell p-1">{{data.operador}}</td>
+                        <td class="mat-cell p-1">{{data.idOferta}}</td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.nombreEjec" style="width: 8em;"></td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.observaciones" style="width: 8em;"></td>
+                        <td class="mat-cell p-2"><input type="text" [value]="data.SOIEDResp" style="width: 3em;"></td>
                     </tr>
                 </tbody>
             </table>
+    </div>
+
+    <!-- Contratos Repetidos en registros de Tasas (Operativo) -->
+    <div class="row mt-4 pt-4 text-center">
+        <div class="col-5"></div>
+        <div class="col-2"><label class="texto-general mb-2">Registros Recolectados</label></div>
+        <div class="col-5"></div>
+    </div>
+    <div class="row pt-4 text-center">
+        <div class="col-5"></div>
+        <div class="col-2"><button class="btn btn-danger btn-sm m-1 btn-border">Borrar</button></div>
+        <div class="col-5"></div>
+    </div>
+    <div class="mt-2 text-center" style="overflow: auto;">
+
+        <div class="col-md-12">
+            <label>Contratos Repetidos en registros de Tasas (Operativo)</label>
         </div>
+            <table class="txt-small w-100 m-auto table table-striped pt-4">
+                <thead>
+                    <tr>
+                        <th *ngFor="let columHeader of tableHeader" class="texto-general" style="cursor: pointer;">
+                            {{columHeader.nombre}}
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="mat-body">
+                    <tr *ngFor="let data of tableValue">
+                        <td class="mat-cell p-2"><input type="checkbox">{{data.id}}</td>
+                        <td class="mat-cell p-1">{{data.folio}}</td>
+                        <td class="mat-cell p-1">{{data.fecha}}</td>
+                        <td class="mat-cell p-1">{{data.sucursal}}</td>
+                        <td class="mat-cell p-1">{{data.monto}}</td>
+                        <td class="mat-cell p-1">{{data.plaza}}</td>
+                        <td class="mat-cell p-1">{{data.tasa}}</td>
+                        <td class="mat-cell p-1">{{data.estatus}}</td>
+                        <td class="mat-cell p-1">{{data.numeroCte}}</td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.nombreCte" style="width: 8em"></td>
+                        <td class="mat-cell p-1">{{data.contrato}}</td>
+                        <td class="mat-cell p-1">{{data.operador}}</td>
+                        <td class="mat-cell p-1">{{data.idOferta}}</td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.nombreEjec" style="width: 8em;"></td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.observaciones" style="width: 8em;"></td>
+                        <td class="mat-cell p-2"><input type="text" [value]="data.SOIEDResp" style="width: 3em;"></td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+
+    <!-- Clientes Repetidos en registros de Tasas (MIS) -->
+    <div class="row mt-4 pt-4 text-center">
+        <div class="col-5"></div>
+        <div class="col-2"><label class="texto-general mb-2">Registros Recolectados</label></div>
+        <div class="col-5"></div>
+    </div>
+    <div class="row pt-4 text-center">
+        <div class="col-5"></div>
+        <div class="col-2"><button class="btn btn-danger btn-sm m-1 btn-border">Borrar</button></div>
+        <div class="col-5"></div>
+    </div>
+    <div class="mt-2 text-center" style="overflow: auto;">
+
+        <div class=" col-md-12">
+            <label>Clientes Repetidos en registros de Tasas (MIS)</label>
+        </div>
+            <table class="txt-small w-100 m-auto table table-striped pt-4">
+                <thead>
+                    <tr>
+                        <th *ngFor="let columHeader of tableHeader" class="texto-general" style="cursor: pointer;">
+                            {{columHeader.nombre}}
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="mat-body">
+                    <tr *ngFor="let data of tableValue">
+                        <td class="mat-cell p-2"><input type="checkbox">{{data.id}}</td>
+                        <td class="mat-cell p-1">{{data.folio}}</td>
+                        <td class="mat-cell p-1">{{data.fecha}}</td>
+                        <td class="mat-cell p-1">{{data.sucursal}}</td>
+                        <td class="mat-cell p-1">{{data.monto}}</td>
+                        <td class="mat-cell p-1">{{data.plaza}}</td>
+                        <td class="mat-cell p-1">{{data.tasa}}</td>
+                        <td class="mat-cell p-1">{{data.estatus}}</td>
+                        <td class="mat-cell p-1">{{data.numeroCte}}</td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.nombreCte" style="width: 8em"></td>
+                        <td class="mat-cell p-1">{{data.contrato}}</td>
+                        <td class="mat-cell p-1">{{data.operador}}</td>
+                        <td class="mat-cell p-1">{{data.idOferta}}</td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.nombreEjec" style="width: 8em;"></td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.observaciones" style="width: 8em;"></td>
+                        <td class="mat-cell p-2"><input type="text" [value]="data.SOIEDResp" style="width: 3em;"></td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+
+    <!-- Clientes Repetidos en registros de Tasas (Operativo) -->
+    <div class="row mt-4 pt-4 text-center">
+        <div class="col-5"></div>
+        <div class="col-2"><label class="texto-general mb-2">Registros Recolectados</label></div>
+        <div class="col-5"></div>
+    </div>
+    <div class="row pt-4 text-center">
+        <div class="col-5"></div>
+        <div class="col-2"><button class="btn btn-danger btn-sm m-1 btn-border">Borrar</button></div>
+        <div class="col-5"></div>
+    </div>
+    <div class="mt-2 text-center" style="overflow: auto;">
+
+        <div class="col-md-12">
+            <label>Clientes Repetidos en registros de Tasas (Operativo)</label>
+        </div>
+            <table class="txt-small w-100 m-auto table table-striped pt-4">
+                <thead>
+                    <tr>
+                        <th *ngFor="let columHeader of tableHeader" class="texto-general" style="cursor: pointer;">
+                            {{columHeader.nombre}}
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="mat-body">
+                    <tr *ngFor="let data of tableValue">
+                        <td class="mat-cell p-2"><input type="checkbox">{{data.id}}</td>
+                        <td class="mat-cell p-1">{{data.folio}}</td>
+                        <td class="mat-cell p-1">{{data.fecha}}</td>
+                        <td class="mat-cell p-1">{{data.sucursal}}</td>
+                        <td class="mat-cell p-1">{{data.monto}}</td>
+                        <td class="mat-cell p-1">{{data.plaza}}</td>
+                        <td class="mat-cell p-1">{{data.tasa}}</td>
+                        <td class="mat-cell p-1">{{data.estatus}}</td>
+                        <td class="mat-cell p-1">{{data.numeroCte}}</td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.nombreCte" style="width: 8em"></td>
+                        <td class="mat-cell p-1">{{data.contrato}}</td>
+                        <td class="mat-cell p-1">{{data.operador}}</td>
+                        <td class="mat-cell p-1">{{data.idOferta}}</td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.nombreEjec" style="width: 8em;"></td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.observaciones" style="width: 8em;"></td>
+                        <td class="mat-cell p-2"><input type="text" [value]="data.SOIEDResp" style="width: 3em;"></td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+
+    <!-- Datos repetidos (monto, plazo y tasa) -->
+    <div class="row mt-4 pt-4 text-center">
+        <div class="col-5"></div>
+        <div class="col-2"><label class="texto-general mb-2">Registros Recolectados</label></div>
+        <div class="col-5"></div>
+    </div>
+    <div class="row pt-4 text-center">
+        <div class="col-5"></div>
+        <div class="col-2"><button class="btn btn-danger btn-sm m-1 btn-border">Borrar</button></div>
+        <div class="col-5"></div>
+    </div>
+    <div class="mt-2 text-center" style="overflow: auto;">
+        <div class="col-md-12">
+            <label>Datos repetidos (monto, plazo y tasa)</label>
+        </div>
+            <table class="txt-small w-100 m-auto table table-striped pt-4">
+                <thead>
+                    <tr>
+                        <th *ngFor="let columHeader of tableHeader" class="texto-general" style="cursor: pointer;">
+                            {{columHeader.nombre}}
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="mat-body">
+                    <tr *ngFor="let data of tableValue">
+                        <td class="mat-cell p-2"><input type="checkbox">{{data.id}}</td>
+                        <td class="mat-cell p-1">{{data.folio}}</td>
+                        <td class="mat-cell p-1">{{data.fecha}}</td>
+                        <td class="mat-cell p-1">{{data.sucursal}}</td>
+                        <td class="mat-cell p-1">{{data.monto}}</td>
+                        <td class="mat-cell p-1">{{data.plaza}}</td>
+                        <td class="mat-cell p-1">{{data.tasa}}</td>
+                        <td class="mat-cell p-1">{{data.estatus}}</td>
+                        <td class="mat-cell p-1">{{data.numeroCte}}</td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.nombreCte" style="width: 8em"></td>
+                        <td class="mat-cell p-1">{{data.contrato}}</td>
+                        <td class="mat-cell p-1">{{data.operador}}</td>
+                        <td class="mat-cell p-1">{{data.idOferta}}</td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.nombreEjec" style="width: 8em;"></td>
+                        <td class="mat-cell p-1"><input type="text" [value]="data.observaciones" style="width: 8em;"></td>
+                        <td class="mat-cell p-2"><input type="text" [value]="data.SOIEDResp" style="width: 3em;"></td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+
+    <!-- Registros de Timeliness -->
+    <div class="row mt-4 pt-4 text-center">
+        <div class="col-5"></div>
+        <div class="col-2"><label class="texto-general mb-2">Registros Recolectados</label></div>
+        <div class="col-5"></div>
+    </div>
+    <div class="row pt-4 text-center">
+        <div class="col-5"></div>
+        <div class="col-2"><button class="btn btn-danger btn-sm m-1 btn-border">Borrar</button></div>
+        <div class="col-5"></div>
+    </div>
+    <div class="mt-4 text-center" style="overflow: auto;">
+        <div class="col-md-12">
+            <label>Registros de Timeliness</label>
+        </div>
+            <table class="txt-small w-100 m-auto table table-striped pt-4">
+                <thead>
+                    <tr>
+                        <th *ngFor="let columHeader of tableHeaderTimeLinnes" class="texto-general" style="cursor: pointer;">
+                            {{columHeader.nombre}}
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="mat-body">
+                    <tr *ngFor="let data of tableValueTimeLiness">
+                        <td class="mat-cell p-2"><input type="checkbox">{{data.id}}</td>
+                        <td class="mat-cell p-1">{{data.asignado}}</td>
+                        <td class="mat-cell p-1">{{data.operadoPor}}</td>
+                        <td class="mat-cell p-1">{{data.contrato}}</td>
+                        <td class="mat-cell p-1">{{data.numeroCte}}</td>
+                        <td class="mat-cell p-1">{{data.estatus}}</td>
+                        <td class="mat-cell p-1">{{data.fecha_Captura}}</td>
+                        <td class="mat-cell p-1">{{data.fecha_Autoriza}}</td>
+                        <td class="mat-cell p-1">{{data.fecha_Estatus}}</td>
+                        <td class="mat-cell p-1">{{data.observa}}</td>
+                        <td class="mat-cell p-1">{{data.oferta}}</td>
+                        <td class="mat-cell p-1">{{data.SOIEDResp}}</td>
+                    </tr>
+                </tbody>
+            </table>
     </div>
 </div>
-
