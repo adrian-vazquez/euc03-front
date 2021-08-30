@@ -1,0 +1,24 @@
+table {
+    width: 150%;
+    border-collapse: collapse;
+    text-align: center;
+}
+.layout {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.over {
+    display: table-cell;
+    overflow-x: auto;
+    width: 100%;
+}
+.over th td{
+    font-size: 1em;
+}
+.tablas-dev {
+    position: relative;
+    bottom: 10em;
+    width: 80em;
+}

@@ -82,7 +82,7 @@
             </div>
             <div class="col">
                 <div *ngIf="showImaCliente==0">
-                    <div *ngIf="showCliente==0">
+                    <div *ngIf="showCliente!=-1">
                         <div class="row">
                             <div class="col-5">
                                 <div class="etiqueta-dato">
@@ -111,6 +111,30 @@
                     <div class="row">
                         <div class="col-4" style="float: left;">
                             <img class="img-position pt-4" style="max-width: 95%;" alt="Citi Info" [src]="iconH">
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="showImaCliente==1">
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="etiqueta-dato">
+                                <label class="texto-general"><b>Saldo 1</b></label>
+                                <div class="separador" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="etiqueta-dato">
+                                <label class="texto-general"><b>Tipo de Persona</b></label>
+                                <div class="separador" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5" style="text-align: center;">
+                            <button class="btn btn-outline-info ml-2" (click)="setSaldo()">{{valSaldo}}</button>
+                        </div>
+                        <div class="col-5" style="text-align: center;">
+                            <button class="btn btn-outline-info ml-2">{{valTipoPersona}}</button>
                         </div>
                     </div>
                 </div>
