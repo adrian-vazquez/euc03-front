@@ -306,7 +306,11 @@ export class OperacionesEspecialesComponent implements OnInit {
   }
 
   openXl(content) {
-    this.modalService.open(content, { centered: true, size: 'xl', scrollable: true });
+    this.modalService.open(content, { centered: true, size: 'xl', scrollable: true, windowClass : "customModal" });
+  }
+
+  openEdit(content) {
+    this.modalService.open(content, {centered: true, size: 'xl', scrollable: true, windowClass : "customModal"});
   }
 
   save(data) {
