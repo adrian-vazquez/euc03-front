@@ -42,9 +42,9 @@ const routes: Routes = [
   { path: 'folios', component: FoliosComponent },
   { path: 'sucursales', component: SucursalesComponent },
   { path: 'ofertas', component: OfertasComponent },
+  { path: 'ofertas-generar', component: OfertasGeneralComponent },
   { path: 'tasas', component: TasasComponent },
-  { path: 'campanas', component: CampaniaComponent },
-  { path: 'ofertas-generar', component: OfertasGeneralComponent }
+  { path: 'campanas', component: CampaniaComponent }
 
 ];
 

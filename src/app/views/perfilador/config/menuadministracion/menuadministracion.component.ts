@@ -10,23 +10,36 @@ import Swal from 'sweetalert2';
 })
 export class MenuadministracionComponent implements OnInit {
 
+  numeroPaginas: number = 1;
+
+
+  seleccion: string;
+  mostrarTablas: Array<Boolean>;
+
   columnHeader = {
     fecha: 'Fecha',
-    numerocuenta: 'Número Cuenta',
+    numerocliente: 'Número Cliente',
     contrato: 'Contrato',
     tasa: 'Tasa',
     plazo: 'Plazo',
     monto: 'Monto',
+    soeid: 'SOEID',
     nomina: 'Nómina',
-    ejecutivo: 'Ejecutivo',
-    sirh: 'SIRH'
+    rol: 'ROL',
+    ejecutivo: 'Nombre de Ejecutivo',
+    sirh: 'SIRH de Sucursal',
+    gatnominal:'GAT Nominal',
+    gatreal:'GAT Real',
+    rendimientos:'Rendimientos',
+    oferta: 'Oferta',
+    campania: 'Campaña'
   };
   tableData: any[] = [
-    {'fecha':'10/08/2021','numerocuenta':'1234','contrato':'567890','tasa':'102','plazo':'91','monto':'12345','nomina':'67890','ejecutivo':'Luis Pozo','sirh':'267'},
-    {'fecha':'10/08/2021','numerocuenta':'1234','contrato':'567890','tasa':'102','plazo':'91','monto':'12345','nomina':'67890','ejecutivo':'Luis Pozo','sirh':'267'},
-    {'fecha':'10/08/2021','numerocuenta':'1234','contrato':'567890','tasa':'102','plazo':'91','monto':'12345','nomina':'67890','ejecutivo':'Luis Pozo','sirh':'267'},
-    {'fecha':'10/08/2021','numerocuenta':'1234','contrato':'567890','tasa':'102','plazo':'91','monto':'12345','nomina':'67890','ejecutivo':'Luis Pozo','sirh':'267'},
-    {'fecha':'10/08/2021','numerocuenta':'1234','contrato':'567890','tasa':'102','plazo':'91','monto':'12345','nomina':'67890','ejecutivo':'Luis Pozo','sirh':'267'}
+    {'fecha':'10/08/2021','numerocliente':'1234','contrato':'567890','tasa':'102','plazo':'91','monto':'12345','soeid':'JP38861','nomina':'67890','rol':'tester','ejecutivo':'Luis Pozo','sirh':'267','gatnominal':'1233','gatreal':'120','rendimientos':'345','oferta':'2','campania':'1'},
+    {'fecha':'10/08/2021','numerocliente':'1234','contrato':'567890','tasa':'102','plazo':'91','monto':'12345','soeid':'JP38861','nomina':'67890','rol':'tester','ejecutivo':'Luis Pozo','sirh':'267','gatnominal':'1233','gatreal':'120','rendimientos':'345','oferta':'2','campania':'1'},
+    {'fecha':'10/08/2021','numerocliente':'1234','contrato':'567890','tasa':'102','plazo':'91','monto':'12345','soeid':'JP38861','nomina':'67890','rol':'tester','ejecutivo':'Luis Pozo','sirh':'267','gatnominal':'1233','gatreal':'120','rendimientos':'345','oferta':'2','campania':'1'},
+    {'fecha':'10/08/2021','numerocliente':'1234','contrato':'567890','tasa':'102','plazo':'91','monto':'12345','soeid':'JP38861','nomina':'67890','rol':'tester','ejecutivo':'Luis Pozo','sirh':'267','gatnominal':'1233','gatreal':'120','rendimientos':'345','oferta':'2','campania':'1'},
+    {'fecha':'10/08/2021','numerocliente':'1234','contrato':'567890','tasa':'102','plazo':'91','monto':'12345','soeid':'JP38861','nomina':'67890','rol':'tester','ejecutivo':'Luis Pozo','sirh':'267','gatnominal':'1233','gatreal':'120','rendimientos':'345','oferta':'2','campania':'1'}
   ];
 
   showDataGrid:boolean = false;
@@ -51,18 +64,6 @@ export class MenuadministracionComponent implements OnInit {
 
   ngOnInit(): void {
     this.valorCambia();
-    this.valOperacionTabla();
-  }
-
-  valOperacionTabla(){
-    let aux = [
-      {'fecha':'10/08/2021','numerocuenta':'1234','contrato':'567890','tasa':'102','plazo':'91','monto':'12345','nomina':'67890','ejecutivo':'Luis Pozo','sirh':'267'},
-      {'fecha':'10/08/2021','numerocuenta':'1234','contrato':'567890','tasa':'102','plazo':'91','monto':'12345','nomina':'67890','ejecutivo':'Luis Pozo','sirh':'267'},
-      {'fecha':'10/08/2021','numerocuenta':'1234','contrato':'567890','tasa':'102','plazo':'91','monto':'12345','nomina':'67890','ejecutivo':'Luis Pozo','sirh':'267'},
-      {'fecha':'10/08/2021','numerocuenta':'1234','contrato':'567890','tasa':'102','plazo':'91','monto':'12345','nomina':'67890','ejecutivo':'Luis Pozo','sirh':'267'},
-      {'fecha':'10/08/2021','numerocuenta':'1234','contrato':'567890','tasa':'102','plazo':'91','monto':'12345','nomina':'67890','ejecutivo':'Luis Pozo','sirh':'267'}
-    ];
-    this.tableData = aux;
   }
 
   valorCambia(){

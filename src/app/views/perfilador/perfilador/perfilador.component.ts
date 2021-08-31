@@ -19,6 +19,7 @@ export class PerfiladorComponent implements OnInit {
   showImaCliente: number = -1;
   showBanner:boolean = true;
   showCliente:number = -1;
+  showNoCliente:number = -1;
   showTablaCliente:number = -1;
   keys: Array<string> = ['cliente','monto', 'numcliente', 'nomcliente','contrato'];
   baseForm:any = {};
@@ -45,12 +46,19 @@ export class PerfiladorComponent implements OnInit {
     this.showImaCliente=0;
   }
 
+  valNoCliente(){
+    this.showImaCliente=0;
+  }
+
   valFormYes() {
     this.showCliente = 0;
   }
 
   valFormNo() {
     this.showCliente = 1;
+    this.showImaCliente = 1;
+    this.valSaldo = '$25,000';
+    this.valTipoPersona = 'N/A';
   }
 
   getCliente(eve:any){
@@ -70,7 +78,10 @@ export class PerfiladorComponent implements OnInit {
   }
 
   setSaldo(){
-    this.monto = 12345;
+    let aux = this.valSaldo.split('$');
+    let saldo = aux[1];
+
+    this.monto = saldo;
   }
 
   abrirmodal(){
